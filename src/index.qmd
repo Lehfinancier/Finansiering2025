@@ -1,0 +1,92 @@
+---
+description: "Finansiering giver en grundlæggende og anvendelsesorienteret introduktion til renter, obligationer, realkredit og regulering. Kurset kombinerer teori, cases og praktiske værktøjer til at forstå fastforrentede instrumenter, renterisiko og bankregulering."
+open-graph:
+    description: "Finansiering giver en grundlæggende og anvendelsesorienteret introduktion til renter, obligationer, realkredit og regulering. Kurset kombinerer teori, cases og praktiske værktøjer til at forstå fastforrentede instrumenter, renterisiko og bankregulering."
+---
+
+# Finansiering (Bachelor)
+
+<img src="images/finance-header-img.png" alt="Finansiering" style="width: 100%;  border-radius: 15px; margin-bottom: 6px;">
+
+Kurset **Finansiering** giver de studerende en introduktion til de vigtigste begreber, modeller og institutioner inden for fastforrentede instrumenter. Vi arbejder både med teoretiske værktøjer og praktiske eksempler fra danske og internationale finansielle markeder.  
+
+Kurset er designet til HA(jur.)-studerende, og lægger vægt på at gøre de tekniske koncepter spiselige og intuitive.  
+
+---
+
+## Course Information
+  
+**Instructor:** Niklas Lehmann Jensen  
+**Email:** [indsæt email her]  
+**Office Location:** [indsæt kontoradresse]  
+**Office Hours:** Efter aftale  
+**Course Website:** Absalon og denne side  
+**Lectures:** [indsæt tid og lokale]  
+
+**Level:** Undergraduate  
+**Prerequisites:** Ingen formelle krav, men basal forståelse for matematik og økonomi er en fordel  
+
+---
+
+## Course Content
+
+Kurset er struktureret som følger:
+
+1. **Renter og rentedannelse**
+   - Real- og nominelle renter  
+   - Inflation og Fisher-ligningen  
+   - Pengepolitik og institutionelle forhold i Danmark  
+
+2. **Obligationer**
+   - Nulkupon- og kuponobligationer  
+   - Direkte rente, effektiv rente og diskontering  
+   - Sammenhæng mellem kurs, rente og afkast  
+
+3. **Rentestruktur og prisfastsættelse**
+   - Rentekurven og arbitrage  
+   - Estimation af rentestrukturen  
+   - Brug af spot- og forwardrenter  
+
+4. **Renterisiko**
+   - Varighed og konveksitet  
+   - Immunisering og risikomål  
+   - Porteføljer af obligationer  
+
+5. **Dansk realkredit**
+   - Realkreditsystemets opbygning og regulering  
+   - Konvertering og præpayment-modeller  
+   - Option Adjusted Spread (OAS)  
+
+6. **Performance og regulering**
+   - Obligationsafkast og performanceattribution  
+   - Finanskrisen 2008 og reguleringsbølgen (Basel III, CRR/CRD)  
+   - Case: Silicon Valley Bank og renterisiko:contentReference[oaicite:1]{index=1}:contentReference[oaicite:2]{index=2}  
+
+---
+
+## Course Materials
+
+**Pensum** består primært af:  
+
+- Egenudviklede lektionsnoter i finansiering:contentReference[oaicite:3]{index=3}  
+- Supplerende artikler og cases om finanskrisen og SVB:contentReference[oaicite:4]{index=4}:contentReference[oaicite:5]{index=5}:contentReference[oaicite:6]{index=6}  
+
+Derudover kan følgende lærebøger anbefales som opslagsværk:  
+- Tuckman & Serrat: *Fixed Income Securities*  
+- Fabozzi: *Bond Markets, Analysis, and Strategies*  
+
+---
+
+## Course Policies
+
+**Grading and Evaluation**  
+Karakteren gives på baggrund af en 90 minutters skriftlig eksamen (closed book). Dato fastsættes af eksamenskontoret.  
+
+**Attendance and Participation**  
+Deltagelse anbefales stærkt, da undervisningen bygger på dialog og øvelser.  
+
+**Academic Integrity**  
+Universitetets regler om eksamenssnyd og plagiering gælder.  
+
+**Accommodations**  
+Studerende med særlige behov bør kontakte universitetets SPS-kontor tidligt i semestret.  

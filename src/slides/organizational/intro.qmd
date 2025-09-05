@@ -1,0 +1,144 @@
+---
+title: "Kursusintroduktion"
+subtitle: "Finansiering — Fixed Income, Risiko & Regulering"
+author: "Niklas Lehmann Jensen"  
+format:
+  revealjs:
+    include-in-header: 
+      text: |
+        <meta name="description" content="Kursusintroduktion til Finansiering (fixed income, renterisiko, realkredit, performanceattribution og regulering)."/> 
+    width: 1150
+    slide-number: true
+    sc-sb-title: true
+    incremental: true   
+    logo: ../../themes/favicon.ico
+    footer: "Finansiering — Kursusintroduktion"
+    footer-logo-link: "#"
+    theme: ../../themes/slides_theme.scss
+    toc: true
+    toc-depth: 2
+    toc-title: Indhold
+    transition: convex
+    transition-speed: fast
+slide-level: 4
+title-slide-attributes:
+    data-background-color: "#045D5D"
+    data-footer: " "
+#filters:
+ # - reveal-header 
+#embed-resources: true
+include-in-header: ../../themes/mathjax.html 
+highlight-style: tango
+open-graph:
+    description: "Kursusintroduktion til Finansiering (fixed income, renterisiko, realkredit, performanceattribution og regulering)." 
+---
+
+## Indhold og Motivation {background="#00100F"}
+
+#### Om mig
+
+**Underviser**: Niklas Lehmann Jensen  
+- Fokus: fixed income, renterisiko, realkredit, regulering  
+- Email: <p style="font-family: 'Courier New', Courier, monospace;">TBA</p>  
+- Kontor & træffetider: TBA (efter aftale)  
+
+### Kurset: Fra grundlæggende finans til praksis {background="#43464B"}
+
+#### Hvad forventes kendt fra basisfag?
+- Nutidsværdi & diskontering, simpel obligationsregning  
+- Risiko/afkast-intuition, grundlæggende porteføljeteori  
+- Simpel regressionsforståelse (til empiriske eksempler)
+
+#### Hvad er fokus i **Finansiering** (mit kursus)?
+- Fastforrentede aktiver & rentestruktur  
+- Renterisiko (varighed/konveksitet, nøglerenter)  
+- Dansk realkredit (match-funding, konvertering, CPR)  
+- Prisfastsættelse: fra cashflows til OAS  
+- Performance: afkastopgørelse & attribution (FIPA)  
+- Regulering & case-studies (GFC, SVB, Basel, dansk kontekst)
+
+#### Hovedblokke
+
+1. **Renter & obligationer**  
+2. **Rentestruktur & arbitrage**  
+3. **Renterisiko** (varighed, konveksitet, delta-vektorer)  
+4. **Dansk realkredit** (marked, lovgivning, produkter, konvertering)  
+5. **Prisfastsættelse & OAS**  
+6. **Performanceevaluering** (HPR, attribution)  
+7. **Regulering & kriser** (før/efter 2008, SVB-case, “kan det ske igen?”)
+
+. . .
+
+Vi når mere, hvis tiden tillader det.
+
+#### Skal du tage faget?
+
+Ja, hvis du…  
+- vil kunne **læse, handle og risikostyre** fixed-income produkter  
+- skal arbejde med **bank, realkredit, ALM, risk eller asset management**  
+- vil forstå **rentechok** og deres effekt på værdier og kapital
+
+## Kursuslogistik {background="#00100F"}
+
+### Organisation & evaluering {background="#43464B"}
+
+#### Mødetider
+- Forelæsninger: **TBA**  
+- Øvelser/case-sessions: **TBA**  
+<div style="border: 2px solid #ccc; padding: 9px; border-radius: 15px; margin-bottom: 10px;">
+Ændringer annonceres på LMS (Absalon/eCampus) og i timen
+</div>
+
+#### Format
+- Forelæsninger med **blandede** teoretiske og empiriske eksempler  
+- Øvelser med **beregninger & case** (Excel + Python er velkomne, men ikke påkrævet)  
+- Aktiv deltagelse anbefales (spørg i timen, før/efter, eller til kontortid)
+
+#### Bedømmelse
+<div style="border: 2px solid #ccc; padding: 9px; border-radius: 15px; margin-bottom: 10px;">
+Skriftlig eksamen (format & hjælpemidler: annonceres)
+</div>
+- Dato: annonceres af eksamenskontoret  
+- Forberedelse: forelæsninger, øvelser, opgavesæt og noter
+
+### Kursusmaterialer {background="#43464B"}
+
+#### Primært
+- **Lektionsnoter i finansiering (2025)** — kursuskompendium med fokus på:  
+  - Renter & obligationer, rentestruktur, varighed/konveksitet  
+  - Dansk realkredit & konvertering  
+  - Prisfastsættelse (swap-/refikurve, OAS)  
+  - Performanceattribution & regulering
+
+. . .
+
+**Supplerende bøger** (kapitelvalg meldes løbende):
+- Fabozzi, *Bond Markets, Analysis, and Strategies*  
+- Tuckman & Serrat, *Fixed Income Securities*  
+- Hull, *Options, Futures, and Other Derivatives* (uddrag til OAS/risiko)  
+
+**Data & værktøjer**:
+- Offentlige kilder (fx DST, Nationalbanken), handelsdata (fx kurslister), Excel/Python
+
+#### Smagsprøve på centrale formler
+- Pris (kupon): \( P = \sum_{t=1}^{N} \frac{C}{(1+y)^t} + \frac{FV}{(1+y)^N} \)  
+- Varighed (Macaulay): \( D = \frac{ \sum_{t=1}^{N} t \cdot \frac{CF_t}{(1+y)^t} }{P} \)  
+- Konveksitet (skitse): \( \mathcal{C} \approx \frac{ \sum t(t+1)\frac{CF_t}{(1+y)^{t+2}} }{P} \)
+
+### Hvor passer kurset ind? {background="#43464B"}
+
+#### Komplementære fag
+- Investering/Porteføljeteori, Økonometri (empiri til rentekurver/risikomål)  
+- Penge/Bank & Regulering (Basel, IRRBB, SREP m.m.)  
+- Makro/pengepolitik (renter, inflation, kurvebevægelser)
+
+. . .
+
+Lavt overlap — fokus på **værdiansættelse, risiko og praksis** i fixed income.
+
+## Referencer {.allowframebreaks visibility="uncounted"}
+
+- Lektionsnoter i finansiering (2025)  
+- Fabozzi — *Bond Markets, Analysis, and Strategies*  
+- Tuckman & Serrat — *Fixed Income Securities*  
+- Hull — *Options, Futures, and Other Derivatives*  
