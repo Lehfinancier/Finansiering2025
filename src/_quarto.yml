@@ -1,0 +1,50 @@
+project:
+  type: website
+  output-dir: ../docs/
+
+html-math-method: mathjax
+
+#filters:
+  #- diagram  
+  #- reveal-header
+#diagram:
+ # engine:
+  #  tikz:
+   #   execpath: pdflatex
+    #  header-includes:
+     #   - '\usepackage{adjustbox}'
+      #  - '\usetikzlibrary{arrows,shapes.arrows,shapes.geometric,shapes.multipart,decorations.pathmorphing,positioning,swigs}' 
+
+website:
+  title: "Finansiering 2025"
+  site-url: https://Lehfinancier.github.io/Finansiering2025/
+  repo-url: https://github.com/Lehfinancier/Finansiering2025
+  repo-subdir: "src"
+  repo-actions: [edit, issue]
+  sidebar:
+    style: floating
+    search: true
+    contents:
+      - index.qmd
+      - section: "Lectures"
+        contents:
+          - slides/organizational/intro.qmd
+      - section: "Exercises"
+        contents:
+          - exercises/ex01.qmd
+      - section: "Course Info"
+        contents:
+          - syllabus.qmd
+
+execute:
+  freeze: auto  # re-render only when source changes
+
+format:
+  html:
+    include-in-header: themes/mathjax.html
+    theme:
+      light: [themes/ws_light.scss, themes/block.scss]
+      dark: [themes/ws_dark.scss, themes/block.scss]  
+
+bibliography: eco.bib
+

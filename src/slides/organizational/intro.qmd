@@ -1,36 +1,42 @@
 ---
 title: "Kursusintroduktion"
 subtitle: "Finansiering — Fixed Income, Risiko & Regulering"
-author: "Niklas Lehmann Jensen"  
+author: "Niklas Lehmann Jensen"
+
 format:
   revealjs:
-    include-in-header: 
-      text: |
-        <meta name="description" content="Kursusintroduktion til Finansiering (fixed income, renterisiko, realkredit, performanceattribution og regulering)."/> 
     width: 1150
     slide-number: true
-    sc-sb-title: true
-    incremental: true   
+    incremental: true
     logo: ../../themes/favicon.ico
     footer: "Finansiering — Kursusintroduktion"
     footer-logo-link: "#"
-    theme: ../../themes/slides_theme.scss
+    theme: [default, ../../themes/slides_theme.scss]   # filsti m. "/"
     toc: true
     toc-depth: 2
     toc-title: Indhold
     transition: convex
     transition-speed: fast
+    include-in-header:                                  # SAMLET ét sted
+      - text: |
+          <meta name="description" content="Kursusintroduktion til Finansiering (fixed income, renterisiko, realkredit, performanceattribution og regulering)."/>
+      - ../../themes/mathjax.html
+
 slide-level: 4
 title-slide-attributes:
-    data-background-color: "#045D5D"
-    data-footer: " "
-#filters:
- # - reveal-header 
-#embed-resources: true
-include-in-header: ../../themes/mathjax.html 
+  data-background-color: "#045D5D"
+  data-footer: " "
+
+# Fjern eller peg korrekt på filteret. Hvis du IKKE har lua-filen, så kommentér ud:
+# filters:
+#   - ../.. /filters/reveal-header.lua
+
+# Slå fra under udvikling (kan sættes til true til sidst for one-file HTML)
+embed-resources: false
+
 highlight-style: tango
 open-graph:
-    description: "Kursusintroduktion til Finansiering (fixed income, renterisiko, realkredit, performanceattribution og regulering)." 
+  description: "Kursusintroduktion til Finansiering (fixed income, renterisiko, realkredit, performanceattribution og regulering)."
 ---
 
 ## Indhold og Motivation {background="#00100F"}
