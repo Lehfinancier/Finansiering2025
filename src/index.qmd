@@ -6,7 +6,7 @@ open-graph:
 
 # Finansiering (Bachelor)
 
-<img src="images/finance-header-img.png" alt="Finansiering" style="width: 100%;  border-radius: 15px; margin-bottom: 6px;">
+<img src="images/finance-header-img-fixed.png" alt="Finansiering" style="width: 100%;  border-radius: 15px; margin-bottom: 6px;">
 
 Kurset **Finansiering** giver de studerende en introduktion til de vigtigste begreber, modeller og institutioner inden for fastforrentede instrumenter. Vi arbejder både med teoretiske værktøjer og praktiske eksempler fra danske og internationale finansielle markeder.  
 
@@ -60,7 +60,7 @@ Kurset er struktureret som følger:
 6. **Performance og regulering**
    - Obligationsafkast og performanceattribution  
    - Finanskrisen 2008 og reguleringsbølgen (Basel III, CRR/CRD)  
-   - Case: Silicon Valley Bank og renterisiko:contentReference[oaicite:1]{index=1}:contentReference[oaicite:2]{index=2}  
+   - Case: Silicon Valley Bank og renterisiko  
 
 ---
 
@@ -68,8 +68,8 @@ Kurset er struktureret som følger:
 
 **Pensum** består primært af:  
 
-- Egenudviklede lektionsnoter i finansiering:contentReference[oaicite:3]{index=3}  
-- Supplerende artikler og cases om finanskrisen og SVB:contentReference[oaicite:4]{index=4}:contentReference[oaicite:5]{index=5}:contentReference[oaicite:6]{index=6}  
+- Egenudviklede lektionsnoter i finansiering  
+- Supplerende artikler og cases om finanskrisen og SVB  
 
 Derudover kan følgende lærebøger anbefales som opslagsværk:  
 - Tuckman & Serrat: *Fixed Income Securities*  

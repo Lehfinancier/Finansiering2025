@@ -11,7 +11,7 @@ format:
     logo: ../../themes/favicon.ico
     footer: "Finansiering — Kursusintroduktion"
     footer-logo-link: "#"
-    theme: [default, ../../themes/slides_theme.scss]   # filsti m. "/"
+    theme: ../../themes/slides_themes.scss  # filsti m. "/"
     toc: true
     toc-depth: 2
     toc-title: Indhold
