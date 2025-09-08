@@ -20,7 +20,7 @@ format:
     include-in-header:                                  # SAMLET ét sted
       - text: |
           <meta name="description" content="Kursusintroduktion til Finansiering (fixed income, renterisiko, realkredit, performanceattribution og regulering)."/>
-      - ../../themes/mathjax.html
+      
 
 slide-level: 4
 title-slide-attributes:
@@ -33,35 +33,43 @@ title-slide-attributes:
 
 # Slå fra under udvikling (kan sættes til true til sidst for one-file HTML)
 embed-resources: false
-
+#include-in-header: ../../themes/mathjax.html 
 highlight-style: tango
 open-graph:
   description: "Kursusintroduktion til Finansiering (fixed income, renterisiko, realkredit, performanceattribution og regulering)."
 ---
 
-## Indhold og Motivation {background="#00100F"}
+## Indhold og motivation {background="#00100F"}
 
-#### Om mig
+#### Om mig (part 1)
+- cand.oecon fra Aarhus Universitet i 2021
+- Arbejdserfaring:
+  - Studentermedhjælper og portefølje-analytiker i Sydbanks kapitalforvaltning (2018-2022)
+  - Analytiker i Sydbanks afdeling for risikomodeller (2022-2023)
+  - Senior analytiker i Scanrate (2023-)
+  - Lektor i matematik og makroøkonomi på SDU (2022-2024)
+  - Lektor i finansiering på AU (2024-)
 
-**Underviser**: Niklas Lehmann Jensen  
-- Fokus: fixed income, renterisiko, realkredit, regulering  
-- Email: <p style="font-family: 'Courier New', Courier, monospace;">TBA</p>  
-- Kontor & træffetider: TBA (efter aftale)  
+#### Om mig (part 2)
+- Fokus: fixed income, realkredit, finansiel matematik, programmering..
+- Email: <p style="font-family: 'Courier New', Courier, monospace;">nlj@econ.au.dk</p>
+- "Kontor" & træffetider: I er velkommen til at skrive en mail 24/7
 
-### Kurset: Fra grundlæggende finans til praksis {background="#43464B"}
 
-#### Hvad forventes kendt fra basisfag?
-- Nutidsværdi & diskontering, simpel obligationsregning  
-- Risiko/afkast-intuition, grundlæggende porteføljeteori  
-- Simpel regressionsforståelse (til empiriske eksempler)
+### Kurset: Fra grundlæggende teori til praksis {background="#43464B"}
 
-#### Hvad er fokus i **Finansiering** (mit kursus)?
-- Fastforrentede aktiver & rentestruktur  
+#### Hvilke kompetencer forventer jeg fra jer? 
+- Matematik B 
+- Grundlæggende forståelse for samfundsøkonomi 
+- Evnen til at fordybe sig i pensum (surpirse)
+
+#### Hvad er fokus i **Finansiering** (min del)?
+- Fastforrentede obligationer & rentestruktur  
 - Renterisiko (varighed/konveksitet, nøglerenter)  
 - Dansk realkredit (match-funding, konvertering, CPR)  
-- Prisfastsættelse: fra cashflows til OAS  
-- Performance: afkastopgørelse & attribution (FIPA)  
-- Regulering & case-studies (GFC, SVB, Basel, dansk kontekst)
+- Prisfastsættelse af obligationer
+- Performance: afkastopgørelse & dekomponering
+- Regulering & case-studies (finanskrisen mm.)
 
 #### Hovedblokke
 
@@ -70,81 +78,86 @@ open-graph:
 3. **Renterisiko** (varighed, konveksitet, delta-vektorer)  
 4. **Dansk realkredit** (marked, lovgivning, produkter, konvertering)  
 5. **Prisfastsættelse & OAS**  
-6. **Performanceevaluering** (HPR, attribution)  
+6. **Performanceevaluering** (HPR, dekomponering)  
 7. **Regulering & kriser** (før/efter 2008, SVB-case, “kan det ske igen?”)
 
 . . .
 
-Vi når mere, hvis tiden tillader det.
+...Når vi det hele??
 
-#### Skal du tage faget?
+#### Vil du synes denne del af faget er fedt?
 
 Ja, hvis du…  
-- vil kunne **læse, handle og risikostyre** fixed-income produkter  
-- skal arbejde med **bank, realkredit, ALM, risk eller asset management**  
-- vil forstå **rentechok** og deres effekt på værdier og kapital
 
-## Kursuslogistik {background="#00100F"}
+ - en gang **selv skal købe** en bolig og finansiere det igennem realkreditmarkedet
+ - ønsker at forstå de risici investorer og boligejere står over for, når man er i det danske boligmarked
+ - vil forstå, hvordan ændringer i økonomien kan påvirke prisen **på dit lån** igennem renten
+ - hvorfor finanskrisen i 2008 skete, og hvilke eftervirkninger det har bragt med sig i form af regulering 
+ - gerne vil have et indblik i **et af de sværeste** finansielle instrumenter at prise! 
 
-### Organisation & evaluering {background="#43464B"}
+## Lidt praktisk om kurset {background="#00100F"}
+
+### Lokale/tider/format & eksamen {background="#43464B"}
 
 #### Mødetider
-- Forelæsninger: **TBA**  
-- Øvelser/case-sessions: **TBA**  
+- Forelæsninger: **tirsdag kl 08:15 til 10:00 og torsdag 14:15 til 16:00**  
+- Øvelser: **sammen med Henning og Visti**
 <div style="border: 2px solid #ccc; padding: 9px; border-radius: 15px; margin-bottom: 10px;">
-Ændringer annonceres på LMS (Absalon/eCampus) og i timen
+Ændringer annonceres på Brightspace og i timen
 </div>
 
 #### Format
-- Forelæsninger med **blandede** teoretiske og empiriske eksempler  
-- Øvelser med **beregninger & case** (Excel + Python er velkomne, men ikke påkrævet)  
-- Aktiv deltagelse anbefales (spørg i timen, før/efter, eller til kontortid)
+- Forelæsninger består af intuitiv gennemgang af pensum med **blandede** teoretiske og praktiske eksempler  
+- Nogle gange vil der vises opgaver med Excel + Excel med solveropgaver - **forventes også i kan til eksamen og opgavesættene!**
+- Aktiv deltagelse anbefales (spørg i timen, før/efter, eller over mail)
 
 #### Bedømmelse
 <div style="border: 2px solid #ccc; padding: 9px; border-radius: 15px; margin-bottom: 10px;">
-Skriftlig eksamen (format & hjælpemidler: annonceres)
+Skriftlig eksamen (format & hjælpemidler: 4 timer, med hjælpemidler, dog ikke internet (.. og jeg jagter jer i efterlivet, hvis i bruger AI!))
 </div>
 - Dato: annonceres af eksamenskontoret  
 - Forberedelse: forelæsninger, øvelser, opgavesæt og noter
 
 ### Kursusmaterialer {background="#43464B"}
 
-#### Primært
-- **Lektionsnoter i finansiering (2025)** — kursuskompendium med fokus på:  
-  - Renter & obligationer, rentestruktur, varighed/konveksitet  
-  - Dansk realkredit & konvertering  
-  - Prisfastsættelse (swap-/refikurve, OAS)  
-  - Performanceattribution & regulering
+#### Det primære pensum
+- **Lektionsnoter i finansiering (2025)** — mit eget hjemmelavet kursuskompendium med fokus på de forrige nævnte emner. 
+- **Fundamentals of Corporate Finance af Berk, DeMarzo og Harfor** — primært til 1 del. Der kan findes lidt om renter og obligationer
+
 
 . . .
 
-**Supplerende bøger** (kapitelvalg meldes løbende):
-- Fabozzi, *Bond Markets, Analysis, and Strategies*  
-- Tuckman & Serrat, *Fixed Income Securities*  
-- Hull, *Options, Futures, and Other Derivatives* (uddrag til OAS/risiko)  
+**Supplerende bøger for absurde tryhards** 
 
-**Data & værktøjer**:
-- Offentlige kilder (fx DST, Nationalbanken), handelsdata (fx kurslister), Excel/Python
+- Tanggaard, *Finansielle instrumenter og deres markeder*  
+- Just Andresen, *Finansiel risikostyring*  
+- Christensen, *Obligationsinvestering: Teori og praktisk anvendelse* 
+- Rom, *Callable Mortgage Bonds*
 
 #### Smagsprøve på centrale formler
-- Pris (kupon): \( P = \sum_{t=1}^{N} \frac{C}{(1+y)^t} + \frac{FV}{(1+y)^N} \)  
-- Varighed (Macaulay): \( D = \frac{ \sum_{t=1}^{N} t \cdot \frac{CF_t}{(1+y)^t} }{P} \)  
-- Konveksitet (skitse): \( \mathcal{C} \approx \frac{ \sum t(t+1)\frac{CF_t}{(1+y)^{t+2}} }{P} \)
+- Pris (kupon): $P = \sum_{t=1}^{N} \frac{C}{(1+y)^t} + \frac{FV}{(1+y)^N}$
 
-### Hvor passer kurset ind? {background="#43464B"}
+<br>
 
-#### Komplementære fag
-- Investering/Porteføljeteori, Økonometri (empiri til rentekurver/risikomål)  
-- Penge/Bank & Regulering (Basel, IRRBB, SREP m.m.)  
-- Makro/pengepolitik (renter, inflation, kurvebevægelser)
+- Kronevarigheden: $(d) = \frac{D}{1+r}\cdot \frac{\text{Kurs}}{100} = MD \cdot \frac{\text{Kurs}}{100}$
+
+<br>
+
+- Kronekonveksitet: $(C) = \frac{\sum_{t=1}^{N} (t^2+t) c_t (1+r)^t}{(1+r)^2} \cdot 0.01^2$
+
+<br>
+
+- Gevinstkrav: $Gain = \frac{PV_{continue}-100\cdot(1+cost)}{PV_{continue}}\label{eq:kap6_RK_GainFormula2}$
+
+
+### Hvordan er min del til eksamen? {background="#43464B"}
+
+#### Eksamensstruktur
+- Opgaver der rører dit og dat fra min del.. Så vidt muligt
+- Min del af faget er ret ungt, jeg kan sagtens finde på at ændre strukturen og måden at stille spørgsmål på i år relativ til sidste år. (Samme forventninger!)
+- I får en ny og mock-eksamen sammen med det gamle eksamenset (i har fået ordinær - i vil også få re-eksamen). Meget repræsentativ for i år også. Men jeg kan altid få gode nye ideér :-) 
 
 . . .
 
-Lavt overlap — fokus på **værdiansættelse, risiko og praksis** i fixed income.
+Fokus på intuition! Men i *skal* også kunne regne. Jeg er dog en pragmatiker! 
 
-## Referencer {.allowframebreaks visibility="uncounted"}
-
-- Lektionsnoter i finansiering (2025)  
-- Fabozzi — *Bond Markets, Analysis, and Strategies*  
-- Tuckman & Serrat — *Fixed Income Securities*  
-- Hull — *Options, Futures, and Other Derivatives*  

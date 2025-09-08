@@ -53,12 +53,8 @@
     "objectID": "slides/organizational/intro.html#indhold-og-motivation",
     "href": "slides/organizational/intro.html#indhold-og-motivation",
     "title": "Kursusintroduktion",
-    "section": "Indhold og Motivation",
-    "text": "Indhold og Motivation",
-    "crumbs": [
-      "Lectures",
-      "Kursusintroduktion"
-    ]
+    "section": "Indhold og motivation",
+    "text": "Indhold og motivation"
   },
   {
     "objectID": "slides/organizational/intro.html#kursuslogistik",
@@ -76,10 +72,69 @@
     "href": "slides/organizational/intro.html#referencer",
     "title": "Kursusintroduktion",
     "section": "Referencer",
-    "text": "Referencer\n\nLektionsnoter i finansiering (2025)\n\nFabozzi — Bond Markets, Analysis, and Strategies\n\nTuckman & Serrat — Fixed Income Securities\n\nHull — Options, Futures, and Other Derivatives",
-    "crumbs": [
-      "Lectures",
-      "Kursusintroduktion"
-    ]
+    "text": "Referencer\n\nLektionsnoter i finansiering (2025)\n\nFabozzi — Bond Markets, Analysis, and Strategies\n\nTuckman & Serrat — Fixed Income Securities\n\nHull — Options, Futures, and Other Derivatives"
+  },
+  {
+    "objectID": "slides/organizational/intro.html#lidt-praktisk-om-kurset",
+    "href": "slides/organizational/intro.html#lidt-praktisk-om-kurset",
+    "title": "Kursusintroduktion",
+    "section": "Lidt praktisk om kurset",
+    "text": "Lidt praktisk om kurset"
+  },
+  {
+    "objectID": "slides/Rentedannelse/entedannelsen.html#introduktion",
+    "href": "slides/Rentedannelse/entedannelsen.html#introduktion",
+    "title": "Rentedannelsen",
+    "section": "Introduktion",
+    "text": "Introduktion"
+  },
+  {
+    "objectID": "slides/Rentedannelse/entedannelsen.html#byggesten-i-den-nominelle-rente",
+    "href": "slides/Rentedannelse/entedannelsen.html#byggesten-i-den-nominelle-rente",
+    "title": "Rentedannelsen",
+    "section": "Byggesten i den nominelle rente",
+    "text": "Byggesten i den nominelle rente"
+  },
+  {
+    "objectID": "slides/Rentedannelse/entedannelsen.html#lånekapital-udbud-efterspørgsel",
+    "href": "slides/Rentedannelse/entedannelsen.html#lånekapital-udbud-efterspørgsel",
+    "title": "Rentedannelsen",
+    "section": "Lånekapital: udbud & efterspørgsel",
+    "text": "Lånekapital: udbud & efterspørgsel"
+  },
+  {
+    "objectID": "slides/Rentedannelse/entedannelsen.html#pengepolitik-og-kort-rente",
+    "href": "slides/Rentedannelse/entedannelsen.html#pengepolitik-og-kort-rente",
+    "title": "Rentedannelsen",
+    "section": "Pengepolitik og kort rente",
+    "text": "Pengepolitik og kort rente"
+  },
+  {
+    "objectID": "slides/Rentedannelse/entedannelsen.html#forventninger-og-rentestruktur-uden-at-gå-dybt-i-forwards",
+    "href": "slides/Rentedannelse/entedannelsen.html#forventninger-og-rentestruktur-uden-at-gå-dybt-i-forwards",
+    "title": "Rentedannelsen",
+    "section": "Forventninger og rentestruktur (uden at gå dybt i forwards)",
+    "text": "Forventninger og rentestruktur (uden at gå dybt i forwards)"
+  },
+  {
+    "objectID": "slides/Rentedannelse/entedannelsen.html#risikopræmier-kort",
+    "href": "slides/Rentedannelse/entedannelsen.html#risikopræmier-kort",
+    "title": "Rentedannelsen",
+    "section": "Risikopræmier (kort)",
+    "text": "Risikopræmier (kort)"
+  },
+  {
+    "objectID": "slides/Rentedannelse/entedannelsen.html#øvelser-tænk-selv",
+    "href": "slides/Rentedannelse/entedannelsen.html#øvelser-tænk-selv",
+    "title": "Rentedannelsen",
+    "section": "Øvelser / “tænk selv”",
+    "text": "Øvelser / “tænk selv”"
+  },
+  {
+    "objectID": "slides/Rentedannelse/entedannelsen.html#opsummering",
+    "href": "slides/Rentedannelse/entedannelsen.html#opsummering",
+    "title": "Rentedannelsen",
+    "section": "Opsummering",
+    "text": "Opsummering"
   }
 ]

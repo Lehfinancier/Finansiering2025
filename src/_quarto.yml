@@ -1,19 +1,11 @@
 project:
   type: website
-  output-dir: docs
+  output-dir:  ../docs/
 
 html-math-method: mathjax
 
-#filters:
-  #- diagram  
-  #- reveal-header
-#diagram:
- # engine:
-  #  tikz:
-   #   execpath: pdflatex
-    #  header-includes:
-     #   - '\usepackage{adjustbox}'
-      #  - '\usetikzlibrary{arrows,shapes.arrows,shapes.geometric,shapes.multipart,decorations.pathmorphing,positioning,swigs}' 
+execute:
+  freeze: auto
 
 website:
   title: "Finansiering 2025"
@@ -25,26 +17,32 @@ website:
     style: floating
     search: true
     contents:
-      - index.qmd
+      - src/index.qmd
       - section: "Lectures"
         contents:
-          - slides/organizational/intro.qmd
+          - src/slides/organizational/intro.qmd
       - section: "Exercises"
         contents:
-          - exercises/ex01.qmd
+          - src/exercises/ex01.qmd
       - section: "Course Info"
         contents:
-          - syllabus.qmd
-
-execute:
-  freeze: auto  # re-render only when source changes
+          - src/syllabus.qmd
 
 format:
   html:
-    include-in-header: themes/mathjax.html
+    include-in-header: ../themes/mathjax.html
     theme:
       light: [themes/ws_light.scss, themes/block.scss]
-      dark: [themes/ws_dark.scss, themes/block.scss]  
+      dark:  [themes/ws_dark.scss, themes/block.scss]
+
+  revealjs:
+    include-in-header: themes/mathjax.html
+    slide-number: true
+    incremental: true
+    toc: true
+    toc-depth: 2
+    transition: convex
+    transition-speed: fast
 
 bibliography: eco.bib
 

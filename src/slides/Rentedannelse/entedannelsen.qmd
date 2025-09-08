@@ -1,0 +1,238 @@
+---
+title: "Rentedannelsen"
+subtitle: "Hvor kommer renter fra – og hvorfor bevæger de sig?"
+author: "Niklas Lehmann Jensen"
+jupyter: python3
+format:
+  revealjs:
+    width: 1150
+    logo: ../../themes/favicon.ico
+    footer: "Finansiering — Rentedannelsen"
+    footer-logo-link: "#"
+    theme: ../../themes/slides_themes.scss
+slide-level: 4
+title-slide-attributes:
+  data-background-color: "#045D5D"
+  data-footer: " "
+execute:
+  echo: true
+  warning: false
+  error: false
+---
+
+## Introduktion {background="#00100F"}
+
+#### Læringsmål {background="#43464B"}
+- Forstå **byggestenene** i den nominelle rente  
+- Se hvordan **forventninger** og **risikopræmier** spiller ind  
+- Få **intuition** via simple Python-demoer (uden tunge modeller)  
+- Kunne forklare “**hvorfor** steg/faldt renten?” på 1 slide
+
+#### Hvorfor findes renter?  {background="#43464B"}
+- Tidspreference (*forbrug nu vs. senere*)
+- Forventet inflation
+- Risiko og usikkerhed
+- Alternativomkostning / knaphed på kapital
+
+## Byggesten i den nominelle rente {background="#00100F"}
+
+#### Grundformel (intuition) {background="#43464B"}
+Den (årlige) **nominelle** rente kan groft tænkes som:
+\[
+i \approx r^\* + \pi^{e} + \text{term premium} + \text{risikopræmier}
+\]
+- \(r^\*\): “neutral” realrente (langsigtet balance mellem opsparing/investering)  
+- \(\pi^{e}\): forventet inflation  
+- Term premium: kompensation for varighed/kurverisiko  
+- Øvrige præmier: kredit, likviditet, skat/regulering, tekniske forhold
+
+#### Hurtig dekomponering (syntetisk eksempel)
+```{python}
+import numpy as np
+import matplotlib.pyplot as plt
+
+labels = ["r*", "Forv. inflation", "Term premium", "Øvrige præmier"]
+vals   = np.array([0.0075, 0.02, 0.005, 0.002])  # 0.75%, 2.0%, 0.5%, 0.2%
+i_nom  = vals.sum()
+
+fig, ax = plt.subplots()
+ax.bar(labels, vals*100)
+ax.set_ylabel("Bidrag (pct.point)")
+ax.set_title(f"Nominel rente ≈ {i_nom*100:.2f}% (syntetisk)")
+for idx,v in enumerate(vals):
+    ax.text(idx, v*100, f"{v*100:.2f}%", ha="center", va="bottom")
+plt.xticks(rotation=15)
+plt.tight_layout()
+plt.show()
+```
+
+## Lånekapital: udbud & efterspørgsel {background="#00100F"}
+
+#### Markedsskitse (loanable funds) {background="#43464B"}
+- **Udbud**: opsparing/likviditet → stigende i renten  
+- **Efterspørgsel**: investering/lån → faldende i renten  
+- **Ligevægt**: skærer hinanden → “markedsrenten” (kortsigtet intuition)
+
+```{python}
+import numpy as np
+import matplotlib.pyplot as plt
+
+r = np.linspace(-0.01, 0.05, 200)           # rente-akse
+S0 = -50 + 3000*(r+0.01)                    # udbud (lineær, stigende)
+D0 = 250 - 2500*(r+0.01)                    # efterspørgsel (lineær, faldende)
+
+fig, ax = plt.subplots()
+ax.plot(r*100, S0, label="Udbud")
+ax.plot(r*100, D0, label="Efterspørgsel")
+# find skæringspunkt
+idx = np.argmin(np.abs(S0-D0))
+ax.scatter([r[idx]*100], [S0[idx]], marker="o")
+ax.annotate(f"Ligevægt\nr≈{r[idx]*100:.2f}%", (r[idx]*100, S0[idx]), xytext=(10,10), textcoords="offset points")
+ax.set_xlabel("Rente (%)")
+ax.set_ylabel("Mængde (indeks)")
+ax.set_title("Lånekapital-marked (intuition)")
+ax.legend()
+ax.grid(True)
+plt.tight_layout()
+plt.show()
+```
+
+#### Efterspørgselsskift (konjunktur/skat/regulering)
+```{python}
+import numpy as np
+import matplotlib.pyplot as plt
+
+r = np.linspace(-0.01, 0.05, 200)
+S0 = -50 + 3000*(r+0.01)
+D0 = 250 - 2500*(r+0.01)
+D1 = 300 - 2500*(r+0.01)   # højere investeringslyst (efterspørgsel ud til højre)
+
+fig, ax = plt.subplots()
+ax.plot(r*100, S0, label="Udbud")
+ax.plot(r*100, D0, label="Efterspørgsel (før)")
+ax.plot(r*100, D1, label="Efterspørgsel (efter)", linestyle="--")
+
+idx0 = np.argmin(np.abs(S0-D0))
+idx1 = np.argmin(np.abs(S0-D1))
+ax.scatter([r[idx0]*100], [S0[idx0]], marker="o")
+ax.scatter([r[idx1]*100], [S0[idx1]], marker="o")
+
+ax.annotate(f"r≈{r[idx0]*100:.2f}%", (r[idx0]*100, S0[idx0]), xytext=(5,-25), textcoords="offset points")
+ax.annotate(f"r≈{r[idx1]*100:.2f}%", (r[idx1]*100, S0[idx1]), xytext=(5,10), textcoords="offset points")
+
+ax.set_xlabel("Rente (%)"); ax.set_ylabel("Mængde (indeks)")
+ax.set_title("Skift i efterspørgsel → højere ligevægtsrente")
+ax.legend(); ax.grid(True)
+plt.tight_layout(); plt.show()
+```
+
+## Pengepolitik og kort rente {background="#00100F"}
+
+#### Centralbankens rolle (intuitivt) {background="#43464B"}
+- Styrer **kort** rente via politikrenten  
+- Reagerer typisk på **inflation** og **kapacitet/aktivitet**  
+- Ingen detaljeret historik – fokus på **intuition**
+
+#### Mini-Taylor-regel (legetøjsmodel)
+\[
+i_t = r^\* + \pi_t + \phi_\pi(\pi_t-\pi^\*) + \phi_y\,gap_t
+\]
+```{python}
+import numpy as np
+import matplotlib.pyplot as plt
+
+T = 32
+pi_star = 0.02
+r_star  = 0.0075
+phi_pi, phi_y = 1.5, 0.5
+
+# simple scenarie: inflation falder fra 3% → 2%; output-gap normaliseres
+pi = np.linspace(0.03, 0.02, T)
+gap = np.linspace(0.01, 0.0, T)
+
+i = r_star + pi + phi_pi*(pi - pi_star) + phi_y*gap
+
+fig, ax = plt.subplots()
+ax.plot(np.arange(T), pi*100, label="Inflation (%)")
+ax.plot(np.arange(T), gap*100, label="Output-gap (%)")
+ax.plot(np.arange(T), i*100, label="Politikrente (%)")
+ax.set_title("Mini-Taylor-regel (illustration)")
+ax.set_xlabel("Tid (kvartaler)")
+ax.grid(True); ax.legend()
+plt.tight_layout(); plt.show()
+```
+
+## Forventninger og rentestruktur (uden at gå dybt i forwards) {background="#00100F"}
+
+#### Intuition: forventet sti for korte renter + term premium {background="#43464B"}
+- Længere løbetider ≈ gennemsnit af **forventede** korte renter + **term premium**  
+- **Term premium** varierer (risiko/appetit, QE/QT, efterspørgsel efter varighed)
+
+#### Demo: konstruér simpelt rentekurvesnit
+```{python}
+import numpy as np
+import matplotlib.pyplot as plt
+
+# forventede korte renter næste 10 år (årligt)
+years = np.arange(1, 11)
+exp_short = 0.02 + 0.003*np.exp(-0.4*(years-1))  # starter lidt højere og falder mod 2%
+
+# term premium kurve (stigende med løbetid)
+tp = 0.002 + 0.0003*years
+
+# spotrenter (enkelt gennemsnit af forventede korte + TP)
+spot = np.array([exp_short[:n].mean() + tp[n-1] for n in years])
+
+fig, ax = plt.subplots()
+ax.plot(years, np.array([exp_short[:n].mean() for n in years])*100, label="Gns. forventet kort rente")
+ax.plot(years, tp*100, label="Term premium (antaget)")
+ax.plot(years, spot*100, label="Spot (≈ sum)")
+ax.set_xlabel("Løbetid (år)"); ax.set_ylabel("Rente (%)")
+ax.set_title("Simpel rentestruktur via forventninger + term premium")
+ax.grid(True); ax.legend()
+plt.tight_layout(); plt.show()
+```
+
+#### Scenarie: højere term premium ⇒ stejlere kurve
+```{python}
+import numpy as np
+import matplotlib.pyplot as plt
+
+years = np.arange(1, 11)
+exp_short = 0.02 + 0.003*np.exp(-0.4*(years-1))
+tp = 0.002 + 0.0003*years
+tp2 = tp + 0.003   # højere præmie hele vejen
+spot = np.array([exp_short[:n].mean() + tp[n-1] for n in years])
+spot2 = np.array([exp_short[:n].mean() + tp2[n-1] for n in years])
+
+fig, ax = plt.subplots()
+ax.plot(years, spot*100, label="Spot (baseline)")
+ax.plot(years, spot2*100, label="Spot (højere TP)", linestyle="--")
+ax.set_xlabel("Løbetid (år)"); ax.set_ylabel("Rente (%)")
+ax.set_title("Højere term premium → stejlere kurve")
+ax.grid(True); ax.legend()
+plt.tight_layout(); plt.show()
+```
+
+## Risikopræmier (kort) {background="#00100F"}
+
+#### Hvad kan udvide renter ud over stats/swap? {background="#43464B"}
+- **Kreditpræmie** (modparts-/default-risiko)  
+- **Likviditetspræmie** (omsættelighed, haircuts, balance sheet-omkostninger)  
+- **Regulering/skat** (kapitalkrav, repo-markeder, skattemæssige forhold)  
+- **Tekniske forhold** (udbud/efterspørgsel efter varighed, benchmark flows)
+
+## Øvelser / “tænk selv” {background="#00100F"}
+
+#### Miniopgaver {background="#43464B"}
+1. En analytiker siger: “Renten steg pga. højere inflation.” Hvilken **byggesten** peger det på – og hvad med de andre?  
+2. Vis med koden: Hvis \(\pi^{e}\) falder 0.5 pct.point, hvad sker der med den **nominelle** rente i din dekomponering?  
+3. Brug “forventninger + term premium”-demoen: Lav en kurve med **inverteret** form – hvilke antagelser kræver det?
+
+## Opsummering {background="#00100F"}
+
+#### Takeaways {background="#43464B"}
+- Nominel rente = realt fundament + forventet inflation + præmier  
+- Korte renter: pengepolitik / reaktion på inflation/aktivitet  
+- Længere renter: forventninger til korte + term premium  
+- Præmier bevæger sig med risiko, likviditet og regel-/markedsforhold

@@ -121,7 +121,82 @@
       margin-right: 0; 
     }
   </style>
+  <!-- MathJax v3 config MUST come before the loader -->
+
+  <script>
+
+    window.MathJax = {
+
+      tex: {
+
+        inlineMath: [['$', '$'], ['\\(', '\\)']],
+
+        displayMath: [['$$', '$$'], ['\\[', '\\]']],
+
+        tags: 'ams',
+
+        macros: {
+
+          vect: ["\\mathbf{#1}", 1],
+
+          mat: ["\\mathbf{#1}", 1],
+
   
+
+          bA: "\\boldsymbol{A}", bB: "\\boldsymbol{B}", bC: "\\boldsymbol{C}",
+
+          bD: "\\boldsymbol{D}", bE: "\\boldsymbol{E}", bF: "\\boldsymbol{F}",
+
+          bG: "\\boldsymbol{G}", bH: "\\boldsymbol{H}", bI: "\\boldsymbol{I}",
+
+          bJ: "\\boldsymbol{J}", bK: "\\boldsymbol{K}", bL: "\\boldsymbol{L}",
+
+          bM: "\\boldsymbol{M}", bN: "\\boldsymbol{N}", bO: "\\boldsymbol{O}",
+
+          bP: "\\boldsymbol{P}", bQ: "\\boldsymbol{Q}", bR: "\\boldsymbol{R}",
+
+          bS: "\\boldsymbol{S}", bT: "\\boldsymbol{T}", bU: "\\boldsymbol{U}",
+
+          bV: "\\boldsymbol{V}", bW: "\\boldsymbol{W}", bX: "\\boldsymbol{X}",
+
+          bY: "\\boldsymbol{Y}", bZ: "\\boldsymbol{Z}",
+
+  
+
+          balpha: "\\boldsymbol{\\alpha}",  bbeta: "\\boldsymbol{\\beta}",
+
+          bgamma: "\\boldsymbol{\\gamma}",  bdelta: "\\boldsymbol{\\delta}",
+
+          blambda: "\\boldsymbol{\\lambda}", bmu: "\\boldsymbol{\\mu}",
+
+          brho: "\\boldsymbol{\\rho}", bsigma: "\\boldsymbol{\\sigma}",
+
+          btheta: "\\boldsymbol{\\theta}", bphi: "\\boldsymbol{\\phi}",
+
+  
+
+          abs: ["\\left\\lvert #1 \\right\\rvert", 1],
+
+          norm: ["\\left\\lVert #1 \\right\\rVert", 1],
+
+          argmin: "\\operatorname*{argmin}",
+
+          argmax: "\\operatorname*{argmax}",
+
+          var: "\\mathrm{var}",
+
+          cov: "\\mathrm{cov}"
+
+        }
+
+      }
+
+    };
+
+  </script>
+
+  <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+
   <meta name="description" content="Kursusintroduktion til Finansiering (fixed income, renterisiko, realkredit, performanceattribution og regulering).">
 <meta property="og:title" content="Kursusintroduktion – Finansiering 2025">
 <meta property="og:description" content="Kursusintroduktion til Finansiering (fixed income, renterisiko, realkredit, performanceattribution og regulering).">
@@ -147,57 +222,59 @@ Niklas Lehmann Jensen
 <nav role="doc-toc"> 
 <h2 id="toc-title">Indhold</h2>
 <ul>
-<li class="fragment"><a href="#/indhold-og-motivation" id="/toc-indhold-og-motivation">Indhold og Motivation</a></li>
-<li class="fragment"><a href="#/kursuslogistik" id="/toc-kursuslogistik">Kursuslogistik</a></li>
+<li class="fragment"><a href="#/indhold-og-motivation" id="/toc-indhold-og-motivation">Indhold og motivation</a></li>
+<li class="fragment"><a href="#/lidt-praktisk-om-kurset" id="/toc-lidt-praktisk-om-kurset">Lidt praktisk om kurset</a></li>
 <li class="fragment"><a href="#/referencer" id="/toc-referencer">Referencer</a></li>
 </ul>
 </nav>
 </section>
 <section>
 <section id="indhold-og-motivation" class="title-slide slide level2 center" data-background="#00100F">
-<h2>Indhold og Motivation</h2>
+<h2>Indhold og motivation</h2>
 
 </section>
 <section id="om-mig" class="slide level4">
 <h4>Om mig</h4>
-<strong>Underviser</strong>: Niklas Lehmann Jensen<br>
-- Fokus: fixed income, renterisiko, realkredit, regulering<br>
-- Email:
-<p style="font-family: 'Courier New', Courier, monospace;">
-TBA
-</p>
 <ul>
-<li class="fragment">Kontor &amp; træffetider: TBA (efter aftale)</li>
+<li class="fragment">cand.oecon fra Aarhus Universitet i 2021</li>
+<li class="fragment">Arbejdsrefaring:</li>
+<li class="fragment">Studentermedhjælper og portefølje analytiker i Sydbanks kapitalforvaltning (2018-2022)</li>
+<li class="fragment">Analytiker i Sydbanks afdeling for risikomodeller (2022-2023)</li>
+<li class="fragment">Senior analytiker i Scanrate (2023-)</li>
+<li class="fragment">Lektor i matematik og makroøkonomi på SDU (2022-2024)</li>
+<li class="fragment">Lektor i finanisiering på AU (2024-)</li>
+<li class="fragment">Fokus: fixed income, realkredit, finansiel matematik, programmering..</li>
+<li class="fragment">Email:
+<p style="font-family: 'Courier New', Courier, monospace;">
+nlj@econ.au.dk
+</p></li>
+<li class="fragment">“Kontor” &amp; træffetider: I er velkommen til at skrive en mail 24/7</li>
 </ul>
 </section>
-<section id="kurset-fra-grundlæggende-finans-til-praksis" class="title-slide slide level3 center" data-background="#43464B">
-<h3>Kurset: Fra grundlæggende finans til praksis</h3>
+<section id="kurset-fra-grundlæggende-teori-til-praksis" class="title-slide slide level3 center" data-background="#43464B">
+<h3>Kurset: Fra grundlæggende teori til praksis</h3>
 
 </section>
-<section id="hvad-forventes-kendt-fra-basisfag" class="slide level4">
-<h4>Hvad forventes kendt fra basisfag?</h4>
+<section id="hvilke-kompetencer-forventer-jeg-fra-jer" class="slide level4">
+<h4>Hvilke kompetencer forventer jeg fra jer?</h4>
 <ul>
-<li class="fragment">Nutidsværdi &amp; diskontering, simpel obligationsregning<br>
-</li>
-<li class="fragment">Risiko/afkast-intuition, grundlæggende porteføljeteori<br>
-</li>
-<li class="fragment">Simpel regressionsforståelse (til empiriske eksempler)</li>
+<li class="fragment">Matematik B</li>
+<li class="fragment">Grundlæggende forståelse for samfundsøkonomi</li>
+<li class="fragment">Evnen til at fordybe sig i pensum (surpirse)</li>
 </ul>
 </section>
-<section id="hvad-er-fokus-i-finansiering-mit-kursus" class="slide level4">
-<h4>Hvad er fokus i <strong>Finansiering</strong> (mit kursus)?</h4>
+<section id="hvad-er-fokus-i-finansiering-min-del" class="slide level4">
+<h4>Hvad er fokus i <strong>Finansiering</strong> (min del)?</h4>
 <ul>
-<li class="fragment">Fastforrentede aktiver &amp; rentestruktur<br>
+<li class="fragment">Fastforrentede obligationer &amp; rentestruktur<br>
 </li>
 <li class="fragment">Renterisiko (varighed/konveksitet, nøglerenter)<br>
 </li>
 <li class="fragment">Dansk realkredit (match-funding, konvertering, CPR)<br>
 </li>
-<li class="fragment">Prisfastsættelse: fra cashflows til OAS<br>
-</li>
-<li class="fragment">Performance: afkastopgørelse &amp; attribution (FIPA)<br>
-</li>
-<li class="fragment">Regulering &amp; case-studies (GFC, SVB, Basel, dansk kontekst)</li>
+<li class="fragment">Prisfastsættelse af obligationer</li>
+<li class="fragment">Performance: afkastopgørelse &amp; dekomponering</li>
+<li class="fragment">Regulering &amp; case-studies (finanskrisen mm.)</li>
 </ul>
 </section>
 <section id="hovedblokke" class="slide level4">
@@ -213,57 +290,53 @@ TBA
 </li>
 <li class="fragment"><strong>Prisfastsættelse &amp; OAS</strong><br>
 </li>
-<li class="fragment"><strong>Performanceevaluering</strong> (HPR, attribution)<br>
+<li class="fragment"><strong>Performanceevaluering</strong> (HPR, dekomponering)<br>
 </li>
 <li class="fragment"><strong>Regulering &amp; kriser</strong> (før/efter 2008, SVB-case, “kan det ske igen?”)</li>
 </ol>
 <div class="fragment">
-<p>Vi når mere, hvis tiden tillader det.</p>
+<p>…Når vi det hele??</p>
 </div>
 </section>
-<section id="skal-du-tage-faget" class="slide level4">
-<h4>Skal du tage faget?</h4>
+<section id="vil-du-synes-denne-del-af-faget-er-fedt" class="slide level4">
+<h4>Vil du synes denne del af faget er fedt?</h4>
 <p>Ja, hvis du…<br>
-- vil kunne <strong>læse, handle og risikostyre</strong> fixed-income produkter<br>
-- skal arbejde med <strong>bank, realkredit, ALM, risk eller asset management</strong><br>
-- vil forstå <strong>rentechok</strong> og deres effekt på værdier og kapital</p>
+- en gang <strong>selv skal købe</strong> en bolig og finansiere det igennem realkreditmarkedet - ønsker at forstå de risici investorer og boligejere står over for, når man er i det danske boligmarked - vil forstå, hvordan ændringer i økonomien kan påvirke prisen <strong>på dit lån</strong> igennem renten - hvorfor finanskrisen i 2008 skete, og hvilke eftervirkninger det har bragt med sig i form af regulering - gerne vil have et indblik i <strong>et af de sværeste</strong> finansielle instrumenter at prise!</p>
 </section>
 </section>
 <section>
-<section id="kursuslogistik" class="title-slide slide level2 center" data-background="#00100F">
-<h2>Kursuslogistik</h2>
+<section id="lidt-praktisk-om-kurset" class="title-slide slide level2 center" data-background="#00100F">
+<h2>Lidt praktisk om kurset</h2>
 
 </section>
-<section id="organisation-evaluering" class="title-slide slide level3 center" data-background="#43464B">
-<h3>Organisation &amp; evaluering</h3>
+<section id="lokaletiderformat-eksamen" class="title-slide slide level3 center" data-background="#43464B">
+<h3>Lokale/tider/format &amp; eksamen</h3>
 
 </section>
 <section id="mødetider" class="slide level4">
 <h4>Mødetider</h4>
 <ul>
-<li class="fragment">Forelæsninger: <strong>TBA</strong><br>
+<li class="fragment">Forelæsninger: <strong>tirsdag kl 08:15 til 10:00 og torsdag 14:15 til 16:00</strong><br>
 </li>
-<li class="fragment">Øvelser/case-sessions: <strong>TBA</strong><br>
-
+<li class="fragment">Øvelser: <strong>sammen med Henning og Visti</strong>
 <div style="border: 2px solid #ccc; padding: 9px; border-radius: 15px; margin-bottom: 10px;">
-<p>Ændringer annonceres på LMS (Absalon/eCampus) og i timen</p>
+<p>Ændringer annonceres på Brightspace og i timen</p>
 </div></li>
 </ul>
 </section>
 <section id="format" class="slide level4">
 <h4>Format</h4>
 <ul>
-<li class="fragment">Forelæsninger med <strong>blandede</strong> teoretiske og empiriske eksempler<br>
+<li class="fragment">Forelæsninger består af intuitiv gennemgang af pensum med <strong>blandede</strong> teoretiske og praktiske eksempler<br>
 </li>
-<li class="fragment">Øvelser med <strong>beregninger &amp; case</strong> (Excel + Python er velkomne, men ikke påkrævet)<br>
-</li>
-<li class="fragment">Aktiv deltagelse anbefales (spørg i timen, før/efter, eller til kontortid)</li>
+<li class="fragment">Nogle gange vil der vises opgaver med Excel - <strong>forventes også i kan til eksamen og opgavesættene!</strong></li>
+<li class="fragment">Aktiv deltagelse anbefales (spørg i timen, før/efter, eller over mail)</li>
 </ul>
 </section>
 <section id="bedømmelse" class="slide level4">
 <h4>Bedømmelse</h4>
 <div style="border: 2px solid #ccc; padding: 9px; border-radius: 15px; margin-bottom: 10px;">
-<p>Skriftlig eksamen (format &amp; hjælpemidler: annonceres)</p>
+<p>Skriftlig eksamen (format &amp; hjælpemidler: 4 timer, med hjælpemidler, dog ikke internet (.. og jeg jagter jer i efterlivet, hvis i bruger AI!))</p>
 </div>
 <ul>
 <li class="fragment">Dato: annonceres af eksamenskontoret<br>
@@ -279,22 +352,14 @@ TBA
 <section id="primært" class="slide level4">
 <h4>Primært</h4>
 <ul>
-<li class="fragment"><strong>Lektionsnoter i finansiering (2025)</strong> — kursuskompendium med fokus på:
-<ul>
-<li class="fragment">Renter &amp; obligationer, rentestruktur, varighed/konveksitet<br>
-</li>
-<li class="fragment">Dansk realkredit &amp; konvertering<br>
-</li>
-<li class="fragment">Prisfastsættelse (swap-/refikurve, OAS)<br>
-</li>
-<li class="fragment">Performanceattribution &amp; regulering</li>
-</ul></li>
+<li class="fragment"><strong>Lektionsnoter i finansiering (2025)</strong> — mit eget hjemmelavet kursuskompendium med fokus på de forrig nævnte emner.</li>
+<li class="fragment"><strong>Fundamentals of Corporate Finance af Berk, DeMarzo og Harfor</strong> — primært til 1 del. Der kan findes lidt om renter og obligationer</li>
 </ul>
 <div class="fragment">
-<p><strong>Supplerende bøger</strong> (kapitelvalg meldes løbende): - Fabozzi, <em>Bond Markets, Analysis, and Strategies</em><br>
-- Tuckman &amp; Serrat, <em>Fixed Income Securities</em><br>
-- Hull, <em>Options, Futures, and Other Derivatives</em> (uddrag til OAS/risiko)</p>
-<p><strong>Data &amp; værktøjer</strong>: - Offentlige kilder (fx DST, Nationalbanken), handelsdata (fx kurslister), Excel/Python</p>
+<p><strong>Supplerende bøger for absurde tryhards</strong> - Tanggaard, <em>Finansielle instrumenter og deres markeder</em><br>
+- Just Andresen, <em>Finansiel risikostyring</em><br>
+- Christensen, <em>Obligationsinvestering: Teori og praktisk anvendelse</em> - Rom, <em>Callable Mortgage Bonds</em></p>
+<p><strong>Data &amp; værktøjer</strong>: - Offentlige kilder (fx DST, Nationalbanken, World Bank, OECD..), Excel</p>
 </div>
 </section>
 <section id="smagsprøve-på-centrale-formler" class="slide level4">
@@ -308,21 +373,19 @@ TBA
 </ul>
 </section>
 
-<section id="hvor-passer-kurset-ind" class="title-slide slide level3 center" data-background="#43464B">
-<h3>Hvor passer kurset ind?</h3>
+<section id="hvordan-er-min-del-til-eksamen" class="title-slide slide level3 center" data-background="#43464B">
+<h3>Hvordan er min del til eksamen?</h3>
 
 </section>
-<section id="komplementære-fag" class="slide level4">
-<h4>Komplementære fag</h4>
+<section id="eksamensstruktur" class="slide level4">
+<h4>Eksamensstruktur</h4>
 <ul>
-<li class="fragment">Investering/Porteføljeteori, Økonometri (empiri til rentekurver/risikomål)<br>
-</li>
-<li class="fragment">Penge/Bank &amp; Regulering (Basel, IRRBB, SREP m.m.)<br>
-</li>
-<li class="fragment">Makro/pengepolitik (renter, inflation, kurvebevægelser)</li>
+<li class="fragment">Opgaver der rører dit og dat fra min del.. Så vidt muligt</li>
+<li class="fragment">Min del af faget er ret ungt, jeg kan sagtens finde på at ændre strukturen og måden at stille spørgsmål på i år relativ til sidste år. (Samme forventninger!)</li>
+<li class="fragment">I får en ny og mock-eksamen sammen med det gamle eksamenset (i har fået ordinær - i vil også få re-eksamen). Meget repræsentativ for i år også. Men jeg kan altid få gode nye ideér :-)</li>
 </ul>
 <div class="fragment">
-<p>Lavt overlap — fokus på <strong>værdiansættelse, risiko og praksis</strong> i fixed income.</p>
+<p>Fokus på intuition! Men i <em>skal</em> også kunne regne. Jeg er dog en pragmatiker!</p>
 </div>
 </section>
 </section>
@@ -626,7 +689,7 @@ TBA
         }
           var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
           var mailtoRegex = new RegExp(/^mailto:/);
-            var filterRegex = new RegExp("https:\/\/Lehfinancier\.github\.io\/Finansiering2025\/");
+            var filterRegex = new RegExp("https:\/\/lehfinancier\.github\.io\/Finansiering2025\/");
           var isInternal = (href) => {
               return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
           }
