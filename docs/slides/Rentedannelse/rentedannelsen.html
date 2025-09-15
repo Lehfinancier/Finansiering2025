@@ -6,11 +6,11 @@
 <script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
 <link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
 <link href="../../site_libs/quarto-html/light-border.css" rel="stylesheet">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-5bebdd5f6268cc26439b7804bba9c7ca.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-1fe81d0376b2c50856e68e651e390326.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
   <meta name="generator" content="quarto-1.8.23">
 
   <meta name="author" content="Niklas Lehmann Jensen">
-  <title>Finansiering 2025 – Kursusintroduktion</title>
+  <title>Finansiering 2025 – Rentedannelsen</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
@@ -29,7 +29,7 @@
       vertical-align: middle;
     }
   </style>
-  <link rel="stylesheet" href="../../site_libs/revealjs/dist/theme/quarto-45d0f61fcd1359279e98dca8884bb1e0.css">
+  <link rel="stylesheet" href="../../site_libs/revealjs/dist/theme/quarto-279b4a550040564c8397cce4518cc706.css">
   <link href="../../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
   <link href="../../site_libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
   <link href="../../site_libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
@@ -197,18 +197,14 @@
 
   <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
 
-  <meta name="description" content="Kursusintroduktion til Finansiering (fixed income, renterisiko, realkredit, performanceattribution og regulering).">
-<meta property="og:title" content="Kursusintroduktion – Finansiering 2025">
-<meta property="og:description" content="Kursusintroduktion til Finansiering (fixed income, renterisiko, realkredit, performanceattribution og regulering).">
-<meta property="og:site_name" content="Finansiering 2025">
 </head>
 <body class="quarto-light">
   <div class="reveal">
     <div class="slides">
 
 <section id="title-slide" data-background-color="#045D5D" data-footer="" class="quarto-title-block center">
-  <h1 class="title">Kursusintroduktion</h1>
-  <p class="subtitle">Finansiering — Fixed Income, Risiko &amp; Regulering</p>
+  <h1 class="title">Rentedannelsen</h1>
+  <p class="subtitle">Hvor kommer renter fra – og hvorfor bevæger de sig?</p>
 
 <div class="quarto-title-authors">
 <div class="quarto-title-author">
@@ -220,207 +216,428 @@ Niklas Lehmann Jensen
 
 </section><section id="TOC">
 <nav role="doc-toc"> 
-<h2 id="toc-title">Indhold</h2>
+<h2 id="toc-title">Table of contents</h2>
 <ul>
-<li class="fragment"><a href="#/indhold-og-motivation" id="/toc-indhold-og-motivation">Indhold og motivation</a></li>
-<li class="fragment"><a href="#/lidt-praktisk-om-kurset" id="/toc-lidt-praktisk-om-kurset">Lidt praktisk om kurset</a></li>
+<li class="fragment"><a href="#/introduktion" id="/toc-introduktion">Introduktion</a></li>
+<li class="fragment"><a href="#/rentebegreber" id="/toc-rentebegreber">Rentebegreber</a></li>
+<li class="fragment"><a href="#/direkte-rente-eksempel" id="/toc-direkte-rente-eksempel">Direkte rente – eksempel</a></li>
+<li class="fragment"><a href="#/lånekapital-udbud-efterspørgsel" id="/toc-lånekapital-udbud-efterspørgsel">Lånekapital: udbud &amp; efterspørgsel</a></li>
+<li class="fragment"><a href="#/inflation-og-rente" id="/toc-inflation-og-rente">Inflation og rente</a></li>
+<li class="fragment"><a href="#/pengepolitik-og-rentedannelse" id="/toc-pengepolitik-og-rentedannelse">Pengepolitik og rentedannelse</a></li>
+<li class="fragment"><a href="#/institutionelle-forhold-for-rentedannelsen-i-danmark" id="/toc-institutionelle-forhold-for-rentedannelsen-i-danmark">Institutionelle forhold for rentedannelsen i Danmark</a></li>
+<li class="fragment"><a href="#/renten-og-investeringer" id="/toc-renten-og-investeringer">Renten og investeringer</a></li>
+<li class="fragment"><a href="#/sammenligning-af-rentesatser-og-debitorrenten" id="/toc-sammenligning-af-rentesatser-og-debitorrenten">Sammenligning af rentesatser og debitorrenten</a></li>
+<li class="fragment"><a href="#/opsummering" id="/toc-opsummering">Opsummering</a></li>
 </ul>
 </nav>
 </section>
 <section>
-<section id="indhold-og-motivation" class="title-slide slide level2 center" data-background="#00100F">
-<h2>Indhold og motivation</h2>
+<section id="introduktion" class="title-slide slide level2 center" data-background="#00100F">
+<h2>Introduktion</h2>
 
 </section>
-<section id="om-mig-part-1" class="slide level4">
-<h4>Om mig (part 1)</h4>
+<section id="læringsmål" class="slide level4" data-background="#43464B">
+<h4>Læringsmål</h4>
 <ul>
-<li class="fragment">cand.oecon fra Aarhus Universitet i 2021</li>
-<li class="fragment">Arbejdserfaring:
+<li class="fragment">Forstå hvordan <strong>renten dannes</strong> gennem udbud, efterspørgsel og pengepolitik<br>
+</li>
+<li class="fragment">Skelne mellem <strong>nominel rente</strong>, <strong>realrente</strong> og <strong>effektiv rente (debitorrente)</strong><br>
+</li>
+<li class="fragment">Kunne forklare hvordan <strong>inflation</strong> og internationale forhold påvirker renten<br>
+</li>
+<li class="fragment">Beregne og fortolke <strong>NPV</strong> og se, hvordan små renteændringer ændrer investeringers værdi<br>
+</li>
+<li class="fragment">Anvende og sammenligne forskellige rentesatser via <strong>omregning</strong> og debitorrenten</li>
+</ul>
+</section>
+<section id="hvad-er-renter-og-hvorfor-findes-de" class="slide level4" data-background="#43464B">
+<h4>Hvad er renter, og hvorfor findes de?</h4>
 <ul>
-<li class="fragment">Studentermedhjælper og portefølje-analytiker i Sydbanks kapitalforvaltning (2018-2022)</li>
-<li class="fragment">Analytiker i Sydbanks afdeling for risikomodeller (2022-2023)</li>
-<li class="fragment">Senior analytiker i Scanrate (2023-)</li>
-<li class="fragment">Lektor i matematik og makroøkonomi på SDU (2022-2024)</li>
-<li class="fragment">Lektor i finansiering på AU (2024-)</li>
+<li class="fragment">Renter kan anskues på mange måder:
+<ul>
+<li class="fragment">“Prisen på penge”<br>
+</li>
+<li class="fragment">Gevinsten ved at udskyde forbrug og opspare<br>
+</li>
+<li class="fragment">Omkostningen ved at forbruge tidligere gennem lån<br>
+</li>
+</ul></li>
+<li class="fragment">Renten bestemmes af udbuds- og efterspørgselskræfter på kapitalmarkedet<br>
+</li>
+<li class="fragment">Der findes forskellige renter – ikke blot én!<br>
+</li>
+<li class="fragment">Renten driver prisfastsættelsen af <em>alle</em> finansielle instrumenter<br>
+</li>
+<li class="fragment">Renten fungerer som et (næsten) risikofrit alternativ, som andre aktiver prissættes i forhold til<br>
+</li>
+<li class="fragment">Alt andet lige: En aktie med en given betalingsstrøm vil falde i pris, hvis renten stiger</li>
+</ul>
+</section></section>
+<section>
+<section id="rentebegreber" class="title-slide slide level2 center" data-background="#00100F">
+<h2>Rentebegreber</h2>
+
+</section>
+<section id="centrale-begreber" class="slide level4" data-background="#43464B">
+<h4>Centrale begreber</h4>
+<ul>
+<li class="fragment"><strong>Realrente</strong>: Kompenserer for den nytte, man går glip af ved at udsætte sit forbrug<br>
+</li>
+<li class="fragment"><strong>Nominel rente</strong>: Kompenserer både for udskydelse af forbrug og for prisstigninger (inflation)<br>
+</li>
+<li class="fragment"><strong>Rentestruktur</strong>: Viser hvordan renter varierer på tværs af løbetider – dvs. sammenhængen mellem renteniveau og lånets løbetid<br>
+</li>
+<li class="fragment"><strong>Pålydende rente</strong>: Den officielle rente, der står angivet på lånet eller obligationen<br>
+</li>
+<li class="fragment"><strong>Direkte rente</strong>: Den rente, der beregnes ud fra obligationens pris (kurs)<br>
+</li>
+<li class="fragment"><strong>Effektiv rente</strong>: Tager højde for renters rente-effekter samt kursgevinster/tab</li>
+</ul>
+</section></section>
+<section>
+<section id="direkte-rente-eksempel" class="title-slide slide level2 center" data-background="#00100F">
+<h2>Direkte rente – eksempel</h2>
+
+</section>
+<section id="beregning" class="slide level4" data-background="#43464B">
+<h4>Beregning</h4>
+<ul>
+<li class="fragment">Direkte rente: <span class="math inline">\(\frac{\text{Kuponrente}}{\text{Købekurs}} \times 100\%\)</span></li>
+<li class="fragment"><em>Eksempel 1: køb til kurs 80</em><br>
+$ = 7,50% $</li>
+<li class="fragment"><em>Eksempel 2: køb til kurs 109</em><br>
+$ = 5,50% $</li>
+<li class="fragment">Potentiel kursgevinst: <span class="math inline">\(100 - 80 = 20\)</span> kurspoint<br>
+</li>
+<li class="fragment">Potentielt kurstab: <span class="math inline">\(109 - 100 = 9\)</span> kurspoint</li>
+</ul>
+</section></section>
+<section>
+<section id="lånekapital-udbud-efterspørgsel" class="title-slide slide level2 center" data-background="#00100F">
+<h2>Lånekapital: udbud &amp; efterspørgsel</h2>
+
+</section>
+<section id="rentedannelsen-på-kredit--og-lånemarkedet" class="slide level4" data-background="#43464B">
+<h4>Rentedannelsen på kredit- og lånemarkedet</h4>
+<ul>
+<li class="fragment">Renten dannes på kredit- og lånemarkedet gennem <strong>udbud</strong> og <strong>efterspørgsel</strong><br>
+</li>
+<li class="fragment"><strong>Udbud</strong>: privat opsparing fra husholdninger og virksomheder, kanaliseret via banker<br>
+</li>
+<li class="fragment"><strong>Efterspørgsel</strong>: lån til bolig, investeringer mv.<br>
+</li>
+<li class="fragment"><strong>Ligevægtsrenten</strong> <span class="math inline">\(r^{*}\)</span>: renten, hvor efterspørgslen efter lån matcher udbuddet af opsparing</li>
+</ul>
+</section>
+<section id="rentedannelsen-på-kredit--og-lånemarkedet-1" class="slide level4" data-background="#43464B">
+<h4>Rentedannelsen på kredit- og lånemarkedet</h4>
+
+<img src="../../images/chapters/chapter_1/kap_1_Kreditmarked.jpg" alt="Kreditmarked" width="100%" class="r-stretch"></section>
+<section id="strukturelle-forhold-bag-r" class="slide level4" data-background="#43464B">
+<h4>Strukturelle forhold bag r*</h4>
+<ul>
+<li class="fragment">Lønstigninger → højere indkomst giver øget låneefterspørgsel<br>
+</li>
+<li class="fragment">Mindre konkurrence i banksektoren → færre banker medfører lavere kreditudbud<br>
+</li>
+<li class="fragment">Ligevægtsrenten kan ikke observeres direkte, men forstås som et langsigtet renteniveau man driver mod</li>
+</ul>
+</section></section>
+<section>
+<section id="inflation-og-rente" class="title-slide slide level2 center" data-background="#00100F">
+<h2>Inflation og rente</h2>
+
+</section>
+<section id="fisher-sammenhængen" class="slide level4" data-background="#43464B">
+<h4>Fisher-sammenhængen</h4>
+<ul>
+<li class="fragment">Fisher-ligningen er givet igennem: <span class="math inline">\(R \approx r + \pi\)</span>
+<ul>
+<li class="fragment">“Prisen på penge”<br>
+</li>
+<li class="fragment"><span class="math inline">\(r\)</span>: realrente</li>
+<li class="fragment"><span class="math inline">\(\pi\)</span>: forventet inflation</li>
+</ul></li>
+<li class="fragment">Inflation måler prisstigninger i økonomien<br>
+</li>
+<li class="fragment">Hvis den nominelle rente er lavere end inflationen → negativ realrente og tab af købekraft<br>
+</li>
+<li class="fragment">Man ønsker derfor en positiv realrente på sin investering</li>
+</ul>
+</section>
+<section id="grafisk-illustration" class="slide level4" data-background="#43464B">
+<h4>Grafisk illustration</h4>
+
+<img src="../../images/chapters/chapter_1/ch_1_RenteInflation.jpg" alt="Inflation og rente" width="100%" class="r-stretch"></section>
+<section id="åben-økonomi" class="slide level4" data-background="#43464B">
+<h4>Åben økonomi</h4>
+<ul>
+<li class="fragment">I en lille åben økonomi som Danmark bestemmes renten også af verdensmarkedet: <span class="math inline">\(R_{\mathrm{DK}} = R_{w} + (\pi_{\mathrm{DK}} - \pi_{w})\)</span>
+<ul>
+<li class="fragment"><span class="math inline">\(R_{\mathrm{DK}}\)</span>: dansk nominel rente<br>
+</li>
+<li class="fragment"><span class="math inline">\(R_{w}\)</span>: verdensrente (ofte proxied ved Tyskland/USA)<br>
+</li>
+<li class="fragment"><span class="math inline">\(\pi_{\mathrm{DK}} - \pi_{w}\)</span>: inflationsforskel mellem DK og udlandet</li>
+</ul></li>
+<li class="fragment">Dansk rente følger både de globale renter og forskellen i inflation.<br>
+</li>
+<li class="fragment">Stigning i <span class="math inline">\(R_{w}\)</span> → dansk rente stiger 1:1<br>
+</li>
+<li class="fragment">Stigning i inflationsforskellen <span class="math inline">\((\pi_{\mathrm{DK}} - \pi_{w})\)</span> → dansk rente stiger tilsvarende</li>
+</ul>
+</section></section>
+<section>
+<section id="pengepolitik-og-rentedannelse" class="title-slide slide level2 center" data-background="#00100F">
+<h2>Pengepolitik og rentedannelse</h2>
+
+</section>
+<section id="centralbankens-rolle-og-likviditetseffekten" class="slide level4" data-background="#43464B">
+<h4>Centralbankens rolle og likviditetseffekten</h4>
+<ul>
+<li class="fragment">Nationalbanken kan føre pengepolitik, som hurtigt påvirker renteniveauet gennem ændringer i <strong>likviditeten</strong><br>
+</li>
+<li class="fragment"><strong>Likviditetseffekten på kort sigt</strong>:
+<ul>
+<li class="fragment">X-aksen skiftes til <em>pengemængde</em> frem for lån<br>
+</li>
+<li class="fragment">Udbuddet af penge er fast → derfor en <strong>lodret kurve</strong><br>
+</li>
+<li class="fragment">Centralbanken kan flytte kurven som ønsket<br>
+</li>
+<li class="fragment">NB: Dette er <em>ikke</em> realrenten men den <strong>korte rente</strong></li>
+</ul></li>
+</ul>
+<p><br></p>
+</section>
+<section id="centralbankens-rolle-og-likviditetseffekten-grafisk" class="slide level4" data-background="#43464B">
+<h4>Centralbankens rolle og likviditetseffekten: Grafisk</h4>
+
+<img src="../../images/chapters/chapter_1/kap_1_RentePengepolitik.jpg" alt="Rente og pengepolitik" width="70%" class="r-stretch"></section>
+<section id="langsigtet-neutralitet" class="slide level4" data-background="#43464B">
+<h4>Langsigtet neutralitet</h4>
+<ul>
+<li class="fragment">Højere aktivitet fra lavere rente driver på sigt <strong>priser og lønninger</strong> op<br>
+</li>
+<li class="fragment">Realrenten vender tilbage til sit oprindelige niveau<br>
+</li>
+<li class="fragment">En 1 %-point stigning i pengemængden neutraliseres langsigtet af inflation<br>
+</li>
+<li class="fragment">Kan illustreres med kvantitetsligningen <span class="math inline">\(\Delta m = \Delta p + \Delta q\)</span></li>
+</ul>
+</section></section>
+<section>
+<section id="institutionelle-forhold-for-rentedannelsen-i-danmark" class="title-slide slide level2 center" data-background="#00100F">
+<h2>Institutionelle forhold for rentedannelsen i Danmark</h2>
+
+</section>
+<section id="nationalbanken" class="slide level4" data-background="#43464B">
+<h4>Nationalbanken</h4>
+<ul>
+<li class="fragment">Fastlægger pengepolitikken (forankret i <strong>fastkurspolitikken</strong>)<br>
+</li>
+<li class="fragment">Instrumenter: foliorenten, udlånsrenten og OMO<br>
+</li>
+<li class="fragment">Kan styre <strong>rentestrukturens form</strong> ved at påvirke korte og lange renter
+<ul>
+<li class="fragment">Hæves den korte rente → øget efterspørgsel efter DKK → rentekurven kan blive <strong>twistet/inverteret</strong><br>
+</li>
+<li class="fragment">Via OMO kan de også skubbe de lange renter op/ned og forstærke twisten<br>
+</li>
+</ul></li>
+<li class="fragment">Udover fastkurspolitikken har Nationalbanken ansvar for at <strong>vedligeholde valutareserven</strong> til strategiske formål
+<ul>
+<li class="fragment">Eksempel: COVID-19 → “flight to safety”</li>
 </ul></li>
 </ul>
 </section>
-<section id="om-mig-part-2" class="slide level4">
-<h4>Om mig (part 2)</h4>
-<ul>
-<li class="fragment">Fokus: fixed income, realkredit, finansiel matematik, programmering..</li>
-<li class="fragment">Email:
-<p style="font-family: 'Courier New', Courier, monospace;">
-nlj@econ.au.dk
-</p></li>
-<li class="fragment">“Kontor” &amp; træffetider: I er velkommen til at skrive en mail 24/7</li>
-</ul>
-</section>
-<section id="kurset-fra-grundlæggende-teori-til-praksis" class="title-slide slide level3 center" data-background="#43464B">
-<h3>Kurset: Fra grundlæggende teori til praksis</h3>
+<section id="twist-af-rentekurven" class="slide level4" data-background="#43464B">
+<h4>Twist af rentekurven</h4>
 
-</section>
-<section id="hvilke-kompetencer-forventer-jeg-fra-jer" class="slide level4">
-<h4>Hvilke kompetencer forventer jeg fra jer?</h4>
+<img src="../../images/chapters/chapter_1/kap_1_InvertertingRentekurve.jpg" alt="Likviditet og rentestruktur" width="70%" class="r-stretch"></section>
+<section id="staten" class="slide level4" data-background="#43464B">
+<h4>Staten</h4>
 <ul>
-<li class="fragment">Matematik B</li>
-<li class="fragment">Grundlæggende forståelse for samfundsøkonomi</li>
-<li class="fragment">Evnen til at fordybe sig i pensum (surpirse)</li>
+<li class="fragment">Påvirker renter via udstedelse af <strong>statsgæld</strong><br>
+</li>
+<li class="fragment">Før 1990’erne: store underskud → flere nye statsobligationer → pres op på renterne<br>
+</li>
+<li class="fragment">I dag: overskud på de offentlige finanser → bidrager til lave renter<br>
+</li>
+<li class="fragment">Direkte effekt: flere statsobligationer til salg → lavere obligationskurser → højere lange renter<br>
+</li>
+<li class="fragment">Indirekte effekt: store statslige ind- og udbetalinger påvirker den daglige likviditet i banksystemet → påvirker korte renter</li>
 </ul>
 </section>
-<section id="hvad-er-fokus-i-finansiering-min-del" class="slide level4">
-<h4>Hvad er fokus i <strong>Finansiering</strong> (min del)?</h4>
+<section id="udlandet" class="slide level4" data-background="#43464B">
+<h4>Udlandet</h4>
 <ul>
-<li class="fragment">Fastforrentede obligationer &amp; rentestruktur<br>
+<li class="fragment">Danmark er en lille, åben økonomi i en global kapitalmarkedsstruktur<br>
 </li>
-<li class="fragment">Renterisiko (varighed/konveksitet, nøglerenter)<br>
+<li class="fragment">Kapital er meget mobil – især mellem vestlige lande<br>
 </li>
-<li class="fragment">Dansk realkredit (match-funding, konvertering, CPR)<br>
-</li>
-<li class="fragment">Prisfastsættelse af obligationer</li>
-<li class="fragment">Performance: afkastopgørelse &amp; dekomponering</li>
-<li class="fragment">Regulering &amp; case-studies (finanskrisen mm.)</li>
+<li class="fragment">Danske renter påvirkes derfor i høj grad af internationale bevægelser i renter og kapitalstrømme</li>
 </ul>
-</section>
-<section id="hovedblokke" class="slide level4">
-<h4>Hovedblokke</h4>
-<ol type="1">
-<li class="fragment"><strong>Renter &amp; obligationer</strong><br>
-</li>
-<li class="fragment"><strong>Rentestruktur &amp; arbitrage</strong><br>
-</li>
-<li class="fragment"><strong>Renterisiko</strong> (varighed, konveksitet, delta-vektorer)<br>
-</li>
-<li class="fragment"><strong>Dansk realkredit</strong> (marked, lovgivning, produkter, konvertering)<br>
-</li>
-<li class="fragment"><strong>Prisfastsættelse &amp; OAS</strong><br>
-</li>
-<li class="fragment"><strong>Performanceevaluering</strong> (HPR, dekomponering)<br>
-</li>
-<li class="fragment"><strong>Regulering &amp; kriser</strong> (før/efter 2008, SVB-case, “kan det ske igen?”)</li>
-</ol>
-<div class="fragment">
-<p>…Når vi det hele??</p>
-</div>
-</section>
-<section id="vil-du-synes-denne-del-af-faget-er-fedt" class="slide level4">
-<h4>Vil du synes denne del af faget er fedt?</h4>
-<p>Ja, hvis du…</p>
-<ul>
-<li class="fragment">en gang <strong>selv skal købe</strong> en bolig og finansiere det igennem realkreditmarkedet</li>
-<li class="fragment">ønsker at forstå de risici investorer og boligejere står over for, når man er i det danske boligmarked</li>
-<li class="fragment">vil forstå, hvordan ændringer i økonomien kan påvirke prisen <strong>på dit lån</strong> igennem renten</li>
-<li class="fragment">hvorfor finanskrisen i 2008 skete, og hvilke eftervirkninger det har bragt med sig i form af regulering</li>
-<li class="fragment">gerne vil have et indblik i <strong>et af de sværeste</strong> finansielle instrumenter at prise!</li>
-</ul>
-</section>
-</section>
+</section></section>
 <section>
-<section id="lidt-praktisk-om-kurset" class="title-slide slide level2 center" data-background="#00100F">
-<h2>Lidt praktisk om kurset</h2>
+<section id="renten-og-investeringer" class="title-slide slide level2 center" data-background="#00100F">
+<h2>Renten og investeringer</h2>
 
 </section>
-<section id="lokaletiderformat-eksamen" class="title-slide slide level3 center" data-background="#43464B">
-<h3>Lokale/tider/format &amp; eksamen</h3>
-
-</section>
-<section id="mødetider" class="slide level4">
-<h4>Mødetider</h4>
+<section id="betydning-for-investeringer" class="slide level4" data-background="#43464B">
+<h4>Betydning for investeringer</h4>
 <ul>
-<li class="fragment">Forelæsninger: <strong>tirsdag kl 08:15 til 10:00 og torsdag 14:15 til 16:00</strong><br>
+<li class="fragment">Renten er afgørende for værdiansættelsen af fremtidige pengestrømme<br>
 </li>
-<li class="fragment">Øvelser: <strong>sammen med Henning og Visti</strong>
-<div style="border: 2px solid #ccc; padding: 9px; border-radius: 15px; margin-bottom: 10px;">
-<p>Ændringer annonceres på Brightspace og i timen</p>
-</div></li>
-</ul>
-</section>
-<section id="format" class="slide level4">
-<h4>Format</h4>
-<ul>
-<li class="fragment">Forelæsninger består af intuitiv gennemgang af pensum med <strong>blandede</strong> teoretiske og praktiske eksempler<br>
+<li class="fragment">Bruges som <strong>diskonteringsfaktor</strong> i nutidsberegninger<br>
 </li>
-<li class="fragment">Nogle gange vil der vises opgaver med Excel + Excel med solveropgaver - <strong>forventes også i kan til eksamen og opgavesættene!</strong></li>
-<li class="fragment">Aktiv deltagelse anbefales (spørg i timen, før/efter, eller over mail)</li>
-</ul>
-</section>
-<section id="bedømmelse" class="slide level4">
-<h4>Bedømmelse</h4>
-<div style="border: 2px solid #ccc; padding: 9px; border-radius: 15px; margin-bottom: 10px;">
-<p>Skriftlig eksamen (format &amp; hjælpemidler: 4 timer, med hjælpemidler, dog ikke internet (.. og jeg jagter jer i efterlivet, hvis i bruger AI!))</p>
-</div>
-<ul>
-<li class="fragment">Dato: annonceres af eksamenskontoret<br>
+<li class="fragment">Selv små renteændringer kan ændre prisen på et aktiv markant<br>
 </li>
-<li class="fragment">Forberedelse: forelæsninger, øvelser, opgavesæt og noter</li>
+<li class="fragment">Derfor bruger centralbanker renten som redskab til at påvirke konjunkturer
+<ul>
+<li class="fragment">Finanskrisen er et godt eksempel</li>
+</ul></li>
 </ul>
 </section>
-
-<section id="kursusmaterialer" class="title-slide slide level3 center" data-background="#43464B">
-<h3>Kursusmaterialer</h3>
+<section id="nutidsværdiberegning-npv" class="slide level4" data-background="#43464B">
+<h4>Nutidsværdiberegning (NPV)</h4>
+<ul>
+<li class="fragment"><p>Eksempel: investering på 10 mio. kr., indbetalinger på 3 mio. kr. årligt i 4 år</p></li>
+<li class="fragment"><p>Ved 5 % rente:<br>
+<span class="math display">\[
+\text{NPV}_{5\%} = -10 + \sum_{t=1}^{4} \frac{3}{1.05^t} = 0{,}64
+\]</span> mio. kr.</p></li>
+<li class="fragment"><p>Ved 9 % rente:<br>
+<span class="math display">\[
+\text{NPV}_{9\%} = -10 + \sum_{t=1}^{4} \frac{3}{1.09^t} = -0{,}28
+\]</span> mio. kr.</p></li>
+<li class="fragment"><p>Små ændringer i renten kan afgøre, om en investering er profitabel eller ej</p></li>
+</ul>
+</section></section>
+<section>
+<section id="sammenligning-af-rentesatser-og-debitorrenten" class="title-slide slide level2 center" data-background="#00100F">
+<h2>Sammenligning af rentesatser og debitorrenten</h2>
 
 </section>
-<section id="det-primære-pensum" class="slide level4">
-<h4>Det primære pensum</h4>
+<section id="hvorfor-sammenligne" class="slide level4" data-background="#43464B">
+<h4>Hvorfor sammenligne?</h4>
 <ul>
-<li class="fragment"><strong>Lektionsnoter i finansiering (2025)</strong> — mit eget hjemmelavet kursuskompendium med fokus på de forrige nævnte emner.</li>
-<li class="fragment"><strong>Fundamentals of Corporate Finance af Berk, DeMarzo og Harfor</strong> — primært til 1 del. Der kan findes lidt om renter og obligationer</li>
-</ul>
-<div class="fragment">
-<p><strong>Supplerende bøger for absurde tryhards</strong></p>
-<ul>
-<li class="fragment">Tanggaard, <em>Finansielle instrumenter og deres markeder</em><br>
+<li class="fragment">Rentesatser opgives ofte som <em>p.a.</em> men med forskellig tilskrivningsfrekvens<br>
 </li>
-<li class="fragment">Just Andresen, <em>Finansiel risikostyring</em><br>
+<li class="fragment">For et retvisende sammenligningsgrundlag →
+<ul>
+<li class="fragment">omregn til <strong>samme frekvens</strong><br>
 </li>
-<li class="fragment">Christensen, <em>Obligationsinvestering: Teori og praktisk anvendelse</em></li>
-<li class="fragment">Rom, <em>Callable Mortgage Bonds</em></li>
-</ul>
-</div>
-</section>
-<section id="smagsprøve-på-centrale-formler" class="slide level4">
-<h4>Smagsprøve på centrale formler</h4>
-<ul>
-<li class="fragment">Pris (kupon): <span class="math inline">\(P = \sum_{t=1}^{N} \frac{C}{(1+y)^t} + \frac{FV}{(1+y)^N}\)</span></li>
-</ul>
-<p><br></p>
-<ul>
-<li class="fragment">Kronevarigheden: <span class="math inline">\((d) = \frac{D}{1+r}\cdot \frac{\text{Kurs}}{100} = MD \cdot \frac{\text{Kurs}}{100}\)</span></li>
-</ul>
-<p><br></p>
-<ul>
-<li class="fragment">Kronekonveksitet: <span class="math inline">\((C) = \frac{\sum_{t=1}^{N} (t^2+t) c_t (1+r)^t}{(1+r)^2} \cdot 0.01^2\)</span></li>
-</ul>
-<p><br></p>
-<ul>
-<li class="fragment">Gevinstkrav: <span class="math inline">\(Gain = \frac{PV_{continue}-100\cdot(1+cost)}{PV_{continue}}\label{eq:kap6_RK_GainFormula2}\)</span></li>
+<li class="fragment">eller til <strong>debitorrenten</strong> (effektiv årlig rente)</li>
+</ul></li>
 </ul>
 </section>
+<section id="omregning-mellem-frekvenser" class="slide level4" data-background="#43464B">
+<h4>Omregning mellem frekvenser</h4>
+<p>Nominel rente <span class="math inline">\(r_m\)</span> med <span class="math inline">\(m\)</span> tilskrivninger, og <span class="math inline">\(r_n\)</span> med <span class="math inline">\(n\)</span> tilskrivninger:</p>
+<p><span class="math display">\[
+\Bigl(1+\tfrac{r_n}{n}\Bigr)^{n} = \Bigl(1+\tfrac{r_m}{m}\Bigr)^{m}
+\]</span></p>
+<p>Heraf:</p>
+<p><span class="math display">\[
+r_n = n\Bigl[\Bigl(1+\tfrac{r_m}{m}\Bigr)^{m/n} - 1\Bigr]
+\]</span></p>
+</section>
+<section id="debitorrenten-effektiv-årlig-rente-n1" class="slide level4" data-background="#43464B">
+<h4>Debitorrenten (effektiv årlig rente, <span class="math inline">\(n=1\)</span>)</h4>
+<p>For <span class="math inline">\(r_m\)</span> med <span class="math inline">\(m\)</span> tilskrivninger:</p>
+<p><span class="math display">\[
+\text{Debitorrente} = \Bigl(1+\tfrac{r_m}{m}\Bigr)^m - 1
+\]</span></p>
+<ul>
+<li class="fragment">Altid ≥ den nominelle rente (<span class="math inline">\(m \ge 1\)</span>)<br>
+</li>
+<li class="fragment">Inkluderer rente-på-rente effekten</li>
+</ul>
+</section>
+<section id="eksempel-beregning-af-debitorrenten" class="slide level4" data-background="#43464B">
+<h4>Eksempel: Beregning af debitorrenten</h4>
+<ul>
+<li class="fragment"><p>Nominel rente: 24 % p.a.<br>
+</p></li>
+<li class="fragment"><p>Månedlig tilskrivning (<span class="math inline">\(m=12\)</span>)<br>
+</p></li>
+<li class="fragment"><p>Formel for debitorrenten:<br>
+<span class="math display">\[
+\text{Debitorrente} = \left(1+\frac{r_m}{m}\right)^m - 1
+\]</span></p></li>
+<li class="fragment"><p>Indsæt <span class="math inline">\(r_m = 24\%\)</span> og <span class="math inline">\(m=12\)</span>:<br>
+<span class="math display">\[
+\left(1+\frac{0,24}{12}\right)^{12} - 1
+= (1+0,02)^{12} - 1
+\approx 0,2682
+\]</span></p></li>
+<li class="fragment"><p>Den effektive årlige rente (debitorrenten) er altså ca. <strong>26,82 %</strong>, hvilket er højere end den nominelle rente på 24 % p.a.</p></li>
+</ul>
+</section>
+<section id="eksempel-fra-debitorrente-til-nominel-rente" class="slide level4" data-background="#43464B">
+<h4>Eksempel: Fra debitorrente til nominel rente</h4>
+<p>Kendes debitorrenten og antallet af terminer <span class="math inline">\(m\)</span>, kan <span class="math inline">\(r_m\)</span> findes: <span class="math display">\[
+r_m = m\Bigl[(1+\text{Debitorrente})^{1/m} - 1\Bigr]
+\]</span> - Indsæt Debitorrente = 26,82 % og <span class="math inline">\(m=12\)</span>:<br>
+<span class="math display">\[
+r_{12} = 12\Bigl[(1+0,2682)^{1/12} - 1\Bigr]
+\]</span> <span class="math display">\[
+\approx 12 \cdot 0,02 = 24\%
+\]</span> - Den nominelle rente med månedlig tilskrivning er altså <strong>24 % p.a.</strong></p>
+</section>
+<section id="eksempel-omregning-mellem-terminer" class="slide level4" data-background="#43464B">
+<h4>Eksempel: Omregning mellem terminer</h4>
+<ul>
+<li class="fragment">6 % p.a. med halvårlig tilskrivning (<span class="math inline">\(m=2\)</span>)</li>
+</ul>
+<p><span class="math display">\[
+(1+0,06/2)^2 - 1 = 6,09\%
+\]</span></p>
+<p>Omregnet til kvartalsvis nominel rente (<span class="math inline">\(m=4\)</span>):</p>
+<p><span class="math display">\[
+(1+0,0609)^{1/4} - 1 = 1,49\% \;\;\Rightarrow\;\; r_4 \approx 5,96\%
+\]</span></p>
+</section>
+<section id="praktisk-brug" class="slide level4" data-background="#43464B">
+<h4>Praktisk brug</h4>
+<p>Når satser sammenlignes:<br>
+- Omregn til <strong>samme frekvens</strong> eller<br>
+- til <strong>debitorrenten</strong></p>
+<ul>
+<li class="fragment">Sikrer fair sammenligning på tværs af lån og investeringer</li>
+</ul>
+</section></section>
+<section>
+<section id="opsummering" class="title-slide slide level2 center" data-background="#00100F">
+<h2>Opsummering</h2>
 
-<section id="hvordan-er-min-del-til-eksamen" class="title-slide slide level3 center" data-background="#43464B">
-<h3>Hvordan er min del til eksamen?</h3>
-
 </section>
-<section id="eksamensstruktur" class="slide level4">
-<h4>Eksamensstruktur</h4>
+<section id="takeaways" class="slide level4" data-background="#43464B">
+<h4>Takeaways</h4>
 <ul>
-<li class="fragment">Opgaver der rører dit og dat fra min del.. Så vidt muligt</li>
-<li class="fragment">Min del af faget er ret ungt, jeg kan sagtens finde på at ændre strukturen og måden at stille spørgsmål på i år relativ til sidste år. (Samme forventninger!)</li>
-<li class="fragment">I får en ny og mock-eksamen sammen med det gamle eksamenset (i har fået ordinær - i vil også få re-eksamen). Meget repræsentativ for i år også. Men jeg kan altid få gode nye ideér :-)</li>
+<li class="fragment">Renten er prisen på penge → afgørende for investeringer, lån og værdiansættelse<br>
+</li>
+<li class="fragment">Realrente = nominel rente minus inflation → det reelle afkast<br>
+</li>
+<li class="fragment">Rentedannelsen bestemmes af udbud &amp; efterspørgsel, pengepolitik og internationale forhold<br>
+</li>
+<li class="fragment">Små renteændringer kan markant ændre nutidsværdien (NPV) af investeringer<br>
+</li>
+<li class="fragment">Nominelle renter med forskellig tilskrivningsfrekvens skal omregnes → brug debitorrenten som fælles mål<br>
+</li>
+<li class="fragment">Debitorrenten (effektiv årlig rente) er altid ≥ nominel rente pga. rente-på-rente-effekten<br>
+</li>
+<li class="fragment">Praktisk: sammenlign altid lån/investeringer på samme grundlag (samme frekvens eller via debitorrente)</li>
 </ul>
-<div class="fragment">
-<p>Fokus på intuition! Men i <em>skal</em> også kunne regne. Jeg er dog en pragmatiker!</p>
 
 
-</div>
-</section>
-</section>
+</section></section>
     </div>
   <div class="quarto-auto-generated-content" style="display: none;">
 <p><img src="../../themes/favicon.ico" class="slide-logo"></p>
 <div class="footer footer-default">
-<p>Finansiering — Kursusintroduktion</p>
+<p>Finansiering — Rentedannelsen</p>
 </div>
 </div></div>
 

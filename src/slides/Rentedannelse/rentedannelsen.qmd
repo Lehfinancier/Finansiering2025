@@ -1,0 +1,269 @@
+---
+title: "Rentedannelsen"
+subtitle: "Hvor kommer renter fra – og hvorfor bevæger de sig?"
+author: "Niklas Lehmann Jensen"
+jupyter: python3
+format:
+  revealjs:
+    width: 1150
+    logo: ../../themes/favicon.ico
+    footer: "Finansiering — Rentedannelsen"
+    footer-logo-link: "#"
+    theme: ../../themes/slides_themes.scss
+slide-level: 4
+title-slide-attributes:
+  data-background-color: "#045D5D"
+  data-footer: " "
+execute:
+  echo: true
+  warning: false
+  error: false
+---
+
+## Introduktion {background="#00100F"}
+
+#### Læringsmål {background="#43464B"}
+- Forstå hvordan **renten dannes** gennem udbud, efterspørgsel og pengepolitik  
+- Skelne mellem **nominel rente**, **realrente** og **effektiv rente (debitorrente)**  
+- Kunne forklare hvordan **inflation** og internationale forhold påvirker renten  
+- Beregne og fortolke **NPV** og se, hvordan små renteændringer ændrer investeringers værdi  
+- Anvende og sammenligne forskellige rentesatser via **omregning** og debitorrenten  
+
+#### Hvad er renter, og hvorfor findes de? {background="#43464B"}
+- Renter kan anskues på mange måder:  
+  - "Prisen på penge"  
+  - Gevinsten ved at udskyde forbrug og opspare  
+  - Omkostningen ved at forbruge tidligere gennem lån  
+- Renten bestemmes af udbuds- og efterspørgselskræfter på kapitalmarkedet  
+- Der findes \emph{mange} forskellige renter – ikke blot én!  
+- Renten driver prisfastsættelsen af *alle* finansielle instrumenter  
+- Renten fungerer som et (næsten) risikofrit alternativ, som andre aktiver prissættes i forhold til  
+- Alt andet lige: En aktie med en given betalingsstrøm vil falde i pris, hvis renten stiger
+
+## Rentebegreber {background="#00100F"}
+
+#### Centrale begreber {background="#43464B"}
+- **Realrente**: Kompenserer for den nytte, man går glip af ved at udsætte sit forbrug  
+- **Nominel rente**: Kompenserer både for udskydelse af forbrug og for prisstigninger (inflation)  
+- **Rentestruktur**: Viser hvordan renter varierer på tværs af løbetider – dvs. sammenhængen mellem renteniveau og lånets løbetid  
+- **Pålydende rente**: Den officielle rente, der står angivet på lånet eller obligationen  
+- **Direkte rente**: Den rente, der beregnes ud fra obligationens pris (kurs)  
+- **Effektiv rente**: Tager højde for renters rente-effekter samt kursgevinster/tab 
+
+## Direkte rente – eksempel {background="#00100F"}
+
+#### Beregning {background="#43464B"}
+- Direkte rente: $\frac{\text{Kuponrente}}{\text{Købekurs}} \times 100\%$
+- *Eksempel 1: køb til kurs 80*  
+  $ \frac{6}{80} = 7,50\% $
+- *Eksempel 2: køb til kurs 109*  
+  $ \frac{6}{109} = 5,50\% $
+- Potentiel kursgevinst: $100 - 80 = 20$ kurspoint  
+- Potentielt kurstab: $109 - 100 = 9$ kurspoint  
+
+## Lånekapital: udbud & efterspørgsel {background="#00100F"}
+
+#### Rentedannelsen på kredit- og lånemarkedet {background="#43464B"}
+- Renten dannes på kredit- og lånemarkedet gennem **udbud** og **efterspørgsel**  
+- **Udbud**: privat opsparing fra husholdninger og virksomheder, kanaliseret via banker  
+- **Efterspørgsel**: lån til bolig, investeringer mv.  
+- **Ligevægtsrenten** $r^{*}$: renten, hvor efterspørgslen efter lån matcher udbuddet af opsparing  
+
+#### Rentedannelsen på kredit- og lånemarkedet {background="#43464B"}
+<img src="/images/chapters/chapter_1/kap_1_Kreditmarked.jpg" alt="Kreditmarked" width="100%"/>
+
+
+#### Strukturelle forhold bag r\* {background="#43464B"}
+- Lønstigninger → højere indkomst giver øget låneefterspørgsel  
+- Mindre konkurrence i banksektoren → færre banker medfører lavere kreditudbud  
+- Ligevægtsrenten kan ikke observeres direkte, men forstås som et langsigtet renteniveau man driver mod
+
+## Inflation og rente {background="#00100F"}
+
+#### Fisher-sammenhængen {background="#43464B"}
+- Fisher-ligningen er givet igennem: $R \approx r + \pi$
+  - "Prisen på penge"  
+  - $r$: realrente
+  - $\pi$: forventet inflation 
+- Inflation måler prisstigninger i økonomien  
+- Hvis den nominelle rente er lavere end inflationen → negativ realrente og tab af købekraft  
+- Man ønsker derfor en positiv realrente på sin investering  
+
+#### Grafisk illustration {background="#43464B"}
+<img src="/images/chapters/chapter_1/ch_1_RenteInflation.jpg" alt="Inflation og rente" width="100%"/>
+
+#### Åben økonomi {background="#43464B"}
+- I en lille åben økonomi som Danmark bestemmes renten også af verdensmarkedet: $R_{\mathrm{DK}} = R_{w} + (\pi_{\mathrm{DK}} - \pi_{w})$
+  - $R_{\mathrm{DK}}$: dansk nominel rente  
+  - $R_{w}$: verdensrente (ofte proxied ved Tyskland/USA)  
+  - $\pi_{\mathrm{DK}} - \pi_{w}$: inflationsforskel mellem DK og udlandet 
+- Dansk rente følger både de globale renter og forskellen i inflation.  
+- Stigning i $R_{w}$ → dansk rente stiger 1:1  
+- Stigning i inflationsforskellen $(\pi_{\mathrm{DK}} - \pi_{w})$ → dansk rente stiger tilsvarende  
+
+## Pengepolitik og rentedannelse {background="#00100F"}
+
+#### Centralbankens rolle og likviditetseffekten {background="#43464B"}
+- Nationalbanken kan føre pengepolitik, som hurtigt påvirker renteniveauet gennem ændringer i **likviditeten**  
+- **Likviditetseffekten på kort sigt**:  
+  - X-aksen skiftes til *pengemængde* frem for lån  
+  - Udbuddet af penge er fast → derfor en **lodret kurve**  
+  - Centralbanken kan flytte kurven som ønsket  
+  - NB: Dette er *ikke* realrenten men den **korte rente**  
+
+<br>
+
+#### Centralbankens rolle og likviditetseffekten: Grafisk {background="#43464B"}
+<img src="/images/chapters/chapter_1/kap_1_RentePengepolitik.jpg" alt="Rente og pengepolitik" width="70%"/>
+
+
+#### Langsigtet neutralitet {background="#43464B"}
+- Højere aktivitet fra lavere rente driver på sigt **priser og lønninger** op  
+- Realrenten vender tilbage til sit oprindelige niveau  
+- En 1 %-point stigning i pengemængden neutraliseres langsigtet af inflation  
+- Kan illustreres med kvantitetsligningen $\Delta m = \Delta p + \Delta q$ 
+
+
+## Institutionelle forhold for rentedannelsen i Danmark {background="#00100F"}
+
+#### Nationalbanken {background="#43464B"}
+- Fastlægger pengepolitikken (forankret i **fastkurspolitikken**)  
+- Instrumenter: foliorenten, udlånsrenten og OMO  
+- Kan styre **rentestrukturens form** ved at påvirke korte og lange renter  
+  - Hæves den korte rente → øget efterspørgsel efter DKK → rentekurven kan blive **twistet/inverteret**  
+  - Via OMO kan de også skubbe de lange renter op/ned og forstærke twisten  
+- Udover fastkurspolitikken har Nationalbanken ansvar for at **vedligeholde valutareserven** til strategiske formål  
+  - Eksempel: COVID-19 → “flight to safety”  
+
+#### Twist af rentekurven {background="#43464B"}
+<img src="/images/chapters/chapter_1/kap_1_InvertertingRentekurve.jpg" alt="Likviditet og rentestruktur" width="70%"/>
+
+#### Staten {background="#43464B"}
+- Påvirker renter via udstedelse af **statsgæld**  
+- Før 1990’erne: store underskud → flere nye statsobligationer → pres op på renterne  
+- I dag: overskud på de offentlige finanser → bidrager til lave renter  
+- Direkte effekt: flere statsobligationer til salg → lavere obligationskurser → højere lange renter  
+- Indirekte effekt: store statslige ind- og udbetalinger påvirker den daglige likviditet i banksystemet → påvirker korte renter  
+
+#### Udlandet {background="#43464B"}
+- Danmark er en lille, åben økonomi i en global kapitalmarkedsstruktur  
+- Kapital er meget mobil – især mellem vestlige lande  
+- Danske renter påvirkes derfor i høj grad af internationale bevægelser i renter og kapitalstrømme  
+
+## Renten og investeringer {background="#00100F"}
+
+#### Betydning for investeringer {background="#43464B"}
+- Renten er afgørende for værdiansættelsen af fremtidige pengestrømme  
+- Bruges som **diskonteringsfaktor** i nutidsberegninger  
+- Selv små renteændringer kan ændre prisen på et aktiv markant  
+- Derfor bruger centralbanker renten som redskab til at påvirke konjunkturer  
+  - Finanskrisen er et godt eksempel  
+
+---
+
+#### Nutidsværdiberegning (NPV) {background="#43464B"}
+
+- Eksempel: investering på 10 mio. kr., indbetalinger på 3 mio. kr. årligt i 4 år
+
+- Ved 5 % rente:  
+$$
+\text{NPV}_{5\%} = -10 + \sum_{t=1}^{4} \frac{3}{1.05^t} = 0{,}64
+$$
+mio. kr.
+
+- Ved 9 % rente:  
+$$
+\text{NPV}_{9\%} = -10 + \sum_{t=1}^{4} \frac{3}{1.09^t} = -0{,}28
+$$
+mio. kr.
+
+
+- Små ændringer i renten kan afgøre, om en investering er profitabel eller ej
+
+
+
+
+## Sammenligning af rentesatser og debitorrenten {background="#00100F"}
+
+#### Hvorfor sammenligne? {background="#43464B"}
+- Rentesatser opgives ofte som *p.a.* men med forskellig tilskrivningsfrekvens  
+- For et retvisende sammenligningsgrundlag →  
+  - omregn til **samme frekvens**  
+  - eller til **debitorrenten** (effektiv årlig rente)  
+
+---
+
+#### Omregning mellem frekvenser {background="#43464B"}
+Nominel rente $r_m$ med $m$ tilskrivninger, og $r_n$ med $n$ tilskrivninger:  
+
+$$
+\Bigl(1+\tfrac{r_n}{n}\Bigr)^{n} = \Bigl(1+\tfrac{r_m}{m}\Bigr)^{m}
+$$
+
+Heraf:  
+
+$$
+r_n = n\Bigl[\Bigl(1+\tfrac{r_m}{m}\Bigr)^{m/n} - 1\Bigr]
+$$
+
+---
+
+#### Debitorrenten (effektiv årlig rente, $n=1$) {background="#43464B"}
+For $r_m$ med $m$ tilskrivninger:  
+
+$$
+\text{Debitorrente} = \Bigl(1+\tfrac{r_m}{m}\Bigr)^m - 1
+$$
+
+- Altid ≥ den nominelle rente ($m \ge 1$)  
+- Inkluderer rente-på-rente effekten  
+
+---
+
+#### Eksempel: Beregning af debitorrenten {background="#43464B"}
+- Nominel rente: 24 % p.a.  
+- Månedlig tilskrivning ($m=12$)  
+- Formel for debitorrenten:  
+$$
+\text{Debitorrente} = \left(1+\frac{r_m}{m}\right)^m - 1
+$$
+- Indsæt $r_m = 24\%$ og $m=12$:  
+$$
+\left(1+\frac{0,24}{12}\right)^{12} - 1
+= (1+0,02)^{12} - 1
+\approx 0,2682
+$$
+
+- Den effektive årlige rente (debitorrenten) er altså ca. **26,82 %**, hvilket er højere end den nominelle rente på 24 % p.a.
+
+#### Eksempel: Fra debitorrente til nominel rente {background="#43464B"}
+Kendes debitorrenten og antallet af terminer $m$, kan $r_m$ findes:
+$$
+r_m = m\Bigl[(1+\text{Debitorrente})^{1/m} - 1\Bigr]
+$$
+- Indsæt Debitorrente = 26,82 % og $m=12$:  
+$$
+r_{12} = 12\Bigl[(1+0,2682)^{1/12} - 1\Bigr]
+$$
+$$
+\approx 12 \cdot 0,02 = 24\%
+$$
+- Den nominelle rente med månedlig tilskrivning er altså **24 % p.a.**
+#### Praktisk brug {background="#43464B"}
+Når satser sammenlignes:  
+- Omregn til **samme frekvens** eller  
+- til **debitorrenten**  
+
+- Sikrer fair sammenligning på tværs af lån og investeringer
+
+
+## Opsummering {background="#00100F"}
+
+#### Takeaways {background="#43464B"}
+- Renten er prisen på penge → afgørende for investeringer, lån og værdiansættelse  
+- Realrente = nominel rente minus inflation → det reelle afkast  
+- Rentedannelsen bestemmes af udbud & efterspørgsel, pengepolitik og internationale forhold  
+- Små renteændringer kan markant ændre nutidsværdien (NPV) af investeringer  
+- Nominelle renter med forskellig tilskrivningsfrekvens skal omregnes → brug debitorrenten som fælles mål  
+- Debitorrenten (effektiv årlig rente) er altid ≥ nominel rente pga. rente-på-rente-effekten  
+- Praktisk: sammenlign altid lån/investeringer på samme grundlag (samme frekvens eller via debitorrente)  
