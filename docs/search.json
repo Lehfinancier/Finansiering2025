@@ -241,5 +241,516 @@
     "title": "Rentedannelsen",
     "section": "Sammenligning af rentesatser og debitorrenten",
     "text": "Sammenligning af rentesatser og debitorrenten"
+  },
+  {
+    "objectID": "slides/Obligationsmarkedet/obligationsmarked.html#introduktion-til-obligationer",
+    "href": "slides/Obligationsmarkedet/obligationsmarked.html#introduktion-til-obligationer",
+    "title": "Obligationsmarkedet",
+    "section": "Introduktion til obligationer",
+    "text": "Introduktion til obligationer"
+  },
+  {
+    "objectID": "slides/Obligationsmarkedet/obligationsmarked.html#obligationstyper",
+    "href": "slides/Obligationsmarkedet/obligationsmarked.html#obligationstyper",
+    "title": "Obligationsmarkedet",
+    "section": "Obligationstyper",
+    "text": "Obligationstyper"
+  },
+  {
+    "objectID": "slides/Obligationsmarkedet/obligationsmarked.html#betalingsstrømme-og-nutidsværdi",
+    "href": "slides/Obligationsmarkedet/obligationsmarked.html#betalingsstrømme-og-nutidsværdi",
+    "title": "Obligationsmarkedet",
+    "section": "Betalingsstrømme og nutidsværdi",
+    "text": "Betalingsstrømme og nutidsværdi"
+  },
+  {
+    "objectID": "slides/Obligationsmarkedet/obligationsmarked.html#handel-med-obligationer",
+    "href": "slides/Obligationsmarkedet/obligationsmarked.html#handel-med-obligationer",
+    "title": "Obligationsmarkedet",
+    "section": "Handel med obligationer",
+    "text": "Handel med obligationer"
+  },
+  {
+    "objectID": "slides/Obligationsmarkedet/obligationsmarked.html#nulkuponobligationer",
+    "href": "slides/Obligationsmarkedet/obligationsmarked.html#nulkuponobligationer",
+    "title": "Obligationsmarkedet",
+    "section": "Nulkuponobligationer",
+    "text": "Nulkuponobligationer"
+  },
+  {
+    "objectID": "slides/Obligationsmarkedet/obligationsmarked.html#kuponbærende-obligationer",
+    "href": "slides/Obligationsmarkedet/obligationsmarked.html#kuponbærende-obligationer",
+    "title": "Obligationsmarkedet",
+    "section": "Kuponbærende obligationer",
+    "text": "Kuponbærende obligationer"
+  },
+  {
+    "objectID": "slides/Obligationsmarkedet/obligationsmarked.html#reinvesteringsrisiko",
+    "href": "slides/Obligationsmarkedet/obligationsmarked.html#reinvesteringsrisiko",
+    "title": "Obligationsmarkedet",
+    "section": "Reinvesteringsrisiko",
+    "text": "Reinvesteringsrisiko"
+  },
+  {
+    "objectID": "slides/Obligationsmarkedet/obligationsmarked.html#prissensitivitet",
+    "href": "slides/Obligationsmarkedet/obligationsmarked.html#prissensitivitet",
+    "title": "Obligationsmarkedet",
+    "section": "Prissensitivitet",
+    "text": "Prissensitivitet"
+  },
+  {
+    "objectID": "slides/Obligationsmarkedet/obligationsmarked.html#markedsrente-kupon-og-kurs",
+    "href": "slides/Obligationsmarkedet/obligationsmarked.html#markedsrente-kupon-og-kurs",
+    "title": "Obligationsmarkedet",
+    "section": "Markedsrente, kupon og kurs",
+    "text": "Markedsrente, kupon og kurs"
+  },
+  {
+    "objectID": "slides/Obligationsmarkedet/obligationsmarked.html#markedsrente-kupon-og-kurs-1",
+    "href": "slides/Obligationsmarkedet/obligationsmarked.html#markedsrente-kupon-og-kurs-1",
+    "title": "Obligationsmarkedet",
+    "section": "Markedsrente, kupon og kurs",
+    "text": "Markedsrente, kupon og kurs"
+  },
+  {
+    "objectID": "slides/Obligationsmarkedet/obligationsmarked.html#tid-og-obligationspriser",
+    "href": "slides/Obligationsmarkedet/obligationsmarked.html#tid-og-obligationspriser",
+    "title": "Obligationsmarkedet",
+    "section": "Tid og obligationspriser",
+    "text": "Tid og obligationspriser"
+  },
+  {
+    "objectID": "slides/Obligationsmarkedet/obligationsmarked.html#obligationsprisernes-dynamik",
+    "href": "slides/Obligationsmarkedet/obligationsmarked.html#obligationsprisernes-dynamik",
+    "title": "Obligationsmarkedet",
+    "section": "Obligationsprisernes dynamik",
+    "text": "Obligationsprisernes dynamik"
+  },
+  {
+    "objectID": "slides/Obligationsmarkedet/obligationsmarked.html#opsummering",
+    "href": "slides/Obligationsmarkedet/obligationsmarked.html#opsummering",
+    "title": "Obligationsmarkedet",
+    "section": "Opsummering",
+    "text": "Opsummering"
+  },
+  {
+    "objectID": "slides/Rentestrukturen/Rentestrukturen.html#introduktion",
+    "href": "slides/Rentestrukturen/Rentestrukturen.html#introduktion",
+    "title": "Rentestrukturen",
+    "section": "Introduktion",
+    "text": "Introduktion"
+  },
+  {
+    "objectID": "slides/Rentestrukturen/Rentestrukturen.html#teorien-bag-rentestrukturen",
+    "href": "slides/Rentestrukturen/Rentestrukturen.html#teorien-bag-rentestrukturen",
+    "title": "Rentestrukturen",
+    "section": "Teorien bag rentestrukturen",
+    "text": "Teorien bag rentestrukturen"
+  },
+  {
+    "objectID": "slides/Rentestrukturen/Rentestrukturen.html#den-effektive-rente-ytm-et-problematisk-afkastmål",
+    "href": "slides/Rentestrukturen/Rentestrukturen.html#den-effektive-rente-ytm-et-problematisk-afkastmål",
+    "title": "Rentestrukturen",
+    "section": "Den effektive rente (YTM) – et problematisk afkastmål",
+    "text": "Den effektive rente (YTM) – et problematisk afkastmål"
+  },
+  {
+    "objectID": "slides/Rentestrukturen/Rentestrukturen.html#rentekurven-og-obligationsarbitrage",
+    "href": "slides/Rentestrukturen/Rentestrukturen.html#rentekurven-og-obligationsarbitrage",
+    "title": "Rentestrukturen",
+    "section": "Rentekurven og obligationsarbitrage",
+    "text": "Rentekurven og obligationsarbitrage"
+  },
+  {
+    "objectID": "slides/Rentestrukturen/Rentestrukturen.html#forklaringer-på-rentestrukturens-form",
+    "href": "slides/Rentestrukturen/Rentestrukturen.html#forklaringer-på-rentestrukturens-form",
+    "title": "Rentestrukturen",
+    "section": "Forklaringer på rentestrukturens form",
+    "text": "Forklaringer på rentestrukturens form"
+  },
+  {
+    "objectID": "slides/Rentestrukturen/Rentestrukturen.html#estimation-af-rentestrukturen",
+    "href": "slides/Rentestrukturen/Rentestrukturen.html#estimation-af-rentestrukturen",
+    "title": "Rentestrukturen",
+    "section": "Estimation af rentestrukturen",
+    "text": "Estimation af rentestrukturen"
+  },
+  {
+    "objectID": "slides/Rentestrukturen/Rentestrukturen.html#prisfastsættelse-ud-fra-rentestrukturen",
+    "href": "slides/Rentestrukturen/Rentestrukturen.html#prisfastsættelse-ud-fra-rentestrukturen",
+    "title": "Rentestrukturen",
+    "section": "Prisfastsættelse ud fra rentestrukturen",
+    "text": "Prisfastsættelse ud fra rentestrukturen"
+  },
+  {
+    "objectID": "slides/Rentestrukturen/Rentestrukturen.html#tolkning-og-risici",
+    "href": "slides/Rentestrukturen/Rentestrukturen.html#tolkning-og-risici",
+    "title": "Rentestrukturen",
+    "section": "Tolkning og risici",
+    "text": "Tolkning og risici"
+  },
+  {
+    "objectID": "slides/Rentestrukturen/Rentestrukturen.html#opsummering",
+    "href": "slides/Rentestrukturen/Rentestrukturen.html#opsummering",
+    "title": "Rentestrukturen",
+    "section": "Opsummering",
+    "text": "Opsummering"
+  },
+  {
+    "objectID": "slides/Rentestrukturen/Rentestrukturen.html#øvelser",
+    "href": "slides/Rentestrukturen/Rentestrukturen.html#øvelser",
+    "title": "Rentestrukturen",
+    "section": "Øvelser",
+    "text": "Øvelser"
+  },
+  {
+    "objectID": "slides/Rentestrukturen/Rentestrukturen.html#øvelser-1",
+    "href": "slides/Rentestrukturen/Rentestrukturen.html#øvelser-1",
+    "title": "Rentestrukturen",
+    "section": "Øvelser",
+    "text": "Øvelser"
+  },
+  {
+    "objectID": "slides/Risikomål/risikomaal.html#introduktion",
+    "href": "slides/Risikomål/risikomaal.html#introduktion",
+    "title": "Risikomål for obligationer",
+    "section": "Introduktion",
+    "text": "Introduktion"
+  },
+  {
+    "objectID": "slides/Risikomål/risikomaal.html#prisen-som-funktion-af-renten",
+    "href": "slides/Risikomål/risikomaal.html#prisen-som-funktion-af-renten",
+    "title": "Risikomål for obligationer",
+    "section": "Prisen som funktion af renten",
+    "text": "Prisen som funktion af renten"
+  },
+  {
+    "objectID": "slides/Risikomål/risikomaal.html#varighed-grundidé",
+    "href": "slides/Risikomål/risikomaal.html#varighed-grundidé",
+    "title": "Risikomål for obligationer",
+    "section": "Varighed: grundidé",
+    "text": "Varighed: grundidé"
+  },
+  {
+    "objectID": "slides/Risikomål/risikomaal.html#konveksitet",
+    "href": "slides/Risikomål/risikomaal.html#konveksitet",
+    "title": "Risikomål for obligationer",
+    "section": "Konveksitet",
+    "text": "Konveksitet"
+  },
+  {
+    "objectID": "slides/Risikomål/risikomaal.html#fra-parallelle-til-ikke-parallelle-bevægelser",
+    "href": "slides/Risikomål/risikomaal.html#fra-parallelle-til-ikke-parallelle-bevægelser",
+    "title": "Risikomål for obligationer",
+    "section": "Fra parallelle til ikke-parallelle bevægelser",
+    "text": "Fra parallelle til ikke-parallelle bevægelser"
+  },
+  {
+    "objectID": "slides/Risikomål/risikomaal.html#key-rate-duration-krd",
+    "href": "slides/Risikomål/risikomaal.html#key-rate-duration-krd",
+    "title": "Risikomål for obligationer",
+    "section": "Key Rate Duration (KRD)",
+    "text": "Key Rate Duration (KRD)"
+  },
+  {
+    "objectID": "slides/Risikomål/risikomaal.html#varighed-og-reinvesteringsrisiko",
+    "href": "slides/Risikomål/risikomaal.html#varighed-og-reinvesteringsrisiko",
+    "title": "Risikomål for obligationer",
+    "section": "Varighed og reinvesteringsrisiko",
+    "text": "Varighed og reinvesteringsrisiko"
+  },
+  {
+    "objectID": "slides/Risikomål/risikomaal.html#formeloversigt",
+    "href": "slides/Risikomål/risikomaal.html#formeloversigt",
+    "title": "Risikomål for obligationer",
+    "section": "Formeloversigt",
+    "text": "Formeloversigt"
+  },
+  {
+    "objectID": "slides/Risikomål/risikomaal.html#workflow-i-praksis",
+    "href": "slides/Risikomål/risikomaal.html#workflow-i-praksis",
+    "title": "Risikomål for obligationer",
+    "section": "Workflow i praksis",
+    "text": "Workflow i praksis"
+  },
+  {
+    "objectID": "slides/Risikomål/risikomaal.html#mini-eksempel-3-årig-cf-vs.-scenarier",
+    "href": "slides/Risikomål/risikomaal.html#mini-eksempel-3-årig-cf-vs.-scenarier",
+    "title": "Risikomål for obligationer",
+    "section": "Mini-eksempel: 3-årig CF vs. scenarier",
+    "text": "Mini-eksempel: 3-årig CF vs. scenarier"
+  },
+  {
+    "objectID": "slides/Risikomål/risikomaal.html#opsummering",
+    "href": "slides/Risikomål/risikomaal.html#opsummering",
+    "title": "Risikomål for obligationer",
+    "section": "Opsummering",
+    "text": "Opsummering"
+  },
+  {
+    "objectID": "slides/Risikomål/risikomaal.html#prisyield-grundform",
+    "href": "slides/Risikomål/risikomaal.html#prisyield-grundform",
+    "title": "Risikomål for obligationer",
+    "section": "Pris–yield: grundform",
+    "text": "Pris–yield: grundform"
+  },
+  {
+    "objectID": "slides/Risikomål/risikomaal.html#oversigtstabel-risikomål",
+    "href": "slides/Risikomål/risikomaal.html#oversigtstabel-risikomål",
+    "title": "Risikomål for obligationer",
+    "section": "Oversigtstabel: risikomål",
+    "text": "Oversigtstabel: risikomål"
+  },
+  {
+    "objectID": "slides/Risikomål/risikomaal.html#tabel-eksempel-én-obligation-illustrativt",
+    "href": "slides/Risikomål/risikomaal.html#tabel-eksempel-én-obligation-illustrativt",
+    "title": "Risikomål for obligationer",
+    "section": "Tabel-eksempel: én obligation (illustrativt)",
+    "text": "Tabel-eksempel: én obligation (illustrativt)"
+  },
+  {
+    "objectID": "slides/Risikomål/risikomaal.html#fisherweil-varighed",
+    "href": "slides/Risikomål/risikomaal.html#fisherweil-varighed",
+    "title": "Risikomål for obligationer",
+    "section": "Fisher–Weil varighed",
+    "text": "Fisher–Weil varighed"
+  },
+  {
+    "objectID": "slides/Risikomål/risikomaal.html#konveksitet-intuition",
+    "href": "slides/Risikomål/risikomaal.html#konveksitet-intuition",
+    "title": "Risikomål for obligationer",
+    "section": "Konveksitet – intuition",
+    "text": "Konveksitet – intuition"
+  },
+  {
+    "objectID": "slides/Risikomål/risikomaal.html#kurvebevægelser",
+    "href": "slides/Risikomål/risikomaal.html#kurvebevægelser",
+    "title": "Risikomål for obligationer",
+    "section": "Kurvebevægelser",
+    "text": "Kurvebevægelser"
+  },
+  {
+    "objectID": "slides/Risikomål/risikomaal.html#tabel-eksempel-scenarie-pl-illustrativt",
+    "href": "slides/Risikomål/risikomaal.html#tabel-eksempel-scenarie-pl-illustrativt",
+    "title": "Risikomål for obligationer",
+    "section": "Tabel-eksempel: scenarie-P/L (illustrativt)",
+    "text": "Tabel-eksempel: scenarie-P/L (illustrativt)"
+  },
+  {
+    "objectID": "slides/Risikomål/risikomaal.html#delta-vektorer",
+    "href": "slides/Risikomål/risikomaal.html#delta-vektorer",
+    "title": "Risikomål for obligationer",
+    "section": "Delta-vektorer",
+    "text": "Delta-vektorer"
+  },
+  {
+    "objectID": "slides/Risikomål/risikomaal.html#hedging-tabel-eksempel",
+    "href": "slides/Risikomål/risikomaal.html#hedging-tabel-eksempel",
+    "title": "Risikomål for obligationer",
+    "section": "Hedging (tabel-eksempel)",
+    "text": "Hedging (tabel-eksempel)"
+  },
+  {
+    "objectID": "slides/Risikomål/risikomaal.html#bullet-vs.-barbell",
+    "href": "slides/Risikomål/risikomaal.html#bullet-vs.-barbell",
+    "title": "Risikomål for obligationer",
+    "section": "Bullet vs. Barbell",
+    "text": "Bullet vs. Barbell"
+  },
+  {
+    "objectID": "slides/Risikomål/risikomaal.html#immunisering",
+    "href": "slides/Risikomål/risikomaal.html#immunisering",
+    "title": "Risikomål for obligationer",
+    "section": "Immunisering",
+    "text": "Immunisering"
+  },
+  {
+    "objectID": "slides/Risikomål/risikomaal.html#immunisering-tabel-eksempel",
+    "href": "slides/Risikomål/risikomaal.html#immunisering-tabel-eksempel",
+    "title": "Risikomål for obligationer",
+    "section": "Immunisering (tabel-eksempel)",
+    "text": "Immunisering (tabel-eksempel)"
+  },
+  {
+    "objectID": "slides/Risikomål/risikomaal.html#kurver-konventioner",
+    "href": "slides/Risikomål/risikomaal.html#kurver-konventioner",
+    "title": "Risikomål for obligationer",
+    "section": "Kurver & konventioner",
+    "text": "Kurver & konventioner"
+  },
+  {
+    "objectID": "slides/Risikomål/risikomaal.html#formler-samlet",
+    "href": "slides/Risikomål/risikomaal.html#formler-samlet",
+    "title": "Risikomål for obligationer",
+    "section": "Formler (samlet)",
+    "text": "Formler (samlet)"
+  },
+  {
+    "objectID": "slides/Risikomål/risikomaal.html#kurvescenarier-grafik",
+    "href": "slides/Risikomål/risikomaal.html#kurvescenarier-grafik",
+    "title": "Risikomål for obligationer",
+    "section": "Kurvescenarier (grafik)",
+    "text": "Kurvescenarier (grafik)"
+  },
+  {
+    "objectID": "slides/Risikomål/risikomaal.html#faldgruber",
+    "href": "slides/Risikomål/risikomaal.html#faldgruber",
+    "title": "Risikomål for obligationer",
+    "section": "Faldgruber",
+    "text": "Faldgruber"
+  },
+  {
+    "objectID": "slides/Risikomål/risikomaal.html#tabel-rapporteringsformat-for-risikomål",
+    "href": "slides/Risikomål/risikomaal.html#tabel-rapporteringsformat-for-risikomål",
+    "title": "Risikomål for obligationer",
+    "section": "Tabel: Rapporteringsformat for risikomål",
+    "text": "Tabel: Rapporteringsformat for risikomål"
+  },
+  {
+    "objectID": "slides/Risikomål/risikomaal.html#tabel-krd-profil-eksempelopsætning",
+    "href": "slides/Risikomål/risikomaal.html#tabel-krd-profil-eksempelopsætning",
+    "title": "Risikomål for obligationer",
+    "section": "Tabel: KRD-profil (eksempelopsætning)",
+    "text": "Tabel: KRD-profil (eksempelopsætning)"
+  },
+  {
+    "objectID": "slides/Risikomål/risikomaal.html#tabel-scenarie-pl-via-durconv",
+    "href": "slides/Risikomål/risikomaal.html#tabel-scenarie-pl-via-durconv",
+    "title": "Risikomål for obligationer",
+    "section": "Tabel: Scenarie-P/L via Dur+Conv",
+    "text": "Tabel: Scenarie-P/L via Dur+Conv"
+  },
+  {
+    "objectID": "slides/Risikomål/risikomaal.html#formeloversigt-samlet",
+    "href": "slides/Risikomål/risikomaal.html#formeloversigt-samlet",
+    "title": "Risikomål for obligationer",
+    "section": "Formeloversigt (samlet)",
+    "text": "Formeloversigt (samlet)"
+  },
+  {
+    "objectID": "slides/Risikomål/risikomaal.html#varighed-og-reinvesteringsrisiko-1",
+    "href": "slides/Risikomål/risikomaal.html#varighed-og-reinvesteringsrisiko-1",
+    "title": "Risikomål for obligationer",
+    "section": "Varighed og reinvesteringsrisiko",
+    "text": "Varighed og reinvesteringsrisiko"
+  },
+  {
+    "objectID": "slides/Risikomål/risikomaal.html#varighed-og-risikomål",
+    "href": "slides/Risikomål/risikomaal.html#varighed-og-risikomål",
+    "title": "Risikomål for obligationer",
+    "section": "Varighed og risikomål",
+    "text": "Varighed og risikomål"
+  },
+  {
+    "objectID": "slides/Risikomål/risikomaal.html#varighed-og-risikomål-1",
+    "href": "slides/Risikomål/risikomaal.html#varighed-og-risikomål-1",
+    "title": "Risikomål for obligationer",
+    "section": "Varighed og risikomål",
+    "text": "Varighed og risikomål"
+  },
+  {
+    "objectID": "slides/Risikomål/risikomaal.html#risikomål-og-rentestrukturen",
+    "href": "slides/Risikomål/risikomaal.html#risikomål-og-rentestrukturen",
+    "title": "Risikomål for obligationer",
+    "section": "Risikomål og rentestrukturen",
+    "text": "Risikomål og rentestrukturen"
+  },
+  {
+    "objectID": "slides/Risikomål/risikomaal.html#risikomål-og-nøglerentevarighed",
+    "href": "slides/Risikomål/risikomaal.html#risikomål-og-nøglerentevarighed",
+    "title": "Risikomål for obligationer",
+    "section": "Risikomål og nøglerentevarighed",
+    "text": "Risikomål og nøglerentevarighed"
+  },
+  {
+    "objectID": "slides/Risikomål/risikomaal.html#øvelser",
+    "href": "slides/Risikomål/risikomaal.html#øvelser",
+    "title": "Risikomål for obligationer",
+    "section": "Øvelser",
+    "text": "Øvelser"
+  },
+  {
+    "objectID": "slides/Risikomål/risikomaal.html#rentersiko-på-porteføljer",
+    "href": "slides/Risikomål/risikomaal.html#rentersiko-på-porteføljer",
+    "title": "Risikomål for obligationer",
+    "section": "Rentersiko på porteføljer",
+    "text": "Rentersiko på porteføljer"
+  },
+  {
+    "objectID": "slides/Realkredit/realkredit.html#introduktion",
+    "href": "slides/Realkredit/realkredit.html#introduktion",
+    "title": "Det danske realkreditmarked",
+    "section": "Introduktion",
+    "text": "Introduktion"
+  },
+  {
+    "objectID": "slides/Realkredit/realkredit.html#baggrund-københavns-brand-1795",
+    "href": "slides/Realkredit/realkredit.html#baggrund-københavns-brand-1795",
+    "title": "Det danske realkreditmarked",
+    "section": "Baggrund: Københavns brand 1795",
+    "text": "Baggrund: Københavns brand 1795"
+  },
+  {
+    "objectID": "slides/Realkredit/realkredit.html#realkreditsystemet",
+    "href": "slides/Realkredit/realkredit.html#realkreditsystemet",
+    "title": "Det danske realkreditmarked",
+    "section": "Realkreditsystemet",
+    "text": "Realkreditsystemet"
+  },
+  {
+    "objectID": "slides/Realkredit/realkredit.html#lovgivning",
+    "href": "slides/Realkredit/realkredit.html#lovgivning",
+    "title": "Det danske realkreditmarked",
+    "section": "Lovgivning",
+    "text": "Lovgivning"
+  },
+  {
+    "objectID": "slides/Realkredit/realkredit.html#ødelæggelser",
+    "href": "slides/Realkredit/realkredit.html#ødelæggelser",
+    "title": "Det danske realkreditmarked",
+    "section": "Ødelæggelser",
+    "text": "Ødelæggelser\n\nIlden varede i hele 2 dage\n\nI alt blev 941 huse ødelagt\n\nSkabte et akut behov for kapital til at genopbygge ejendommene\n\nSpørgsmålet var: Hvem skulle låne ud?"
+  },
+  {
+    "objectID": "slides/Realkredit/realkredit.html#løsningen-kreditkassen",
+    "href": "slides/Realkredit/realkredit.html#løsningen-kreditkassen",
+    "title": "Det danske realkreditmarked",
+    "section": "Løsningen: Kreditkassen",
+    "text": "Løsningen: Kreditkassen\n\nMange långivere slog sig sammen under navnet Husejernes Kreditkasse\n\nFormålet: stille kapital til rådighed for genopbygning af boliger\n\nSåledes kunne folk få et tag over hovedet igen"
+  },
+  {
+    "objectID": "slides/Realkredit/realkredit.html#særlige-vilkår",
+    "href": "slides/Realkredit/realkredit.html#særlige-vilkår",
+    "title": "Det danske realkreditmarked",
+    "section": "Særlige vilkår",
+    "text": "Særlige vilkår\n\nDatidens lov forbød renter over 4%\n\nEn lav rente kunne kun retfærdiggøres gennem lavere kreditrisiko\n\nDerfor:\n\nLåntagere blev medlemmer af foreningen og hæftede solidarisk\n\nSikkerhed/pant i ejendomme var påkrævet"
+  },
+  {
+    "objectID": "slides/Realkredit/realkredit.html#perspektiv",
+    "href": "slides/Realkredit/realkredit.html#perspektiv",
+    "title": "Det danske realkreditmarked",
+    "section": "Perspektiv",
+    "text": "Perspektiv\n\nModellen gav stor sikkerhed for investorer\n\nIngen konkurs på en obligationsserie i 200 år!\n\nStartskuddet til det danske realkreditsystem"
+  },
+  {
+    "objectID": "slides/Realkredit/realkredit.html#markedet",
+    "href": "slides/Realkredit/realkredit.html#markedet",
+    "title": "Det danske realkreditmarked",
+    "section": "Markedet",
+    "text": "Markedet"
+  },
+  {
+    "objectID": "slides/Realkredit/realkredit.html#de-forskellige-realkreditobligationer",
+    "href": "slides/Realkredit/realkredit.html#de-forskellige-realkreditobligationer",
+    "title": "Det danske realkreditmarked",
+    "section": "De forskellige realkreditobligationer",
+    "text": "De forskellige realkreditobligationer"
+  },
+  {
+    "objectID": "slides/Realkredit/realkredit.html#afrunding",
+    "href": "slides/Realkredit/realkredit.html#afrunding",
+    "title": "Det danske realkreditmarked",
+    "section": "Afrunding",
+    "text": "Afrunding"
   }
 ]

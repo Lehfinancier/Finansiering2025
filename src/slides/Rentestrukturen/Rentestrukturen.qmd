@@ -1,0 +1,304 @@
+---
+title: "Rentestrukturen"
+subtitle: "Afkast, kurver og prisfastsættelse"
+author: "Niklas Lehmann Jensen"
+jupyter: python3
+format:
+  revealjs:
+    width: 1150
+    logo: ../../themes/favicon.ico
+    footer: "Finansiering — Rentestrukturen"
+    footer-logo-link: "#"
+    theme: ../../themes/slides_themes.scss
+    slide-number: true
+slide-level: 4
+title-slide-attributes:
+  data-background-color: "#045D5D"
+  data-footer: " "
+execute:
+  echo: true
+  warning: false
+  error: false
+---
+
+## Introduktion {background="#00100F"}
+
+#### Læringsmål {background="#43464B"}
+- Forstå hvad **rentestrukturen (yield curve)** er, og hvorfor den er central for prisfastsættelse  
+- Skelne **horisontal vs. vertikal rentestruktur** og tolke kurvens form  
+- Forklare hvorfor **effektiv rente (YTM)** er et **begrænset** afkastmål  
+- Bruge **nulkuponrenter/discountfaktorer** til at prisfastsætte cashflows (bootstrapping-intuition)  
+- Kende hovedforklaringer: **forventningshypotesen**, **løbetids-/likviditetspræmie**, **segmentering**  
+- Forstå principper for **estimation** af en *glat* rentestruktur og sammenholde med markedspriser  
+
+## Teorien bag rentestrukturen {background="#00100F"}
+
+#### Hvad er rentestrukturen? {background="#43464B"}
+- En **kurve** over risikofri (eller næsten risikofri) renter for forskellige **løbetider**  
+- Bruges til **diskontering** af en betalingsstrøm:  
+  $$ P = \sum_{t=1}^{N} \frac{CF_t}{(1 + r_t)^t} \;=\; \sum_{t=1}^{N} CF_t \cdot d(t) $$
+  hvor $r_t$ er **nulkuponrenten** og $d(t)$ **diskonteringsfaktoren**  
+- Giver både **afkastmål** (spot/forward/par) og **risikomål** (reaktion på kurvebevægelser)  
+
+#### Horisontal vs. vertikal rentestruktur {background="#43464B"}
+- **Horisontal**: samme instrumenttype (fx statsobligationer), **varierende løbetid** → klassisk yield curve  
+- **Vertikal**: samme løbetid, **varierende egenskaber** (kupon, likviditet, kredit, skat) → forklare *spreads*  
+- Begge perspektiver bruges i praksis, men til **forskellige spørgsmål**  
+
+<img src="/images/chapters/chapter_3/kap3_vertikal_horizontal.png" alt="Horisontal og vertikal rentestruktur" width="70%"/>
+
+## Den effektive rente (YTM) – et problematisk afkastmål {background="#00100F"}
+
+#### Hvorfor er YTM utilstrækkelig? {background="#43464B"}
+- **Gennemsnitlig** intern rente på hele cashflowet – blander korte og lange renter  
+- Antager **reinvestering** af kuponer til **samme** rente → sjældent realistisk  
+- To obligationer kan have **samme YTM**, men meget **forskellig kurvefølsomhed**  
+- Løsning: arbejd **periode for periode** med **nulkuponrenter** og **discountfaktorer**  
+
+---
+
+#### Pris som sum af diskonterede betalinger {background="#43464B"}
+- Med YTM $r$ (for overskuelighed) skrives:  
+  $$ K = \sum_{t=1}^{N} \frac{Y(t)}{(1+r)^t} $$
+- Bedre i praksis: brug **rentestrukturen**  
+  $$ K \;=\; \sum_{t=1}^{N} \frac{Y(t)}{(1+z_t)^t} \;=\; \sum_{t=1}^{N} Y(t)\cdot d(t) $$
+- Hermed matcher **hver betaling** sin **egen** relevante **termrente**  
+
+---
+
+#### Bootstrapping-intuition via markedseksempel {background="#43464B"}
+**Obligationsmarked (stående lån)**  
+
+| Løbetid | Kupon | Kurs   | Eff. rente |
+|:--:|:--:|:--:|:--:|
+| 1 år | 5% | 100,96 | 4,00% |
+| 2 år | 6% | 101,91 | 4,97% |
+| 3 år | 7% | 102,92 | 5,91% |
+
+- 1Y er også en **nulkupon**: $100{,}96 = 105/(1+n_1)$ → $n_1=4{,}00\%$.  
+- 2Y: $101{,}91 = 6/(1{+}0{,}04) + 106/(1{+}n_2)^2$ → $n_2\approx 5{,}00\%$.  
+- 3Y: $102{,}92 = 7/(1{+}0{,}04) + 7/(1{+}0{,}05)^2 + 107/(1{+}n_3)^3$ → $n_3\approx 6{,}00\%$.
+
+---
+
+#### Diskonteringsfaktorer (fra nulkuponrenter) {background="#43464B"}
+- Generelt: $d_t=\dfrac{1}{(1+n_t)^t}$.  
+- Med $n_1{=}4\%$, $n_2{=}5\%$, $n_3{=}6\%$:  
+  $d_1=0{,}9615,\; d_2=0{,}9070,\; d_3=0{,}8396$.
+
+::: {.callout-note title="Definition: YTM vs. nulkuponrente"}
+**Effektiv rente (YTM):** ens for alle betalinger i *den samme* obligation.  
+**Nulkuponrente:** ens for alle betalinger der forfalder på *samme tidspunkt* – uanset obligation.
+:::
+
+## Rentekurven og obligationsarbitrage {background="#00100F"}
+
+#### Kuponobligation = portefølje af nulkuponer {background="#43464B"}
+- En kuponobligations cashflow kan **gengskabes 1:1** med nulkuponer i de samme tidspunkter  
+- Derfor skal prisen være **lig** prisen på den tilsvarende **nulkupon-portefølje**  
+- Ellers opstår **arbitrage** (sælg den dyre/køb den billige)  
+
+<img src="/images/chapters/chapter_3/kap3_BondArbitrage.png" alt="Kuponobligation som portefølje af nulkuponer" width="70%"/>
+
+## Forklaringer på rentestrukturens form {background="#00100F"}
+
+#### Typiske former {background="#43464B"}
+- **Stigende/stejl**: højere lange renter end korte (vækst/normalisering)  
+- **Flad**: små renteforskelle (usikkerhed/overgang)  
+- **Inverteret**: korte renter > lange (stram pengepolitik/recessionsfrygt)  
+
+<img src="/images/chapters/chapter_3/kap3_Rentekurver.png" alt="Tre typiske forløb for rentekurven" width="70%"/>
+
+#### Forventningshypotesen (EH) {background="#43464B"}
+- Lange renter ≈ **forventet gennemsnit** af fremtidige korte renter  
+- Intuition: investor er **neutral** over for løbetid → kun forventninger driver kurven  
+- Begrænsning: matcher ofte **niveau/slope** dårligere i praksis uden præmier  
+
+<img src="/images/chapters/chapter_3/kap3_rentekurve_forventninger.png" alt="Rentekurvens forløb efter forventningshypotesen" width="70%"/>
+
+#### Løbetids-/likviditetspræmie (TP) {background="#43464B"}
+- Investorer kræver typisk **ekstra præmie** for at binde kapital længere og bære **kurserisiko/likviditet**  
+- Lange renter = **forventet** kort rente + **løbetidspræmie** (stigende med løbetid)  
+- Hjælper med at forklare **vedvarende** positiv hældning  
+
+<img src="/images/chapters/chapter_3/kap3_Likviditetspræmie.png" alt="Rentestruktur og løbetidspræmie" width="70%"/>
+
+#### Markedssegmentering {background="#43464B"}
+- Forskellige investorer har **præferencer/mandater** for bestemte løbetider  
+- Efterspørgsel/udbud i **adskilte segmenter** → dele af kurven kan bevæge sig **uafhængigt**  
+- Fx banker (korte), pensionskasser (lange) → **lokale niveauer og slopes**  
+
+<img src="/images/chapters/chapter_3/kap3_Segmentering.png" alt="Rentestrukturens segmentering" width="70%"/>
+
+## Estimation af rentestrukturen {background="#00100F"}
+
+#### Mål: En *glat* og arbitragefri kurve {background="#43464B"}
+- Data: observationer af **priser/renter** på **likvide** papirer (oftest statsobligationer)  
+- Krav: **ingen arbitrage**, **glat** forløb, **god fit** til markedet  
+- Metoder (intuition): **bootstrapping** (fra korte til lange), splines, **parametriske** (fx NSS)  
+- Output: **diskonteringsfunktion** $d(t)$ og **nulkuponrenter** $z_t$  
+
+#### Teoretisk kurve vs. markedspriser {background="#43464B"}
+- Modeller **approksimerer** markedet; små afvigelser er normale  
+- Store systematiske afvigelser → dataproblem, modelvalg eller illikviditet  
+
+<img src="/images/chapters/chapter_3/kap_3_RentestrukturMarkedspriser.png" alt="Beregnet rentestruktur og markedspriser" width="75%"/>
+
+#### Definition (glat rentestruktur) {background="#43464B"}
+- En robust rentestruktur bygger på **finansiel logik** (ingen arbitrage)  
+- **Interpolation** skal sikre **glathed** mellem datapunkter (ingen “hak”)  
+- Kurven bruges **konsistent** til både **pris** og **risikomål** på tværs af løbetider  
+
+## Prisfastsættelse ud fra rentestrukturen {background="#00100F"}
+
+#### Standardopskrift {background="#43464B"}
+1) Find **relevante** nulkuponrenter $z_t$ (eller $d(t)$) for alle betalingsdatoer  
+2) Diskontér hver betaling: $PV_t = CF_t \cdot d(t)$  
+3) Læg sammen: $P = \sum PV_t$  
+4) Man kan herfra udlede **YTM** på obligationen fra prisen – men pris kommer fra kurven  
+
+---
+
+#### Teoretisk pris vs. markedspris (formler) {background="#43464B"}
+- **Teoretisk (nulkupon):**  
+  $$
+  K^{*} + v \;=\; \sum_{t=1}^{N} \frac{y_t}{(1 + n_t)^{t}}
+  $$
+- **Markedspris (YTM):**  
+  $$
+  K + v \;=\; \sum_{t=1}^{N} \frac{y_t}{(1 + r)^{t}}
+  $$
+- $n_t$: nulkuponrente for termin $t$; $r$: effektiv rente anvendt på hele CF’et.
+
+---
+
+#### Nettonutidsværdi (NNV) og mispricing {background="#43464B"}
+- **NNV =** $K^{*} - K$.  
+- **Tolkning:**  
+  - $K^{*}-K > 0$ → **undervurderet** (teoretisk > marked).  
+  - $K^{*}-K < 0$ → **overvurderet** (teoretisk < marked).  
+- Bruges til at spotte afvigelser vs. “kurve-konsistente” priser.
+
+---
+
+#### Eksempel: DK0009924961 (2,25% 2035) {background="#43464B"}
+Nedenfor NV via nulkuponkurven (afrundet):
+
+::: {.smaller style="font-size: 0.5em"}
+| Termin     | t | Y%  | z%  | NV   |
+|------------|--:|---:|---:|-----:|
+| 15-11-2025 |0,77|2,25|2,24|  2,21|
+| 15-11-2026 |1,77|2,25|2,03|  2,16|
+| 15-11-2027 |2,77|2,25|2,04|  2,12|
+| 15-11-2028 |3,77|2,25|2,14|  2,07|
+| 15-11-2029 |4,77|2,25|2,25|  2,02|
+| 15-11-2030 |5,77|2,25|2,35|  1,98|
+| 15-11-2031 |6,77|2,25|2,44|  1,94|
+| 15-11-2032 |7,78|2,25|2,52|  1,89|
+| 15-11-2033 |8,78|2,25|2,60|  1,85|
+| 15-11-2034 |9,78|2,25|2,67|  1,81|
+| 15-11-2035 |10,78|102,25|2,72| 80,58|
+| **Total**  |    |     |     | **100,64** |
+:::
+
+**Konklusion:** $K^{*}=100{,}64$, $K=100{,}63$ ⇒ **NNV = 0,01** → let **undervurderet**.
+
+## Tolkning og risici {background="#00100F"}
+
+#### Prisfølsomhed under forskellige kurver (eksempel) {background="#43464B"}
+Vi prissætter en **4% kuponobligation** (H=1000) under to rentestrukturer (årlig):  
+
+::: {.smaller style="font-size: 0.5em"}
+| År | Lav rente (%) | Høj rente (%) | CF (kr.) | PV lav | PV høj |
+|---:|---:|---:|---:|---:|---:|
+|1|1,5|4,0|40|39,4|38,5|
+|2|1,8|4,5|40|38,6|36,6|
+|3|2,1|5,0|40|37,6|34,6|
+|4|2,4|5,5|40|36,4|32,3|
+|5|2,7|6,0|40|35,0|29,9|
+|6|3,0|6,5|40|33,5|27,4|
+|7|3,3|7,0|40|31,9|24,9|
+|8|3,6|7,5|1040|783,7|583,1|
+:::
+
+**Resultat:** Kurs (lav) ≈ **103,61** ; Kurs (høj) ≈ **80,73**.  
+Højere kurver → hårdere diskontering → lavere pris.
+
+---
+
+#### Kurvebevægelser og prisfølsomhed {background="#43464B"}
+- **Parallelle skift**: alle $z_t$ flytter sig ≈ simpel varighedsrespons  
+- **Stejling/udfladning**: korte vs. lange renter flytter **forskelligt**  
+- **Kurvatur**: midten bevæger sig relativt til enderne  
+- Derfor: risikomål bør relatere til **kurvescenarier**, ikke kun én YTM. Men vi skal se, at i praksis tager man begge i brug.  
+
+## Øvelser {background="#00100F"}
+
+### Bond pricing med diskret rentes rente {background="#43464B"}
+
+**Årlig spotrente med halvårlig tilskrivning**  
+
+::: {.smaller style="font-size: 0.5em"}
+| Måneder| Spotrente (%) |
+|:------------------:|:-------------:|
+| 6  | 4.0 |
+| 12 | 4.2 |
+| 18 | 4.4 |
+| 24 | 4.6 |
+| 30 | 4.8 |
+:::
+
+**Obligation**  
+- Hovedstol: **100**  
+- Løbetid: **30 mdr.**  
+- Kupon: **4% p.a.**, **halvårlig** 
+
+**Spørgsmål**
+1) Udregn **diskonteringsfaktorerne** for hver periode (6, 12, 18, 24, 30 mdr.).  
+2) Udregn **obligationens pris** (nutidsværdi af alle cashflows).
+
+### Facit {background="#43464B"}
+Lad os se i Excel
+
+### Brugen af rentestruktur {background="#43464B"}
+
+**Data (årlig konvention)**  
+Nulkuponrenter: $y_1 = 1{,}00\%$, $y_2 = 2{,}01\%$
+
+::: {.smaller style="font-size: 0.5em"}
+| Type   | Løbetid | Kupon | Yield | Handlet kurs |
+|:------:|:-------:|:-----:|:-----:|:------------:|
+| Stående | 1 år    | 2%    | 1%    | 100,99       |
+| Stående | 2 år    | 2%    | 2%    | 100,00       |
+| Serie  | 2 år    | 2%    | 2%    | 100,00       |
+:::
+
+**Spørgsmål**
+<br>
+1) Udregn den **teoretiske pris** for hver obligation ud fra zero-kuponrenterne.  
+2) Hvilke obligationer er **billige/dyre** relativt til den teoretiske pris?
+
+### Facit {background="#43464B"}
+
+**Nulkuponrenter**: $d_1=1{,}00\%$, $d_2=2{,}01\%$. Årlig diskontering.
+
+**1) Teoretiske priser**
+
+- **Bullet 1Y (kupon 2%)**  
+  $P = \dfrac{102}{1+0{,}01} = \mathbf{100{,}99}$
+
+- **Bullet 2Y (kupon 2%)**  
+  $P = \dfrac{2}{1+0{,}0100} + \dfrac{102}{(1+0{,}0201)^2} \approx \mathbf{100{,}00}$
+
+- **Serielån 2Y (2% på restgæld, afdrag 50/50)**  
+ $P = \dfrac{52}{1+0{,}0100} + \dfrac{51}{(1+0{,}0201)^2} \approx \mathbf{100{,}50}$
+
+
+## Opsummering {background="#00100F"}
+
+#### Takeaways {background="#43464B"}
+- **Rentestrukturen** er fundamentet for pris og risiko i renteprodukter  
+- **YTM** er praktisk, men **misvisende**: brug **nulkuponrenter/discountfaktorer**  
+- Kurvens form afspejler **forventninger**, **præmier** og **segmentering**  
+- En **glat, arbitragefri** kurve muliggør **konsistent** prisfastsættelse  
+- Tænk i **kurvebevægelser** (parallel, steepen/flatten, kurvatur) for risiko og scenarier  
