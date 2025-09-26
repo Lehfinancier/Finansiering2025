@@ -10,9 +10,10 @@ $presentation-heading-font: "Roboto Slab", sans-serif !default;
 $body-color: #333 !default;
 $body-bg: #ffffff !default;
 
-$presentation-h1-font-size: 3em !default;
-$presentation-h2-font-size: 2.4em !default;
-$presentation-h3-font-size: 2em !default;
+// *** Justerede størrelser ***
+$presentation-h1-font-size: 2.2em !default;   // før: 3em
+$presentation-h2-font-size: 1.7em !default;   // før: 2.4em
+$presentation-h3-font-size: 1.4em !default;   // før: 2em
 $presentation-h4-font-size: 1.1em !default;
 
 $presentation-heading-color: $body-color !default;  
@@ -33,8 +34,13 @@ $code-color: $accent !default;
 $code-block-border-color: lighten($link-color, 0%) !default;
 $code-block-bg: transparent !default;
 
-
 /*-- scss:rules --*/
+
+// Mindre standard font
+.reveal {
+  font-size: 26px;   // default er ~36px
+  line-height: 1.3;  // gør afsnit mere kompakte
+}
 
 // Fix links so they are not cut off
 .reveal a {
@@ -95,6 +101,7 @@ $presentation-title-slide-text-align: left;
 .reveal ul {
   font-weight: lighter;
   padding-left: 16px;
+  line-height: 1.25;   // lidt mere kompakt
 
   li::marker {
     color: mix($accent, white, 70%);
@@ -117,12 +124,12 @@ $presentation-title-slide-text-align: left;
 .reveal ol {
   font-weight: lighter;
   padding-left: 16px;
+  line-height: 1.25;
 
   li::marker {
     color: $accent;
   }
 }
-
 
 /*-- scss:mixins --*/
 

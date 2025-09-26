@@ -752,5 +752,236 @@
     "title": "Det danske realkreditmarked",
     "section": "Afrunding",
     "text": "Afrunding"
+  },
+  {
+    "objectID": "slides/Konverteringsmodel/konverteringsmodel.html#modellering-af-konverteringsadfærd",
+    "href": "slides/Konverteringsmodel/konverteringsmodel.html#modellering-af-konverteringsadfærd",
+    "title": "Modellering af konverteringsadfærd",
+    "section": "Modellering af Konverteringsadfærd",
+    "text": "Modellering af Konverteringsadfærd"
+  },
+  {
+    "objectID": "slides/Konverteringsmodel/konverteringsmodel.html#konverteringsadfærd",
+    "href": "slides/Konverteringsmodel/konverteringsmodel.html#konverteringsadfærd",
+    "title": "Modellering af konverteringsadfærd",
+    "section": "Konverteringsadfærd",
+    "text": "Konverteringsadfærd"
+  },
+  {
+    "objectID": "slides/Konverteringsmodel/konverteringsmodel.html#konverteringsraten-cpr",
+    "href": "slides/Konverteringsmodel/konverteringsmodel.html#konverteringsraten-cpr",
+    "title": "Modellering af konverteringsadfærd",
+    "section": "Konverteringsraten (CPR)",
+    "text": "Konverteringsraten (CPR)"
+  },
+  {
+    "objectID": "slides/Konverteringsmodel/konverteringsmodel.html#konverteringsdata",
+    "href": "slides/Konverteringsmodel/konverteringsmodel.html#konverteringsdata",
+    "title": "Modellering af konverteringsadfærd",
+    "section": "Konverteringsdata",
+    "text": "Konverteringsdata"
+  },
+  {
+    "objectID": "slides/Konverteringsmodel/konverteringsmodel.html#konverteringsmodellen",
+    "href": "slides/Konverteringsmodel/konverteringsmodel.html#konverteringsmodellen",
+    "title": "Modellering af konverteringsadfærd",
+    "section": "Konverteringsmodellen",
+    "text": "Konverteringsmodellen"
+  },
+  {
+    "objectID": "slides/Konverteringsmodel/konverteringsmodel.html#konverteringsfunktioner",
+    "href": "slides/Konverteringsmodel/konverteringsmodel.html#konverteringsfunktioner",
+    "title": "Modellering af konverteringsadfærd",
+    "section": "Konverteringsfunktioner",
+    "text": "Konverteringsfunktioner"
+  },
+  {
+    "objectID": "slides/Konverteringsmodel/konverteringsmodel.html#opsummering",
+    "href": "slides/Konverteringsmodel/konverteringsmodel.html#opsummering",
+    "title": "Modellering af konverteringsadfærd",
+    "section": "Opsummering",
+    "text": "Opsummering"
+  },
+  {
+    "objectID": "slides/Konverteringsmodel/konverteringsmodel.html#øvelser",
+    "href": "slides/Konverteringsmodel/konverteringsmodel.html#øvelser",
+    "title": "Modellering af konverteringsadfærd",
+    "section": "Øvelser",
+    "text": "Øvelser"
+  },
+  {
+    "objectID": "slides/PrisNoegletal/pricingkeyfigures.html#introduktion",
+    "href": "slides/PrisNoegletal/pricingkeyfigures.html#introduktion",
+    "title": "Prisfastsættelse og nøgletal på konverterbare obligationer",
+    "section": "Introduktion",
+    "text": "Introduktion"
+  },
+  {
+    "objectID": "slides/PrisNoegletal/pricingkeyfigures.html#konverteringsrisiko",
+    "href": "slides/PrisNoegletal/pricingkeyfigures.html#konverteringsrisiko",
+    "title": "Prisfastsættelse og nøgletal på konverterbare obligationer",
+    "section": "Konverteringsrisiko",
+    "text": "Konverteringsrisiko"
+  },
+  {
+    "objectID": "slides/PrisNoegletal/pricingkeyfigures.html#markedsbestemmelse-af-konverteringspræmien",
+    "href": "slides/PrisNoegletal/pricingkeyfigures.html#markedsbestemmelse-af-konverteringspræmien",
+    "title": "Prisfastsættelse og nøgletal på konverterbare obligationer",
+    "section": "Markedsbestemmelse af konverteringspræmien",
+    "text": "Markedsbestemmelse af konverteringspræmien"
+  },
+  {
+    "objectID": "slides/PrisNoegletal/pricingkeyfigures.html#prisfastsættelse-af-konverterbare-obligationer",
+    "href": "slides/PrisNoegletal/pricingkeyfigures.html#prisfastsættelse-af-konverterbare-obligationer",
+    "title": "Prisfastsættelse og nøgletal på konverterbare obligationer",
+    "section": "Prisfastsættelse af konverterbare obligationer",
+    "text": "Prisfastsættelse af konverterbare obligationer"
+  },
+  {
+    "objectID": "slides/PrisNoegletal/pricingkeyfigures.html#varighed-og-konveksitet-for-konverterbare",
+    "href": "slides/PrisNoegletal/pricingkeyfigures.html#varighed-og-konveksitet-for-konverterbare",
+    "title": "Prisfastsættelse og nøgletal på konverterbare obligationer",
+    "section": "Varighed og konveksitet for konverterbare",
+    "text": "Varighed og konveksitet for konverterbare"
+  },
+  {
+    "objectID": "slides/PrisNoegletal/pricingkeyfigures.html#cpr-og-pris",
+    "href": "slides/PrisNoegletal/pricingkeyfigures.html#cpr-og-pris",
+    "title": "Prisfastsættelse og nøgletal på konverterbare obligationer",
+    "section": "CPR og pris",
+    "text": "CPR og pris"
+  },
+  {
+    "objectID": "slides/PrisNoegletal/pricingkeyfigures.html#to-kurver-swap-prisning-og-refinansiering-swap-lys",
+    "href": "slides/PrisNoegletal/pricingkeyfigures.html#to-kurver-swap-prisning-og-refinansiering-swap-lys",
+    "title": "Prisfastsættelse og nøgletal på konverterbare obligationer",
+    "section": "To kurver: swap (prisning) og refinansiering (swap + LYS)",
+    "text": "To kurver: swap (prisning) og refinansiering (swap + LYS)"
+  },
+  {
+    "objectID": "slides/PrisNoegletal/pricingkeyfigures.html#oas-option-adjusted-spread",
+    "href": "slides/PrisNoegletal/pricingkeyfigures.html#oas-option-adjusted-spread",
+    "title": "Prisfastsættelse og nøgletal på konverterbare obligationer",
+    "section": "OAS (Option-Adjusted Spread)",
+    "text": "OAS (Option-Adjusted Spread)"
+  },
+  {
+    "objectID": "slides/PrisNoegletal/pricingkeyfigures.html#øvelser-opgaver",
+    "href": "slides/PrisNoegletal/pricingkeyfigures.html#øvelser-opgaver",
+    "title": "Prisfastsættelse og nøgletal på konverterbare obligationer",
+    "section": "Øvelser / Opgaver",
+    "text": "Øvelser / Opgaver"
+  },
+  {
+    "objectID": "slides/PrisNoegletal/pricingkeyfigures.html#opsummering",
+    "href": "slides/PrisNoegletal/pricingkeyfigures.html#opsummering",
+    "title": "Prisfastsættelse og nøgletal på konverterbare obligationer",
+    "section": "Opsummering",
+    "text": "Opsummering"
+  },
+  {
+    "objectID": "slides/FinanskrisenRegulering/financialcrisis.html#introduktion",
+    "href": "slides/FinanskrisenRegulering/financialcrisis.html#introduktion",
+    "title": "Finanskrisens udvikling og eftervirkninger",
+    "section": "Introduktion",
+    "text": "Introduktion"
+  },
+  {
+    "objectID": "slides/FinanskrisenRegulering/financialcrisis.html#perioden-op-til-finanskrisen",
+    "href": "slides/FinanskrisenRegulering/financialcrisis.html#perioden-op-til-finanskrisen",
+    "title": "Finanskrisens udvikling og eftervirkninger",
+    "section": "Perioden op til finanskrisen",
+    "text": "Perioden op til finanskrisen"
+  },
+  {
+    "objectID": "slides/FinanskrisenRegulering/financialcrisis.html#udviklingen-i-den-finansielle-sektor",
+    "href": "slides/FinanskrisenRegulering/financialcrisis.html#udviklingen-i-den-finansielle-sektor",
+    "title": "Finanskrisens udvikling og eftervirkninger",
+    "section": "Udviklingen i den finansielle sektor",
+    "text": "Udviklingen i den finansielle sektor"
+  },
+  {
+    "objectID": "slides/FinanskrisenRegulering/financialcrisis.html#securitisering-tranching-og-shadow-banking",
+    "href": "slides/FinanskrisenRegulering/financialcrisis.html#securitisering-tranching-og-shadow-banking",
+    "title": "Finanskrisens udvikling og eftervirkninger",
+    "section": "Securitisering, tranching og shadow banking",
+    "text": "Securitisering, tranching og shadow banking"
+  },
+  {
+    "objectID": "slides/FinanskrisenRegulering/financialcrisis.html#hvordan-låntagning-øger-risiko",
+    "href": "slides/FinanskrisenRegulering/financialcrisis.html#hvordan-låntagning-øger-risiko",
+    "title": "Finanskrisens udvikling og eftervirkninger",
+    "section": "Hvordan låntagning øger risiko",
+    "text": "Hvordan låntagning øger risiko"
+  },
+  {
+    "objectID": "slides/FinanskrisenRegulering/financialcrisis.html#gearing-og-kapitalandel-lehman-brothers",
+    "href": "slides/FinanskrisenRegulering/financialcrisis.html#gearing-og-kapitalandel-lehman-brothers",
+    "title": "Finanskrisens udvikling og eftervirkninger",
+    "section": "Gearing og kapitalandel: Lehman Brothers",
+    "text": "Gearing og kapitalandel: Lehman Brothers"
+  },
+  {
+    "objectID": "slides/FinanskrisenRegulering/financialcrisis.html#krisens-udbrud",
+    "href": "slides/FinanskrisenRegulering/financialcrisis.html#krisens-udbrud",
+    "title": "Finanskrisens udvikling og eftervirkninger",
+    "section": "Krisens udbrud",
+    "text": "Krisens udbrud"
+  },
+  {
+    "objectID": "slides/FinanskrisenRegulering/financialcrisis.html#eftervirkninger-politik-og-økonomi",
+    "href": "slides/FinanskrisenRegulering/financialcrisis.html#eftervirkninger-politik-og-økonomi",
+    "title": "Finanskrisens udvikling og eftervirkninger",
+    "section": "Eftervirkninger: politik og økonomi",
+    "text": "Eftervirkninger: politik og økonomi"
+  },
+  {
+    "objectID": "slides/FinanskrisenRegulering/financialcrisis.html#øget-regulering-basel-iiiiv",
+    "href": "slides/FinanskrisenRegulering/financialcrisis.html#øget-regulering-basel-iiiiv",
+    "title": "Finanskrisens udvikling og eftervirkninger",
+    "section": "Øget regulering: Basel III/IV",
+    "text": "Øget regulering: Basel III/IV"
+  },
+  {
+    "objectID": "slides/FinanskrisenRegulering/financialcrisis.html#kan-det-ske-igen-svb-case-2023",
+    "href": "slides/FinanskrisenRegulering/financialcrisis.html#kan-det-ske-igen-svb-case-2023",
+    "title": "Finanskrisens udvikling og eftervirkninger",
+    "section": "Kan “det” ske igen? (SVB-case 2023)",
+    "text": "Kan “det” ske igen? (SVB-case 2023)"
+  },
+  {
+    "objectID": "slides/FinanskrisenRegulering/financialcrisis.html#nim-balance-og-struktur",
+    "href": "slides/FinanskrisenRegulering/financialcrisis.html#nim-balance-og-struktur",
+    "title": "Finanskrisens udvikling og eftervirkninger",
+    "section": "NIM, balance og struktur",
+    "text": "NIM, balance og struktur"
+  },
+  {
+    "objectID": "slides/FinanskrisenRegulering/financialcrisis.html#egenkapitalens-varighed-duration",
+    "href": "slides/FinanskrisenRegulering/financialcrisis.html#egenkapitalens-varighed-duration",
+    "title": "Finanskrisens udvikling og eftervirkninger",
+    "section": "Egenkapitalens varighed (duration)",
+    "text": "Egenkapitalens varighed (duration)"
+  },
+  {
+    "objectID": "slides/FinanskrisenRegulering/financialcrisis.html#afrunding",
+    "href": "slides/FinanskrisenRegulering/financialcrisis.html#afrunding",
+    "title": "Finanskrisens udvikling og eftervirkninger",
+    "section": "Afrunding",
+    "text": "Afrunding"
+  },
+  {
+    "objectID": "slides/FinanskrisenRegulering/financialcrisis.html#rentespænd-og-nettorentemargin",
+    "href": "slides/FinanskrisenRegulering/financialcrisis.html#rentespænd-og-nettorentemargin",
+    "title": "Finanskrisens udvikling og eftervirkninger",
+    "section": "Rentespænd og nettorentemargin",
+    "text": "Rentespænd og nettorentemargin"
+  },
+  {
+    "objectID": "slides/FinanskrisenRegulering/financialcrisis.html#egenkapitalens-varighed",
+    "href": "slides/FinanskrisenRegulering/financialcrisis.html#egenkapitalens-varighed",
+    "title": "Finanskrisens udvikling og eftervirkninger",
+    "section": "Egenkapitalens varighed",
+    "text": "Egenkapitalens varighed"
   }
 ]

@@ -1,0 +1,1260 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-html/tabby.min.js"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/light-border.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-1fe81d0376b2c50856e68e651e390326.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
+  <meta name="generator" content="quarto-1.8.23">
+
+  <meta name="author" content="Niklas Lehmann Jensen">
+  <title>Finansiering 2025 – Modellering af konverteringsadfærd</title>
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+  <link rel="stylesheet" href="../../site_libs/revealjs/dist/reset.css">
+  <link rel="stylesheet" href="../../site_libs/revealjs/dist/reveal.css">
+  <style>
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+      vertical-align: middle;
+    }
+  </style>
+  <link rel="stylesheet" href="../../site_libs/revealjs/dist/theme/quarto-565ef86150f1a57566569b2d4da14a6d.css">
+  <link href="../../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
+  <link href="../../site_libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
+  <link href="../../site_libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
+  <link href="../../site_libs/revealjs/plugin/quarto-support/footer.css" rel="stylesheet">
+  <style type="text/css">
+    .reveal div.sourceCode {
+      margin: 0;
+      overflow: auto;
+    }
+    .reveal div.hanging-indent {
+      margin-left: 1em;
+      text-indent: -1em;
+    }
+    .reveal .slide:not(.center) {
+      height: 100%;
+    }
+    .reveal .slide.scrollable {
+      overflow-y: auto;
+    }
+    .reveal .footnotes {
+      height: 100%;
+      overflow-y: auto;
+    }
+    .reveal .slide .absolute {
+      position: absolute;
+      display: block;
+    }
+    .reveal .footnotes ol {
+      counter-reset: ol;
+      list-style-type: none; 
+      margin-left: 0;
+    }
+    .reveal .footnotes ol li:before {
+      counter-increment: ol;
+      content: counter(ol) ". "; 
+    }
+    .reveal .footnotes ol li > p:first-child {
+      display: inline-block;
+    }
+    .reveal .slide ul,
+    .reveal .slide ol {
+      margin-bottom: 0.5em;
+    }
+    .reveal .slide ul li,
+    .reveal .slide ol li {
+      margin-top: 0.4em;
+      margin-bottom: 0.2em;
+    }
+    .reveal .slide ul[role="tablist"] li {
+      margin-bottom: 0;
+    }
+    .reveal .slide ul li > *:first-child,
+    .reveal .slide ol li > *:first-child {
+      margin-block-start: 0;
+    }
+    .reveal .slide ul li > *:last-child,
+    .reveal .slide ol li > *:last-child {
+      margin-block-end: 0;
+    }
+    .reveal .slide .columns:nth-child(3) {
+      margin-block-start: 0.8em;
+    }
+    .reveal blockquote {
+      box-shadow: none;
+    }
+    .reveal .tippy-content>* {
+      margin-top: 0.2em;
+      margin-bottom: 0.7em;
+    }
+    .reveal .tippy-content>*:last-child {
+      margin-bottom: 0.2em;
+    }
+    .reveal .slide > img.stretch.quarto-figure-center,
+    .reveal .slide > img.r-stretch.quarto-figure-center {
+      display: block;
+      margin-left: auto;
+      margin-right: auto; 
+    }
+    .reveal .slide > img.stretch.quarto-figure-left,
+    .reveal .slide > img.r-stretch.quarto-figure-left  {
+      display: block;
+      margin-left: 0;
+      margin-right: auto; 
+    }
+    .reveal .slide > img.stretch.quarto-figure-right,
+    .reveal .slide > img.r-stretch.quarto-figure-right  {
+      display: block;
+      margin-left: auto;
+      margin-right: 0; 
+    }
+  </style>
+  <!-- MathJax v3 config MUST come before the loader -->
+
+  <script>
+
+    window.MathJax = {
+
+      tex: {
+
+        inlineMath: [['$', '$'], ['\\(', '\\)']],
+
+        displayMath: [['$$', '$$'], ['\\[', '\\]']],
+
+        tags: 'ams',
+
+        macros: {
+
+          vect: ["\\mathbf{#1}", 1],
+
+          mat: ["\\mathbf{#1}", 1],
+
+  
+
+          bA: "\\boldsymbol{A}", bB: "\\boldsymbol{B}", bC: "\\boldsymbol{C}",
+
+          bD: "\\boldsymbol{D}", bE: "\\boldsymbol{E}", bF: "\\boldsymbol{F}",
+
+          bG: "\\boldsymbol{G}", bH: "\\boldsymbol{H}", bI: "\\boldsymbol{I}",
+
+          bJ: "\\boldsymbol{J}", bK: "\\boldsymbol{K}", bL: "\\boldsymbol{L}",
+
+          bM: "\\boldsymbol{M}", bN: "\\boldsymbol{N}", bO: "\\boldsymbol{O}",
+
+          bP: "\\boldsymbol{P}", bQ: "\\boldsymbol{Q}", bR: "\\boldsymbol{R}",
+
+          bS: "\\boldsymbol{S}", bT: "\\boldsymbol{T}", bU: "\\boldsymbol{U}",
+
+          bV: "\\boldsymbol{V}", bW: "\\boldsymbol{W}", bX: "\\boldsymbol{X}",
+
+          bY: "\\boldsymbol{Y}", bZ: "\\boldsymbol{Z}",
+
+  
+
+          balpha: "\\boldsymbol{\\alpha}",  bbeta: "\\boldsymbol{\\beta}",
+
+          bgamma: "\\boldsymbol{\\gamma}",  bdelta: "\\boldsymbol{\\delta}",
+
+          blambda: "\\boldsymbol{\\lambda}", bmu: "\\boldsymbol{\\mu}",
+
+          brho: "\\boldsymbol{\\rho}", bsigma: "\\boldsymbol{\\sigma}",
+
+          btheta: "\\boldsymbol{\\theta}", bphi: "\\boldsymbol{\\phi}",
+
+  
+
+          abs: ["\\left\\lvert #1 \\right\\rvert", 1],
+
+          norm: ["\\left\\lVert #1 \\right\\rVert", 1],
+
+          argmin: "\\operatorname*{argmin}",
+
+          argmax: "\\operatorname*{argmax}",
+
+          var: "\\mathrm{var}",
+
+          cov: "\\mathrm{cov}"
+
+        }
+
+      }
+
+    };
+
+  </script>
+
+  <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+
+</head>
+<body class="quarto-light">
+  <div class="reveal">
+    <div class="slides">
+
+<section id="title-slide" data-background-color="#045D5D" data-footer="" class="quarto-title-block center">
+  <h1 class="title">Modellering af konverteringsadfærd</h1>
+  <p class="subtitle">Gevinstkrav, miksturmodel og prisning af konverterbare realkreditobligationer</p>
+
+<div class="quarto-title-authors">
+<div class="quarto-title-author">
+<div class="quarto-title-author-name">
+Niklas Lehmann Jensen 
+</div>
+</div>
+</div>
+
+</section><section id="TOC">
+<nav role="doc-toc"> 
+<h2 id="toc-title">Table of contents</h2>
+<ul>
+<li class="fragment"><a href="#/modellering-af-konverteringsadfærd" id="/toc-modellering-af-konverteringsadfærd">Modellering af Konverteringsadfærd</a></li>
+<li class="fragment"><a href="#/konverteringsadfærd" id="/toc-konverteringsadfærd">Konverteringsadfærd</a></li>
+<li class="fragment"><a href="#/konverteringsraten-cpr" id="/toc-konverteringsraten-cpr">Konverteringsraten (CPR)</a></li>
+<li class="fragment"><a href="#/konverteringsdata" id="/toc-konverteringsdata">Konverteringsdata</a></li>
+<li class="fragment"><a href="#/konverteringsmodellen" id="/toc-konverteringsmodellen">Konverteringsmodellen</a></li>
+<li class="fragment"><a href="#/konverteringsfunktioner" id="/toc-konverteringsfunktioner">Konverteringsfunktioner</a></li>
+<li class="fragment"><a href="#/opsummering" id="/toc-opsummering">Opsummering</a></li>
+<li class="fragment"><a href="#/øvelser" id="/toc-øvelser">Øvelser</a></li>
+</ul>
+</nav>
+</section>
+<section>
+<section id="modellering-af-konverteringsadfærd" class="title-slide slide level2 center" data-background="#00100F">
+<h2>Modellering af Konverteringsadfærd</h2>
+
+</section>
+<section id="introduktion" class="slide level4" data-background="#43464B">
+<h4>Introduktion</h4>
+<ul>
+<li class="fragment">Vi ønsker at forstå prisfastsættelsen og risikonøgletal på en konverterbar realkreditobligation<br>
+</li>
+<li class="fragment">Prisfastsættelsen er kompleks:
+<ul>
+<li class="fragment">Rentestrukturmodel → fremtidige renter og konverteringer<br>
+</li>
+<li class="fragment">Prepayment-model → låntagernes konverteringsadfærd<br>
+</li>
+<li class="fragment">Numeriske metoder (MLE, PDE-gitter, Monte Carlo)<br>
+</li>
+</ul></li>
+<li class="fragment">I dette kursus holder vi os til <strong>overfladen</strong>, men kompleksiteten er stadig stor<br>
+</li>
+<li class="fragment">Praktikere handler ofte på resultaterne – uden selv at beregne modellerne</li>
+</ul>
+</section></section>
+<section>
+<section id="konverteringsadfærd" class="title-slide slide level2 center" data-background="#00100F">
+<h2>Konverteringsadfærd</h2>
+
+</section>
+<section id="optionselementet" class="slide level4" data-background="#43464B">
+<h4>Optionselementet</h4>
+<ul>
+<li class="fragment">Låntager kan altid indfri sit fastforrentede realkreditlån til pari (kurs 100)<br>
+</li>
+<li class="fragment">Det svarer til, at låntager har en <strong>call-option</strong> på egen gæld<br>
+</li>
+<li class="fragment">For investoren betyder det:
+<ul>
+<li class="fragment">Betalingsrækken er usikker<br>
+</li>
+<li class="fragment">Konverteringsadfærd har stor indflydelse på obligationens værdi</li>
+</ul></li>
+</ul>
+</section>
+<section id="ordinær-ydelsesrække-uden-konvertering" class="slide level4" data-background="#43464B">
+<h4>Ordinær ydelsesrække (uden konvertering)</h4>
+<ul>
+<li class="fragment">Eksempel: 5% NYK 2053<br>
+</li>
+<li class="fragment">Ingen konvertering → deterministisk cashflow<br>
+</li>
+<li class="fragment">Figuren viser rente + afdrag som annuitet<br>
+</li>
+<li class="fragment">Investoren ville foretrække denne stabile betalingsstrøm</li>
+</ul>
+
+<img src="../../images/chapters/chapter_6/kap6_NYK5_OfficialCF.png" width="70%" class="r-stretch"></section>
+<section id="ydelsesrække-med-konvertering" class="slide level4" data-background="#43464B">
+<h4>Ydelsesrække med konvertering</h4>
+<ul>
+<li class="fragment">Virkeligheden: Mange låntagere konverterer<br>
+</li>
+<li class="fragment">Resultat: kortere betalingsstrøm, usikker profil<br>
+</li>
+<li class="fragment">Konverteringsraten (CPR) afgør, hvor hurtigt obligationen afvikles</li>
+</ul>
+
+<img src="../../images/chapters/chapter_6/kap6_NYK5_ModelEstimatCF.png" width="70%" class="r-stretch"></section>
+<section id="hvad-driver-konverteringer" class="slide level4" data-background="#43464B">
+<h4>Hvad driver konverteringer?</h4>
+<ul>
+<li class="fragment">Strukturelle ændringer (flytning, skilsmisse, jobskifte)<br>
+</li>
+<li class="fragment">Alternativ finansiering (skifte til fleks/variabelt lån)<br>
+</li>
+<li class="fragment">Økonomisk gevinst (rentefald → gevinst ved omlægning)<br>
+</li>
+<li class="fragment">Sidste punkt er det vigtigste og kan modelleres</li>
+</ul>
+
+<img src="../../images/chapters/chapter_6/kap6_PrepaymentInterestRate.png" width="70%" class="r-stretch"></section></section>
+<section>
+<section id="konverteringsraten-cpr" class="title-slide slide level2 center" data-background="#00100F">
+<h2>Konverteringsraten (CPR)</h2>
+
+</section>
+<section id="definition" class="slide level4" data-background="#43464B">
+<h4>Definition</h4>
+<ul>
+<li class="fragment">CPR = andel af udestående restgæld, som indfries til pari i en periode<br>
+</li>
+<li class="fragment">På dansk: <strong>konverteringsraten</strong><br>
+</li>
+<li class="fragment">Sammen med ordinære udtræk giver det den samlede udtræksprocent</li>
+</ul>
+<p><span class="math display">\[
+UDT = 100 \cdot CPR + ORD \cdot (1 - CPR)
+\]</span></p>
+</section>
+<section id="eksempel-ck95-data" class="slide level4" data-background="#43464B">
+<h4>Eksempel: CK95-data</h4>
+<table class="caption-top">
+<thead>
+<tr class="header">
+<th></th>
+<th>NYK 5% 2053</th>
+<th>NYK 4% 2053</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Cirk. nom. (mio)</td>
+<td>62.096</td>
+<td>43.833</td>
+</tr>
+<tr class="even">
+<td>Udtræk i %</td>
+<td>3,47%</td>
+<td>0,34%</td>
+</tr>
+<tr class="odd">
+<td>Ekstraord. i %</td>
+<td>3,06%</td>
+<td>0,01%</td>
+</tr>
+<tr class="even">
+<td>Faktisk CPR</td>
+<td>3,07%</td>
+<td>0,01%</td>
+</tr>
+<tr class="odd">
+<td>Modelestimat CPR</td>
+<td>10,92%</td>
+<td>2,77%</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li class="fragment">5%-serien havde klart større konvertering pga. gevinstmuligheder<br>
+</li>
+<li class="fragment">Modeller skal fange forskelle og give estimater <strong>før</strong> tallene offentliggøres</li>
+</ul>
+</section></section>
+<section>
+<section id="konverteringsdata" class="title-slide slide level2 center" data-background="#00100F">
+<h2>Konverteringsdata</h2>
+
+</section>
+<section id="debitorfordelinger-ck92" class="slide level4" data-background="#43464B">
+<h4>Debitorfordelinger (CK92)</h4>
+<ul>
+<li class="fragment">Serier består af tusindvis af lån<br>
+</li>
+<li class="fragment">Kun restgældsfordelinger offentliggøres (ikke adresser)<br>
+</li>
+<li class="fragment">Lån opdeles i private og erhverv</li>
+</ul>
+
+<img src="../../images/chapters/chapter_6/kap6_5NYK2035_LoanGroups.png" width="70%" class="r-stretch"></section>
+<section id="fordeling-af-obligationsrestgæld-pr.-23092024" class="slide level4" data-background="#43464B">
+<h4>Fordeling af obligationsrestgæld pr. 23/09/2024</h4>
+<ul>
+<li class="fragment">Nedenstående er rå debitorfordelingsdata for en 5% NYK 2053 ::: {.smaller style=“font-size: 0.6em”} | Interval | Privat (mio. kr.) | Privat % | Erhverv (mio. kr.) | Erhverv % | Total (mio. kr.) | |———-|——————:|———:|——————-:|———-:|—————–:| | 1 | 11,2 | 0,0 % | 0,2 | 0,0 % | 11,4 | | 2 | 723,7 | 1,2 % | 4,0 | 0,0 % | 727,7 | | 3 | 8.921,3 | 14,9 % | 32,9 | 0,1 % | 8.954,2 | | 4 | 41.113,6 | 68,8 % | 304,1 | 0,5 % | 41.417,6 | | 5 | 7.338,2 | 12,3 % | 429,4 | 0,7 % | 7.767,6 | | 6 | 44,7 | 0,1 % | 506,2 | 0,8 % | 550,9 | | 7 | – | 0,0 % | 331,3 | 0,6 % | 331,3 | | <strong>Total</strong>| <strong>58.152,6</strong> | <strong>97,3 %</strong> | <strong>1.608,1</strong> | <strong>2,7 %</strong> | <strong>59.760,7</strong> | :::</li>
+</ul>
+</section>
+<section id="homogen-gruppering-af-debitordata-23092024" class="slide level4" data-background="#43464B">
+<h4>Homogen gruppering af debitordata 23/09/2024</h4>
+<ul>
+<li class="fragment">Vi kan gruppere det smartere! Nemmere at modellere</li>
+<li class="fragment">Findes flere forskellige metoder og måder at gruppere på.</li>
+<li class="fragment"><img src="../../images/chapters/chapter_6/kap6_ScanrateGrouping.png" width="70%"></li>
+</ul>
+</section>
+<section id="gruppering" class="slide level4" data-background="#43464B">
+<h4>Gruppering</h4>
+<ul>
+<li class="fragment">Forenkling: lån opdeles i <strong>Small, Medium, Large</strong><br>
+</li>
+<li class="fragment">Store lån konverterer hurtigere end små (større økonomisk gevinst, bedre rådgivning)</li>
+</ul>
+<table class="caption-top">
+<thead>
+<tr class="header">
+<th>Gruppe</th>
+<th>Beskrivelse</th>
+<th>Vægt</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>1</td>
+<td>Small Loans</td>
+<td>16,2 %</td>
+</tr>
+<tr class="even">
+<td>2</td>
+<td>Medium Loans</td>
+<td>81,6 %</td>
+</tr>
+<tr class="odd">
+<td>3</td>
+<td>Large Loans</td>
+<td>2,2 %</td>
+</tr>
+</tbody>
+</table>
+</section></section>
+<section>
+<section id="konverteringsmodellen" class="title-slide slide level2 center" data-background="#00100F">
+<h2>Konverteringsmodellen</h2>
+
+</section>
+<section id="hvorfor-have-en-konverteringsmodel" class="slide level4" data-background="#43464B">
+<h4>Hvorfor have en konverteringsmodel?</h4>
+<ul>
+<li class="fragment">Konverteringsadfærd er <strong>svær at forudsige</strong>, fordi beslutningen afhænger af mange faktorer:
+<ul>
+<li class="fragment">Kreditværdighed<br>
+</li>
+<li class="fragment">Forventninger til fremtiden<br>
+</li>
+<li class="fragment">Jobsituation, skilsmisser osv.<br>
+</li>
+</ul></li>
+<li class="fragment">Det er derfor <strong>umuligt</strong> at modellere alle detaljer → vi har brug for en <strong>praktisk og intuitiv model</strong><br>
+</li>
+<li class="fragment">Formålet er ikke at lave en perfekt model, men en model der kan bruges til:
+<ul>
+<li class="fragment"><strong>Prisfastsættelse</strong> af konverterbare obligationer<br>
+</li>
+<li class="fragment">Beregning af <strong>risikonøgletal</strong></li>
+</ul></li>
+</ul>
+</section>
+<section id="jakobsen-modellen-1992" class="slide level4" data-background="#43464B">
+<h4>Jakobsen-modellen (1992)</h4>
+<ul>
+<li class="fragment">Udviklet af <strong>Svend Jakobsen</strong> (medstifter af Scanrate)<br>
+</li>
+<li class="fragment">Bygger på to hovedelementer:
+<ol type="1">
+<li class="fragment"><strong>Gevinstkravsmodellen</strong> → estimerer sandsynligheden for konvertering baseret på økonomisk gevinst<br>
+</li>
+<li class="fragment"><strong>Miksturmodellen</strong> → opdeler låntagere i grupper med forskellig konverteringsadfærd<br>
+</li>
+</ol></li>
+<li class="fragment">Kombinationen giver en mere <strong>realistisk beskrivelse</strong> af, hvordan hele obligationsserien konverterer</li>
+</ul>
+</section>
+<section id="den-centrale-drivfaktor" class="slide level4" data-background="#43464B">
+<h4>Den centrale drivfaktor</h4>
+<ul>
+<li class="fragment">Den <strong>eneste stokastiske variabel</strong> i gevinstkravsmodellen:
+<ul>
+<li class="fragment"><strong>Gevinsten ved at refinansiere</strong><br>
+</li>
+</ul></li>
+<li class="fragment">Intuition: Jo større gevinst en låntager kan opnå, desto større er sandsynligheden for konvertering<br>
+</li>
+<li class="fragment">Denne variabel undersøges i næste afsnit: <strong>Gevinstkravsmodellen</strong></li>
+</ul>
+</section>
+<section id="gevinstkravsmodellen" class="slide level4" data-background="#43464B">
+<h4>Gevinstkravsmodellen</h4>
+<ul>
+<li class="fragment">Låntagere konverterer, når gevinsten overstiger deres personlige krav<br>
+</li>
+<li class="fragment">Gevinsten beregnes som:</li>
+</ul>
+<p><span class="math display">\[
+Gain = \frac{PV_{continue} - 100 \cdot (1+c)}{PV_{continue}}
+\]</span> - <span class="math inline">\(c\)</span> = omkostning ved konvertering (fx 2%)<br>
+- Hver låntager har forskelligt <strong>gevinstkrav</strong> → spredning</p>
+</section>
+<section id="gevinstkravsmodellen-1" class="slide level4" data-background="#43464B">
+<h4>Gevinstkravsmodellen</h4>
+
+<img src="../../images/chapters/chapter_6/kap6_PrepaymentGain.png" width="70%" class="r-stretch"></section>
+<section id="miksturmodellen" class="slide level4" data-background="#43464B">
+<h4>Miksturmodellen</h4>
+<ul>
+<li class="fragment">Gevinstkravsmodellen udvides med flere variable<br>
+</li>
+<li class="fragment">CPR for en serie er vægtet sum af gruppernes CPR</li>
+</ul>
+<p><span class="math display">\[
+\text{CPR} = \sum_j w_j \cdot \text{CPR}_j
+\]</span></p>
+<ul>
+<li class="fragment">Faktorer:
+<ul>
+<li class="fragment">Gevinst (+)<br>
+</li>
+<li class="fragment">Burnout (+)<br>
+</li>
+<li class="fragment">Restløbetid (–)</li>
+</ul></li>
+</ul>
+</section>
+<section id="burnout-effekten" class="slide level4" data-background="#43464B">
+<h4>Burnout-effekten</h4>
+<ul>
+<li class="fragment">Aggressive låntagere konverterer først → serien bliver “udbrændt”<br>
+</li>
+<li class="fragment">Få tilbageværende låntagere konverterer langsommere<br>
+</li>
+<li class="fragment">Effekt: fremtidig CPR falder, hvis meget er indfriet<br>
+<span class="math display">\[
+\begin{cases}
+\begin{aligned}
+I_{ss,t}(1 - \text{CPR}_t) \;+\;&amp; (1 - I_{ss,t}) \,\text{Burnout}_{t-1} \\
+&amp;\times (1 - \text{CPR}_t)
+\end{aligned}, &amp; \text{if } I_{ss,t} &gt; 0 \\[6pt]
+\text{Burnout}_{t-1}(1 - \text{CPR}_t), &amp; \text{if } I_{ss,t} \leq 0
+\end{cases}
+\]</span></li>
+</ul>
+</section>
+<section id="burnout-effekten-1" class="slide level4" data-background="#43464B">
+<h4>Burnout-effekten</h4>
+
+<img src="../../images/chapters/chapter_6/kap6_Burnout.png" width="70%" class="r-stretch"></section>
+<section id="tid-til-udløb-effekten" class="slide level4" data-background="#43464B">
+<h4>Tid til udløb-effekten</h4>
+<ul>
+<li class="fragment"><strong>Kortere lån</strong> → konverteres typisk ved lavere gevinstniveau<br>
+</li>
+<li class="fragment"><strong>Længere lån</strong> → låntager kan vente længere (optionen kan blive mere værd)<br>
+</li>
+<li class="fragment">Argument fra optionsteorien: Jo længere tid til udløb, desto større sandsynlighed for at call-optionen går dybere i pengene</li>
+</ul>
+<p><span class="math display">\[
+\text{Restløbetid} = \frac{\text{Udløbsdato – Terminsdato}}{365}
+\]</span></p>
+</section>
+<section id="tid-til-udløb-effekten-1" class="slide level4" data-background="#43464B">
+<h4>Tid til udløb-effekten</h4>
+<div class="smaller">
+<table class="caption-top">
+<thead>
+<tr class="header">
+<th></th>
+<th>Nyk 5 2046</th>
+<th>Nyk 5 2053</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Termin</td>
+<td>01-10-2024</td>
+<td>01-10-2024</td>
+</tr>
+<tr class="even">
+<td>Udløb</td>
+<td>01-10-2046</td>
+<td>01-10-2053</td>
+</tr>
+<tr class="odd">
+<td>Restløbetid</td>
+<td>22,01 år</td>
+<td>29,02 år</td>
+</tr>
+</tbody>
+</table>
+</div>
+<ul>
+<li class="fragment"><strong>Eksempel:</strong><br>
+– Nyk 5 2046 kræver lavere gevinst for at konvertere<br>
+– Nyk 5 2053 har længere horisont → større sandsynlighed for fremtidig gevinst</li>
+</ul>
+</section></section>
+<section>
+<section id="konverteringsfunktioner" class="title-slide slide level2 center" data-background="#00100F">
+<h2>Konverteringsfunktioner</h2>
+
+</section>
+<section id="tre-grupper" class="slide level4" data-background="#43464B">
+<h4>Tre grupper</h4>
+<ul>
+<li class="fragment">Hver låntagergruppe har egen CPR-funktion<br>
+</li>
+<li class="fragment">Store lån → hurtigere konvertering ved samme gevinst<br>
+</li>
+<li class="fragment">Samlet CPR = vægtet gennemsnit</li>
+</ul>
+
+<img src="../../images/chapters/chapter_6/kap6_KonverteringsfunktionerTreGrupper.png" width="70%" class="r-stretch"></section>
+<section id="modelopdatering" class="slide level4" data-background="#43464B">
+<h4>Modelopdatering</h4>
+<ul>
+<li class="fragment">Nye data ændrer estimerede funktioner<br>
+</li>
+<li class="fragment">Opdatering sker typisk kvartalsvist</li>
+</ul>
+
+<img src="../../images/chapters/chapter_6/kap6_PrepaymentFunctionsQ3Q4.png" width="70%" class="r-stretch"></section>
+<section id="usikkerhed" class="slide level4" data-background="#43464B">
+<h4>Usikkerhed</h4>
+<ul>
+<li class="fragment">Jo længere tidshorisont → større usikkerhed<br>
+</li>
+<li class="fragment">Både renter og låntageradfærd kan ændre sig</li>
+</ul>
+
+<img src="../../images/chapters/chapter_6/kap6_EstimationUncertainty.png" width="70%" class="r-stretch"></section></section>
+<section>
+<section id="opsummering" class="title-slide slide level2 center" data-background="#00100F">
+<h2>Opsummering</h2>
+
+</section>
+<section id="takeaways" class="slide level4" data-background="#43464B">
+<h4>Takeaways</h4>
+<ul>
+<li class="fragment">Konverteringsoptionen = call-option for låntager, risiko for investor<br>
+</li>
+<li class="fragment">CPR (konverteringsrate) afgør cashflow og risiko<br>
+</li>
+<li class="fragment">To modelkomponenter:
+<ol type="1">
+<li class="fragment"><strong>Gevinstkravsmodel</strong> (gevinstdrevet konvertering)<br>
+</li>
+<li class="fragment"><strong>Miksturmodel</strong> (forskelle på låntagergrupper)<br>
+</li>
+</ol></li>
+<li class="fragment">Faktorer: gevinst, burnout, restløbetid<br>
+</li>
+<li class="fragment">Modeller giver bud – men usikkerhed vokser med horisonten</li>
+</ul>
+</section></section>
+<section>
+<section id="øvelser" class="title-slide slide level2 center" data-background="#00100F">
+<h2>Øvelser</h2>
+
+</section>
+<section id="udtræk-på-serieniveau-ck95" class="slide level4" data-background="#43464B">
+<h4>Udtræk på serieniveau (CK95)</h4>
+<p>Du har følgende CK95-data på to forskellige realkreditobligationer:</p>
+<table class="caption-top" style="width:100%;">
+<colgroup>
+<col style="width: 34%">
+<col style="width: 33%">
+<col style="width: 31%">
+</colgroup>
+<thead>
+<tr class="header">
+<th></th>
+<th><strong>1.5 RD S MTG 2043</strong></th>
+<th><strong>5 NYK E MTG 2053</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Payment Date</td>
+<td>2024-07-01</td>
+<td>2024-07-01</td>
+</tr>
+<tr class="even">
+<td>Cirk. nom. mio. kr.</td>
+<td>21,371,745</td>
+<td>63,871,157,094</td>
+</tr>
+<tr class="odd">
+<td>Udtrukket beløb</td>
+<td>263,450</td>
+<td>1,751,177</td>
+</tr>
+<tr class="even">
+<td>Ekstraordinær i %</td>
+<td>0 %</td>
+<td>2.34 %</td>
+</tr>
+<tr class="odd">
+<td>Udtræk i %</td>
+<td>1.23 %</td>
+<td>2.74 %</td>
+</tr>
+</tbody>
+</table>
+<ol type="1">
+<li class="fragment">Udregn det ordinære udtræk for begge obligationer.<br>
+</li>
+<li class="fragment">Udregn CPR for begge obligationer.<br>
+</li>
+<li class="fragment">Du får nu at vide, at <em>1.5 RD</em> handler til kurs 85 og <em>5.0 NYK</em> handler til kurs 102. Hvorfor har det en betydning for det observerede ekstraordinære afdrag?<br>
+</li>
+<li class="fragment">Hvorfor tror du, at der er så stor forskel i prisen mellem de to obligationer? (Hint: argumenter ud fra kuponrenten)</li>
+</ol>
+</section>
+<section id="debitorfordelinger-ck92-1" class="slide level4" data-background="#43464B">
+<h4>Debitorfordelinger (CK92)</h4>
+<p>Du får følgende debitorfordelinger for de samme obligationer:</p>
+<div class="columns">
+<div class="column">
+<p><strong>ISIN DK0004622172</strong></p>
+<table class="caption-top">
+<thead>
+<tr class="header">
+<th>Interval</th>
+<th style="text-align: right;">Privat</th>
+<th style="text-align: right;">Virksomhed</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>1</td>
+<td style="text-align: right;">102,691</td>
+<td style="text-align: right;">–</td>
+</tr>
+<tr class="even">
+<td>2</td>
+<td style="text-align: right;">938,558</td>
+<td style="text-align: right;">–</td>
+</tr>
+<tr class="odd">
+<td>3</td>
+<td style="text-align: right;">3,937,398</td>
+<td style="text-align: right;">1,960,933</td>
+</tr>
+<tr class="even">
+<td>4</td>
+<td style="text-align: right;">7,667,202</td>
+<td style="text-align: right;">–</td>
+</tr>
+<tr class="odd">
+<td>5</td>
+<td style="text-align: right;">–</td>
+<td style="text-align: right;">6,421,709</td>
+</tr>
+<tr class="even">
+<td>6</td>
+<td style="text-align: right;">–</td>
+<td style="text-align: right;">–</td>
+</tr>
+<tr class="odd">
+<td>7</td>
+<td style="text-align: right;">–</td>
+<td style="text-align: right;">–</td>
+</tr>
+</tbody>
+</table>
+</div><div class="column">
+<p><strong>ISIN DK0009539116</strong></p>
+<table class="caption-top">
+<thead>
+<tr class="header">
+<th>Interval</th>
+<th style="text-align: right;">Privat</th>
+<th style="text-align: right;">Virksomhed</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>1</td>
+<td style="text-align: right;">11,375,699</td>
+<td style="text-align: right;">196,996</td>
+</tr>
+<tr class="even">
+<td>2</td>
+<td style="text-align: right;">734,885,349</td>
+<td style="text-align: right;">3,989,296</td>
+</tr>
+<tr class="odd">
+<td>3</td>
+<td style="text-align: right;">9,070,398,958</td>
+<td style="text-align: right;">32,911,710</td>
+</tr>
+<tr class="even">
+<td>4</td>
+<td style="text-align: right;">42,193,012,670</td>
+<td style="text-align: right;">302,408,835</td>
+</tr>
+<tr class="odd">
+<td>5</td>
+<td style="text-align: right;">7,577,403,715</td>
+<td style="text-align: right;">433,009,565</td>
+</tr>
+<tr class="even">
+<td>6</td>
+<td style="text-align: right;">58,189,089</td>
+<td style="text-align: right;">506,186,999</td>
+</tr>
+<tr class="odd">
+<td>7</td>
+<td style="text-align: right;">–</td>
+<td style="text-align: right;">331,326,781</td>
+</tr>
+</tbody>
+</table>
+</div></div>
+</section>
+<section class="slide level4">
+
+<ol type="1">
+<li class="fragment">Placer hver af de 7+7 (private + virksomheder) i de tre grupperinger jævnfør figuren af mappingsreglerne. Gør dette for hver af de to obligationer.<br>
+</li>
+<li class="fragment">Udregn nu vægtene for hver gruppe i hver obligation.<br>
+</li>
+<li class="fragment">Argumenter for hvilke mulige årsager der står bag, hvorfor medium-group er så stor for <strong>DK0009539116</strong>?</li>
+</ol>
+</section>
+<section id="gain-beregning" class="slide level4" data-background="#43464B">
+<h4>Gain-beregning</h4>
+<ul>
+<li class="fragment">Du får at vide at nutidsværdien ved at fortsætte dit lån er <span class="math inline">\(PV = 110.28\)</span> samt der er en procentvis omkostning ved at konvertere dit lån på 5 %. Beregn gevinst-variablen ved at konvertere dit lån. Burde man konvertere?<br>
+</li>
+<li class="fragment">Du får at vide at nutidsværdien for at fortsætte sit lån på en anden obligation er på 101. Burde man konvertere?<br>
+</li>
+<li class="fragment">Hvad nu, hvis omkostningsprocenten falder til 2 % i ovenstående obligation. Burde man konvertere?</li>
+</ul>
+</section>
+<section id="miksturmodellen-1" class="slide level4" data-background="#43464B">
+<h4>Miksturmodellen</h4>
+<p>Du får oplyst følgende estimerede gruppe-CPR:</p>
+<p><span class="math display">\[
+\begin{aligned}
+CPR_{1} &amp;= 1.43\% \\
+CPR_{2} &amp;= 3.27\% \\
+CPR_{3} &amp;= 7.64\%
+\end{aligned}
+\]</span></p>
+<p>Samt følgende grupperede nominelle værdier:</p>
+<p><span class="math display">\[
+\begin{aligned}
+SamletNominel_{1} &amp;= 6{,}939{,}580 \ \text{DKK} \\
+SamletNominel_{2} &amp;= 7{,}667{,}202 \ \text{DKK} \\
+SamletNominel_{3} &amp;= 6{,}421{,}709 \ \text{DKK}
+\end{aligned}
+\]</span></p>
+<ol type="1">
+<li class="fragment">Beregn det vægtede serie-CPR ud fra ovenstående information.<br>
+</li>
+<li class="fragment">Antag at det generelle renteniveau falder. Hvad sker der med det vægtede CPR? Hvorfor?<br>
+</li>
+<li class="fragment">Du får at vide, at burnout er på 0.92 i nuværende kvartal, samt at serien er lukket. Hvad var burnout i forrige kvartal givet dit udregnede serie-CPR? Hvilken betydning har det på burnout, hvis vi antager serien er lukket?<br>
+</li>
+<li class="fragment">Hvis det generelle renteniveau som sagt falder, hvordan kommer det til at påvirke burnout i nuværende og fremtidige perioder?<br>
+</li>
+<li class="fragment">Antag nu at serien er åben for nyudstedelser og at andelen af nyudstedelser <span class="math inline">\(I_{ss,t} = 0.15\)</span>. Udregn nu burnout for den nuværende periode og sammenlign_</li>
+</ol>
+
+
+</section></section>
+    </div>
+  <div class="quarto-auto-generated-content" style="display: none;">
+<p><img src="../../themes/favicon.ico" class="slide-logo"></p>
+<div class="footer footer-default">
+<p>Finansiering — Konvertering &amp; modellering</p>
+</div>
+</div></div>
+
+  <script>window.backupDefine = window.define; window.define = undefined;</script>
+  <script src="../../site_libs/revealjs/dist/reveal.js"></script>
+  <!-- reveal.js plugins -->
+  <script src="../../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.js"></script>
+  <script src="../../site_libs/revealjs/plugin/pdf-export/pdfexport.js"></script>
+  <script src="../../site_libs/revealjs/plugin/reveal-menu/menu.js"></script>
+  <script src="../../site_libs/revealjs/plugin/reveal-menu/quarto-menu.js"></script>
+  <script src="../../site_libs/revealjs/plugin/quarto-support/support.js"></script>
+  
+
+  <script src="../../site_libs/revealjs/plugin/notes/notes.js"></script>
+  <script src="../../site_libs/revealjs/plugin/search/search.js"></script>
+  <script src="../../site_libs/revealjs/plugin/zoom/zoom.js"></script>
+  <script src="../../site_libs/revealjs/plugin/math/math.js"></script>
+  <script>window.define = window.backupDefine; window.backupDefine = undefined;</script>
+
+  <script>
+
+      // Full list of configuration options available at:
+      // https://revealjs.com/config/
+      Reveal.initialize({
+'controlsAuto': true,
+'previewLinksAuto': false,
+'pdfSeparateFragments': false,
+'autoAnimateEasing': "ease",
+'autoAnimateDuration': 1,
+'autoAnimateUnmatched': true,
+'jumpToSlide': true,
+'menu': {"side":"left","useTextContentForMissingTitles":true,"markers":false,"loadIcons":false,"custom":[{"title":"Tools","icon":"<i class=\"fas fa-gear\"></i>","content":"<ul class=\"slide-menu-items\">\n<li class=\"slide-tool-item active\" data-item=\"0\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.fullscreen(event)\"><kbd>f</kbd> Fullscreen</a></li>\n<li class=\"slide-tool-item\" data-item=\"1\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.speakerMode(event)\"><kbd>s</kbd> Speaker View</a></li>\n<li class=\"slide-tool-item\" data-item=\"2\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.overview(event)\"><kbd>o</kbd> Slide Overview</a></li>\n<li class=\"slide-tool-item\" data-item=\"3\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.togglePdfExport(event)\"><kbd>e</kbd> PDF Export Mode</a></li>\n<li class=\"slide-tool-item\" data-item=\"4\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.toggleScrollView(event)\"><kbd>r</kbd> Scroll View Mode</a></li>\n<li class=\"slide-tool-item\" data-item=\"5\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.keyboardHelp(event)\"><kbd>?</kbd> Keyboard Help</a></li>\n</ul>"}],"openButton":true},
+'smaller': false,
+ 
+        // Display controls in the bottom right corner
+        controls: false,
+
+        // Help the user learn the controls by providing hints, for example by
+        // bouncing the down arrow when they first encounter a vertical slide
+        controlsTutorial: false,
+
+        // Determines where controls appear, "edges" or "bottom-right"
+        controlsLayout: 'edges',
+
+        // Visibility rule for backwards navigation arrows; "faded", "hidden"
+        // or "visible"
+        controlsBackArrows: 'faded',
+
+        // Display a presentation progress bar
+        progress: true,
+
+        // Display the page number of the current slide
+        slideNumber: 'c/t',
+
+        // 'all', 'print', or 'speaker'
+        showSlideNumber: 'all',
+
+        // Add the current slide number to the URL hash so that reloading the
+        // page/copying the URL will return you to the same slide
+        hash: true,
+
+        // Start with 1 for the hash rather than 0
+        hashOneBasedIndex: false,
+
+        // Flags if we should monitor the hash and change slides accordingly
+        respondToHashChanges: true,
+
+        // Push each slide change to the browser history
+        history: true,
+
+        // Enable keyboard shortcuts for navigation
+        keyboard: true,
+
+        // Enable the slide overview mode
+        overview: true,
+
+        // Disables the default reveal.js slide layout (scaling and centering)
+        // so that you can use custom CSS layout
+        disableLayout: false,
+
+        // Vertical centering of slides
+        center: false,
+
+        // Enables touch navigation on devices with touch input
+        touch: true,
+
+        // Loop the presentation
+        loop: false,
+
+        // Change the presentation direction to be RTL
+        rtl: false,
+
+        // see https://revealjs.com/vertical-slides/#navigation-mode
+        navigationMode: 'linear',
+
+        // Randomizes the order of slides each time the presentation loads
+        shuffle: false,
+
+        // Turns fragments on and off globally
+        fragments: true,
+
+        // Flags whether to include the current fragment in the URL,
+        // so that reloading brings you to the same fragment position
+        fragmentInURL: false,
+
+        // Flags if the presentation is running in an embedded mode,
+        // i.e. contained within a limited portion of the screen
+        embedded: false,
+
+        // Flags if we should show a help overlay when the questionmark
+        // key is pressed
+        help: true,
+
+        // Flags if it should be possible to pause the presentation (blackout)
+        pause: true,
+
+        // Flags if speaker notes should be visible to all viewers
+        showNotes: false,
+
+        // Global override for autoplaying embedded media (null/true/false)
+        autoPlayMedia: null,
+
+        // Global override for preloading lazy-loaded iframes (null/true/false)
+        preloadIframes: null,
+
+        // Number of milliseconds between automatically proceeding to the
+        // next slide, disabled when set to 0, this value can be overwritten
+        // by using a data-autoslide attribute on your slides
+        autoSlide: 0,
+
+        // Stop auto-sliding after user input
+        autoSlideStoppable: true,
+
+        // Use this method for navigation when auto-sliding
+        autoSlideMethod: null,
+
+        // Specify the average time in seconds that you think you will spend
+        // presenting each slide. This is used to show a pacing timer in the
+        // speaker view
+        defaultTiming: null,
+
+        // Enable slide navigation via mouse wheel
+        mouseWheel: false,
+
+        // The display mode that will be used to show slides
+        display: 'block',
+
+        // Hide cursor if inactive
+        hideInactiveCursor: true,
+
+        // Time before the cursor is hidden (in ms)
+        hideCursorTime: 5000,
+
+        // Opens links in an iframe preview overlay
+        previewLinks: false,
+
+        // Transition style (none/fade/slide/convex/concave/zoom)
+        transition: 'convex',
+
+        // Transition speed (default/fast/slow)
+        transitionSpeed: 'fast',
+
+        // Transition style for full page slide backgrounds
+        // (none/fade/slide/convex/concave/zoom)
+        backgroundTransition: 'none',
+
+        // Number of slides away from the current that are visible
+        viewDistance: 3,
+
+        // Number of slides away from the current that are visible on mobile
+        // devices. It is advisable to set this to a lower number than
+        // viewDistance in order to save resources.
+        mobileViewDistance: 2,
+
+        // The "normal" size of the presentation, aspect ratio will be preserved
+        // when the presentation is scaled to fit different resolutions. Can be
+        // specified using percentage units.
+        width: 1150,
+
+        height: 700,
+
+        // Factor of the display size that should remain empty around the content
+        margin: 0.1,
+
+        math: {
+          mathjax: 'https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js',
+          config: 'TeX-AMS_HTML-full',
+          tex2jax: {
+            inlineMath: [['\\(','\\)']],
+            displayMath: [['\\[','\\]']],
+            balanceBraces: true,
+            processEscapes: false,
+            processRefs: true,
+            processEnvironments: true,
+            preview: 'TeX',
+            skipTags: ['script','noscript','style','textarea','pre','code'],
+            ignoreClass: 'tex2jax_ignore',
+            processClass: 'tex2jax_process'
+          },
+        },
+
+        // reveal.js plugins
+        plugins: [QuartoLineHighlight, PdfExport, RevealMenu, QuartoSupport,
+
+          RevealMath,
+          RevealNotes,
+          RevealSearch,
+          RevealZoom
+        ]
+      });
+    </script>
+    <script id="quarto-html-after-body" type="application/javascript">
+      window.document.addEventListener("DOMContentLoaded", function (event) {
+        const tabsets =  window.document.querySelectorAll(".panel-tabset-tabby")
+        tabsets.forEach(function(tabset) {
+          const tabby = new Tabby('#' + tabset.id);
+        });
+        const isCodeAnnotation = (el) => {
+          for (const clz of el.classList) {
+            if (clz.startsWith('code-annotation-')) {                     
+              return true;
+            }
+          }
+          return false;
+        }
+        const onCopySuccess = function(e) {
+          // button target
+          const button = e.trigger;
+          // don't keep focus
+          button.blur();
+          // flash "checked"
+          button.classList.add('code-copy-button-checked');
+          var currentTitle = button.getAttribute("title");
+          button.setAttribute("title", "Copied!");
+          let tooltip;
+          if (window.bootstrap) {
+            button.setAttribute("data-bs-toggle", "tooltip");
+            button.setAttribute("data-bs-placement", "left");
+            button.setAttribute("data-bs-title", "Copied!");
+            tooltip = new bootstrap.Tooltip(button, 
+              { trigger: "manual", 
+                customClass: "code-copy-button-tooltip",
+                offset: [0, -8]});
+            tooltip.show();    
+          }
+          setTimeout(function() {
+            if (tooltip) {
+              tooltip.hide();
+              button.removeAttribute("data-bs-title");
+              button.removeAttribute("data-bs-toggle");
+              button.removeAttribute("data-bs-placement");
+            }
+            button.setAttribute("title", currentTitle);
+            button.classList.remove('code-copy-button-checked');
+          }, 1000);
+          // clear code selection
+          e.clearSelection();
+        }
+        const getTextToCopy = function(trigger) {
+          const outerScaffold = trigger.parentElement.cloneNode(true);
+          const codeEl = outerScaffold.querySelector('code');
+          for (const childEl of codeEl.children) {
+            if (isCodeAnnotation(childEl)) {
+              childEl.remove();
+            }
+          }
+          return codeEl.innerText;
+        }
+        const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+          text: getTextToCopy
+        });
+        clipboard.on('success', onCopySuccess);
+        if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+          const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+            text: getTextToCopy,
+            container: window.document.getElementById('quarto-embedded-source-code-modal')
+          });
+          clipboardModal.on('success', onCopySuccess);
+        }
+          var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+          var mailtoRegex = new RegExp(/^mailto:/);
+            var filterRegex = new RegExp("https:\/\/lehfinancier\.github\.io\/Finansiering2025\/");
+          var isInternal = (href) => {
+              return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+          }
+          // Inspect non-navigation links and adorn them if external
+         var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+          for (var i=0; i<links.length; i++) {
+            const link = links[i];
+            if (!isInternal(link.href)) {
+              // undo the damage that might have been done by quarto-nav.js in the case of
+              // links that we want to consider external
+              if (link.dataset.originalHref !== undefined) {
+                link.href = link.dataset.originalHref;
+              }
+            }
+          }
+        function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+          const config = {
+            allowHTML: true,
+            maxWidth: 500,
+            delay: 100,
+            arrow: false,
+            appendTo: function(el) {
+                return el.closest('section.slide') || el.parentElement;
+            },
+            interactive: true,
+            interactiveBorder: 10,
+            theme: 'light-border',
+            placement: 'bottom-start',
+          };
+          if (contentFn) {
+            config.content = contentFn;
+          }
+          if (onTriggerFn) {
+            config.onTrigger = onTriggerFn;
+          }
+          if (onUntriggerFn) {
+            config.onUntrigger = onUntriggerFn;
+          }
+            config['offset'] = [0,0];
+            config['maxWidth'] = 700;
+          window.tippy(el, config); 
+        }
+        const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+        for (var i=0; i<noterefs.length; i++) {
+          const ref = noterefs[i];
+          tippyHover(ref, function() {
+            // use id or data attribute instead here
+            let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+            try { href = new URL(href).hash; } catch {}
+            const id = href.replace(/^#\/?/, "");
+            const note = window.document.getElementById(id);
+            if (note) {
+              return note.innerHTML;
+            } else {
+              return "";
+            }
+          });
+        }
+        const findCites = (el) => {
+          const parentEl = el.parentElement;
+          if (parentEl) {
+            const cites = parentEl.dataset.cites;
+            if (cites) {
+              return {
+                el,
+                cites: cites.split(' ')
+              };
+            } else {
+              return findCites(el.parentElement)
+            }
+          } else {
+            return undefined;
+          }
+        };
+        var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+        for (var i=0; i<bibliorefs.length; i++) {
+          const ref = bibliorefs[i];
+          const citeInfo = findCites(ref);
+          if (citeInfo) {
+            tippyHover(citeInfo.el, function() {
+              var popup = window.document.createElement('div');
+              citeInfo.cites.forEach(function(cite) {
+                var citeDiv = window.document.createElement('div');
+                citeDiv.classList.add('hanging-indent');
+                citeDiv.classList.add('csl-entry');
+                var biblioDiv = window.document.getElementById('ref-' + cite);
+                if (biblioDiv) {
+                  citeDiv.innerHTML = biblioDiv.innerHTML;
+                }
+                popup.appendChild(citeDiv);
+              });
+              return popup.innerHTML;
+            });
+          }
+        }
+      });
+      </script>
+    
+
+</body></html>
