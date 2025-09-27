@@ -289,7 +289,6 @@ Du får følgende debitorfordelinger for de samme obligationer:
 
 ::: columns
 ::: column
-
 **ISIN DK0004622172**
 
 | Interval | Privat    | Virksomhed |
@@ -301,10 +300,9 @@ Du får følgende debitorfordelinger for de samme obligationer:
 | 5        | –         | 6,421,709  |
 | 6        | –         | –          |
 | 7        | –         | –          |
-
 :::
-::: column
 
+::: column
 **ISIN DK0009539116**
 
 | Interval | Privat        | Virksomhed   |
@@ -316,10 +314,8 @@ Du får følgende debitorfordelinger for de samme obligationer:
 | 5        | 7,577,403,715 | 433,009,565  |
 | 6        | 58,189,089    | 506,186,999  |
 | 7        | –             | 331,326,781  |
-
 :::
-:::
-
+:::  
 
 1. Placer hver af de 7+7 (private + virksomheder) i de tre grupperinger jævnfør figuren af mappingsreglerne. Gør dette for hver af de to obligationer.  
 2. Udregn nu vægtene for hver gruppe i hver obligation.  
