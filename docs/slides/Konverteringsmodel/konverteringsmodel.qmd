@@ -1,0 +1,364 @@
+---
+title: "Modellering af konverteringsadfærd"
+subtitle: "Gevinstkrav, miksturmodel og prisning af konverterbare realkreditobligationer"
+author: "Niklas Lehmann Jensen"
+jupyter: python3
+format:
+  revealjs:
+    width: 1150
+    logo: ../../themes/favicon.ico
+    footer: "Finansiering — Konvertering & modellering"
+    footer-logo-link: "#"
+    theme: ../../themes/slides_themes.scss
+    toc-title: Indhold        
+slide-level: 4
+title-slide-attributes:
+  data-background-color: "#045D5D"
+  data-footer: " "
+execute:
+  echo: true
+  warning: false
+  error: false
+---
+
+## Modellering af Konverteringsadfærd {background="#00100F"}
+
+#### Introduktion {background="#43464B"}
+- Vi ønsker at forstå prisfastsættelsen og risikonøgletal på en konverterbar realkreditobligation  
+- Prisfastsættelsen er kompleks:  
+  - Rentestrukturmodel → fremtidige renter og konverteringer  
+  - Prepayment-model → låntagernes konverteringsadfærd  
+  - Numeriske metoder (MLE, PDE-gitter, Monte Carlo)  
+- I dette kursus holder vi os til **overfladen**, men kompleksiteten er stadig stor  
+- Praktikere handler ofte på resultaterne – uden selv at beregne modellerne  
+
+
+## Konverteringsadfærd {background="#00100F"}
+
+#### Optionselementet {background="#43464B"}
+- Låntager kan altid indfri sit fastforrentede realkreditlån til pari (kurs 100)  
+- Det svarer til, at låntager har en **call-option** på egen gæld  
+- For investoren betyder det:  
+  - Betalingsrækken er usikker  
+  - Konverteringsadfærd har stor indflydelse på obligationens værdi  
+
+ 
+#### Ordinær ydelsesrække (uden konvertering) {background="#43464B"}
+- Eksempel: 5% NYK 2053  
+- Ingen konvertering → deterministisk cashflow  
+- Figuren viser rente + afdrag som annuitet  
+- Investoren ville foretrække denne stabile betalingsstrøm  
+
+<img src="/images/chapters/chapter_6/kap6_NYK5_OfficialCF.png" width="70%"/>
+
+ 
+#### Ydelsesrække med konvertering {background="#43464B"}
+- Virkeligheden: Mange låntagere konverterer  
+- Resultat: kortere betalingsstrøm, usikker profil  
+- Konverteringsraten (CPR) afgør, hvor hurtigt obligationen afvikles  
+
+<img src="/images/chapters/chapter_6/kap6_NYK5_ModelEstimatCF.png" width="70%"/>
+
+ 
+#### Hvad driver konverteringer? {background="#43464B"}
+- Strukturelle ændringer (flytning, skilsmisse, jobskifte)  
+- Alternativ finansiering (skifte til fleks/variabelt lån)  
+- Økonomisk gevinst (rentefald → gevinst ved omlægning)  
+- Sidste punkt er det vigtigste og kan modelleres  
+
+<img src="/images/chapters/chapter_6/kap6_PrepaymentInterestRate.png" width="70%"/>
+
+ 
+## Konverteringsraten (CPR) {background="#00100F"}
+
+#### Definition {background="#43464B"}
+- CPR = andel af udestående restgæld, som indfries til pari i en periode  
+- På dansk: **konverteringsraten**  
+- Sammen med ordinære udtræk giver det den samlede udtræksprocent  
+
+$$
+UDT = 100 \cdot CPR + ORD \cdot (1 - CPR)
+$$
+
+ 
+#### Eksempel: CK95-data {background="#43464B"}
+
+|                  | NYK 5% 2053 | NYK 4% 2053 |
+|------------------|-------------|-------------|
+| Cirk. nom. (mio) | 62.096      | 43.833      |
+| Udtræk i %       | 3,47%       | 0,34%       |
+| Ekstraord. i %   | 3,06%       | 0,01%       |
+| Faktisk CPR      | 3,07%       | 0,01%       |
+| Modelestimat CPR | 10,92%      | 2,77%       |
+
+- 5%-serien havde klart større konvertering pga. gevinstmuligheder  
+- Modeller skal fange forskelle og give estimater **før** tallene offentliggøres  
+
+ 
+## Konverteringsdata {background="#00100F"}
+
+#### Debitorfordelinger (CK92) {background="#43464B"}
+- Serier består af tusindvis af lån  
+- Kun restgældsfordelinger offentliggøres (ikke adresser)  
+- Lån opdeles i private og erhverv  
+
+<img src="/images/chapters/chapter_6/kap6_5NYK2035_LoanGroups.png" width="70%"/>
+
+#### Fordeling af obligationsrestgæld pr. 23/09/2024 {background="#43464B"}
+- Nedenstående er rå debitorfordelingsdata for en 5\% NYK 2053
+::: {.smaller style="font-size: 0.6em"}
+| Interval | Privat (mio. kr.) | Privat % | Erhverv (mio. kr.) | Erhverv % | Total (mio. kr.) |
+|----------|------------------:|---------:|-------------------:|----------:|-----------------:|
+| 1        | 11,2              | 0,0 %    | 0,2                | 0,0 %     | 11,4             |
+| 2        | 723,7             | 1,2 %    | 4,0                | 0,0 %     | 727,7            |
+| 3        | 8.921,3           | 14,9 %   | 32,9               | 0,1 %     | 8.954,2          |
+| 4        | 41.113,6          | 68,8 %   | 304,1              | 0,5 %     | 41.417,6         |
+| 5        | 7.338,2           | 12,3 %   | 429,4              | 0,7 %     | 7.767,6          |
+| 6        | 44,7              | 0,1 %    | 506,2              | 0,8 %     | 550,9            |
+| 7        | –                 | 0,0 %    | 331,3              | 0,6 %     | 331,3            |
+| **Total**| **58.152,6**      | **97,3 %** | **1.608,1**      | **2,7 %** | **59.760,7**     |
+:::
+
+#### Homogen gruppering af debitordata 23/09/2024 {background="#43464B"}
+- Vi kan gruppere det smartere! Nemmere at modellere
+- Findes flere forskellige metoder og måder at gruppere på. 
+- <img src="/images/chapters/chapter_6/kap6_ScanrateGrouping.png" width="70%"/>
+
+ 
+#### Gruppering {background="#43464B"}
+- Forenkling: lån opdeles i **Small, Medium, Large**  
+- Store lån konverterer hurtigere end små (større økonomisk gevinst, bedre rådgivning)  
+
+| Gruppe | Beskrivelse    | Vægt   |
+|--------|----------------|--------|
+| 1      | Small Loans    | 16,2 % |
+| 2      | Medium Loans   | 81,6 % |
+| 3      | Large Loans    | 2,2 %  |
+
+ 
+## Konverteringsmodellen {background="#00100F"}
+
+#### Hvorfor have en konverteringsmodel? {background="#43464B"}
+- Konverteringsadfærd er **svær at forudsige**, fordi beslutningen afhænger af mange faktorer:  
+  - Kreditværdighed  
+  - Forventninger til fremtiden  
+  - Jobsituation, skilsmisser osv.  
+- Det er derfor **umuligt** at modellere alle detaljer → vi har brug for en **praktisk og intuitiv model**  
+- Formålet er ikke at lave en perfekt model, men en model der kan bruges til:  
+  - **Prisfastsættelse** af konverterbare obligationer  
+  - Beregning af **risikonøgletal**
+
+#### Jakobsen-modellen (1992) {background="#43464B"}
+- Udviklet af **Svend Jakobsen** (medstifter af Scanrate)  
+- Bygger på to hovedelementer:  
+  1. **Gevinstkravsmodellen** → estimerer sandsynligheden for konvertering baseret på økonomisk gevinst  
+  2. **Miksturmodellen** → opdeler låntagere i grupper med forskellig konverteringsadfærd  
+- Kombinationen giver en mere **realistisk beskrivelse** af, hvordan hele obligationsserien konverterer
+
+#### Den centrale drivfaktor {background="#43464B"}
+- Den **eneste stokastiske variabel** i gevinstkravsmodellen:  
+  - **Gevinsten ved at refinansiere**  
+- Intuition: Jo større gevinst en låntager kan opnå, desto større er sandsynligheden for konvertering  
+- Denne variabel undersøges i næste afsnit: **Gevinstkravsmodellen**
+
+#### Gevinstkravsmodellen {background="#43464B"}
+- Låntagere konverterer, når gevinsten overstiger deres personlige krav  
+- Gevinsten beregnes som:  
+
+$$
+Gain = \frac{PV_{continue} - 100 \cdot (1+c)}{PV_{continue}}
+$$
+- $c$ = omkostning ved konvertering (fx 2%)  
+- Hver låntager har forskelligt **gevinstkrav** → spredning 
+
+#### Gevinstkravsmodellen {background="#43464B"}
+<img src="/images/chapters/chapter_6/kap6_PrepaymentGain.png" width="70%"/>
+ 
+#### Miksturmodellen {background="#43464B"}
+- Gevinstkravsmodellen udvides med flere variable  
+- CPR for en serie er vægtet sum af gruppernes CPR  
+
+$$
+\text{CPR} = \sum_j w_j \cdot \text{CPR}_j
+$$
+
+- Faktorer:  
+  - Gevinst (+)  
+  - Burnout (+)  
+  - Restløbetid (–)  
+
+#### Burnout-effekten {background="#43464B"}
+- Aggressive låntagere konverterer først → serien bliver “udbrændt”  
+- Få tilbageværende låntagere konverterer langsommere  
+- Effekt: fremtidig CPR falder, hvis meget er indfriet  
+$$
+\begin{cases}
+\begin{aligned}
+I_{ss,t}(1 - \text{CPR}_t) \;+\;& (1 - I_{ss,t}) \,\text{Burnout}_{t-1} \\
+&\times (1 - \text{CPR}_t)
+\end{aligned}, & \text{if } I_{ss,t} > 0 \\[6pt]
+\text{Burnout}_{t-1}(1 - \text{CPR}_t), & \text{if } I_{ss,t} \leq 0
+\end{cases}
+$$
+
+#### Burnout-effekten {background="#43464B"}
+
+<img src="/images/chapters/chapter_6/kap6_Burnout.png" width="70%"/>
+
+#### Tid til udløb-effekten {background="#43464B"}
+
+- **Kortere lån** → konverteres typisk ved lavere gevinstniveau  
+- **Længere lån** → låntager kan vente længere (optionen kan blive mere værd)  
+- Argument fra optionsteorien: Jo længere tid til udløb, desto større sandsynlighed for at call-optionen går dybere i pengene  
+
+$$
+\text{Restløbetid} = \frac{\text{Udløbsdato – Terminsdato}}{365}
+$$
+
+#### Tid til udløb-effekten {background="#43464B"}
+
+::: {.smaller}
+|              | Nyk 5 2046   | Nyk 5 2053   |
+|--------------|--------------|--------------|
+| Termin       | 01-10-2024   | 01-10-2024   |
+| Udløb        | 01-10-2046   | 01-10-2053   |
+| Restløbetid  | 22,01 år     | 29,02 år     |
+:::
+
+- **Eksempel:**  
+  – Nyk 5 2046 kræver lavere gevinst for at konvertere  
+  – Nyk 5 2053 har længere horisont → større sandsynlighed for fremtidig gevinst
+
+## Konverteringsfunktioner {background="#00100F"}
+
+#### Tre grupper {background="#43464B"}
+- Hver låntagergruppe har egen CPR-funktion  
+- Store lån → hurtigere konvertering ved samme gevinst  
+- Samlet CPR = vægtet gennemsnit  
+
+<img src="/images/chapters/chapter_6/kap6_KonverteringsfunktionerTreGrupper.png" width="70%"/>
+ 
+#### Modelopdatering {background="#43464B"}
+- Nye data ændrer estimerede funktioner  
+- Opdatering sker typisk kvartalsvist  
+
+<img src="/images/chapters/chapter_6/kap6_PrepaymentFunctionsQ3Q4.png" width="70%"/>
+
+ 
+#### Usikkerhed {background="#43464B"}
+- Jo længere tidshorisont → større usikkerhed  
+- Både renter og låntageradfærd kan ændre sig  
+
+<img src="/images/chapters/chapter_6/kap6_EstimationUncertainty.png" width="70%"/>
+ 
+## Opsummering {background="#00100F"}
+
+#### Takeaways {background="#43464B"}
+- Konverteringsoptionen = call-option for låntager, risiko for investor  
+- CPR (konverteringsrate) afgør cashflow og risiko  
+- To modelkomponenter:  
+  1. **Gevinstkravsmodel** (gevinstdrevet konvertering)  
+  2. **Miksturmodel** (forskelle på låntagergrupper)  
+- Faktorer: gevinst, burnout, restløbetid  
+- Modeller giver bud – men usikkerhed vokser med horisonten  
+
+## Øvelser {background="#00100F"}
+
+#### Udtræk på serieniveau (CK95) {background="#43464B"}
+
+Du har følgende CK95-data på to forskellige realkreditobligationer:
+
+|                        | **1.5 RD S MTG 2043** | **5 NYK E MTG 2053** |
+|------------------------|-----------------------|----------------------|
+| Payment Date           | 2024-07-01            | 2024-07-01           |
+| Cirk. nom. mio. kr.    | 21,371,745            | 63,871,157,094       |
+| Udtrukket beløb        | 263,450               | 1,751,177            |
+| Ekstraordinær i %      | 0 %                   | 2.34 %               |
+| Udtræk i %             | 1.23 %                | 2.74 %               |
+
+1. Udregn det ordinære udtræk for begge obligationer.  
+2. Udregn CPR for begge obligationer.  
+3. Du får nu at vide, at *1.5 RD* handler til kurs 85 og *5.0 NYK* handler til kurs 102. Hvorfor har det en betydning for det observerede ekstraordinære afdrag?  
+4. Hvorfor tror du, at der er så stor forskel i prisen mellem de to obligationer? (Hint: argumenter ud fra kuponrenten)  
+
+---
+
+#### Debitorfordelinger (CK92) {background="#43464B"}
+
+Du får følgende debitorfordelinger for de samme obligationer:
+
+::: columns
+::: column
+
+**ISIN DK0004622172**
+
+| Interval | Privat    | Virksomhed |
+|----------|----------:|-----------:|
+| 1        | 102,691   | –          |
+| 2        | 938,558   | –          |
+| 3        | 3,937,398 | 1,960,933  |
+| 4        | 7,667,202 | –          |
+| 5        | –         | 6,421,709  |
+| 6        | –         | –          |
+| 7        | –         | –          |
+
+:::
+::: column
+
+**ISIN DK0009539116**
+
+| Interval | Privat        | Virksomhed   |
+|----------|--------------:|-------------:|
+| 1        | 11,375,699    | 196,996      |
+| 2        | 734,885,349   | 3,989,296    |
+| 3        | 9,070,398,958 | 32,911,710   |
+| 4        | 42,193,012,670| 302,408,835  |
+| 5        | 7,577,403,715 | 433,009,565  |
+| 6        | 58,189,089    | 506,186,999  |
+| 7        | –             | 331,326,781  |
+
+:::
+:::
+
+
+1. Placer hver af de 7+7 (private + virksomheder) i de tre grupperinger jævnfør figuren af mappingsreglerne. Gør dette for hver af de to obligationer.  
+2. Udregn nu vægtene for hver gruppe i hver obligation.  
+3. Argumenter for hvilke mulige årsager der står bag, hvorfor medium-group er så stor for **DK0009539116**?  
+  
+
+
+#### Gain-beregning {background="#43464B"}
+
+- Du får at vide at nutidsværdien ved at fortsætte dit lån er $PV = 110.28$ samt der er en procentvis omkostning ved at konvertere dit lån på 5 %. Beregn gevinst-variablen ved at konvertere dit lån. Burde man konvertere?  
+- Du får at vide at nutidsværdien for at fortsætte sit lån på en anden obligation er på 101. Burde man konvertere?  
+- Hvad nu, hvis omkostningsprocenten falder til 2 % i ovenstående obligation. Burde man konvertere?  
+
+
+
+#### Miksturmodellen {background="#43464B"}
+
+Du får oplyst følgende estimerede gruppe-CPR:
+
+$$
+\begin{aligned}
+CPR_{1} &= 1.43\% \\
+CPR_{2} &= 3.27\% \\
+CPR_{3} &= 7.64\%
+\end{aligned}
+$$
+
+Samt følgende grupperede nominelle værdier:
+
+$$
+\begin{aligned}
+SamletNominel_{1} &= 6{,}939{,}580 \ \text{DKK} \\
+SamletNominel_{2} &= 7{,}667{,}202 \ \text{DKK} \\
+SamletNominel_{3} &= 6{,}421{,}709 \ \text{DKK}
+\end{aligned}
+$$
+
+1. Beregn det vægtede serie-CPR ud fra ovenstående information.  
+2. Antag at det generelle renteniveau falder. Hvad sker der med det vægtede CPR? Hvorfor?  
+3. Du får at vide, at burnout er på 0.92 i nuværende kvartal, samt at serien er lukket. Hvad var burnout i forrige kvartal givet dit udregnede serie-CPR? Hvilken betydning har det på burnout, hvis vi antager serien er lukket?  
+4. Hvis det generelle renteniveau som sagt falder, hvordan kommer det til at påvirke burnout i nuværende og fremtidige perioder?  
+5. Antag nu at serien er åben for nyudstedelser og at andelen af nyudstedelser $I_{ss,t} = 0.15$. Udregn nu burnout for den nuværende periode og sammenlign_

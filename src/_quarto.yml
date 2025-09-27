@@ -5,6 +5,7 @@ project:
     - themes/                    # ensure custom themes get published
     - Lektionsnote/Lektionsnoter_2025.pdf
     - exercises/Del2_OS2.pdf
+    - slides/**/*
 
 html-math-method: mathjax
 
@@ -14,7 +15,6 @@ execute:
 website:
   title: "Finansiering 2025"
   site-url: https://lehfinancier.github.io/Finansiering2025/
-#  base-url: /Finansiering2025/    # important for GitHub Pages project sites
   repo-url: https://github.com/Lehfinancier/Finansiering2025
   repo-subdir: "src"
   sidebar:

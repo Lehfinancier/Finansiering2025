@@ -1,0 +1,160 @@
+---
+title: "Pengeinstitutters risikostyring"
+subtitle: "Kreditrisiko, likviditetsrisiko, kapital og regulering"
+author: "Niklas Lehmann Jensen"
+jupyter: python3
+format:
+  revealjs:
+    width: 1150
+    logo: ../../themes/favicon.ico
+    footer: "Finansiering — Risikostyring i pengeinstitutter"
+    footer-logo-link: "#"
+    theme: ../../themes/slides_themes.scss
+    slide-number: true
+    transition: fade
+    controls: true
+slide-level: 4
+title-slide-attributes:
+  data-background-color: "#045D5D"
+  data-footer: " "
+execute:
+  echo: false
+  warning: false
+  error: false
+---
+
+## Pengeinstitutters risikostyring {background="#00100F"}
+
+#### Ramme {background="#43464B"}
+- Banker **skal** tage risici — pointen er **bevidst og prissat** risikotagning  
+- Fokus her: **kreditrisiko** og **likviditetsrisiko** (markeds- og operationel risiko udelades)  
+- Bankens rolle: **allokere kapital** og fungere som **løbetidstransformator**  
+- Lærdom fra 2008 og 2023: **tillid** og **tabsabsorbering** (kapital/likviditet) er centrale
+
+#### Læringsmål {background="#43464B"}
+- Forklare og skelne mellem **kredit-** og **likviditetsrisiko**
+- Forstå **systematisk vs. usystematisk** kreditrisiko og porteføljeimplikationer
+- Anvende **PD–LGD–EAD**; beregne **EL** og **UL** (via **WCDR**)
+- Tolke **eksterne ratings** og **RWA/kapitalkrav** (standardmetoden) + kapitalhierarki (**CET1/AT1/Tier2**)
+- Forklare **LCR** og **NSFR**, HQLA-niveauer samt praktiske LCR-eksempler
+- Beregne en simpel **likviditetspræmie** fra bid–ask og drøfte funding-/markedslikviditet
+
+## Kreditrisiko: hvad og hvorfor? {background="#00100F"}
+
+#### Definition og payoff {background="#43464B"}
+::: columns
+::: column
+- Risiko for **misligholdelse** (helt/delvist) → tab på **udlån, garantier, lande** m.m.
+- Største risikotype i banker/realkredit → kræver **modeller, processer, governance**
+- I pensionskasser dominerer ofte **markedsrisiko** (mange investeringer, ingen udlån)
+:::
+::: column
+- Typisk: kunden **betaler** → banken tjener **kredittillæg** (moderat gevinst)
+- Ved **default**: tab af **renter + (dele af) hovedstol** → **skæv** fordeling
+:::
+:::
+<img src="/images/chapters/chapter_10/KreditAktieRisk.png" alt="Kredit vs aktie: payoff-asymmetri" width="78%"/>
+
+## Systematisk vs. usystematisk kreditrisiko {background="#00100F"}
+
+#### Begreber og porteføljeimplikation {background="#43464B"}
+::: columns
+::: column
+- **Systematisk**: makrostød (recession) rammer bredt — svær at **diversificere**  
+- **Usystematisk**: kundespecifik (ledelse, jobtab) — kan **spredes væk**
+- Erhverv typisk mere **konjunkturfølsomt** end husholdninger
+- Banker bruger **ratings/PD-klasser** til styring og prissætning
+:::
+::: column
+<img src="/images/chapters/chapter_10/SystematiskUsystematiskRisk.png" alt="Systematisk/usystematisk risiko" width="85%"/>
+:::
+:::
+
+## PD – ratingklasser og anvendelser {background="#00100F"}
+
+#### Probability of Default (årlig) {background="#43464B"}
+- Bankerne estimerer **PD** på tværs af segmenter og grupperer i **ratingklasser**
+- PD bruges til **kreditvurdering, kapitalstyring** (regulatorisk/økonomisk) og **prissætning**
+
+::: {.smaller style="font-size:0.8em"}
+| **Probability of Default** | **Original eksponering** | **Off-balance eksponering** | **CCF** | **Gns. PD** | **Gns. LGD** | **Gns. løbetid (år)** |
+|:--|--:|--:|--:|--:|--:|--:|
+| 0,00 til < 0,15 | 45.059 | 34.008 | 50% | 0,04% | 29,30% | 2,2 |
+| 0,15 til < 0,25 | 15.653 | 13.986 | 48% | 0,22% | 26,80% | 2,3 |
+| 0,25 til < 0,50 | 36.589 | 13.556 | 48% | 0,44% | 26,80% | 2,2 |
+| 0,50 til < 0,75 | 10 | 10 | 57% | 0,56% | 32,50% | 2,5 |
+| 0,75 til < 2,50 | 15.684 | 7.091 | 49% | 1,06% | 26,60% | 2,3 |
+| 2,50 til < 10,00 | 1.146 | 445 | 50% | 4,10% | 25,60% | 2,5 |
+| 10,00 til < 100 | 1.958 | 895 | 51% | 9,86% | 29,60% | 2,7 |
+| 100 (Default) | 1.133 | 244 | 0% | 100,00% | 29,00% | 2,3 |
+| **Total** | **116.844** | **66.401** | **49%** | **1,51%** | **28,10%** | **2,3** |
+:::
+
+#### Kredittillæg (intuition) {background="#43464B"}
+- Simpelt mål:  
+  $$
+  s \;=\; \mathrm{PD}\cdot(1-R),
+  $$
+  hvor $R$ er **recovery rate**.
+
+## Eksempler: kredittillæg (PD & Recovery) {background="#00100F"}
+
+#### Cases {background="#43464B"}
+::: columns
+::: column
+**Eksempel 1: Dårlig kunde**  
+- PD $=15\%$, $R=20\%$  
+$$
+s \;=\; 0{,}15\cdot(1-0{,}20) \;=\; 0{,}12 \;\Rightarrow\; 12\%
+$$
+:::
+::: column
+**Eksempel 2: God kunde**  
+- PD $=1\%$, $R=70\%$  
+$$
+s \;=\; 0{,}01\cdot(1-0{,}70) \;=\; 0{,}003 \;\Rightarrow\; 0{,}3\%
+$$
+:::
+:::
+
+## LGD og Recovery Rate {background="#00100F"}
+
+#### Begreber {background="#43464B"}
+::: columns
+::: column
+- **LGD**: forventet tab (pct.) ved default  
+- **Recovery**: andel **ikke** tabt, $ \text{Recovery} = 1-\text{LGD} $
+- Afhænger af **sikkerheder**, **likviditet** og **konjunktur**
+:::
+::: column
+<img src="/images/chapters/chapter_10/RecoveryRatesAndPRobability.png" alt="Recovery vs konjunktur" width="85%"/>
+:::
+:::
+
+## EAD – Exposure at Default {background="#00100F"}
+
+#### Definition og praksis {background="#43464B"}
+- Forventet eksponering **ved** misligholdelse
+- Inkluderer **udestående** + forventet træk på **off-balance faciliteter**
+- Modelleres med **konverteringsfaktorer (CF/CCF)** afhængig af adfærd, facilitet og konjunktur
+
+## EL og UL – samt WCDR {background="#00100F"}
+
+#### Historik og WCDR {background="#43464B"}
+::: columns
+::: column
+- Kapital sigtes mod **sjældne, hårde år** (fx 99,9% på 1 år)  
+- Brug **WCDR** (worst-case default rate) til UL-dimensionering
+:::
+::: column
+- **Forventet tab (EL)**  
+  $$
+  \mathrm{EL}=\mathrm{PD}\cdot\mathrm{LGD}\cdot\mathrm{EAD}
+  $$
+- **Uforudset tab (UL)**  
+  $$
+  \mathrm{UL}=(\mathrm{WCDR}-\mathrm{PD})\cdot\mathrm{LGD}\cdot\mathrm{EAD}
+  $$
+:::
+:::
+...

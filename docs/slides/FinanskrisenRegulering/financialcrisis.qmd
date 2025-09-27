@@ -1,0 +1,357 @@
+---
+title: "Finanskrisens udvikling og eftervirkninger"
+subtitle: "Fra boligboom til regulering — mekanismer, cases og læring"
+author: "Niklas Lehmann Jensen"
+jupyter: python3
+format:
+  revealjs:
+    width: 1150
+    logo: ../../themes/favicon.ico
+    footer: "Finansiering — Finanskrisen"
+    footer-logo-link: "#"
+    theme: ../../themes/slides_themes.scss
+    slide-number: true
+    toc-title: Indhold       
+slide-level: 4
+title-slide-attributes:
+  data-background-color: "#045D5D"
+  data-footer: " "
+execute:
+  echo: false
+  warning: false
+  error: false
+---
+
+## Introduktion {background="#00100F"}
+
+#### Læringsmål {background="#43464B"}
+- Forklare hovedforløbet **før, under og efter finanskrisen** samt de centrale mekanismer bag  
+- Beskrive udviklingen i **lånemarkedet** (prime → subprime/Alt-A/HEL) og forstå logikken bag høj LTV og risikable lånetyper  
+- Redegøre for principperne i **securitisering, tranching og shadow banking** samt betydningen af kort funding af lange aktiver  
+- Anvende balancelogik (LTV, kapitalandel, gearing) til at analysere risici hos **boligejere og banker** (fx Lehman Brothers)  
+- Fortolke centrale indikatorer og politiske svar: **renter, TED-spread, BNP** samt **penge- og finanspolitik** (QE, garantier, nulrente)  
+- Diskutere reguleringssvarene (**Basel III/IV**) og nyere eksempler (**SVB-casen**) for at forstå varighedsmismatch, fundingrisiko og tillid  
+
+ 
+
+## Perioden op til finanskrisen {background="#00100F"}
+
+#### Makromiljø og renter {background="#43464B"}
+- USA midt-00’erne: stabil vækst, **lav arbejdsløshed**, **lav rente**, **høj risikoappetit**  
+- Efter recessionen i 2001 satte **Federal Reserve** renten markant ned → **1%** i 2003  
+- Lave renter **længe** → **kraftig kreditvækst** og **stigende aktivpriser** (bolig + aktier)  
+
+<img src="/images/chapters/chapter_9/kap9_FedFunds.jpg" alt="Fed Funds Rate 2000–2007 — lav styringsrente som afsæt for kredit- og prisboom" width="80%"/>
+
+#### Huspriser {background="#43464B"}
+- Reale huspriser **stabile frem til 2000**, derefter **+40% på 7 år**  
+- Husprisstigninger → husholdninger kunne optage **større lån**  
+- Boligen blev brugt som **”hæveautomat”** (forbrug finansieret af friværdi)  
+- Skabte **illusion af varig velstand** og lav risiko  
+
+<img src="/images/chapters/chapter_9/kap9_HouseIndex.jpg" 
+alt="Reale huspriser i USA 1970–2010 — markant stigning i 00’erne" width="80%"/>
+
+#### Aktiemarked {background="#43464B"}
+- Fald i starten af 00’erne (dotcom/2001 recession)  
+- Derefter **+70% stigning** frem mod 2007  
+- Kombineret med stigende boligpriser → oplevet **kraftig velstandseffekt**  
+- Forstærkede **optimisme, kreditgivning og risikotagning** i hele systemet  
+
+
+<img src="/images/chapters/chapter_9/kap9_SPCompIndex.jpg" 
+alt="S&P Composite: nedtur ifm. 2001, derefter kraftig optur til 2007" width="80%"/>
+
+## Udviklingen i den finansielle sektor {background="#00100F"}
+
+#### Fra prime til non-prime {background="#43464B"}
+
+::: columns
+::: {.column width="55%"}
+- Kreditgivning skiftede gradvist mod **mere risikable låntagere** (subprime, Alt-A, HEL)  
+- Prime-andel faldt 2001→2006; **non-prime** steg kraftigt (subprime/Alt-A/HEL)  
+- Husholdninger trak **friværdi** ud (HEL/cash-outs) → forbrug drevet af huspriser  
+
+<img src="/images/chapters/chapter_9/kap9_mortgage_origination.png" 
+     alt="Sammensætning af nye boliglån 2001–2007: prime ned, subprime/Alt-A/HEL op" 
+     width="100%"/>
+:::
+
+::: {.column width="45%"}
+- **Conforming / FHA/VA / Jumbo**: relativt lav/moderat risiko  
+- **Alt-A**: svag dokumentation; **HEL**: forbrug via friværdi (prissensitivt)  
+- **Subprime**: teaser-renter, høj LTV (ofte 100%), **negativ amortisering**  
+- Bæredygtighed byggede på **fortsatte prisstigninger** (refi før rentestigninger slog igennem)
+:::
+:::
+ 
+
+## Securitisering, tranching og shadow banking {background="#00100F"}
+
+#### CDO-strukturer og ratings {background="#43464B"}
+- Lån pakkes i puljer → **tranching**: **senior / mezzanine / equity**  
+- Tabet absorberes **nedefra**; senior får **AAA** (ofte overvurderet sikkerhed)  
+- **CDO-squared**: meta-strukturer → **kompleksitet** og **korrelationsblindhed**
+
+<img src="/images/chapters/chapter_9/kap9_securitization_tranching.png" alt="Securitisering og tranching: pulje af lån opdelt efter prioritet og risiko" width="90%"/>
+
+#### Shadow banking og funding {background="#43464B"}
+- **Uden for reguleret banksektor**: banklignende funktioner uden samme kapitalkrav  
+- Kort funding (ABCP, repos) finansierer **lange/illikvide aktiver**  
+- Risiko flyttes **ud af balancer** og bliver **uigennemsigtig/systemisk**
+
+ 
+
+## Hvordan låntagning øger risiko {background="#00100F"}
+
+#### Boligejer-logik (proxy for bank) {background="#43464B"}
+- Køb: pris 1 mio., **20% udbetaling**, **80% lån** (LTV=80%)  
+- **Egenkapital** bærer prisrisikoen; lån er fast **nominal gæld**  
+- Stiger priser +50% → EK vokser kraftigt; falder −10% → EK reduceres  
+- Ved meget høj LTV (90–125%) → **hurtigt insolvens** ved små prisfald
+
+<img src="/images/chapters/chapter_9/kap9_adam_balance.png" alt="Adams balance: aktiv (bolig), passiv (lån+EK); scenarier for prisstigning/fald" width="90%"/>
+
+#### Incitamenter op til krisen {background="#43464B"}
+- Banker tjener på **større udlån**; låntagere får **højt afkast på lav EK**  
+- Antagelsen “**priser falder ikke**” → skubber både banker og låntagere op ad risikostigen  
+- **Høj belåning** + **svag kredit** = **systemisk sårbarhed**
+
+ 
+
+## Gearing og kapitalandel: Lehman Brothers {background="#00100F"}
+
+#### Eksempel: Lehman Q1 2008 {background="#43464B"}
+
+::: {.columns}
+::: {.column width="50%"}
+**Kapitalandel**  
+
+$$
+\text{Kapitalandel} = \frac{\text{EK}}{\text{Aktiver}}
+$$  
+
+→ tabsabsorberende buffer
+:::
+
+::: {.column width="50%"}
+**Gearing**  
+
+$$
+\text{Gearing} = \frac{\text{Aktiver}}{\text{EK}}
+$$  
+
+→ forstærker afkast/tab
+:::
+:::
+
+::: {.smaller style="font-size:0.8em"}
+| **Aktiver**                           | Beløb    | **Passiver og EK**           | Beløb    |
+|:--------------------------------------|---------:|:-----------------------------|---------:|
+| Cash og andre                         | 61.265   | Kortfristet gæld             | 300.917  |
+| Værdipapirer og finansielle instrumenter | 196.997  | Værdipapirer solgt m.v.      | 61.243   |
+| Reverse repo m.v.                     | 299.283  | Repos m.v.                   | 127.846  |
+| Andre aktiver                         | 81.887   | Langfristet gæld             | 123.150  |
+| **Sum aktiver**                       | **639.432** | **Egenkapital**              | **26.276** |
+|                                       |          | **Sum passiver + EK**        | **639.432** |
+:::
+
+- Ud af aktiver på **639 mia. USD** var kun **26 mia. USD egenkapital**  
+
+::: {.columns}
+::: {.column width="50%"}
+**Kapitalandel**  
+
+$$
+\frac{26.276}{639.432} \approx 4,1\%
+$$
+:::
+
+::: {.column width="50%"}
+**Gearing**  
+
+$$
+\frac{639.432}{26.276} \approx 24
+$$
+:::
+:::
+
+- **Fortolkning**: Lehman havde ~24 dollars i aktiver for hver dollar egenkapital.  
+  → Et aktivfald på **4%** udhulede hele EK ⇒ insolvens.
+
+
+
+## Krisens udbrud {background="#00100F"}
+
+#### Fra renteløft til misligholdelser {background="#43464B"}
+- Fed hæver renter fra 2004 → **ARM-ydelser stiger** (subprime hårdest ramt)  
+- **Misligholdelser** stiger fra 2005; tabene **spredes** via strukturerede produkter  
+- **Uigennemsigtighed**: ingen ved, **hvem** der bærer tabene → **tillid forsvinder**
+
+#### Funding, løbetider og likviditet {background="#43464B"}
+- Lange/illikvide aktiver finansieret med **kort funding** (repo, ABCP)  
+- Når funding **ikke fornyes**, tvinges **brandsalg** → yderligere prisfald/tab  
+- **Likviditetskrise** bliver **systemisk**
+
+#### Lehman og TED-spread {background="#43464B"}
+- **Lehman-konkurs** (sept 2008) udløser global panik — interbank **fryser til**  
+- **TED-spread** måler forskellen mellem 3 måneders LIBOR og 3 måneders amerikanske statsobligationer
+    - 3M Libor er den gennemsnitrente bankerne ville låne til hinanden over 3 måneder. 
+    - eksploderer: pris på bank-til-bank-kredit stiger voldsomt
+
+<img src="/images/chapters/chapter_9/kap9_STEDSpread.jpg" alt="TED-spread: LIBOR vs. T-bills — tillidskollaps i sep. 2008" width="90%"/>
+
+#### Realøkonomisk nedtur {background="#43464B"}
+- Kreditkanaler lukker → **fald i forbrug/investering**  
+- **BNP** og **industriel produktion** falder kraftigt, globalt
+
+<img src="/images/chapters/chapter_9/kap9_GDP_vs_IndustrialProduction.jpg" alt="BNP og industriel produktion i USA falder kraftigt under krisen" width="90%"/>
+
+ 
+
+## Eftervirkninger: politik og økonomi {background="#00100F"}
+
+#### Pengepolitik og QE {background="#43464B"}
+- Styringsrenter mod **nul** (0–0,25% i USA) og **langvarigt lave**  
+- **QE**: centralbanker opkøber obligationer → lavere renter, større balancer
+
+<img src="/images/chapters/chapter_9/kap9_FedFunds_LINE.jpg" alt="Fed Funds Rate før/under/efter finanskrisen — ned til nul" width="90%"/>
+
+#### Finanspolitik {background="#43464B"}
+- **Garantier, rekapitaliseringer, redninger** af banker  
+- **Store underskud** pga. stabilisatorer og aktiv finanspolitik
+
+<img src="/images/chapters/chapter_9/kap9_Underskud.jpg" alt="USA: historisk stort budgetunderskud i 2009, eftervirkninger i årene efter" width="90%"/>
+
+#### Global varig effekt {background="#43464B"}
+- Verdens BNP på **lavere vækstbane** vs. hypotetisk præ-krisetrend
+
+<img src="/images/chapters/chapter_9/kap9_WorldGdp_real_vs_hypothetical.jpg" alt="Globalt BNP: faktisk vs. hypotetisk uden krise — vedvarende output-gap" width="90%"/>
+
+ 
+
+## Øget regulering: Basel III/IV {background="#00100F"}
+
+#### Fra svagheder til regler {background="#43464B"}
+- Svagheder før 2008: **lav kapital**, **kort funding**, **kompleksitet**, **modelafhængighed**  
+- Basel III: mere og bedre kapital (**CET1 ≥ 7%** af RWA), **buffere**, **LCR/NSFR**, **leverage-ratio**  
+- “Basel IV”: **output floor 72,5%**, styrket standardmetode, strammere krav til SIFI’er
+
+<img src="/images/chapters/chapter_9/kap9_Søjlerbasel.png" alt="Basel: Søjle 1–3 (kapitalkrav, tilsyn, markedsdisciplin) som samlet arkitektur" width="80%"/>
+
+#### Søjle 1–3 (kort) {background="#43464B"}
+- **Søjle 1**: minimumskapitalkrav (kredit, marked, operationel), højere CET1 + buffere  
+- **Søjle 2**: tilsyn/ICAAP — ekstra kapital for ikke-dækkede risici; fokus på likviditet/gearing  
+- **Søjle 3**: transparens/markedsdisciplin — mere **gennemsigtighed** efter oplevet panik
+
+ 
+
+## Kan “det” ske igen? (SVB-case 2023) {background="#00100F"}
+
+#### Fra kreditkompl. (2008) til varighed (2023) {background="#43464B"}
+- 2008: **kreditrisiko & kompleksitet** (MBS/CDO’er, illikviditet)  
+- 2023: **renterisiko & varighed** (stats/agency/MBS, HTM) + **digitalt bank run**  
+- Fællesnævner: **mismatch** + **høj gearing** + **tillidschok**
+
+#### SVB: forretningsmodel og sårbarheder {background="#43464B"}
+- Kundebase: **VC/tech**, **store uforsikrede indskud**, **høj deposit beta**  
+- Aktivside: **lange, fastforrentede** obligationer (ofte **HTM**)  
+- Passivside: **kort/flygtig** funding → **løbetidsmismatch**  
+- Regnskab ≠ økonomi: **urealiserede tab** bliver reelle ved run
+
+
+
+## Rentespænd og nettorentemargin {background="#00100F"}
+
+#### Generel bank {background="#43464B"}
+
+- Nettorentemargin (NIM):
+  $$
+  \text{NIM} = \frac{\text{Renteindtægter} - \text{Renteudgifter}}{\text{Gennemsnitlige rentebærende aktiver}}
+  $$
+
+- Med balanceidentiteten $$ A_e = IB + E $$ fås:
+  $$
+  \text{NIM} = (\bar r_A - \bar r_{IB}) + \bar r_{IB}\frac{E}{A_e}
+  $$
+
+- **Fortolkning:**  
+  - Første led = klassisk rentespænd.  
+  - Andet led = bidrag fra egenkapital (gratis funding).  
+  - NIM > spread når EK-andelen er betydelig og $$\bar r_{IB}>0$$ 
+
+
+#### Ren udlånsbank {background="#43464B"}
+
+- Antag: en bank har kun **udlån** som aktiver og **indlån** som funding.  
+- Balanceidentitet:
+  $$
+  L = D + E
+  $$
+  hvor $L$ = lån, $D$ = indlån, $E$ = egenkapital.  
+
+- Med $ \bar r_A = r_L $ (lånerente) og $ \bar r_{IB} = r_D $ (indlånsrente) bliver NIM:  
+
+  $$
+  \text{NIM} = (r_L - r_D) + r_D \frac{E}{L}
+  $$
+
+- **Fortolkning:**  
+  - Første led: klassisk spread mellem lånerente og indlånsrente.  
+  - Andet led: løft fra egenkapitalen.  
+  - Hvis $r_D > 0$, ligger NIM **over** det simple spread.  
+  - Hvis $r_D < 0$, ligger NIM **under** det simple spread.  
+  - NIM ≈ spread kræver enten $$E/L \to 0$$ eller $$r_D \approx 0$$ 
+
+
+#### Klassisk bank vs. SVB (skematisk) {background="#43464B"}
+
+::: {.smaller style="font-size:0.8em"}
+| **Klassisk bank — aktiver** |   | **SVB — aktiver** |   |
+|---|---|---|---|
+| Udlån | Høj andel | Obligationer | Meget høj andel (lange, fastforrentede; HTM) |
+| Obligationer | Moderat | Udlån | Lav andel |
+| Likvider | Mindre | Likvider | Begrænset |
+
+| **Passiver/EK** |   | **Passiver/EK** |   |
+|---|---|---|---|
+| Indlån | Bred, diversificeret | Indlån | Koncentreret, stor andel uforsikrede |
+| Ekstern funding | Varierer | Ekstern funding | Lav |
+| Egenkapital | 20–30% af aktiver | Egenkapital | ~8% af aktiver |
+:::
+
+
+
+## Egenkapitalens varighed {background="#00100F"}
+
+#### Formel og intuition {background="#43464B"}
+- Egenkapitalens varighed (følsomhed for renteændringer):  
+  $$
+  V_E \;=\; V_P \;+\; \frac{MVA}{MVE}\,\bigl(V_A - V_P\bigr)
+  $$
+  - $V_A$: aktivvarighed, $V_P$: passivvarighed, $MVA/MVE$: **gearing**  
+- **Mismatch** $ (V_A>V_P) $ + **høj gearing** ⇒ **stor $V_E$**
+
+::: {.smaller style="font-size:0.8em"}
+|                        | **Standard bank** | **SVB-lignende bank** |
+|---|---:|---:|
+| Aktiver, varighed      | $V_A \approx 2{,}3$ | $V_A \approx 4{,}6$ |
+| Passiver, varighed     | $V_P \approx 2{,}0$ | $V_P \approx 0{,}25$ |
+| Gearing $MVA/MVE$      | ~10 | ~12,5 |
+| **Egenkapital-varighed $V_E$** | **~5** | **>50** |
+:::
+
+- **Konsekvens**: 1 %-point rentehop kan **halvere** EK-markedsværdi i SVB-profilen  
+- **IRRBB-læring**: styr efter **økonomisk** kapital, match varighed, hedge risiko
+
+
+
+## Afrunding {background="#00100F"}
+
+#### Hovedpointer {background="#43464B"}
+- **Før krisen**: lave renter, prisboom, skift mod **non-prime** og **kompleks struktur**  
+- **Krisen**: misligholdelser → uigennemsigtighed → fundingfrys → systemisk panik  
+- **Eftervirkninger**: nulrenter/QE, store underskud, vedvarende lavere vækstbane  
+- **Regulering**: Basel III/IV — mere/bedre kapital, LCR/NSFR, leverage-backstop, output-floor  
+- **I dag**: kriser skifter form; mekanismen består — **mismatch + gearing + tillid**
+
