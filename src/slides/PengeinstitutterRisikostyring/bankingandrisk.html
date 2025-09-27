@@ -226,6 +226,16 @@ Niklas Lehmann Jensen
 <li class="fragment"><a href="#/lgd-og-recovery-rate" id="/toc-lgd-og-recovery-rate">LGD og Recovery Rate</a></li>
 <li class="fragment"><a href="#/ead-exposure-at-default" id="/toc-ead-exposure-at-default">EAD – Exposure at Default</a></li>
 <li class="fragment"><a href="#/el-og-ul-samt-wcdr" id="/toc-el-og-ul-samt-wcdr">EL og UL – samt WCDR</a></li>
+<li class="fragment"><a href="#/eksempel-beregn-ul-wcdr" id="/toc-eksempel-beregn-ul-wcdr">Eksempel: beregn UL (WCDR)</a></li>
+<li class="fragment"><a href="#/eksterne-ratings-oversigt-og-brug" id="/toc-eksterne-ratings-oversigt-og-brug">Eksterne ratings: oversigt og brug</a></li>
+<li class="fragment"><a href="#/kapital-og-kapitalkrav-søjler-buffere" id="/toc-kapital-og-kapitalkrav-søjler-buffere">Kapital og kapitalkrav (Søjler &amp; buffere)</a></li>
+<li class="fragment"><a href="#/standardmetoden-rwa-og-kapitalkrav" id="/toc-standardmetoden-rwa-og-kapitalkrav">Standardmetoden: RWA og kapitalkrav</a></li>
+<li class="fragment"><a href="#/likviditetsrisiko-to-vinkler" id="/toc-likviditetsrisiko-to-vinkler">Likviditetsrisiko: to vinkler</a></li>
+<li class="fragment"><a href="#/lcr-og-nsfr-intuition-og-formler" id="/toc-lcr-og-nsfr-intuition-og-formler">LCR og NSFR – intuition og formler</a></li>
+<li class="fragment"><a href="#/hqla-niveauer-og-haircuts-forenklet" id="/toc-hqla-niveauer-og-haircuts-forenklet">HQLA – niveauer og haircuts (forenklet)</a></li>
+<li class="fragment"><a href="#/lcr-tre-små-cases-samme-nævner" id="/toc-lcr-tre-små-cases-samme-nævner">LCR – tre små cases (samme nævner)</a></li>
+<li class="fragment"><a href="#/markedslikviditet-mål-og-pris-for-at-komme-ud" id="/toc-markedslikviditet-mål-og-pris-for-at-komme-ud">Markedslikviditet: mål og ”pris for at komme ud”</a></li>
+<li class="fragment"><a href="#/afrunding" id="/toc-afrunding">Afrunding</a></li>
 </ul>
 </nav>
 </section>
@@ -277,8 +287,10 @@ Niklas Lehmann Jensen
 <li class="fragment">Ved <strong>default</strong>: tab af <strong>renter + (dele af) hovedstol</strong> → <strong>skæv</strong> fordeling</li>
 </ul>
 </div></div>
-
-<img src="../../images/chapters/chapter_10/KreditAktieRisk.png" alt="Kredit vs aktie: payoff-asymmetri" width="78%" class="r-stretch"></section></section>
+<div style="text-align:center">
+<p><img src="../../images/chapters/chapter_10/KreditAktieRisk.png" alt="Kredit vs aktie: payoff-asymmetri" width="78%"></p>
+</div>
+</section></section>
 <section>
 <section id="systematisk-vs.-usystematisk-kreditrisiko" class="title-slide slide level2 center" data-background="#00100F">
 <h2>Systematisk vs.&nbsp;usystematisk kreditrisiko</h2>
@@ -296,7 +308,9 @@ Niklas Lehmann Jensen
 <li class="fragment">Banker bruger <strong>ratings/PD-klasser</strong> til styring og prissætning</li>
 </ul>
 </div><div class="column">
+<div style="text-align:center">
 <p><img src="../../images/chapters/chapter_10/SystematiskUsystematiskRisk.png" alt="Systematisk/usystematisk risiko" width="85%"></p>
+</div>
 </div></div>
 </section></section>
 <section>
@@ -465,7 +479,9 @@ s \;=\; 0{,}01\cdot(1-0{,}70) \;=\; 0{,}003 \;\Rightarrow\; 0{,}3\%
 <li class="fragment">Afhænger af <strong>sikkerheder</strong>, <strong>likviditet</strong> og <strong>konjunktur</strong></li>
 </ul>
 </div><div class="column">
+<div style="text-align:center">
 <p><img src="../../images/chapters/chapter_10/RecoveryRatesAndPRobability.png" alt="Recovery vs konjunktur" width="85%"></p>
+</div>
 </div></div>
 </section></section>
 <section>
@@ -486,8 +502,8 @@ s \;=\; 0{,}01\cdot(1-0{,}70) \;=\; 0{,}003 \;\Rightarrow\; 0{,}3\%
 <h2>EL og UL – samt WCDR</h2>
 
 </section>
-<section id="historik-og-wcdr" class="slide level4" data-background="#43464B">
-<h4>Historik og WCDR</h4>
+<section id="historik-og-formler" class="slide level4" data-background="#43464B">
+<h4>Historik og formler</h4>
 <div class="columns">
 <div class="column">
 <ul>
@@ -507,7 +523,533 @@ s \;=\; 0{,}01\cdot(1-0{,}70) \;=\; 0{,}003 \;\Rightarrow\; 0{,}3\%
 \]</span></li>
 </ul>
 </div></div>
-<p>…</p>
+</section>
+<section id="wcdr-tabeller-og-figur" class="slide level4" data-background="#43464B">
+<h4>WCDR-tabeller og figur</h4>
+<div class="smaller" style="font-size:0.8em">
+<table class="caption-top">
+<thead>
+<tr class="header">
+<th style="text-align: left;"><strong>Kreditrating</strong></th>
+<th style="text-align: right;"><strong>1 år</strong></th>
+<th style="text-align: right;"><strong>3 år</strong></th>
+<th style="text-align: right;"><strong>5 år</strong></th>
+<th style="text-align: right;"><strong>7 år</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">AAA</td>
+<td style="text-align: right;">0,0%</td>
+<td style="text-align: right;">0,0%</td>
+<td style="text-align: right;">0,0%</td>
+<td style="text-align: right;">0,1%</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">AA</td>
+<td style="text-align: right;">0,0%</td>
+<td style="text-align: right;">0,0%</td>
+<td style="text-align: right;">0,4%</td>
+<td style="text-align: right;">0,7%</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">A</td>
+<td style="text-align: right;">0,0%</td>
+<td style="text-align: right;">0,5%</td>
+<td style="text-align: right;">1,0%</td>
+<td style="text-align: right;">2,0%</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">BBB</td>
+<td style="text-align: right;">0,5%</td>
+<td style="text-align: right;">2,5%</td>
+<td style="text-align: right;">3,6%</td>
+<td style="text-align: right;">4,5%</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">BB</td>
+<td style="text-align: right;">2,8%</td>
+<td style="text-align: right;">8,0%</td>
+<td style="text-align: right;">13,5%</td>
+<td style="text-align: right;">16,5%</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">B</td>
+<td style="text-align: right;">7,0%</td>
+<td style="text-align: right;">16,6%</td>
+<td style="text-align: right;">20,5%</td>
+<td style="text-align: right;">26,6%</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div style="text-align:center">
+<p><img src="../../images/chapters/chapter_10/ExpectedAndUnexpectedLoss.png" alt="EL vs UL" width="78%"></p>
+</div>
+</section></section>
+<section>
+<section id="eksempel-beregn-ul-wcdr" class="title-slide slide level2 center" data-background="#00100F">
+<h2>Eksempel: beregn UL (WCDR)</h2>
+
+</section>
+<section id="opsætning-og-beregning" class="slide level4" data-background="#43464B">
+<h4>Opsætning og beregning</h4>
+<ul>
+<li class="fragment">Udlån 100 mio. → <strong>EAD = 130 mio.</strong><br>
+</li>
+<li class="fragment">PD <span class="math inline">\(=2\%\)</span>, <strong>WCDR <span class="math inline">\(=10\%\)</span></strong>, Recovery <span class="math inline">\(=40\%\)</span> → <strong>LGD <span class="math inline">\(=60\%\)</span></strong></li>
+</ul>
+<p><span class="math display">\[
+\mathrm{UL}=(10\%-2\%)\cdot 60\%\cdot 130
+= 0{,}08\cdot 0{,}60\cdot 130
+= 6{,}24\ \text{mio. kr.}
+\]</span></p>
+<p><strong>Tolkning:</strong> Banken bør holde ~<strong>6,24 mio. kr.</strong> i kapital til <strong>uforudsete</strong> tab i et hårdt år.</p>
+</section></section>
+<section>
+<section id="eksterne-ratings-oversigt-og-brug" class="title-slide slide level2 center" data-background="#00100F">
+<h2>Eksterne ratings: oversigt og brug</h2>
+
+</section>
+<section id="rolle-og-kritik" class="slide level4" data-background="#43464B">
+<h4>Rolle og kritik</h4>
+<div class="columns">
+<div class="column">
+<ul>
+<li class="fragment">Bruges til investeringer og under <strong>standardmetoden</strong> (RWA)</li>
+<li class="fragment">Skelnen: <strong>Investment grade</strong> (BBB/Baa+) vs.&nbsp;<strong>Speculative</strong> (BB/Ba og lavere)</li>
+<li class="fragment">“Through-the-Cycle” praksis → undgå konstante ratinghop</li>
+</ul>
+</div><div class="column">
+<ul>
+<li class="fragment"><strong>Cliff risk</strong>, <strong>modeltillid</strong>, <strong>udsteder-betaler</strong>, uklar <strong>ansvarlighed</strong> (post-2008)</li>
+</ul>
+</div></div>
+</section>
+<section id="ratingkort" class="slide level4" data-background="#43464B">
+<h4>Ratingkort</h4>
+<div class="smaller" style="font-size:0.8em">
+<table class="caption-top">
+<thead>
+<tr class="header">
+<th style="text-align: left;"><strong>Moody’s</strong></th>
+<th style="text-align: left;"><strong>S&amp;P</strong></th>
+<th style="text-align: left;"><strong>Fitch</strong></th>
+<th style="text-align: left;"></th>
+<th style="text-align: left;"><strong>Betydning</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Aaa</td>
+<td style="text-align: left;">AAA</td>
+<td style="text-align: left;">AAA</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">Bedste rating</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Aa</td>
+<td style="text-align: left;">AA</td>
+<td style="text-align: left;">AA</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">Meget høj kreditværdighed</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">A</td>
+<td style="text-align: left;">A</td>
+<td style="text-align: left;">A</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">Øvre middel</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Baa</td>
+<td style="text-align: left;">BBB</td>
+<td style="text-align: left;">BBB</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">Nedre middel</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Ba</td>
+<td style="text-align: left;">BB</td>
+<td style="text-align: left;">BB</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">Spekulativ</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">B</td>
+<td style="text-align: left;">B</td>
+<td style="text-align: left;">B</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">Meget spekulativ</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Caa</td>
+<td style="text-align: left;">CCC</td>
+<td style="text-align: left;">CCC</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">Høj default-risiko</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Ca</td>
+<td style="text-align: left;">CC</td>
+<td style="text-align: left;">CC</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">Ekstremt spekulativ</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">C</td>
+<td style="text-align: left;">C</td>
+<td style="text-align: left;">C</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">Nær konkurs</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">—</td>
+<td style="text-align: left;">D</td>
+<td style="text-align: left;">D</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">Konkurs</td>
+</tr>
+</tbody>
+</table>
+</div>
+</section></section>
+<section>
+<section id="kapital-og-kapitalkrav-søjler-buffere" class="title-slide slide level2 center" data-background="#00100F">
+<h2>Kapital og kapitalkrav (Søjler &amp; buffere)</h2>
+
+</section>
+<section id="arkitektur-og-kapitalgrundlag" class="slide level4" data-background="#43464B">
+<h4>Arkitektur og kapitalgrundlag</h4>
+<ul>
+<li class="fragment"><strong>Søjle 1</strong>: min. <strong>8% af RWA</strong> (bundplade)<br>
+</li>
+<li class="fragment"><strong>Søjle 2</strong>: institut-specifik <strong>ekstra</strong> kapital (solvensbehov)<br>
+</li>
+<li class="fragment"><strong>Søjle 3</strong>: <strong>gennemsigtighed</strong> og markedsdisciplin<br>
+</li>
+<li class="fragment"><strong>Buffere</strong>: kapitalbevaring, kontracyklisk, <strong>SIFI</strong> m.fl.</li>
+<li class="fragment"><strong>CET1</strong> (aktier/tilbageholdt overskud; hårdest fradrag) — <strong>rygraden</strong><br>
+</li>
+<li class="fragment"><strong>AT1</strong> (hybrid, kupon kan springes, write-down/konvertering) — <strong>støddæmper</strong><br>
+</li>
+<li class="fragment"><strong>Tier 2</strong> (efterstillet, lang løbetid) — <strong>nødnet</strong><br>
+</li>
+<li class="fragment">Minimumsniveauer + <strong>udbytte/bonus-begrænsning</strong> ved bufferbrud</li>
+</ul>
+</section></section>
+<section>
+<section id="standardmetoden-rwa-og-kapitalkrav" class="title-slide slide level2 center" data-background="#00100F">
+<h2>Standardmetoden: RWA og kapitalkrav</h2>
+
+</section>
+<section id="formler-og-vægte" class="slide level4" data-background="#43464B">
+<h4>Formler og vægte</h4>
+<div class="columns">
+<div class="column">
+<p><span class="math display">\[
+\text{RWA}=\sum_i \text{EAD}_i\cdot\text{risikovægt}_i,
+\qquad
+\text{Krav}=8\%\cdot\text{RWA}
+\]</span> - Ratings ⇒ risikovægte (ellers faste vægte) - EAD inkluderer <strong>off-balance</strong> via CCF</p>
+</div><div class="column">
+<div class="smaller" style="font-size:0.8em">
+<table class="caption-top" style="width:100%;">
+<colgroup>
+<col style="width: 14%">
+<col style="width: 14%">
+<col style="width: 14%">
+<col style="width: 14%">
+<col style="width: 14%">
+<col style="width: 14%">
+<col style="width: 14%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;"><strong>Risikoklasse</strong></th>
+<th style="text-align: right;">1</th>
+<th style="text-align: right;">2</th>
+<th style="text-align: right;">3</th>
+<th style="text-align: right;">4</th>
+<th style="text-align: right;">5</th>
+<th style="text-align: right;">6</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;"><strong>Rating-eksempel</strong></td>
+<td style="text-align: right;">AAA–AA-</td>
+<td style="text-align: right;">A+–A-</td>
+<td style="text-align: right;">BBB+–BBB-</td>
+<td style="text-align: right;">BB+–BB-</td>
+<td style="text-align: right;">B+–B-</td>
+<td style="text-align: right;">&lt; B-</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Virksomheder</td>
+<td style="text-align: right;">20%</td>
+<td style="text-align: right;">50%</td>
+<td style="text-align: right;">100/75%</td>
+<td style="text-align: right;">100%</td>
+<td style="text-align: right;">150%</td>
+<td style="text-align: right;">150%</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Kreditinstitutter</td>
+<td style="text-align: right;">20%</td>
+<td style="text-align: right;">50/30%</td>
+<td style="text-align: right;">50/30%</td>
+<td style="text-align: right;">100%</td>
+<td style="text-align: right;">100%</td>
+<td style="text-align: right;">150%</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div></div>
+</section>
+<section id="eksempel-b-rating" class="slide level4" data-background="#43464B">
+<h4>Eksempel (B-rating)</h4>
+<ul>
+<li class="fragment">B-ratet virksomhed, <strong>EAD = 30 mio.</strong>, vægt <strong>150%</strong><br>
+<span class="math display">\[
+\text{RWA}=30\cdot 150\% = 45,
+\qquad
+\text{Krav}=45\cdot 8\% = 3{,}6\ \text{mio. kr.}
+\]</span></li>
+</ul>
+</section></section>
+<section>
+<section id="likviditetsrisiko-to-vinkler" class="title-slide slide level2 center" data-background="#00100F">
+<h2>Likviditetsrisiko: to vinkler</h2>
+
+</section>
+<section id="funding-vs.-marked" class="slide level4" data-background="#43464B">
+<h4>Funding vs.&nbsp;marked</h4>
+<div class="columns">
+<div class="column">
+<ul>
+<li class="fragment"><strong>Fundinglikviditet</strong>: kan banken skaffe <strong>kontanter</strong> til tiden?</li>
+<li class="fragment"><strong>Markedslikviditet</strong>: kan aktiver <strong>sælges</strong> uden stort prisfald?</li>
+<li class="fragment">Banken er <strong>løbetidstransformator</strong>: kort funding, lange aktiver</li>
+</ul>
+</div><div class="column">
+<div style="text-align:center">
+<p><img src="../../images/chapters/chapter_10/Pilediagram.png" alt="Kreditschok → funding/markedslikviditet" width="82%"></p>
+</div>
+</div></div>
+</section>
+<section id="krise-typer" class="slide level4" data-background="#43464B">
+<h4>Krise-typer</h4>
+<ul>
+<li class="fragment"><strong>Institutspecifik</strong>: dårlig nyhed → indlånsudløb, dyr/no funding<br>
+</li>
+<li class="fragment"><strong>Systemisk</strong>: flight-to-quality; markeder <strong>lukker</strong> (ABS, efterstillet gæld)<br>
+</li>
+<li class="fragment">Selv sunde banker kan blive ramt i systemiske episoder</li>
+</ul>
+</section></section>
+<section>
+<section id="lcr-og-nsfr-intuition-og-formler" class="title-slide slide level2 center" data-background="#00100F">
+<h2>LCR og NSFR – intuition og formler</h2>
+
+</section>
+<section id="definitioner" class="slide level4" data-background="#43464B">
+<h4>Definitioner</h4>
+<div class="columns">
+<div class="column">
+<p><strong>LCR (30 dage)</strong><br>
+- Har banken nok <strong>HQLA</strong> i en <strong>30 dages</strong> stress? <span class="math display">\[
+\text{LCR}=\frac{\text{HQLA}}{\text{netto udstrømning 30 dage}}\ \ge\ 100\%
+\]</span> - <strong>HQLA-niveauer</strong>: Level 1 (stats/CB), 2A, 2B + <strong>haircuts/lofter</strong></p>
+</div><div class="column">
+<p><strong>NSFR (langsigtet)</strong><br>
+- Matcher lang <strong>aktivside</strong> med <strong>stabil funding</strong> <span class="math display">\[
+\text{NSFR}=\frac{\text{ASF}}{\text{RSF}}\ \ge\ 100\%
+\]</span> - <strong>ASF</strong> vægter EK/lang funding højest; <strong>RSF</strong> vægter lange/illikvide aktiver højest</p>
+</div></div>
+</section></section>
+<section>
+<section id="hqla-niveauer-og-haircuts-forenklet" class="title-slide slide level2 center" data-background="#00100F">
+<h2>HQLA – niveauer og haircuts (forenklet)</h2>
+
+</section>
+<section id="kategorier" class="slide level4" data-background="#43464B">
+<h4>Kategorier</h4>
+<div class="smaller" style="font-size:0.85em">
+<table class="caption-top">
+<colgroup>
+<col style="width: 30%">
+<col style="width: 30%">
+<col style="width: 40%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;"><strong>Niveau</strong></th>
+<th style="text-align: left;"><strong>Eksempler</strong></th>
+<th style="text-align: center;"><strong>Tælling i buffer</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;"><strong>Level 1</strong></td>
+<td style="text-align: left;">Kontanter/centralbank; stats-obl.; udvalgte særligt dækkede obl.</td>
+<td style="text-align: center;">100% (evt. 93% i DK-praksis)</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><strong>Level 2A</strong></td>
+<td style="text-align: left;">Dækkede obl. (AA- til AA+), stærke virksomhedsobl.</td>
+<td style="text-align: center;">~85%</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><strong>Level 2B</strong></td>
+<td style="text-align: left;">Udvalgte indeksaktier; BBB- virksomhedsobl. m.m.</td>
+<td style="text-align: center;">50–75%</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p><strong>Bemærk:</strong> Loft for andel af Level 2 i bufferen + mindstekrav til andel <strong>bedste Level 1</strong>.</p>
+</section></section>
+<section>
+<section id="lcr-tre-små-cases-samme-nævner" class="title-slide slide level2 center" data-background="#00100F">
+<h2>LCR – tre små cases (samme nævner)</h2>
+
+</section>
+<section id="trin-1-haircuts" class="slide level4" data-background="#43464B">
+<h4>Trin 1: Haircuts</h4>
+<div class="smaller" style="font-size:0.8em">
+<table class="caption-top" style="width:100%;">
+<colgroup>
+<col style="width: 43%">
+<col style="width: 18%">
+<col style="width: 18%">
+<col style="width: 18%">
+</colgroup>
+<thead>
+<tr class="header">
+<th></th>
+<th style="text-align: right;"><strong>A</strong></th>
+<th style="text-align: right;"><strong>B</strong></th>
+<th style="text-align: right;"><strong>C</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Statsobligationer (L1)</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">100</td>
+<td style="text-align: right;">100</td>
+</tr>
+<tr class="even">
+<td>Særligt dækkede (L1, 7% haircut)</td>
+<td style="text-align: right;"><span class="math inline">\(200\times0{,}93=186\)</span></td>
+<td style="text-align: right;"><span class="math inline">\(300\times0{,}93=279\)</span></td>
+<td style="text-align: right;"><span class="math inline">\(200\times0{,}93=186\)</span></td>
+</tr>
+<tr class="odd">
+<td>Level 2A (15% haircut)</td>
+<td style="text-align: right;"><span class="math inline">\(50\times0{,}85=42{,}5\)</span></td>
+<td style="text-align: right;"><span class="math inline">\(100\times0{,}85=85\)</span></td>
+<td style="text-align: right;"><span class="math inline">\(50\times0{,}85=42{,}5\)</span></td>
+</tr>
+<tr class="even">
+<td><strong>Sum før kvoter</strong></td>
+<td style="text-align: right;"><strong>228,5</strong></td>
+<td style="text-align: right;"><strong>464,0</strong></td>
+<td style="text-align: right;"><strong>328,5</strong></td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+<section id="trin-2-kvoterlofter-tilladt-hqla" class="slide level4" data-background="#43464B">
+<h4>Trin 2: Kvoter/lofter → tilladt HQLA</h4>
+<div class="smaller" style="font-size:0.8em">
+<table class="caption-top">
+<thead>
+<tr class="header">
+<th></th>
+<th style="text-align: right;"><strong>A</strong></th>
+<th style="text-align: right;"><strong>B</strong></th>
+<th style="text-align: right;"><strong>C</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>Tilladt HQLA efter kvoter</strong></td>
+<td style="text-align: right;"><strong>0</strong></td>
+<td style="text-align: right;"><strong>333,3</strong></td>
+<td style="text-align: right;"><strong>328,5</strong></td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+<section id="trin-3-lcr-beregning-nævner-250-mio." class="slide level4" data-background="#43464B">
+<h4>Trin 3: LCR-beregning (nævner = 250 mio.)</h4>
+<ul>
+<li class="fragment"><span class="math inline">\(\text{LCR}_A = 0/250 = 0\%\)</span><br>
+</li>
+<li class="fragment"><span class="math inline">\(\text{LCR}_B = 333{,}3/250 = 133\%\)</span><br>
+</li>
+<li class="fragment"><span class="math inline">\(\text{LCR}_C = 328{,}5/250 = 131\%\)</span></li>
+</ul>
+<p><strong>Intuition:</strong> Case <strong>A</strong> dumper (mangler de bedste Level 1). <strong>B/C</strong> består; <strong>B</strong> “spilder” buffer pga. kvoter.</p>
+</section></section>
+<section>
+<section id="markedslikviditet-mål-og-pris-for-at-komme-ud" class="title-slide slide level2 center" data-background="#00100F">
+<h2>Markedslikviditet: mål og ”pris for at komme ud”</h2>
+
+</section>
+<section id="bidask-og-eksempel" class="slide level4" data-background="#43464B">
+<h4>Bid–ask og eksempel</h4>
+<div class="columns">
+<div class="column">
+<ul>
+<li class="fragment">En praktisk årlig <strong>præmie</strong> for illikviditet: <span class="math display">\[
+\text{Likviditetspræmie}=\frac{S_b-S_s}{H\cdot P}
+\]</span></li>
+<li class="fragment"><span class="math inline">\(S_b\)</span>: spread på illikvidt papir, <span class="math inline">\(S_s\)</span>: spread på reference<br>
+</li>
+<li class="fragment"><span class="math inline">\(H\)</span>: horisont (år), <span class="math inline">\(P\)</span>: gennemsnitskurs</li>
+</ul>
+</div><div class="column">
+<ul>
+<li class="fragment">Illikvid virksomhedsobl.: pris 95, bid–ask <strong>94–95</strong> ⇒ spread <strong>1,00</strong><br>
+</li>
+<li class="fragment">Likvidt referencepapir: spread <strong>0,10</strong><br>
+</li>
+<li class="fragment"><span class="math inline">\(H=0{,}5\)</span>, <span class="math inline">\(P\approx100\)</span></li>
+</ul>
+<p><span class="math display">\[
+\Delta S = 1{,}00-0{,}10=0{,}90
+\]</span> <span class="math display">\[
+\text{Likviditetspræmie}=\frac{0{,}90}{0{,}5\cdot 100}=1{,}8\%
+\]</span> <span class="math display">\[
+\text{"Skjult" omkostning}=\frac{0{,}90}{94{,}5}\approx 0{,}95\%
+\]</span></p>
+</div></div>
+<p><strong>Bemærk:</strong> Spreads <strong>udvider</strong> sig i stress → omkostningen stiger netop, når man <strong>behøver</strong> likviditet.</p>
+</section></section>
+<section>
+<section id="afrunding" class="title-slide slide level2 center" data-background="#00100F">
+<h2>Afrunding</h2>
+
+</section>
+<section id="hovedpointer" class="slide level4" data-background="#43464B">
+<h4>Hovedpointer</h4>
+<ul>
+<li class="fragment"><strong>Kreditrisiko</strong> dominerer i banker: styr via <strong>PD–LGD–EAD</strong>, pris <strong>EL</strong> ind og dæk <strong>UL</strong> med kapital<br>
+</li>
+<li class="fragment"><strong>Kapital</strong> er både <strong>mængde og kvalitet</strong>: <strong>CET1/AT1/Tier2</strong>, + Søjle- og bufferkrav<br>
+</li>
+<li class="fragment"><strong>Likviditet</strong> er lige så central som kapital: <strong>LCR (30 dage)</strong> og <strong>NSFR (lang sigt)</strong>, sammensætning af <strong>HQLA</strong> er afgørende<br>
+</li>
+<li class="fragment"><strong>Funding- og markedslikviditet</strong> forstærker ofte hinanden — modeller hjælper, men <strong>systematiske stød</strong> kræver robuste buffere<br>
+</li>
+<li class="fragment">Målet er <strong>sund risikotagning</strong>, ikke nulsikring — og fastholdelse af <strong>tillid</strong> som sektorens fundament</li>
+</ul>
 
 
 </section></section>

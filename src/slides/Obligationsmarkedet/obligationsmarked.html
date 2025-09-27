@@ -10,7 +10,7 @@
   <meta name="generator" content="quarto-1.8.24">
 
   <meta name="author" content="Niklas Lehmann Jensen">
-  <title>Finansiering 2025 – Rentedannelsen</title>
+  <title>Finansiering 2025 – Obligationsmarkedet</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
@@ -203,8 +203,8 @@
     <div class="slides">
 
 <section id="title-slide" data-background-color="#045D5D" data-footer="" class="quarto-title-block center">
-  <h1 class="title">Rentedannelsen</h1>
-  <p class="subtitle">Hvor kommer renter fra – og hvorfor bevæger de sig?</p>
+  <h1 class="title">Obligationsmarkedet</h1>
+  <p class="subtitle">Bag om obligationstyperne - teori og praksis</p>
 
 <div class="quarto-title-authors">
 <div class="quarto-title-author">
@@ -218,379 +218,486 @@ Niklas Lehmann Jensen
 <nav role="doc-toc"> 
 <h2 id="toc-title">Table of contents</h2>
 <ul>
-<li class="fragment"><a href="#/introduktion" id="/toc-introduktion">Introduktion</a></li>
-<li class="fragment"><a href="#/rentebegreber" id="/toc-rentebegreber">Rentebegreber</a></li>
-<li class="fragment"><a href="#/direkte-rente-eksempel" id="/toc-direkte-rente-eksempel">Direkte rente – eksempel</a></li>
-<li class="fragment"><a href="#/lånekapital-udbud-efterspørgsel" id="/toc-lånekapital-udbud-efterspørgsel">Lånekapital: udbud &amp; efterspørgsel</a></li>
-<li class="fragment"><a href="#/inflation-og-rente" id="/toc-inflation-og-rente">Inflation og rente</a></li>
-<li class="fragment"><a href="#/pengepolitik-og-rentedannelse" id="/toc-pengepolitik-og-rentedannelse">Pengepolitik og rentedannelse</a></li>
-<li class="fragment"><a href="#/institutionelle-forhold-for-rentedannelsen-i-danmark" id="/toc-institutionelle-forhold-for-rentedannelsen-i-danmark">Institutionelle forhold for rentedannelsen i Danmark</a></li>
-<li class="fragment"><a href="#/renten-og-investeringer" id="/toc-renten-og-investeringer">Renten og investeringer</a></li>
-<li class="fragment"><a href="#/sammenligning-af-rentesatser-og-debitorrenten" id="/toc-sammenligning-af-rentesatser-og-debitorrenten">Sammenligning af rentesatser og debitorrenten</a></li>
+<li class="fragment"><a href="#/introduktion-til-obligationer" id="/toc-introduktion-til-obligationer">Introduktion til obligationer</a></li>
+<li class="fragment"><a href="#/obligationstyper" id="/toc-obligationstyper">Obligationstyper</a></li>
+<li class="fragment"><a href="#/betalingsstrømme-og-nutidsværdi" id="/toc-betalingsstrømme-og-nutidsværdi">Betalingsstrømme og nutidsværdi</a></li>
+<li class="fragment"><a href="#/handel-med-obligationer" id="/toc-handel-med-obligationer">Handel med obligationer</a></li>
+<li class="fragment"><a href="#/nulkuponobligationer" id="/toc-nulkuponobligationer">Nulkuponobligationer</a></li>
+<li class="fragment"><a href="#/kuponbærende-obligationer" id="/toc-kuponbærende-obligationer">Kuponbærende obligationer</a></li>
+<li class="fragment"><a href="#/reinvesteringsrisiko" id="/toc-reinvesteringsrisiko">Reinvesteringsrisiko</a></li>
+<li class="fragment"><a href="#/prissensitivitet" id="/toc-prissensitivitet">Prissensitivitet</a></li>
+<li class="fragment"><a href="#/markedsrente-kupon-og-kurs" id="/toc-markedsrente-kupon-og-kurs">Markedsrente, kupon og kurs</a></li>
+<li class="fragment"><a href="#/markedsrente-kupon-og-kurs-1" id="/toc-markedsrente-kupon-og-kurs-1">Markedsrente, kupon og kurs</a></li>
+<li class="fragment"><a href="#/obligationsprisernes-dynamik" id="/toc-obligationsprisernes-dynamik">Obligationsprisernes dynamik</a></li>
+<li class="fragment"><a href="#/tid-og-obligationspriser" id="/toc-tid-og-obligationspriser">Tid og obligationspriser</a></li>
+<li class="fragment"><a href="#/øvelser" id="/toc-øvelser">Øvelser</a></li>
 <li class="fragment"><a href="#/opsummering" id="/toc-opsummering">Opsummering</a></li>
 </ul>
 </nav>
 </section>
 <section>
-<section id="introduktion" class="title-slide slide level2 center" data-background="#00100F">
-<h2>Introduktion</h2>
+<section id="introduktion-til-obligationer" class="title-slide slide level2 center" data-background="#00100F">
+<h2>Introduktion til obligationer</h2>
 
 </section>
 <section id="læringsmål" class="slide level4" data-background="#43464B">
 <h4>Læringsmål</h4>
 <ul>
-<li class="fragment">Forstå hvordan <strong>renten dannes</strong> gennem udbud, efterspørgsel og pengepolitik<br>
+<li class="fragment">Kende de centrale obligationstyper og deres <strong>cashflows</strong> (stående, annuitet, serie)<br>
 </li>
-<li class="fragment">Skelne mellem <strong>nominel rente</strong>, <strong>realrente</strong> og <strong>effektiv rente (debitorrente)</strong><br>
+<li class="fragment">Prisfastsætte <strong>nulkupon</strong> via nutidsværdi og forklare sammenhængen <strong>kurs ↔︎ rente ↔︎ løbetid</strong><br>
 </li>
-<li class="fragment">Kunne forklare hvordan <strong>inflation</strong> og internationale forhold påvirker renten<br>
+<li class="fragment">For <strong>kuponbærende</strong>: anvende prisformlen og forstå at <strong>YTM</strong> normalt findes <strong>numerisk</strong><br>
 </li>
-<li class="fragment">Beregne og fortolke <strong>NPV</strong> og se, hvordan små renteændringer ændrer investeringers værdi<br>
+<li class="fragment">Skelne <strong>clean vs.&nbsp;dirty price</strong> og beregne <strong>vedhængende rente</strong> (valør, termin)<br>
 </li>
-<li class="fragment">Anvende og sammenligne forskellige rentesatser via <strong>omregning</strong> og debitorrenten</li>
+<li class="fragment">Forklare <strong>reinvesteringsrisiko</strong> og hvad der skal til for at realisere YTM<br>
+</li>
+<li class="fragment">Vurdere <strong>prissensitivitet</strong> ift. løbetid/kupon og forbinde intuitionen til <strong>varighed</strong></li>
 </ul>
 </section>
-<section id="hvad-er-renter-og-hvorfor-findes-de" class="slide level4" data-background="#43464B">
-<h4>Hvad er renter, og hvorfor findes de?</h4>
+<section id="hvad-er-en-obligation" class="slide level4" data-background="#43464B">
+<h4>Hvad er en obligation?</h4>
 <ul>
-<li class="fragment">Renter kan anskues på mange måder:
+<li class="fragment">En af de vigtigste finansielle instrumenter til kapitalrejsning<br>
+</li>
+<li class="fragment">Værdien afhænger direkte af <strong>renten</strong> → tæt kobling mellem renter og obligationspriser<br>
+</li>
+<li class="fragment">Definition: gældsinstrument hvor udstederen låner penge fra investorer mod:
 <ul>
-<li class="fragment">“Prisen på penge”<br>
+<li class="fragment">periodiske rentebetalinger (kuponer)<br>
 </li>
-<li class="fragment">Gevinsten ved at udskyde forbrug og opspare<br>
-</li>
-<li class="fragment">Omkostningen ved at forbruge tidligere gennem lån<br>
-</li>
+<li class="fragment">tilbagebetaling af hovedstolen ved udløb</li>
 </ul></li>
-<li class="fragment">Renten bestemmes af udbuds- og efterspørgselskræfter på kapitalmarkedet<br>
-</li>
-<li class="fragment">Der findes forskellige renter – ikke blot én!<br>
-</li>
-<li class="fragment">Renten driver prisfastsættelsen af <em>alle</em> finansielle instrumenter<br>
-</li>
-<li class="fragment">Renten fungerer som et (næsten) risikofrit alternativ, som andre aktiver prissættes i forhold til<br>
-</li>
-<li class="fragment">Alt andet lige: En aktie med en given betalingsstrøm vil falde i pris, hvis renten stiger</li>
 </ul>
-</section></section>
-<section>
-<section id="rentebegreber" class="title-slide slide level2 center" data-background="#00100F">
-<h2>Rentebegreber</h2>
-
 </section>
 <section id="centrale-begreber" class="slide level4" data-background="#43464B">
 <h4>Centrale begreber</h4>
 <ul>
-<li class="fragment"><strong>Realrente</strong>: Kompenserer for den nytte, man går glip af ved at udsætte sit forbrug<br>
+<li class="fragment"><strong>Terminer</strong>: antal betalinger pr. år<br>
 </li>
-<li class="fragment"><strong>Nominel rente</strong>: Kompenserer både for udskydelse af forbrug og for prisstigninger (inflation)<br>
+<li class="fragment"><strong>Hovedstol</strong>: det oprindeligt lånte beløb<br>
 </li>
-<li class="fragment"><strong>Rentestruktur</strong>: Viser hvordan renter varierer på tværs af løbetider – dvs. sammenhængen mellem renteniveau og lånets løbetid<br>
+<li class="fragment"><strong>Afdrag / afdragsprofil</strong>: tilbagebetaling af hovedstol over tid<br>
 </li>
-<li class="fragment"><strong>Pålydende rente</strong>: Den officielle rente, der står angivet på lånet eller obligationen<br>
-</li>
-<li class="fragment"><strong>Direkte rente</strong>: Den rente, der beregnes ud fra obligationens pris (kurs)<br>
-</li>
-<li class="fragment"><strong>Effektiv rente</strong>: Tager højde for renters rente-effekter samt kursgevinster/tab</li>
+<li class="fragment"><strong>Ydelse</strong>: samlet betaling pr. termin (renter + afdrag)</li>
 </ul>
 </section></section>
 <section>
-<section id="direkte-rente-eksempel" class="title-slide slide level2 center" data-background="#00100F">
-<h2>Direkte rente – eksempel</h2>
+<section id="obligationstyper" class="title-slide slide level2 center" data-background="#00100F">
+<h2>Obligationstyper</h2>
 
 </section>
-<section id="beregning" class="slide level4" data-background="#43464B">
-<h4>Beregning</h4>
+<section id="stående-lån" class="slide level4" data-background="#43464B">
+<h4>Stående lån</h4>
 <ul>
-<li class="fragment">Direkte rente: <span class="math inline">\(\frac{\text{Kuponrente}}{\text{Købekurs}} \times 100\%\)</span></li>
-<li class="fragment"><em>Eksempel 1: køb til kurs 80</em><br>
-$ = 7,50% $</li>
-<li class="fragment"><em>Eksempel 2: køb til kurs 109</em><br>
-$ = 5,50% $</li>
-<li class="fragment">Potentiel kursgevinst: <span class="math inline">\(100 - 80 = 20\)</span> kurspoint<br>
+<li class="fragment">Rentebetalinger løbende, hovedstol først ved udløb<br>
 </li>
-<li class="fragment">Potentielt kurstab: <span class="math inline">\(109 - 100 = 9\)</span> kurspoint</li>
+<li class="fragment">Klassisk eksempel: statsobligationer<br>
+</li>
+<li class="fragment">Stabil cashflow for investor, men udsteder har stor betaling til sidst</li>
+</ul>
+
+<img src="../../images/chapters/chapter_2/kap2_Ståendelån.png" alt="Stående lån profil" width="70%" class="r-stretch"></section>
+<section id="annuitetslån" class="slide level4" data-background="#43464B">
+<h4>Annuitetslån</h4>
+<ul>
+<li class="fragment">Låntager betaler <strong>fast ydelse</strong> hver termin<br>
+</li>
+<li class="fragment">Afdrag stiger over tid, mens renteandel falder<br>
+</li>
+<li class="fragment">Giver stabil belastning for låntager</li>
+</ul>
+
+<img src="../../images/chapters/chapter_2/kap2_Annuitetslån.png" alt="Annuitetslån profil" width="70%" class="r-stretch"></section>
+<section id="serielån" class="slide level4" data-background="#43464B">
+<h4>Serielån</h4>
+<ul>
+<li class="fragment">Konstant afdrag pr. termin → faldende rente over tid<br>
+</li>
+<li class="fragment">Høj ydelse i starten, lavere mod slutningen<br>
+</li>
+<li class="fragment">Begrænset efterspørgsel i praksis</li>
+</ul>
+
+<img src="../../images/chapters/chapter_2/kap2_Serielån.png" alt="Serielån profil" width="70%" class="r-stretch"></section></section>
+<section>
+<section id="betalingsstrømme-og-nutidsværdi" class="title-slide slide level2 center" data-background="#00100F">
+<h2>Betalingsstrømme og nutidsværdi</h2>
+
+</section>
+<section id="obligation-som-betalingsrække" class="slide level4" data-background="#43464B">
+<h4>Obligation som betalingsrække</h4>
+<ul>
+<li class="fragment">En obligation = række af fremtidige betalinger (kuponer + afdrag)<br>
+</li>
+<li class="fragment">Spørgsmål: hvor meget er man villig til at betale for at eje denne betalingsstrøm?<br>
+</li>
+<li class="fragment">Kræver et <strong>afkastmål</strong> → den effektive rente</li>
+</ul>
+</section>
+<section id="centrale-begreber-1" class="slide level4" data-background="#43464B">
+<h4>Centrale begreber</h4>
+<ul>
+<li class="fragment"><strong>Betalingsstrømme</strong>: grafisk visning af cashflows<br>
+</li>
+<li class="fragment"><strong>Nutidsværdi (NV)</strong>: værdien i dag af fremtidige betalinger<br>
+</li>
+<li class="fragment">Formel:<br>
+<span class="math display">\[ NV = \frac{FV}{(1+r)^n} \]</span></li>
+<li class="fragment"><strong>Diskonteringsfaktor</strong>:<br>
+<span class="math display">\[ d_k = \frac{1}{(1+r/m)^k} \]</span></li>
+<li class="fragment"><strong>Effektiv rente</strong>: rente der gør NV = markedspris</li>
 </ul>
 </section></section>
 <section>
-<section id="lånekapital-udbud-efterspørgsel" class="title-slide slide level2 center" data-background="#00100F">
-<h2>Lånekapital: udbud &amp; efterspørgsel</h2>
+<section id="handel-med-obligationer" class="title-slide slide level2 center" data-background="#00100F">
+<h2>Handel med obligationer</h2>
 
 </section>
-<section id="rentedannelsen-på-kredit--og-lånemarkedet" class="slide level4" data-background="#43464B">
-<h4>Rentedannelsen på kredit- og lånemarkedet</h4>
-<ul>
-<li class="fragment">Renten dannes på kredit- og lånemarkedet gennem <strong>udbud</strong> og <strong>efterspørgsel</strong><br>
-</li>
-<li class="fragment"><strong>Udbud</strong>: privat opsparing fra husholdninger og virksomheder, kanaliseret via banker<br>
-</li>
-<li class="fragment"><strong>Efterspørgsel</strong>: lån til bolig, investeringer mv.<br>
-</li>
-<li class="fragment"><strong>Ligevægtsrenten</strong> <span class="math inline">\(r^{*}\)</span>: renten, hvor efterspørgslen efter lån matcher udbuddet af opsparing</li>
-</ul>
-</section>
-<section id="rentedannelsen-på-kredit--og-lånemarkedet-1" class="slide level4" data-background="#43464B">
-<h4>Rentedannelsen på kredit- og lånemarkedet</h4>
+<section id="kurslisten" class="slide level4" data-background="#43464B">
+<h4>Kurslisten</h4>
 
-<img src="../../images/chapters/chapter_1/kap_1_Kreditmarked.jpg" alt="Kreditmarked" width="100%" class="r-stretch"></section>
-<section id="strukturelle-forhold-bag-r" class="slide level4" data-background="#43464B">
-<h4>Strukturelle forhold bag r*</h4>
+<img src="../../images/chapters/chapter_2/kap2_kurslisten.png" alt="Kursliste" width="100%" class="r-stretch"></section>
+<section id="terminer" class="slide level4" data-background="#43464B">
+<h4>Terminer</h4>
 <ul>
-<li class="fragment">Lønstigninger → højere indkomst giver øget låneefterspørgsel<br>
+<li class="fragment">Antal gange pr. år med betaling<br>
 </li>
-<li class="fragment">Mindre konkurrence i banksektoren → færre banker medfører lavere kreditudbud<br>
+<li class="fragment">DK statsobligationer: 1 årlig termin<br>
 </li>
-<li class="fragment">Ligevægtsrenten kan ikke observeres direkte, men forstås som et langsigtet renteniveau man driver mod</li>
+<li class="fragment">US Treasury: 2 årlige terminer<br>
+</li>
+<li class="fragment">Eksempel: 4,50 % med halvårlige betalinger → 2,25 % pr. termin</li>
 </ul>
-</section></section>
-<section>
-<section id="inflation-og-rente" class="title-slide slide level2 center" data-background="#00100F">
-<h2>Inflation og rente</h2>
+</section>
+<section id="kursværdien" class="slide level4" data-background="#43464B">
+<h4>Kursværdien</h4>
+<ul>
+<li class="fragment">Alle obligationer udløber til kurs 100 (pari)<br>
+</li>
+<li class="fragment">Men kursen kan svinge i markedet<br>
+</li>
+<li class="fragment">Eksempel: kurs 127 → over pari: <span class="math inline">\(KV = 100.000 \cdot \frac{127,8}{100}=127.800\)</span></li>
+</ul>
+</section>
+<section id="valør" class="slide level4" data-background="#43464B">
+<h4>Valør</h4>
+<ul>
+<li class="fragment">Oprindeligt blev begrebet “valør” brugt i en tid, hvor obligationer eksisterede som fysiske papirer. (Manuel transport af papirer)</li>
+<li class="fragment">Giver ligeledes tid til at “ordne det praktiske”</li>
+<li class="fragment">Dagen hvor handlen effektueres (T+2 bankdage i DK).</li>
+<li class="fragment">Eksempel: handel 10. sep (tirsdag). → levering 12. sep (torsdag).<br>
+</li>
+<li class="fragment">Handel indgået en torsdag, afvikles den efterfølgende mandag.</li>
+</ul>
+</section>
+<section id="vedhængende-rente" class="slide level4" data-background="#43464B">
+<h4>Vedhængende rente</h4>
+<ul>
+<li class="fragment">Køber overtager retten til den førstkommende rentebetaling, regnet ud fra valørdagen.</li>
+<li class="fragment">Køberen skal tilgengæld kompensere sælger herfor ved at betale de vedhængende renter.</li>
+<li class="fragment">Eksempelvis: Hvis vi ejer en obligation fra d.12 september og der er termin d.&nbsp;15 november. Så skal vi som køber ikke have hele rentebetalingen, fordi vi kun har ejet den 63 dage.</li>
+<li class="fragment">Sikrer fair fordeling af renteindtægt</li>
+</ul>
+</section>
+<section id="vedhængende-rente-1" class="slide level4" data-background="#43464B">
+<h4>Vedhængende rente</h4>
 
-</section>
-<section id="fisher-sammenhængen" class="slide level4" data-background="#43464B">
-<h4>Fisher-sammenhængen</h4>
-<ul>
-<li class="fragment">Fisher-ligningen er givet igennem: <span class="math inline">\(R \approx r + \pi\)</span>
-<ul>
-<li class="fragment">“Prisen på penge”<br>
-</li>
-<li class="fragment"><span class="math inline">\(r\)</span>: realrente</li>
-<li class="fragment"><span class="math inline">\(\pi\)</span>: forventet inflation</li>
-</ul></li>
-<li class="fragment">Inflation måler prisstigninger i økonomien<br>
-</li>
-<li class="fragment">Hvis den nominelle rente er lavere end inflationen → negativ realrente og tab af købekraft<br>
-</li>
-<li class="fragment">Man ønsker derfor en positiv realrente på sin investering</li>
-</ul>
-</section>
-<section id="grafisk-illustration" class="slide level4" data-background="#43464B">
-<h4>Grafisk illustration</h4>
-
-<img src="../../images/chapters/chapter_1/ch_1_RenteInflation.jpg" alt="Inflation og rente" width="100%" class="r-stretch"></section>
-<section id="åben-økonomi" class="slide level4" data-background="#43464B">
-<h4>Åben økonomi</h4>
-<ul>
-<li class="fragment">I en lille åben økonomi som Danmark bestemmes renten også af verdensmarkedet: <span class="math inline">\(R_{\mathrm{DK}} = R_{w} + (\pi_{\mathrm{DK}} - \pi_{w})\)</span>
-<ul>
-<li class="fragment"><span class="math inline">\(R_{\mathrm{DK}}\)</span>: dansk nominel rente<br>
-</li>
-<li class="fragment"><span class="math inline">\(R_{w}\)</span>: verdensrente (ofte proxied ved Tyskland/USA)<br>
-</li>
-<li class="fragment"><span class="math inline">\(\pi_{\mathrm{DK}} - \pi_{w}\)</span>: inflationsforskel mellem DK og udlandet</li>
-</ul></li>
-<li class="fragment">Dansk rente følger både de globale renter og forskellen i inflation.<br>
-</li>
-<li class="fragment">Stigning i <span class="math inline">\(R_{w}\)</span> → dansk rente stiger 1:1<br>
-</li>
-<li class="fragment">Stigning i inflationsforskellen <span class="math inline">\((\pi_{\mathrm{DK}} - \pi_{w})\)</span> → dansk rente stiger tilsvarende</li>
-</ul>
-</section></section>
-<section>
-<section id="pengepolitik-og-rentedannelse" class="title-slide slide level2 center" data-background="#00100F">
-<h2>Pengepolitik og rentedannelse</h2>
-
-</section>
-<section id="centralbankens-rolle-og-likviditetseffekten" class="slide level4" data-background="#43464B">
-<h4>Centralbankens rolle og likviditetseffekten</h4>
-<ul>
-<li class="fragment">Nationalbanken kan føre pengepolitik, som hurtigt påvirker renteniveauet gennem ændringer i <strong>likviditeten</strong><br>
-</li>
-<li class="fragment"><strong>Likviditetseffekten på kort sigt</strong>:
-<ul>
-<li class="fragment">X-aksen skiftes til <em>pengemængde</em> frem for lån<br>
-</li>
-<li class="fragment">Udbuddet af penge er fast → derfor en <strong>lodret kurve</strong><br>
-</li>
-<li class="fragment">Centralbanken kan flytte kurven som ønsket<br>
-</li>
-<li class="fragment">NB: Dette er <em>ikke</em> realrenten men den <strong>korte rente</strong></li>
-</ul></li>
-</ul>
-<p><br></p>
-</section>
-<section id="centralbankens-rolle-og-likviditetseffekten-grafisk" class="slide level4" data-background="#43464B">
-<h4>Centralbankens rolle og likviditetseffekten: Grafisk</h4>
-
-<img src="../../images/chapters/chapter_1/kap_1_RentePengepolitik.jpg" alt="Rente og pengepolitik" width="70%" class="r-stretch"></section>
-<section id="langsigtet-neutralitet" class="slide level4" data-background="#43464B">
-<h4>Langsigtet neutralitet</h4>
-<ul>
-<li class="fragment">Højere aktivitet fra lavere rente driver på sigt <strong>priser og lønninger</strong> op<br>
-</li>
-<li class="fragment">Realrenten vender tilbage til sit oprindelige niveau<br>
-</li>
-<li class="fragment">En 1 %-point stigning i pengemængden neutraliseres langsigtet af inflation<br>
-</li>
-<li class="fragment">Kan illustreres med kvantitetsligningen <span class="math inline">\(\Delta m = \Delta p + \Delta q\)</span></li>
-</ul>
-</section></section>
-<section>
-<section id="institutionelle-forhold-for-rentedannelsen-i-danmark" class="title-slide slide level2 center" data-background="#00100F">
-<h2>Institutionelle forhold for rentedannelsen i Danmark</h2>
-
-</section>
-<section id="nationalbanken" class="slide level4" data-background="#43464B">
-<h4>Nationalbanken</h4>
-<ul>
-<li class="fragment">Fastlægger pengepolitikken (forankret i <strong>fastkurspolitikken</strong>)<br>
-</li>
-<li class="fragment">Instrumenter: foliorenten, udlånsrenten og OMO<br>
-</li>
-<li class="fragment">Kan styre <strong>rentestrukturens form</strong> ved at påvirke korte og lange renter
-<ul>
-<li class="fragment">Hæves den korte rente → øget efterspørgsel efter DKK → rentekurven kan blive <strong>twistet/inverteret</strong><br>
-</li>
-<li class="fragment">Via OMO kan de også skubbe de lange renter op/ned og forstærke twisten<br>
-</li>
-</ul></li>
-<li class="fragment">Udover fastkurspolitikken har Nationalbanken ansvar for at <strong>vedligeholde valutareserven</strong> til strategiske formål
-<ul>
-<li class="fragment">Eksempel: COVID-19 → “flight to safety”</li>
-</ul></li>
-</ul>
-</section>
-<section id="twist-af-rentekurven" class="slide level4" data-background="#43464B">
-<h4>Twist af rentekurven</h4>
-
-<img src="../../images/chapters/chapter_1/kap_1_InvertertingRentekurve.jpg" alt="Likviditet og rentestruktur" width="70%" class="r-stretch"></section>
-<section id="staten" class="slide level4" data-background="#43464B">
-<h4>Staten</h4>
-<ul>
-<li class="fragment">Påvirker renter via udstedelse af <strong>statsgæld</strong><br>
-</li>
-<li class="fragment">Før 1990’erne: store underskud → flere nye statsobligationer → pres op på renterne<br>
-</li>
-<li class="fragment">I dag: overskud på de offentlige finanser → bidrager til lave renter<br>
-</li>
-<li class="fragment">Direkte effekt: flere statsobligationer til salg → lavere obligationskurser → højere lange renter<br>
-</li>
-<li class="fragment">Indirekte effekt: store statslige ind- og udbetalinger påvirker den daglige likviditet i banksystemet → påvirker korte renter</li>
-</ul>
-</section>
-<section id="udlandet" class="slide level4" data-background="#43464B">
-<h4>Udlandet</h4>
-<ul>
-<li class="fragment">Danmark er en lille, åben økonomi i en global kapitalmarkedsstruktur<br>
-</li>
-<li class="fragment">Kapital er meget mobil – især mellem vestlige lande<br>
-</li>
-<li class="fragment">Danske renter påvirkes derfor i høj grad af internationale bevægelser i renter og kapitalstrømme</li>
-</ul>
-</section></section>
-<section>
-<section id="renten-og-investeringer" class="title-slide slide level2 center" data-background="#00100F">
-<h2>Renten og investeringer</h2>
-
-</section>
-<section id="betydning-for-investeringer" class="slide level4" data-background="#43464B">
-<h4>Betydning for investeringer</h4>
-<ul>
-<li class="fragment">Renten er afgørende for værdiansættelsen af fremtidige pengestrømme<br>
-</li>
-<li class="fragment">Bruges som <strong>diskonteringsfaktor</strong> i nutidsberegninger<br>
-</li>
-<li class="fragment">Selv små renteændringer kan ændre prisen på et aktiv markant<br>
-</li>
-<li class="fragment">Derfor bruger centralbanker renten som redskab til at påvirke konjunkturer
-<ul>
-<li class="fragment">Finanskrisen er et godt eksempel</li>
-</ul></li>
-</ul>
-</section>
-<section id="nutidsværdiberegning-npv" class="slide level4" data-background="#43464B">
-<h4>Nutidsværdiberegning (NPV)</h4>
-<ul>
-<li class="fragment"><p>Eksempel: investering på 10 mio. kr., indbetalinger på 3 mio. kr. årligt i 4 år</p></li>
-<li class="fragment"><p>Ved 5 % rente:<br>
-<span class="math display">\[
-\text{NPV}_{5\%} = -10 + \sum_{t=1}^{4} \frac{3}{1.05^t} = 0{,}64
-\]</span> mio. kr.</p></li>
-<li class="fragment"><p>Ved 9 % rente:<br>
-<span class="math display">\[
-\text{NPV}_{9\%} = -10 + \sum_{t=1}^{4} \frac{3}{1.09^t} = -0{,}28
-\]</span> mio. kr.</p></li>
-<li class="fragment"><p>Små ændringer i renten kan afgøre, om en investering er profitabel eller ej</p></li>
-</ul>
-</section></section>
-<section>
-<section id="sammenligning-af-rentesatser-og-debitorrenten" class="title-slide slide level2 center" data-background="#00100F">
-<h2>Sammenligning af rentesatser og debitorrenten</h2>
-
-</section>
-<section id="hvorfor-sammenligne" class="slide level4" data-background="#43464B">
-<h4>Hvorfor sammenligne?</h4>
-<ul>
-<li class="fragment">Rentesatser opgives ofte som <em>p.a.</em> men med forskellig tilskrivningsfrekvens<br>
-</li>
-<li class="fragment">For et retvisende sammenligningsgrundlag →
-<ul>
-<li class="fragment">omregn til <strong>samme frekvens</strong><br>
-</li>
-<li class="fragment">eller til <strong>debitorrenten</strong> (effektiv årlig rente)</li>
-</ul></li>
-</ul>
-</section>
-<section id="omregning-mellem-frekvenser" class="slide level4" data-background="#43464B">
-<h4>Omregning mellem frekvenser</h4>
-<p>Nominel rente <span class="math inline">\(r_m\)</span> med <span class="math inline">\(m\)</span> tilskrivninger, og <span class="math inline">\(r_n\)</span> med <span class="math inline">\(n\)</span> tilskrivninger:</p>
-<p><span class="math display">\[
-\Bigl(1+\tfrac{r_n}{n}\Bigr)^{n} = \Bigl(1+\tfrac{r_m}{m}\Bigr)^{m}
-\]</span></p>
-<p>Heraf:</p>
-<p><span class="math display">\[
-r_n = n\Bigl[\Bigl(1+\tfrac{r_m}{m}\Bigr)^{m/n} - 1\Bigr]
-\]</span></p>
-</section>
-<section id="debitorrenten-effektiv-årlig-rente-n1" class="slide level4" data-background="#43464B">
-<h4>Debitorrenten (effektiv årlig rente, <span class="math inline">\(n=1\)</span>)</h4>
-<p>For <span class="math inline">\(r_m\)</span> med <span class="math inline">\(m\)</span> tilskrivninger:</p>
-<p><span class="math display">\[
-\text{Debitorrente} = \Bigl(1+\tfrac{r_m}{m}\Bigr)^m - 1
+<img src="../../images/chapters/chapter_2/kap2_VedhængendeRente.png" alt="VedhængendeRente" width="100%" class="r-stretch"></section>
+<section id="vedhængende-rente-2" class="slide level4" data-background="#43464B">
+<h4>Vedhængende rente</h4>
+<p>Den vedhængende rente <span class="math inline">\(v\)</span> udregnes ud fra: <span class="math display">\[
+v = \frac{r\cdot H\cdot D}{n\cdot DT}
 \]</span></p>
 <ul>
-<li class="fragment">Altid ≥ den nominelle rente (<span class="math inline">\(m \ge 1\)</span>)<br>
-</li>
-<li class="fragment">Inkluderer rente-på-rente effekten</li>
-</ul>
-</section>
-<section id="eksempel-beregning-af-debitorrenten" class="slide level4" data-background="#43464B">
-<h4>Eksempel: Beregning af debitorrenten</h4>
-<ul>
-<li class="fragment"><p>Nominel rente: 24 % p.a.<br>
-</p></li>
-<li class="fragment"><p>Månedlig tilskrivning (<span class="math inline">\(m=12\)</span>)<br>
-</p></li>
-<li class="fragment"><p>Formel for debitorrenten:<br>
-<span class="math display">\[
-\text{Debitorrente} = \left(1+\frac{r_m}{m}\right)^m - 1
+<li class="fragment"><p>Ud fra vores eksempel får vi: <span class="math display">\[
+v = \frac{0,045\cdot 100.000 \cdot 302}{1\cdot 365} = 3,723.29
 \]</span></p></li>
-<li class="fragment"><p>Indsæt <span class="math inline">\(r_m = 24\%\)</span> og <span class="math inline">\(m=12\)</span>:<br>
-<span class="math display">\[
-\left(1+\frac{0,24}{12}\right)^{12} - 1
-= (1+0,02)^{12} - 1
-\approx 0,2682
-\]</span></p></li>
-<li class="fragment"><p>Den effektive årlige rente (debitorrenten) er altså ca. <strong>26,82 %</strong>, hvilket er højere end den nominelle rente på 24 % p.a.</p></li>
+<li class="fragment"><p>Sælger bliver kompenseret ved at lægge den vedhængende rente over i kursværdien. Så man samlet betaler <span class="math inline">\(127.800+3.723,29=131.523,29\)</span>.</p></li>
 </ul>
 </section>
-<section id="eksempel-fra-debitorrente-til-nominel-rente" class="slide level4" data-background="#43464B">
-<h4>Eksempel: Fra debitorrente til nominel rente</h4>
-<p>Kendes debitorrenten og antallet af terminer <span class="math inline">\(m\)</span>, kan <span class="math inline">\(r_m\)</span> findes: <span class="math display">\[
-r_m = m\Bigl[(1+\text{Debitorrente})^{1/m} - 1\Bigr]
-\]</span> - Indsæt Debitorrente = 26,82 % og <span class="math inline">\(m=12\)</span>:<br>
+<section id="vedhængende-rente-3" class="slide level4" data-background="#43464B">
+<h4>Vedhængende rente</h4>
+<ul>
+<li class="fragment"><strong>Clean price vs.&nbsp;dirty price</strong>
+<ul>
+<li class="fragment">Clean = kurs uden vedhængende rente (Den vi ser som markedsprisen)</li>
+<li class="fragment">Dirty = kurs inkl. vedhængende rente<br>
+</li>
+</ul></li>
+<li class="fragment"><img src="../../images/chapters/chapter_2/kap2_SavtakketVedhængendeRente.png" alt="VedhængendeRenteCPN" width="100%"></li>
+</ul>
+</section></section>
+<section>
+<section id="nulkuponobligationer" class="title-slide slide level2 center" data-background="#00100F">
+<h2>Nulkuponobligationer</h2>
+
+</section>
+<section id="karakteristika" class="title-slide slide level3 center" data-background="#43464B">
+<h3>Karakteristika</h3>
+<ul>
+<li class="fragment">Den mest simple form for obligation
+<ul>
+<li class="fragment">Ingen løbende rentebetalinger</li>
+<li class="fragment">Deraf utrolig lav risiko for låntager går konkurs (risikofrit?)</li>
+</ul></li>
+<li class="fragment">Sælges til en kurs under pari/100 (discount)
+<ul>
+<li class="fragment">Ellers ville ingen købe!</li>
+</ul></li>
+<li class="fragment">Afkast opnås ved forskellen mellem købskurs og pålydende værdi ved udløb.</li>
+</ul>
+</section>
+
+<section id="prisfastsættelse" class="title-slide slide level3 center" data-background="#43464B">
+<h3>Prisfastsættelse</h3>
+<p>Prises ud fra: <span class="math display">\[
+P = \frac{FV}{(1 + r)^n}
+\]</span></p>
+<ul>
+<li class="fragment">P: Pris (markedspris)</li>
+<li class="fragment">FV: Pålydende værdi</li>
+<li class="fragment">r: Effektiv rente (regnes ud fra markedsprisen)</li>
+<li class="fragment">n: Antal perioder til udløb</li>
+</ul>
+</section>
+
+<section id="eksempel-på-prisfastsættelse-10-årig-nulkupon" class="title-slide slide level3 center" data-background="#43464B">
+<h3>Eksempel på prisfastsættelse 10-årig nulkupon</h3>
+<ul>
+<li class="fragment">Investor køber for 980.000 kr.<br>
+</li>
+<li class="fragment">Hovedstol (udbetaling om 10 år): 1.000.000 kr.<br>
+</li>
+<li class="fragment">Ingen betalinger undervejs → kun kursgevinst på 20.000 kr.</li>
+</ul>
+
+<img src="../../images/chapters/chapter_2/kap2_10YZeroCouponBondCF.png" alt="10-årig nulkupon betalingsrække" width="70%" class="r-stretch"></section>
+
+<section id="eksempel-på-prisfastsættelse-10-årig-nulkupon-1" class="title-slide slide level3 center" data-background="#43464B">
+<h3>Eksempel på prisfastsættelse 10-årig nulkupon</h3>
+<p>Formel:<br>
 <span class="math display">\[
-r_{12} = 12\Bigl[(1+0,2682)^{1/12} - 1\Bigr]
+IB = \frac{H}{(1+r)^n}
+\]</span></p>
+<ul>
+<li class="fragment"><p>Indsættelse:<br>
+<span class="math display">\[
+980.000 = \frac{1.000.000}{(1+r)^{10}}
+\;\;\Rightarrow\;\;
 \]</span> <span class="math display">\[
-\approx 12 \cdot 0,02 = 24\%
-\]</span> - Den nominelle rente med månedlig tilskrivning er altså <strong>24 % p.a.</strong> #### Praktisk brug {background=“#43464B”} Når satser sammenlignes:<br>
-- Omregn til <strong>samme frekvens</strong> eller<br>
-- til <strong>debitorrenten</strong></p>
-<ul>
-<li class="fragment">Sikrer fair sammenligning på tværs af lån og investeringer</li>
+r = \left(\tfrac{1.000.000}{980.000}\right)^{1/10} - 1 \approx 0,2022\%
+\]</span></p></li>
+<li class="fragment"><p>Jo højere kurs → jo lavere effektiv rente</p></li>
 </ul>
-</section></section>
+</section>
+</section>
+<section>
+<section id="kuponbærende-obligationer" class="title-slide slide level2 center" data-background="#00100F">
+<h2>Kuponbærende obligationer</h2>
+
+</section>
+<section id="karakteristika-og-pristfastsættelse" class="title-slide slide level3 center" data-background="#43464B">
+<h3>Karakteristika og pristfastsættelse</h3>
+<ul>
+<li class="fragment"><p>Løbende kuponbetalinger (renter).</p></li>
+<li class="fragment"><p>Hovedstolen tilbagebetales ved udløb.</p></li>
+<li class="fragment"><p>Prises ud fra: <span class="math display">\[
+P = CPN \times \frac{1}{y} \left(1 - \frac{1}{(1 + y)^N}\right) + \frac{FV}{(1 + y)^N}
+\]</span></p></li>
+<li class="fragment"><p><span class="math inline">\(CPN\)</span> er kuponbetaling per periode, <span class="math inline">\(y\)</span> er effektiv rente, og <span class="math inline">\(N\)</span> er antal perioder til udløb.</p></li>
+<li class="fragment"><p>Den effektive rente kan ikke løses så nemt ligesom ved vores nulkuponobligation.</p></li>
+<li class="fragment"><p>Derimod skal vi have hjælp af numeriske metoder som findes i Excel. (Lad os se et eksempel!)</p></li>
+</ul>
+</section>
+</section>
+<section>
+<section id="reinvesteringsrisiko" class="title-slide slide level2 center" data-background="#00100F">
+<h2>Reinvesteringsrisiko</h2>
+
+</section>
+<section id="reinvesteringsrisiko-og-kuponbetalinger" class="title-slide slide level3 center" data-background="#43464B">
+<h3>Reinvesteringsrisiko og kuponbetalinger</h3>
+<ul>
+<li class="fragment">Når man investerer i en kuponobligation, skal man tænke over, hvad man skal genplacere sine kuponbetalinger i</li>
+<li class="fragment">Den effektive rente antager naivt, at man altid kan genplacere til den rente som den effektive rente angiver</li>
+<li class="fragment">Renteniveauet er dynamisk og er som sagt afhængig af, hvad der sker i markedet. Dette er en risiko investorer i kuponobligationer løber.</li>
+</ul>
+</section>
+
+<section id="eksempel" class="title-slide slide level3 center" data-background="#43464B">
+<h3>Eksempel</h3>
+<ul>
+<li class="fragment"><p>Investor køber for 980.000 kr.<br>
+</p></li>
+<li class="fragment"><p>Effektiv rente = 4,25 %<br>
+</p></li>
+<li class="fragment"><p>Efter 10 år:<br>
+<span class="math display">\[
+980.000 \times (1+0,0425)^{10} = 1.485.841 \ \text{kr.}
+\]</span></p></li>
+<li class="fragment"><p><strong>Opdeling af værdi ved udløb:</strong></p>
+<ul>
+<li class="fragment">Hovedstol: 1.000.000 kr.<br>
+</li>
+<li class="fragment">Rentebetalinger: 400.000 kr.<br>
+</li>
+<li class="fragment">Rentes rente-effekt: 85.841 kr.</li>
+</ul></li>
+<li class="fragment"><p><strong>Beregningen af effektiv rente forudsætter:</strong></p>
+<ol type="1">
+<li class="fragment">Rentebetalinger reinvesteres løbende<br>
+</li>
+<li class="fragment">Reinvesteringen kan ske til samme rente (4,25 %)</li>
+</ol></li>
+</ul>
+<p>– <strong>Reinvesteringsrisiko:</strong><br>
+- Hvis reinvesteringsrenten &lt; 4,25 % → realiseret afkast lavere<br>
+- Hvis reinvesteringsrenten &gt; 4,25 % → realiseret afkast højere</p>
+</section>
+</section>
+<section>
+<section id="prissensitivitet" class="title-slide slide level2 center" data-background="#00100F">
+<h2>Prissensitivitet</h2>
+
+</section>
+<section id="hvad-driver-prisrisikoen" class="title-slide slide level3 center" data-background="#43464B">
+<h3>Hvad driver prisrisikoen?</h3>
+<ul>
+<li class="fragment">Jo <strong>længere løbetid</strong> → større reinvesteringsrisiko<br>
+</li>
+<li class="fragment">Jo <strong>større ydelse</strong> (kupon) → flere beløb skal reinvesteres<br>
+</li>
+<li class="fragment">Derfor: langsigtede og høj-kupon obligationer er mest følsomme</li>
+</ul>
+</section>
+
+<section id="sammenligning" class="title-slide slide level3 center" data-background="#43464B" data-auto-animate="true">
+<h3 data-id="quarto-animate-title">Sammenligning</h3>
+
+<img src="../../images/chapters/chapter_2/kap2_ReinvestRiskBondAB.png" alt="Prissensitivitet" width="85%" class="r-stretch"><ul>
+<li class="fragment">Lige effektiv rente (10 %) → samme kurs (1.000)</li>
+<li class="fragment">Hvis renten stiger til 15 % →
+<ul>
+<li class="fragment">Obligation A: kurs 672</li>
+<li class="fragment">Obligation B: kurs 957</li>
+</ul></li>
+<li class="fragment">Lang obligation = langt mere følsom</li>
+</ul>
+</section>
+
+<section id="hvorfor-større-prisrisiko-ved-lang-løbetid" class="title-slide slide level3 center" data-background="#43464B">
+<h3>Hvorfor større prisrisiko ved lang løbetid?</h3>
+<ul>
+<li class="fragment">Diskontering rammer <strong>hovedstolen langt hårdere</strong> ved lang horisont<br>
+<span class="math display">\[
+\frac{1.000}{(1+y)^1} \;&gt;\; \frac{1.000}{(1+y)^{30}}
+\]</span></li>
+<li class="fragment">Små ændringer i <span class="math inline">\(y\)</span> (renten) betyder store forskelle i PV når <span class="math inline">\(n\)</span> er stort<br>
+</li>
+<li class="fragment">Langløbende obligationer har derfor:
+<ul>
+<li class="fragment">højere prissensitivitet<br>
+</li>
+<li class="fragment">højere reinvesteringsrisiko</li>
+</ul></li>
+</ul>
+</section>
+</section>
+<section>
+<section id="markedsrente-kupon-og-kurs" class="title-slide slide level2 center" data-background="#00100F">
+<h2>Markedsrente, kupon og kurs</h2>
+
+</section>
+<section id="sammenhæng" class="title-slide slide level3 center" data-background="#43464B">
+<h3>Sammenhæng</h3>
+<ul>
+<li class="fragment">Den <strong>effektive rente</strong> = markedsrenten i et likvidt marked<br>
+</li>
+<li class="fragment">Kursen bestemmes af forskellen mellem <strong>markedsrenten</strong> og <strong>kuponrenten</strong><br>
+</li>
+<li class="fragment">Eksempel: 1,5 % stående lån (2023)
+<ul>
+<li class="fragment">Kurs 108,35 den 18. dec. 2019<br>
+</li>
+<li class="fragment">Markedsrente = -0,61 %</li>
+</ul></li>
+</ul>
+
+<img src="../../images/chapters/chapter_2/kap2_KursYTM.png" alt="Sammenhæng mellem markedsrente og kurs" width="70%" class="r-stretch"></section>
+</section>
+<section>
+<section id="markedsrente-kupon-og-kurs-1" class="title-slide slide level2 center" data-background="#00100F">
+<h2>Markedsrente, kupon og kurs</h2>
+
+</section>
+<section id="hovedpointer" class="title-slide slide level3 center" data-background="#43464B">
+<h3>Hovedpointer</h3>
+<ul>
+<li class="fragment">Kurs = 100 (pari), når markedsrente = kuponrente<br>
+</li>
+<li class="fragment">Kurs &lt; 100, når markedsrente &gt; kuponrente<br>
+</li>
+<li class="fragment">Kurs &gt; 100, når markedsrente &lt; kuponrente</li>
+</ul>
+
+<img src="../../images/chapters/chapter_2/kap2_10YDanskStat.png" alt="Markedsrente for 10-årig dansk statsobligation" width="70%" class="r-stretch"></section>
+</section>
+<section>
+<section id="obligationsprisernes-dynamik" class="title-slide slide level2 center" data-background="#00100F">
+<h2>Obligationsprisernes dynamik</h2>
+
+</section>
+<section id="discount-premium-og-par" class="title-slide slide level3 center" data-background="#43464B">
+<h3>Discount, premium og par</h3>
+<ul>
+<li class="fragment"><p><strong>Discount</strong>: Pris &lt; 100 → effektiv rente &gt; kupon<br>
+</p></li>
+<li class="fragment"><p><strong>Premium</strong>: Pris &gt; 100 → effektiv rente &lt; kupon<br>
+</p></li>
+<li class="fragment"><p><strong>Par</strong>: Pris = 100 → effektiv rente = kupon</p></li>
+<li class="fragment"><p>Udstedere sætter normalt kupon ≈ markedsrente → obligationen starter tæt på kurs 100</p></li>
+</ul>
+</section>
+</section>
+<section>
+<section id="tid-og-obligationspriser" class="title-slide slide level2 center" data-background="#00100F">
+<h2>Tid og obligationspriser</h2>
+
+</section>
+<section id="betydning-af-tid-til-udløb" class="title-slide slide level3 center" data-background="#43464B">
+<h3>Betydning af tid til udløb</h3>
+<ul>
+<li class="fragment">Nulkupon 30 år til udløb, <span class="math inline">\(r=5\%\)</span>: kurs ≈ 23,14<br>
+</li>
+<li class="fragment">Efter 5 år (25 år til udløb), <span class="math inline">\(r=5\%\)</span>: kurs ≈ 29,53<br>
+</li>
+<li class="fragment">Når tiden til udløb bliver kortere →
+<ul>
+<li class="fragment">discounten falder<br>
+</li>
+<li class="fragment">kursen nærmer sig pålydende værdi</li>
+</ul></li>
+<li class="fragment">Jo længere tid til udløb, desto mere følsom er prisen over for ændringer i renten (varighed).</li>
+</ul>
+
+<img src="../../images/chapters/chapter_2/kap2_DiscountPremiumMovement.png" alt="Premium/discount og markedsrente" width="70%" class="r-stretch"></section>
+</section>
+<section>
+<section id="øvelser" class="title-slide slide level2 center" data-background="#00100F">
+<h2>Øvelser</h2>
+
+</section>
+<section id="excel" class="title-slide slide level3 center" data-background="#43464B">
+<h3>Excel</h3>
+<ul>
+<li class="fragment">Eksempel: 10-årig 3% Statsobligation med termin 15-9-2025<br>
+</li>
+<li class="fragment">Eksempel (lav selv): 5-årig 0,5% statsobligation med termin 15-11-2025</li>
+</ul>
+</section>
+</section>
 <section>
 <section id="opsummering" class="title-slide slide level2 center" data-background="#00100F">
 <h2>Opsummering</h2>
@@ -599,19 +706,19 @@ r_{12} = 12\Bigl[(1+0,2682)^{1/12} - 1\Bigr]
 <section id="takeaways" class="slide level4" data-background="#43464B">
 <h4>Takeaways</h4>
 <ul>
-<li class="fragment">Renten er prisen på penge → afgørende for investeringer, lån og værdiansættelse<br>
+<li class="fragment">Obligation = betalingsrække; <strong>pris = nutidsværdi</strong> af kuponer + hovedstol<br>
 </li>
-<li class="fragment">Realrente = nominel rente minus inflation → det reelle afkast<br>
+<li class="fragment"><strong>Nulkupon</strong> handles under pari; afkast = kursgevinst til udløb<br>
 </li>
-<li class="fragment">Rentedannelsen bestemmes af udbud &amp; efterspørgsel, pengepolitik og internationale forhold<br>
+<li class="fragment"><strong>Kuponobligationer</strong>: pris via standardformel; <strong>YTM</strong> er markedets afkastmål<br>
 </li>
-<li class="fragment">Små renteændringer kan markant ændre nutidsværdien (NPV) af investeringer<br>
+<li class="fragment"><strong>Markedsrente vs.&nbsp;kupon</strong>: rente ↑ → kurs ↓ ; pari når rente = kupon<br>
 </li>
-<li class="fragment">Nominelle renter med forskellig tilskrivningsfrekvens skal omregnes → brug debitorrenten som fælles mål<br>
+<li class="fragment"><strong>Clean/dirty</strong>: vedhængende rente tilfalder sælger; valør T+2 i DK<br>
 </li>
-<li class="fragment">Debitorrenten (effektiv årlig rente) er altid ≥ nominel rente pga. rente-på-rente-effekten<br>
+<li class="fragment"><strong>Reinvesteringsrisiko</strong>: realiseret afkast ≠ YTM, hvis kuponer ikke kan genplaceres til samme rente<br>
 </li>
-<li class="fragment">Praktisk: sammenlign altid lån/investeringer på samme grundlag (samme frekvens eller via debitorrente)</li>
+<li class="fragment"><strong>Prisrisiko</strong>: længere løbetid og lavere kupon → større følsomhed (varighed næste gang)</li>
 </ul>
 
 
@@ -620,7 +727,7 @@ r_{12} = 12\Bigl[(1+0,2682)^{1/12} - 1\Bigr]
   <div class="quarto-auto-generated-content" style="display: none;">
 <p><img src="../../themes/favicon.ico" class="slide-logo"></p>
 <div class="footer footer-default">
-<p>Finansiering — Rentedannelsen</p>
+<p>Finansiering — Obligationsmarkedet</p>
 </div>
 </div></div>
 

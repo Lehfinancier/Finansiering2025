@@ -1,6 +1,6 @@
 project:
   type: website
-  output-dir:  ../docs
+  output-dir: ../docs   # <- vigtigt: byg til /docs i repoet
 
 html-math-method: mathjax
 
@@ -14,29 +14,50 @@ website:
   repo-subdir: "src"
   repo-actions: [edit, issue]
   sidebar:
-    style: floating
+    style: docked       # venstre, fast menu (som Morozov)
     search: true
     contents:
-      - src/index.qmd
+      - text: "Forside"
+        href: src/index.qmd
+
       - section: "Lectures"
+        # enten list filer én for én...
         contents:
           - src/slides/organizational/intro.qmd
+          # ...eller brug glob-mønstre (tilføj flere linjer for alle kapitler):
+          - text: "Kapitel 7 — Konverterbare"
+            contents: src/slides/Konverteringsmodel/**
+          - text: "Kapitel 10 — Pengeinstitutter"
+            contents: src/slides/PengeinstitutterRisikostyring/**
+          - text: "Rentestrukturen"
+            contents: src/slides/Rentestrukturen/**
+          - text: "Obligationsmarkedet"
+            contents: src/slides/Obligationsmarkedet/**
+          - text: "Realkredit"
+            contents: src/slides/Realkredit/**
+          - text: "Risikomål"
+            contents: src/slides/Risikomål/**
+          - text: "Prisnøgletal"
+            contents: src/slides/PrisNoegletal/**
+
       - section: "Exercises"
         contents:
           - src/exercises/ex01.qmd
+
       - section: "Course Info"
         contents:
           - src/syllabus.qmd
 
 format:
   html:
-    include-in-header: ../themes/mathjax.html
+    include-in-header: themes/mathjax.html   # <- korrekt sti
     theme:
       light: [themes/ws_light.scss, themes/block.scss]
       dark:  [themes/ws_dark.scss, themes/block.scss]
+    page-navigation: true                    # næste/forrige i bunden
 
   revealjs:
-    include-in-header: themes/mathjax.html
+    include-in-header: themes/mathjax.html   # <- samme her
     slide-number: true
     incremental: true
     toc: true
@@ -45,4 +66,3 @@ format:
     transition-speed: fast
 
 bibliography: eco.bib
-

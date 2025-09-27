@@ -10,7 +10,7 @@
   <meta name="generator" content="quarto-1.8.24">
 
   <meta name="author" content="Niklas Lehmann Jensen">
-  <title>Finansiering 2025 – Rentedannelsen</title>
+  <title>Finansiering 2025 – Modellering af konverteringsadfærd</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
@@ -203,8 +203,8 @@
     <div class="slides">
 
 <section id="title-slide" data-background-color="#045D5D" data-footer="" class="quarto-title-block center">
-  <h1 class="title">Rentedannelsen</h1>
-  <p class="subtitle">Hvor kommer renter fra – og hvorfor bevæger de sig?</p>
+  <h1 class="title">Modellering af konverteringsadfærd</h1>
+  <p class="subtitle">Gevinstkrav, miksturmodel og prisning af konverterbare realkreditobligationer</p>
 
 <div class="quarto-title-authors">
 <div class="quarto-title-author">
@@ -218,379 +218,422 @@ Niklas Lehmann Jensen
 <nav role="doc-toc"> 
 <h2 id="toc-title">Table of contents</h2>
 <ul>
-<li class="fragment"><a href="#/introduktion" id="/toc-introduktion">Introduktion</a></li>
-<li class="fragment"><a href="#/rentebegreber" id="/toc-rentebegreber">Rentebegreber</a></li>
-<li class="fragment"><a href="#/direkte-rente-eksempel" id="/toc-direkte-rente-eksempel">Direkte rente – eksempel</a></li>
-<li class="fragment"><a href="#/lånekapital-udbud-efterspørgsel" id="/toc-lånekapital-udbud-efterspørgsel">Lånekapital: udbud &amp; efterspørgsel</a></li>
-<li class="fragment"><a href="#/inflation-og-rente" id="/toc-inflation-og-rente">Inflation og rente</a></li>
-<li class="fragment"><a href="#/pengepolitik-og-rentedannelse" id="/toc-pengepolitik-og-rentedannelse">Pengepolitik og rentedannelse</a></li>
-<li class="fragment"><a href="#/institutionelle-forhold-for-rentedannelsen-i-danmark" id="/toc-institutionelle-forhold-for-rentedannelsen-i-danmark">Institutionelle forhold for rentedannelsen i Danmark</a></li>
-<li class="fragment"><a href="#/renten-og-investeringer" id="/toc-renten-og-investeringer">Renten og investeringer</a></li>
-<li class="fragment"><a href="#/sammenligning-af-rentesatser-og-debitorrenten" id="/toc-sammenligning-af-rentesatser-og-debitorrenten">Sammenligning af rentesatser og debitorrenten</a></li>
+<li class="fragment"><a href="#/modellering-af-konverteringsadfærd" id="/toc-modellering-af-konverteringsadfærd">Modellering af Konverteringsadfærd</a></li>
+<li class="fragment"><a href="#/konverteringsadfærd" id="/toc-konverteringsadfærd">Konverteringsadfærd</a></li>
+<li class="fragment"><a href="#/konverteringsraten-cpr" id="/toc-konverteringsraten-cpr">Konverteringsraten (CPR)</a></li>
+<li class="fragment"><a href="#/konverteringsdata" id="/toc-konverteringsdata">Konverteringsdata</a></li>
+<li class="fragment"><a href="#/konverteringsmodellen" id="/toc-konverteringsmodellen">Konverteringsmodellen</a></li>
+<li class="fragment"><a href="#/konverteringsfunktioner" id="/toc-konverteringsfunktioner">Konverteringsfunktioner</a></li>
 <li class="fragment"><a href="#/opsummering" id="/toc-opsummering">Opsummering</a></li>
+<li class="fragment"><a href="#/øvelser" id="/toc-øvelser">Øvelser</a></li>
 </ul>
 </nav>
 </section>
 <section>
-<section id="introduktion" class="title-slide slide level2 center" data-background="#00100F">
-<h2>Introduktion</h2>
+<section id="modellering-af-konverteringsadfærd" class="title-slide slide level2 center" data-background="#00100F">
+<h2>Modellering af Konverteringsadfærd</h2>
 
 </section>
-<section id="læringsmål" class="slide level4" data-background="#43464B">
-<h4>Læringsmål</h4>
+<section id="introduktion" class="slide level4" data-background="#43464B">
+<h4>Introduktion</h4>
 <ul>
-<li class="fragment">Forstå hvordan <strong>renten dannes</strong> gennem udbud, efterspørgsel og pengepolitik<br>
+<li class="fragment">Vi ønsker at forstå prisfastsættelsen og risikonøgletal på en konverterbar realkreditobligation<br>
 </li>
-<li class="fragment">Skelne mellem <strong>nominel rente</strong>, <strong>realrente</strong> og <strong>effektiv rente (debitorrente)</strong><br>
-</li>
-<li class="fragment">Kunne forklare hvordan <strong>inflation</strong> og internationale forhold påvirker renten<br>
-</li>
-<li class="fragment">Beregne og fortolke <strong>NPV</strong> og se, hvordan små renteændringer ændrer investeringers værdi<br>
-</li>
-<li class="fragment">Anvende og sammenligne forskellige rentesatser via <strong>omregning</strong> og debitorrenten</li>
-</ul>
-</section>
-<section id="hvad-er-renter-og-hvorfor-findes-de" class="slide level4" data-background="#43464B">
-<h4>Hvad er renter, og hvorfor findes de?</h4>
+<li class="fragment">Prisfastsættelsen er kompleks:
 <ul>
-<li class="fragment">Renter kan anskues på mange måder:
-<ul>
-<li class="fragment">“Prisen på penge”<br>
+<li class="fragment">Rentestrukturmodel → fremtidige renter og konverteringer<br>
 </li>
-<li class="fragment">Gevinsten ved at udskyde forbrug og opspare<br>
+<li class="fragment">Prepayment-model → låntagernes konverteringsadfærd<br>
 </li>
-<li class="fragment">Omkostningen ved at forbruge tidligere gennem lån<br>
+<li class="fragment">Numeriske metoder (MLE, PDE-gitter, Monte Carlo)<br>
 </li>
 </ul></li>
-<li class="fragment">Renten bestemmes af udbuds- og efterspørgselskræfter på kapitalmarkedet<br>
+<li class="fragment">I dette kursus holder vi os til <strong>overfladen</strong>, men kompleksiteten er stadig stor<br>
 </li>
-<li class="fragment">Der findes forskellige renter – ikke blot én!<br>
-</li>
-<li class="fragment">Renten driver prisfastsættelsen af <em>alle</em> finansielle instrumenter<br>
-</li>
-<li class="fragment">Renten fungerer som et (næsten) risikofrit alternativ, som andre aktiver prissættes i forhold til<br>
-</li>
-<li class="fragment">Alt andet lige: En aktie med en given betalingsstrøm vil falde i pris, hvis renten stiger</li>
+<li class="fragment">Praktikere handler ofte på resultaterne – uden selv at beregne modellerne</li>
 </ul>
 </section></section>
 <section>
-<section id="rentebegreber" class="title-slide slide level2 center" data-background="#00100F">
-<h2>Rentebegreber</h2>
+<section id="konverteringsadfærd" class="title-slide slide level2 center" data-background="#00100F">
+<h2>Konverteringsadfærd</h2>
 
 </section>
-<section id="centrale-begreber" class="slide level4" data-background="#43464B">
-<h4>Centrale begreber</h4>
+<section id="optionselementet" class="slide level4" data-background="#43464B">
+<h4>Optionselementet</h4>
 <ul>
-<li class="fragment"><strong>Realrente</strong>: Kompenserer for den nytte, man går glip af ved at udsætte sit forbrug<br>
+<li class="fragment">Låntager kan altid indfri sit fastforrentede realkreditlån til pari (kurs 100)<br>
 </li>
-<li class="fragment"><strong>Nominel rente</strong>: Kompenserer både for udskydelse af forbrug og for prisstigninger (inflation)<br>
+<li class="fragment">Det svarer til, at låntager har en <strong>call-option</strong> på egen gæld<br>
 </li>
-<li class="fragment"><strong>Rentestruktur</strong>: Viser hvordan renter varierer på tværs af løbetider – dvs. sammenhængen mellem renteniveau og lånets løbetid<br>
-</li>
-<li class="fragment"><strong>Pålydende rente</strong>: Den officielle rente, der står angivet på lånet eller obligationen<br>
-</li>
-<li class="fragment"><strong>Direkte rente</strong>: Den rente, der beregnes ud fra obligationens pris (kurs)<br>
-</li>
-<li class="fragment"><strong>Effektiv rente</strong>: Tager højde for renters rente-effekter samt kursgevinster/tab</li>
-</ul>
-</section></section>
-<section>
-<section id="direkte-rente-eksempel" class="title-slide slide level2 center" data-background="#00100F">
-<h2>Direkte rente – eksempel</h2>
-
-</section>
-<section id="beregning" class="slide level4" data-background="#43464B">
-<h4>Beregning</h4>
+<li class="fragment">For investoren betyder det:
 <ul>
-<li class="fragment">Direkte rente: <span class="math inline">\(\frac{\text{Kuponrente}}{\text{Købekurs}} \times 100\%\)</span></li>
-<li class="fragment"><em>Eksempel 1: køb til kurs 80</em><br>
-$ = 7,50% $</li>
-<li class="fragment"><em>Eksempel 2: køb til kurs 109</em><br>
-$ = 5,50% $</li>
-<li class="fragment">Potentiel kursgevinst: <span class="math inline">\(100 - 80 = 20\)</span> kurspoint<br>
+<li class="fragment">Betalingsrækken er usikker<br>
 </li>
-<li class="fragment">Potentielt kurstab: <span class="math inline">\(109 - 100 = 9\)</span> kurspoint</li>
-</ul>
-</section></section>
-<section>
-<section id="lånekapital-udbud-efterspørgsel" class="title-slide slide level2 center" data-background="#00100F">
-<h2>Lånekapital: udbud &amp; efterspørgsel</h2>
-
-</section>
-<section id="rentedannelsen-på-kredit--og-lånemarkedet" class="slide level4" data-background="#43464B">
-<h4>Rentedannelsen på kredit- og lånemarkedet</h4>
-<ul>
-<li class="fragment">Renten dannes på kredit- og lånemarkedet gennem <strong>udbud</strong> og <strong>efterspørgsel</strong><br>
-</li>
-<li class="fragment"><strong>Udbud</strong>: privat opsparing fra husholdninger og virksomheder, kanaliseret via banker<br>
-</li>
-<li class="fragment"><strong>Efterspørgsel</strong>: lån til bolig, investeringer mv.<br>
-</li>
-<li class="fragment"><strong>Ligevægtsrenten</strong> <span class="math inline">\(r^{*}\)</span>: renten, hvor efterspørgslen efter lån matcher udbuddet af opsparing</li>
-</ul>
-</section>
-<section id="rentedannelsen-på-kredit--og-lånemarkedet-1" class="slide level4" data-background="#43464B">
-<h4>Rentedannelsen på kredit- og lånemarkedet</h4>
-
-<img src="../../images/chapters/chapter_1/kap_1_Kreditmarked.jpg" alt="Kreditmarked" width="100%" class="r-stretch"></section>
-<section id="strukturelle-forhold-bag-r" class="slide level4" data-background="#43464B">
-<h4>Strukturelle forhold bag r*</h4>
-<ul>
-<li class="fragment">Lønstigninger → højere indkomst giver øget låneefterspørgsel<br>
-</li>
-<li class="fragment">Mindre konkurrence i banksektoren → færre banker medfører lavere kreditudbud<br>
-</li>
-<li class="fragment">Ligevægtsrenten kan ikke observeres direkte, men forstås som et langsigtet renteniveau man driver mod</li>
-</ul>
-</section></section>
-<section>
-<section id="inflation-og-rente" class="title-slide slide level2 center" data-background="#00100F">
-<h2>Inflation og rente</h2>
-
-</section>
-<section id="fisher-sammenhængen" class="slide level4" data-background="#43464B">
-<h4>Fisher-sammenhængen</h4>
-<ul>
-<li class="fragment">Fisher-ligningen er givet igennem: <span class="math inline">\(R \approx r + \pi\)</span>
-<ul>
-<li class="fragment">“Prisen på penge”<br>
-</li>
-<li class="fragment"><span class="math inline">\(r\)</span>: realrente</li>
-<li class="fragment"><span class="math inline">\(\pi\)</span>: forventet inflation</li>
-</ul></li>
-<li class="fragment">Inflation måler prisstigninger i økonomien<br>
-</li>
-<li class="fragment">Hvis den nominelle rente er lavere end inflationen → negativ realrente og tab af købekraft<br>
-</li>
-<li class="fragment">Man ønsker derfor en positiv realrente på sin investering</li>
-</ul>
-</section>
-<section id="grafisk-illustration" class="slide level4" data-background="#43464B">
-<h4>Grafisk illustration</h4>
-
-<img src="../../images/chapters/chapter_1/ch_1_RenteInflation.jpg" alt="Inflation og rente" width="100%" class="r-stretch"></section>
-<section id="åben-økonomi" class="slide level4" data-background="#43464B">
-<h4>Åben økonomi</h4>
-<ul>
-<li class="fragment">I en lille åben økonomi som Danmark bestemmes renten også af verdensmarkedet: <span class="math inline">\(R_{\mathrm{DK}} = R_{w} + (\pi_{\mathrm{DK}} - \pi_{w})\)</span>
-<ul>
-<li class="fragment"><span class="math inline">\(R_{\mathrm{DK}}\)</span>: dansk nominel rente<br>
-</li>
-<li class="fragment"><span class="math inline">\(R_{w}\)</span>: verdensrente (ofte proxied ved Tyskland/USA)<br>
-</li>
-<li class="fragment"><span class="math inline">\(\pi_{\mathrm{DK}} - \pi_{w}\)</span>: inflationsforskel mellem DK og udlandet</li>
-</ul></li>
-<li class="fragment">Dansk rente følger både de globale renter og forskellen i inflation.<br>
-</li>
-<li class="fragment">Stigning i <span class="math inline">\(R_{w}\)</span> → dansk rente stiger 1:1<br>
-</li>
-<li class="fragment">Stigning i inflationsforskellen <span class="math inline">\((\pi_{\mathrm{DK}} - \pi_{w})\)</span> → dansk rente stiger tilsvarende</li>
-</ul>
-</section></section>
-<section>
-<section id="pengepolitik-og-rentedannelse" class="title-slide slide level2 center" data-background="#00100F">
-<h2>Pengepolitik og rentedannelse</h2>
-
-</section>
-<section id="centralbankens-rolle-og-likviditetseffekten" class="slide level4" data-background="#43464B">
-<h4>Centralbankens rolle og likviditetseffekten</h4>
-<ul>
-<li class="fragment">Nationalbanken kan føre pengepolitik, som hurtigt påvirker renteniveauet gennem ændringer i <strong>likviditeten</strong><br>
-</li>
-<li class="fragment"><strong>Likviditetseffekten på kort sigt</strong>:
-<ul>
-<li class="fragment">X-aksen skiftes til <em>pengemængde</em> frem for lån<br>
-</li>
-<li class="fragment">Udbuddet af penge er fast → derfor en <strong>lodret kurve</strong><br>
-</li>
-<li class="fragment">Centralbanken kan flytte kurven som ønsket<br>
-</li>
-<li class="fragment">NB: Dette er <em>ikke</em> realrenten men den <strong>korte rente</strong></li>
-</ul></li>
-</ul>
-<p><br></p>
-</section>
-<section id="centralbankens-rolle-og-likviditetseffekten-grafisk" class="slide level4" data-background="#43464B">
-<h4>Centralbankens rolle og likviditetseffekten: Grafisk</h4>
-
-<img src="../../images/chapters/chapter_1/kap_1_RentePengepolitik.jpg" alt="Rente og pengepolitik" width="70%" class="r-stretch"></section>
-<section id="langsigtet-neutralitet" class="slide level4" data-background="#43464B">
-<h4>Langsigtet neutralitet</h4>
-<ul>
-<li class="fragment">Højere aktivitet fra lavere rente driver på sigt <strong>priser og lønninger</strong> op<br>
-</li>
-<li class="fragment">Realrenten vender tilbage til sit oprindelige niveau<br>
-</li>
-<li class="fragment">En 1 %-point stigning i pengemængden neutraliseres langsigtet af inflation<br>
-</li>
-<li class="fragment">Kan illustreres med kvantitetsligningen <span class="math inline">\(\Delta m = \Delta p + \Delta q\)</span></li>
-</ul>
-</section></section>
-<section>
-<section id="institutionelle-forhold-for-rentedannelsen-i-danmark" class="title-slide slide level2 center" data-background="#00100F">
-<h2>Institutionelle forhold for rentedannelsen i Danmark</h2>
-
-</section>
-<section id="nationalbanken" class="slide level4" data-background="#43464B">
-<h4>Nationalbanken</h4>
-<ul>
-<li class="fragment">Fastlægger pengepolitikken (forankret i <strong>fastkurspolitikken</strong>)<br>
-</li>
-<li class="fragment">Instrumenter: foliorenten, udlånsrenten og OMO<br>
-</li>
-<li class="fragment">Kan styre <strong>rentestrukturens form</strong> ved at påvirke korte og lange renter
-<ul>
-<li class="fragment">Hæves den korte rente → øget efterspørgsel efter DKK → rentekurven kan blive <strong>twistet/inverteret</strong><br>
-</li>
-<li class="fragment">Via OMO kan de også skubbe de lange renter op/ned og forstærke twisten<br>
-</li>
-</ul></li>
-<li class="fragment">Udover fastkurspolitikken har Nationalbanken ansvar for at <strong>vedligeholde valutareserven</strong> til strategiske formål
-<ul>
-<li class="fragment">Eksempel: COVID-19 → “flight to safety”</li>
+<li class="fragment">Konverteringsadfærd har stor indflydelse på obligationens værdi</li>
 </ul></li>
 </ul>
 </section>
-<section id="twist-af-rentekurven" class="slide level4" data-background="#43464B">
-<h4>Twist af rentekurven</h4>
+<section id="ordinær-ydelsesrække-uden-konvertering" class="slide level4" data-background="#43464B">
+<h4>Ordinær ydelsesrække (uden konvertering)</h4>
+<ul>
+<li class="fragment">Eksempel: 5% NYK 2053<br>
+</li>
+<li class="fragment">Ingen konvertering → deterministisk cashflow<br>
+</li>
+<li class="fragment">Figuren viser rente + afdrag som annuitet<br>
+</li>
+<li class="fragment">Investoren ville foretrække denne stabile betalingsstrøm</li>
+</ul>
 
-<img src="../../images/chapters/chapter_1/kap_1_InvertertingRentekurve.jpg" alt="Likviditet og rentestruktur" width="70%" class="r-stretch"></section>
-<section id="staten" class="slide level4" data-background="#43464B">
-<h4>Staten</h4>
+<img src="../../images/chapters/chapter_6/kap6_NYK5_OfficialCF.png" width="70%" class="r-stretch"></section>
+<section id="ydelsesrække-med-konvertering" class="slide level4" data-background="#43464B">
+<h4>Ydelsesrække med konvertering</h4>
 <ul>
-<li class="fragment">Påvirker renter via udstedelse af <strong>statsgæld</strong><br>
+<li class="fragment">Virkeligheden: Mange låntagere konverterer<br>
 </li>
-<li class="fragment">Før 1990’erne: store underskud → flere nye statsobligationer → pres op på renterne<br>
+<li class="fragment">Resultat: kortere betalingsstrøm, usikker profil<br>
 </li>
-<li class="fragment">I dag: overskud på de offentlige finanser → bidrager til lave renter<br>
-</li>
-<li class="fragment">Direkte effekt: flere statsobligationer til salg → lavere obligationskurser → højere lange renter<br>
-</li>
-<li class="fragment">Indirekte effekt: store statslige ind- og udbetalinger påvirker den daglige likviditet i banksystemet → påvirker korte renter</li>
+<li class="fragment">Konverteringsraten (CPR) afgør, hvor hurtigt obligationen afvikles</li>
 </ul>
-</section>
-<section id="udlandet" class="slide level4" data-background="#43464B">
-<h4>Udlandet</h4>
+
+<img src="../../images/chapters/chapter_6/kap6_NYK5_ModelEstimatCF.png" width="70%" class="r-stretch"></section>
+<section id="hvad-driver-konverteringer" class="slide level4" data-background="#43464B">
+<h4>Hvad driver konverteringer?</h4>
 <ul>
-<li class="fragment">Danmark er en lille, åben økonomi i en global kapitalmarkedsstruktur<br>
+<li class="fragment">Strukturelle ændringer (flytning, skilsmisse, jobskifte)<br>
 </li>
-<li class="fragment">Kapital er meget mobil – især mellem vestlige lande<br>
+<li class="fragment">Alternativ finansiering (skifte til fleks/variabelt lån)<br>
 </li>
-<li class="fragment">Danske renter påvirkes derfor i høj grad af internationale bevægelser i renter og kapitalstrømme</li>
+<li class="fragment">Økonomisk gevinst (rentefald → gevinst ved omlægning)<br>
+</li>
+<li class="fragment">Sidste punkt er det vigtigste og kan modelleres</li>
 </ul>
-</section></section>
+
+<img src="../../images/chapters/chapter_6/kap6_PrepaymentInterestRate.png" width="70%" class="r-stretch"></section></section>
 <section>
-<section id="renten-og-investeringer" class="title-slide slide level2 center" data-background="#00100F">
-<h2>Renten og investeringer</h2>
+<section id="konverteringsraten-cpr" class="title-slide slide level2 center" data-background="#00100F">
+<h2>Konverteringsraten (CPR)</h2>
 
 </section>
-<section id="betydning-for-investeringer" class="slide level4" data-background="#43464B">
-<h4>Betydning for investeringer</h4>
+<section id="definition" class="slide level4" data-background="#43464B">
+<h4>Definition</h4>
 <ul>
-<li class="fragment">Renten er afgørende for værdiansættelsen af fremtidige pengestrømme<br>
+<li class="fragment">CPR = andel af udestående restgæld, som indfries til pari i en periode<br>
 </li>
-<li class="fragment">Bruges som <strong>diskonteringsfaktor</strong> i nutidsberegninger<br>
+<li class="fragment">På dansk: <strong>konverteringsraten</strong><br>
 </li>
-<li class="fragment">Selv små renteændringer kan ændre prisen på et aktiv markant<br>
-</li>
-<li class="fragment">Derfor bruger centralbanker renten som redskab til at påvirke konjunkturer
-<ul>
-<li class="fragment">Finanskrisen er et godt eksempel</li>
-</ul></li>
+<li class="fragment">Sammen med ordinære udtræk giver det den samlede udtræksprocent</li>
 </ul>
-</section>
-<section id="nutidsværdiberegning-npv" class="slide level4" data-background="#43464B">
-<h4>Nutidsværdiberegning (NPV)</h4>
-<ul>
-<li class="fragment"><p>Eksempel: investering på 10 mio. kr., indbetalinger på 3 mio. kr. årligt i 4 år</p></li>
-<li class="fragment"><p>Ved 5 % rente:<br>
-<span class="math display">\[
-\text{NPV}_{5\%} = -10 + \sum_{t=1}^{4} \frac{3}{1.05^t} = 0{,}64
-\]</span> mio. kr.</p></li>
-<li class="fragment"><p>Ved 9 % rente:<br>
-<span class="math display">\[
-\text{NPV}_{9\%} = -10 + \sum_{t=1}^{4} \frac{3}{1.09^t} = -0{,}28
-\]</span> mio. kr.</p></li>
-<li class="fragment"><p>Små ændringer i renten kan afgøre, om en investering er profitabel eller ej</p></li>
-</ul>
-</section></section>
-<section>
-<section id="sammenligning-af-rentesatser-og-debitorrenten" class="title-slide slide level2 center" data-background="#00100F">
-<h2>Sammenligning af rentesatser og debitorrenten</h2>
-
-</section>
-<section id="hvorfor-sammenligne" class="slide level4" data-background="#43464B">
-<h4>Hvorfor sammenligne?</h4>
-<ul>
-<li class="fragment">Rentesatser opgives ofte som <em>p.a.</em> men med forskellig tilskrivningsfrekvens<br>
-</li>
-<li class="fragment">For et retvisende sammenligningsgrundlag →
-<ul>
-<li class="fragment">omregn til <strong>samme frekvens</strong><br>
-</li>
-<li class="fragment">eller til <strong>debitorrenten</strong> (effektiv årlig rente)</li>
-</ul></li>
-</ul>
-</section>
-<section id="omregning-mellem-frekvenser" class="slide level4" data-background="#43464B">
-<h4>Omregning mellem frekvenser</h4>
-<p>Nominel rente <span class="math inline">\(r_m\)</span> med <span class="math inline">\(m\)</span> tilskrivninger, og <span class="math inline">\(r_n\)</span> med <span class="math inline">\(n\)</span> tilskrivninger:</p>
 <p><span class="math display">\[
-\Bigl(1+\tfrac{r_n}{n}\Bigr)^{n} = \Bigl(1+\tfrac{r_m}{m}\Bigr)^{m}
-\]</span></p>
-<p>Heraf:</p>
-<p><span class="math display">\[
-r_n = n\Bigl[\Bigl(1+\tfrac{r_m}{m}\Bigr)^{m/n} - 1\Bigr]
+UDT = 100 \cdot CPR + ORD \cdot (1 - CPR)
 \]</span></p>
 </section>
-<section id="debitorrenten-effektiv-årlig-rente-n1" class="slide level4" data-background="#43464B">
-<h4>Debitorrenten (effektiv årlig rente, <span class="math inline">\(n=1\)</span>)</h4>
-<p>For <span class="math inline">\(r_m\)</span> med <span class="math inline">\(m\)</span> tilskrivninger:</p>
-<p><span class="math display">\[
-\text{Debitorrente} = \Bigl(1+\tfrac{r_m}{m}\Bigr)^m - 1
-\]</span></p>
+<section id="eksempel-ck95-data" class="slide level4" data-background="#43464B">
+<h4>Eksempel: CK95-data</h4>
+<table class="caption-top">
+<thead>
+<tr class="header">
+<th></th>
+<th>NYK 5% 2053</th>
+<th>NYK 4% 2053</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Cirk. nom. (mio)</td>
+<td>62.096</td>
+<td>43.833</td>
+</tr>
+<tr class="even">
+<td>Udtræk i %</td>
+<td>3,47%</td>
+<td>0,34%</td>
+</tr>
+<tr class="odd">
+<td>Ekstraord. i %</td>
+<td>3,06%</td>
+<td>0,01%</td>
+</tr>
+<tr class="even">
+<td>Faktisk CPR</td>
+<td>3,07%</td>
+<td>0,01%</td>
+</tr>
+<tr class="odd">
+<td>Modelestimat CPR</td>
+<td>10,92%</td>
+<td>2,77%</td>
+</tr>
+</tbody>
+</table>
 <ul>
-<li class="fragment">Altid ≥ den nominelle rente (<span class="math inline">\(m \ge 1\)</span>)<br>
+<li class="fragment">5%-serien havde klart større konvertering pga. gevinstmuligheder<br>
 </li>
-<li class="fragment">Inkluderer rente-på-rente effekten</li>
-</ul>
-</section>
-<section id="eksempel-beregning-af-debitorrenten" class="slide level4" data-background="#43464B">
-<h4>Eksempel: Beregning af debitorrenten</h4>
-<ul>
-<li class="fragment"><p>Nominel rente: 24 % p.a.<br>
-</p></li>
-<li class="fragment"><p>Månedlig tilskrivning (<span class="math inline">\(m=12\)</span>)<br>
-</p></li>
-<li class="fragment"><p>Formel for debitorrenten:<br>
-<span class="math display">\[
-\text{Debitorrente} = \left(1+\frac{r_m}{m}\right)^m - 1
-\]</span></p></li>
-<li class="fragment"><p>Indsæt <span class="math inline">\(r_m = 24\%\)</span> og <span class="math inline">\(m=12\)</span>:<br>
-<span class="math display">\[
-\left(1+\frac{0,24}{12}\right)^{12} - 1
-= (1+0,02)^{12} - 1
-\approx 0,2682
-\]</span></p></li>
-<li class="fragment"><p>Den effektive årlige rente (debitorrenten) er altså ca. <strong>26,82 %</strong>, hvilket er højere end den nominelle rente på 24 % p.a.</p></li>
-</ul>
-</section>
-<section id="eksempel-fra-debitorrente-til-nominel-rente" class="slide level4" data-background="#43464B">
-<h4>Eksempel: Fra debitorrente til nominel rente</h4>
-<p>Kendes debitorrenten og antallet af terminer <span class="math inline">\(m\)</span>, kan <span class="math inline">\(r_m\)</span> findes: <span class="math display">\[
-r_m = m\Bigl[(1+\text{Debitorrente})^{1/m} - 1\Bigr]
-\]</span> - Indsæt Debitorrente = 26,82 % og <span class="math inline">\(m=12\)</span>:<br>
-<span class="math display">\[
-r_{12} = 12\Bigl[(1+0,2682)^{1/12} - 1\Bigr]
-\]</span> <span class="math display">\[
-\approx 12 \cdot 0,02 = 24\%
-\]</span> - Den nominelle rente med månedlig tilskrivning er altså <strong>24 % p.a.</strong> #### Praktisk brug {background=“#43464B”} Når satser sammenlignes:<br>
-- Omregn til <strong>samme frekvens</strong> eller<br>
-- til <strong>debitorrenten</strong></p>
-<ul>
-<li class="fragment">Sikrer fair sammenligning på tværs af lån og investeringer</li>
+<li class="fragment">Modeller skal fange forskelle og give estimater <strong>før</strong> tallene offentliggøres</li>
 </ul>
 </section></section>
+<section>
+<section id="konverteringsdata" class="title-slide slide level2 center" data-background="#00100F">
+<h2>Konverteringsdata</h2>
+
+</section>
+<section id="debitorfordelinger-ck92" class="slide level4" data-background="#43464B">
+<h4>Debitorfordelinger (CK92)</h4>
+<ul>
+<li class="fragment">Serier består af tusindvis af lån<br>
+</li>
+<li class="fragment">Kun restgældsfordelinger offentliggøres (ikke adresser)<br>
+</li>
+<li class="fragment">Lån opdeles i private og erhverv</li>
+</ul>
+
+<img src="../../images/chapters/chapter_6/kap6_5NYK2035_LoanGroups.png" width="70%" class="r-stretch"></section>
+<section id="fordeling-af-obligationsrestgæld-pr.-23092024" class="slide level4" data-background="#43464B">
+<h4>Fordeling af obligationsrestgæld pr. 23/09/2024</h4>
+<ul>
+<li class="fragment">Nedenstående er rå debitorfordelingsdata for en 5% NYK 2053 ::: {.smaller style=“font-size: 0.6em”} | Interval | Privat (mio. kr.) | Privat % | Erhverv (mio. kr.) | Erhverv % | Total (mio. kr.) | |———-|——————:|———:|——————-:|———-:|—————–:| | 1 | 11,2 | 0,0 % | 0,2 | 0,0 % | 11,4 | | 2 | 723,7 | 1,2 % | 4,0 | 0,0 % | 727,7 | | 3 | 8.921,3 | 14,9 % | 32,9 | 0,1 % | 8.954,2 | | 4 | 41.113,6 | 68,8 % | 304,1 | 0,5 % | 41.417,6 | | 5 | 7.338,2 | 12,3 % | 429,4 | 0,7 % | 7.767,6 | | 6 | 44,7 | 0,1 % | 506,2 | 0,8 % | 550,9 | | 7 | – | 0,0 % | 331,3 | 0,6 % | 331,3 | | <strong>Total</strong>| <strong>58.152,6</strong> | <strong>97,3 %</strong> | <strong>1.608,1</strong> | <strong>2,7 %</strong> | <strong>59.760,7</strong> | :::</li>
+</ul>
+</section>
+<section id="homogen-gruppering-af-debitordata-23092024" class="slide level4" data-background="#43464B">
+<h4>Homogen gruppering af debitordata 23/09/2024</h4>
+<ul>
+<li class="fragment">Vi kan gruppere det smartere! Nemmere at modellere</li>
+<li class="fragment">Findes flere forskellige metoder og måder at gruppere på.</li>
+<li class="fragment"><img src="../../images/chapters/chapter_6/kap6_ScanrateGrouping.png" width="70%"></li>
+</ul>
+</section>
+<section id="gruppering" class="slide level4" data-background="#43464B">
+<h4>Gruppering</h4>
+<ul>
+<li class="fragment">Forenkling: lån opdeles i <strong>Small, Medium, Large</strong><br>
+</li>
+<li class="fragment">Store lån konverterer hurtigere end små (større økonomisk gevinst, bedre rådgivning)</li>
+</ul>
+<table class="caption-top">
+<thead>
+<tr class="header">
+<th>Gruppe</th>
+<th>Beskrivelse</th>
+<th>Vægt</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>1</td>
+<td>Small Loans</td>
+<td>16,2 %</td>
+</tr>
+<tr class="even">
+<td>2</td>
+<td>Medium Loans</td>
+<td>81,6 %</td>
+</tr>
+<tr class="odd">
+<td>3</td>
+<td>Large Loans</td>
+<td>2,2 %</td>
+</tr>
+</tbody>
+</table>
+</section></section>
+<section>
+<section id="konverteringsmodellen" class="title-slide slide level2 center" data-background="#00100F">
+<h2>Konverteringsmodellen</h2>
+
+</section>
+<section id="hvorfor-have-en-konverteringsmodel" class="slide level4" data-background="#43464B">
+<h4>Hvorfor have en konverteringsmodel?</h4>
+<ul>
+<li class="fragment">Konverteringsadfærd er <strong>svær at forudsige</strong>, fordi beslutningen afhænger af mange faktorer:
+<ul>
+<li class="fragment">Kreditværdighed<br>
+</li>
+<li class="fragment">Forventninger til fremtiden<br>
+</li>
+<li class="fragment">Jobsituation, skilsmisser osv.<br>
+</li>
+</ul></li>
+<li class="fragment">Det er derfor <strong>umuligt</strong> at modellere alle detaljer → vi har brug for en <strong>praktisk og intuitiv model</strong><br>
+</li>
+<li class="fragment">Formålet er ikke at lave en perfekt model, men en model der kan bruges til:
+<ul>
+<li class="fragment"><strong>Prisfastsættelse</strong> af konverterbare obligationer<br>
+</li>
+<li class="fragment">Beregning af <strong>risikonøgletal</strong></li>
+</ul></li>
+</ul>
+</section>
+<section id="jakobsen-modellen-1992" class="slide level4" data-background="#43464B">
+<h4>Jakobsen-modellen (1992)</h4>
+<ul>
+<li class="fragment">Udviklet af <strong>Svend Jakobsen</strong> (medstifter af Scanrate)<br>
+</li>
+<li class="fragment">Bygger på to hovedelementer:
+<ol type="1">
+<li class="fragment"><strong>Gevinstkravsmodellen</strong> → estimerer sandsynligheden for konvertering baseret på økonomisk gevinst<br>
+</li>
+<li class="fragment"><strong>Miksturmodellen</strong> → opdeler låntagere i grupper med forskellig konverteringsadfærd<br>
+</li>
+</ol></li>
+<li class="fragment">Kombinationen giver en mere <strong>realistisk beskrivelse</strong> af, hvordan hele obligationsserien konverterer</li>
+</ul>
+</section>
+<section id="den-centrale-drivfaktor" class="slide level4" data-background="#43464B">
+<h4>Den centrale drivfaktor</h4>
+<ul>
+<li class="fragment">Den <strong>eneste stokastiske variabel</strong> i gevinstkravsmodellen:
+<ul>
+<li class="fragment"><strong>Gevinsten ved at refinansiere</strong><br>
+</li>
+</ul></li>
+<li class="fragment">Intuition: Jo større gevinst en låntager kan opnå, desto større er sandsynligheden for konvertering<br>
+</li>
+<li class="fragment">Denne variabel undersøges i næste afsnit: <strong>Gevinstkravsmodellen</strong></li>
+</ul>
+</section>
+<section id="gevinstkravsmodellen" class="slide level4" data-background="#43464B">
+<h4>Gevinstkravsmodellen</h4>
+<ul>
+<li class="fragment">Låntagere konverterer, når gevinsten overstiger deres personlige krav<br>
+</li>
+<li class="fragment">Gevinsten beregnes som:</li>
+</ul>
+<p><span class="math display">\[
+Gain = \frac{PV_{continue} - 100 \cdot (1+c)}{PV_{continue}}
+\]</span> - <span class="math inline">\(c\)</span> = omkostning ved konvertering (fx 2%)<br>
+- Hver låntager har forskelligt <strong>gevinstkrav</strong> → spredning</p>
+</section>
+<section id="gevinstkravsmodellen-1" class="slide level4" data-background="#43464B">
+<h4>Gevinstkravsmodellen</h4>
+
+<img src="../../images/chapters/chapter_6/kap6_PrepaymentGain.png" width="70%" class="r-stretch"></section>
+<section id="miksturmodellen" class="slide level4" data-background="#43464B">
+<h4>Miksturmodellen</h4>
+<ul>
+<li class="fragment">Gevinstkravsmodellen udvides med flere variable<br>
+</li>
+<li class="fragment">CPR for en serie er vægtet sum af gruppernes CPR</li>
+</ul>
+<p><span class="math display">\[
+\text{CPR} = \sum_j w_j \cdot \text{CPR}_j
+\]</span></p>
+<ul>
+<li class="fragment">Faktorer:
+<ul>
+<li class="fragment">Gevinst (+)<br>
+</li>
+<li class="fragment">Burnout (+)<br>
+</li>
+<li class="fragment">Restløbetid (–)</li>
+</ul></li>
+</ul>
+</section>
+<section id="burnout-effekten" class="slide level4" data-background="#43464B">
+<h4>Burnout-effekten</h4>
+<ul>
+<li class="fragment">Aggressive låntagere konverterer først → serien bliver “udbrændt”<br>
+</li>
+<li class="fragment">Få tilbageværende låntagere konverterer langsommere<br>
+</li>
+<li class="fragment">Effekt: fremtidig CPR falder, hvis meget er indfriet<br>
+<span class="math display">\[
+\begin{cases}
+\begin{aligned}
+I_{ss,t}(1 - \text{CPR}_t) \;+\;&amp; (1 - I_{ss,t}) \,\text{Burnout}_{t-1} \\
+&amp;\times (1 - \text{CPR}_t)
+\end{aligned}, &amp; \text{if } I_{ss,t} &gt; 0 \\[6pt]
+\text{Burnout}_{t-1}(1 - \text{CPR}_t), &amp; \text{if } I_{ss,t} \leq 0
+\end{cases}
+\]</span></li>
+</ul>
+</section>
+<section id="burnout-effekten-1" class="slide level4" data-background="#43464B">
+<h4>Burnout-effekten</h4>
+
+<img src="../../images/chapters/chapter_6/kap6_Burnout.png" width="70%" class="r-stretch"></section>
+<section id="tid-til-udløb-effekten" class="slide level4" data-background="#43464B">
+<h4>Tid til udløb-effekten</h4>
+<ul>
+<li class="fragment"><strong>Kortere lån</strong> → konverteres typisk ved lavere gevinstniveau<br>
+</li>
+<li class="fragment"><strong>Længere lån</strong> → låntager kan vente længere (optionen kan blive mere værd)<br>
+</li>
+<li class="fragment">Argument fra optionsteorien: Jo længere tid til udløb, desto større sandsynlighed for at call-optionen går dybere i pengene</li>
+</ul>
+<p><span class="math display">\[
+\text{Restløbetid} = \frac{\text{Udløbsdato – Terminsdato}}{365}
+\]</span></p>
+</section>
+<section id="tid-til-udløb-effekten-1" class="slide level4" data-background="#43464B">
+<h4>Tid til udløb-effekten</h4>
+<div class="smaller">
+<table class="caption-top">
+<thead>
+<tr class="header">
+<th></th>
+<th>Nyk 5 2046</th>
+<th>Nyk 5 2053</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Termin</td>
+<td>01-10-2024</td>
+<td>01-10-2024</td>
+</tr>
+<tr class="even">
+<td>Udløb</td>
+<td>01-10-2046</td>
+<td>01-10-2053</td>
+</tr>
+<tr class="odd">
+<td>Restløbetid</td>
+<td>22,01 år</td>
+<td>29,02 år</td>
+</tr>
+</tbody>
+</table>
+</div>
+<ul>
+<li class="fragment"><strong>Eksempel:</strong><br>
+– Nyk 5 2046 kræver lavere gevinst for at konvertere<br>
+– Nyk 5 2053 har længere horisont → større sandsynlighed for fremtidig gevinst</li>
+</ul>
+</section></section>
+<section>
+<section id="konverteringsfunktioner" class="title-slide slide level2 center" data-background="#00100F">
+<h2>Konverteringsfunktioner</h2>
+
+</section>
+<section id="tre-grupper" class="slide level4" data-background="#43464B">
+<h4>Tre grupper</h4>
+<ul>
+<li class="fragment">Hver låntagergruppe har egen CPR-funktion<br>
+</li>
+<li class="fragment">Store lån → hurtigere konvertering ved samme gevinst<br>
+</li>
+<li class="fragment">Samlet CPR = vægtet gennemsnit</li>
+</ul>
+
+<img src="../../images/chapters/chapter_6/kap6_KonverteringsfunktionerTreGrupper.png" width="70%" class="r-stretch"></section>
+<section id="modelopdatering" class="slide level4" data-background="#43464B">
+<h4>Modelopdatering</h4>
+<ul>
+<li class="fragment">Nye data ændrer estimerede funktioner<br>
+</li>
+<li class="fragment">Opdatering sker typisk kvartalsvist</li>
+</ul>
+
+<img src="../../images/chapters/chapter_6/kap6_PrepaymentFunctionsQ3Q4.png" width="70%" class="r-stretch"></section>
+<section id="usikkerhed" class="slide level4" data-background="#43464B">
+<h4>Usikkerhed</h4>
+<ul>
+<li class="fragment">Jo længere tidshorisont → større usikkerhed<br>
+</li>
+<li class="fragment">Både renter og låntageradfærd kan ændre sig</li>
+</ul>
+
+<img src="../../images/chapters/chapter_6/kap6_EstimationUncertainty.png" width="70%" class="r-stretch"></section></section>
 <section>
 <section id="opsummering" class="title-slide slide level2 center" data-background="#00100F">
 <h2>Opsummering</h2>
@@ -599,20 +642,229 @@ r_{12} = 12\Bigl[(1+0,2682)^{1/12} - 1\Bigr]
 <section id="takeaways" class="slide level4" data-background="#43464B">
 <h4>Takeaways</h4>
 <ul>
-<li class="fragment">Renten er prisen på penge → afgørende for investeringer, lån og værdiansættelse<br>
+<li class="fragment">Konverteringsoptionen = call-option for låntager, risiko for investor<br>
 </li>
-<li class="fragment">Realrente = nominel rente minus inflation → det reelle afkast<br>
+<li class="fragment">CPR (konverteringsrate) afgør cashflow og risiko<br>
 </li>
-<li class="fragment">Rentedannelsen bestemmes af udbud &amp; efterspørgsel, pengepolitik og internationale forhold<br>
+<li class="fragment">To modelkomponenter:
+<ol type="1">
+<li class="fragment"><strong>Gevinstkravsmodel</strong> (gevinstdrevet konvertering)<br>
 </li>
-<li class="fragment">Små renteændringer kan markant ændre nutidsværdien (NPV) af investeringer<br>
+<li class="fragment"><strong>Miksturmodel</strong> (forskelle på låntagergrupper)<br>
 </li>
-<li class="fragment">Nominelle renter med forskellig tilskrivningsfrekvens skal omregnes → brug debitorrenten som fælles mål<br>
+</ol></li>
+<li class="fragment">Faktorer: gevinst, burnout, restløbetid<br>
 </li>
-<li class="fragment">Debitorrenten (effektiv årlig rente) er altid ≥ nominel rente pga. rente-på-rente-effekten<br>
-</li>
-<li class="fragment">Praktisk: sammenlign altid lån/investeringer på samme grundlag (samme frekvens eller via debitorrente)</li>
+<li class="fragment">Modeller giver bud – men usikkerhed vokser med horisonten</li>
 </ul>
+</section></section>
+<section>
+<section id="øvelser" class="title-slide slide level2 center" data-background="#00100F">
+<h2>Øvelser</h2>
+
+</section>
+<section id="udtræk-på-serieniveau-ck95" class="slide level4" data-background="#43464B">
+<h4>Udtræk på serieniveau (CK95)</h4>
+<p>Du har følgende CK95-data på to forskellige realkreditobligationer:</p>
+<table class="caption-top" style="width:100%;">
+<colgroup>
+<col style="width: 34%">
+<col style="width: 33%">
+<col style="width: 31%">
+</colgroup>
+<thead>
+<tr class="header">
+<th></th>
+<th><strong>1.5 RD S MTG 2043</strong></th>
+<th><strong>5 NYK E MTG 2053</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Payment Date</td>
+<td>2024-07-01</td>
+<td>2024-07-01</td>
+</tr>
+<tr class="even">
+<td>Cirk. nom. mio. kr.</td>
+<td>21,371,745</td>
+<td>63,871,157,094</td>
+</tr>
+<tr class="odd">
+<td>Udtrukket beløb</td>
+<td>263,450</td>
+<td>1,751,177</td>
+</tr>
+<tr class="even">
+<td>Ekstraordinær i %</td>
+<td>0 %</td>
+<td>2.34 %</td>
+</tr>
+<tr class="odd">
+<td>Udtræk i %</td>
+<td>1.23 %</td>
+<td>2.74 %</td>
+</tr>
+</tbody>
+</table>
+<ol type="1">
+<li class="fragment">Udregn det ordinære udtræk for begge obligationer.<br>
+</li>
+<li class="fragment">Udregn CPR for begge obligationer.<br>
+</li>
+<li class="fragment">Du får nu at vide, at <em>1.5 RD</em> handler til kurs 85 og <em>5.0 NYK</em> handler til kurs 102. Hvorfor har det en betydning for det observerede ekstraordinære afdrag?<br>
+</li>
+<li class="fragment">Hvorfor tror du, at der er så stor forskel i prisen mellem de to obligationer? (Hint: argumenter ud fra kuponrenten)</li>
+</ol>
+</section>
+<section id="debitorfordelinger-ck92-1" class="slide level4" data-background="#43464B">
+<h4>Debitorfordelinger (CK92)</h4>
+<p>Du får følgende debitorfordelinger for de samme obligationer:</p>
+<div class="columns">
+<div class="column">
+<p><strong>ISIN DK0004622172</strong></p>
+<table class="caption-top">
+<thead>
+<tr class="header">
+<th>Interval</th>
+<th style="text-align: right;">Privat</th>
+<th style="text-align: right;">Virksomhed</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>1</td>
+<td style="text-align: right;">102,691</td>
+<td style="text-align: right;">–</td>
+</tr>
+<tr class="even">
+<td>2</td>
+<td style="text-align: right;">938,558</td>
+<td style="text-align: right;">–</td>
+</tr>
+<tr class="odd">
+<td>3</td>
+<td style="text-align: right;">3,937,398</td>
+<td style="text-align: right;">1,960,933</td>
+</tr>
+<tr class="even">
+<td>4</td>
+<td style="text-align: right;">7,667,202</td>
+<td style="text-align: right;">–</td>
+</tr>
+<tr class="odd">
+<td>5</td>
+<td style="text-align: right;">–</td>
+<td style="text-align: right;">6,421,709</td>
+</tr>
+<tr class="even">
+<td>6</td>
+<td style="text-align: right;">–</td>
+<td style="text-align: right;">–</td>
+</tr>
+<tr class="odd">
+<td>7</td>
+<td style="text-align: right;">–</td>
+<td style="text-align: right;">–</td>
+</tr>
+</tbody>
+</table>
+</div><div class="column">
+<p><strong>ISIN DK0009539116</strong></p>
+<table class="caption-top">
+<thead>
+<tr class="header">
+<th>Interval</th>
+<th style="text-align: right;">Privat</th>
+<th style="text-align: right;">Virksomhed</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>1</td>
+<td style="text-align: right;">11,375,699</td>
+<td style="text-align: right;">196,996</td>
+</tr>
+<tr class="even">
+<td>2</td>
+<td style="text-align: right;">734,885,349</td>
+<td style="text-align: right;">3,989,296</td>
+</tr>
+<tr class="odd">
+<td>3</td>
+<td style="text-align: right;">9,070,398,958</td>
+<td style="text-align: right;">32,911,710</td>
+</tr>
+<tr class="even">
+<td>4</td>
+<td style="text-align: right;">42,193,012,670</td>
+<td style="text-align: right;">302,408,835</td>
+</tr>
+<tr class="odd">
+<td>5</td>
+<td style="text-align: right;">7,577,403,715</td>
+<td style="text-align: right;">433,009,565</td>
+</tr>
+<tr class="even">
+<td>6</td>
+<td style="text-align: right;">58,189,089</td>
+<td style="text-align: right;">506,186,999</td>
+</tr>
+<tr class="odd">
+<td>7</td>
+<td style="text-align: right;">–</td>
+<td style="text-align: right;">331,326,781</td>
+</tr>
+</tbody>
+</table>
+</div></div>
+<ol type="1">
+<li class="fragment">Placer hver af de 7+7 (private + virksomheder) i de tre grupperinger jævnfør figuren af mappingsreglerne. Gør dette for hver af de to obligationer.<br>
+</li>
+<li class="fragment">Udregn nu vægtene for hver gruppe i hver obligation.<br>
+</li>
+<li class="fragment">Argumenter for hvilke mulige årsager der står bag, hvorfor medium-group er så stor for <strong>DK0009539116</strong>?</li>
+</ol>
+</section>
+<section id="gain-beregning" class="slide level4" data-background="#43464B">
+<h4>Gain-beregning</h4>
+<ul>
+<li class="fragment">Du får at vide at nutidsværdien ved at fortsætte dit lån er <span class="math inline">\(PV = 110.28\)</span> samt der er en procentvis omkostning ved at konvertere dit lån på 5 %. Beregn gevinst-variablen ved at konvertere dit lån. Burde man konvertere?<br>
+</li>
+<li class="fragment">Du får at vide at nutidsværdien for at fortsætte sit lån på en anden obligation er på 101. Burde man konvertere?<br>
+</li>
+<li class="fragment">Hvad nu, hvis omkostningsprocenten falder til 2 % i ovenstående obligation. Burde man konvertere?</li>
+</ul>
+</section>
+<section id="miksturmodellen-1" class="slide level4" data-background="#43464B">
+<h4>Miksturmodellen</h4>
+<p>Du får oplyst følgende estimerede gruppe-CPR:</p>
+<p><span class="math display">\[
+\begin{aligned}
+CPR_{1} &amp;= 1.43\% \\
+CPR_{2} &amp;= 3.27\% \\
+CPR_{3} &amp;= 7.64\%
+\end{aligned}
+\]</span></p>
+<p>Samt følgende grupperede nominelle værdier:</p>
+<p><span class="math display">\[
+\begin{aligned}
+SamletNominel_{1} &amp;= 6{,}939{,}580 \ \text{DKK} \\
+SamletNominel_{2} &amp;= 7{,}667{,}202 \ \text{DKK} \\
+SamletNominel_{3} &amp;= 6{,}421{,}709 \ \text{DKK}
+\end{aligned}
+\]</span></p>
+<ol type="1">
+<li class="fragment">Beregn det vægtede serie-CPR ud fra ovenstående information.<br>
+</li>
+<li class="fragment">Antag at det generelle renteniveau falder. Hvad sker der med det vægtede CPR? Hvorfor?<br>
+</li>
+<li class="fragment">Du får at vide, at burnout er på 0.92 i nuværende kvartal, samt at serien er lukket. Hvad var burnout i forrige kvartal givet dit udregnede serie-CPR? Hvilken betydning har det på burnout, hvis vi antager serien er lukket?<br>
+</li>
+<li class="fragment">Hvis det generelle renteniveau som sagt falder, hvordan kommer det til at påvirke burnout i nuværende og fremtidige perioder?<br>
+</li>
+<li class="fragment">Antag nu at serien er åben for nyudstedelser og at andelen af nyudstedelser <span class="math inline">\(I_{ss,t} = 0.15\)</span>. Udregn nu burnout for den nuværende periode og sammenlign_</li>
+</ol>
 
 
 </section></section>
@@ -620,7 +872,7 @@ r_{12} = 12\Bigl[(1+0,2682)^{1/12} - 1\Bigr]
   <div class="quarto-auto-generated-content" style="display: none;">
 <p><img src="../../themes/favicon.ico" class="slide-logo"></p>
 <div class="footer footer-default">
-<p>Finansiering — Rentedannelsen</p>
+<p>Finansiering — Konvertering &amp; modellering</p>
 </div>
 </div></div>
 
