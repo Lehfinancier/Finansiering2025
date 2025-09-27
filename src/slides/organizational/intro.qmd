@@ -32,7 +32,6 @@ title-slide-attributes:
 #   - ../.. /filters/reveal-header.lua
 
 # Slå fra under udvikling (kan sættes til true til sidst for one-file HTML)
-embed-resources: false
 #include-in-header: ../../themes/mathjax.html 
 highlight-style: tango
 open-graph:
