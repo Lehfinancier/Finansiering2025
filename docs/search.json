@@ -1,149 +1,102 @@
 [
   {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "Finansiering 2025",
-    "section": "",
-    "text": "Se slides i full screen",
-    "crumbs": [
-      "Finansiering 2025"
-    ]
-  },
-  {
-    "objectID": "index.html#course-information",
-    "href": "index.html#course-information",
-    "title": "Finansiering 2025 — Lecture Notes",
-    "section": "Course Information",
-    "text": "Course Information\nInstructor: Niklas Lehmann Jensen\nEmail: [indsæt email her]\nOffice Location: [indsæt kontoradresse]\nOffice Hours: Efter aftale\nCourse Website: Absalon og denne side\nLectures: [indsæt tid og lokale]\nLevel: Undergraduate\nPrerequisites: Ingen formelle krav, men basal forståelse for matematik og økonomi er en fordel",
-    "crumbs": [
-      "Finansiering 2025"
-    ]
-  },
-  {
-    "objectID": "index.html#course-content",
-    "href": "index.html#course-content",
-    "title": "Finansiering 2025",
-    "section": "Course Content",
-    "text": "Course Content\nKurset er struktureret som følger:\n\nRenter og rentedannelse\n\nReal- og nominelle renter\n\nInflation og Fisher-ligningen\n\nPengepolitik og institutionelle forhold i Danmark\n\nObligationer\n\nNulkupon- og kuponobligationer\n\nDirekte rente, effektiv rente og diskontering\n\nSammenhæng mellem kurs, rente og afkast\n\nRentestruktur og prisfastsættelse\n\nRentekurven og arbitrage\n\nEstimation af rentestrukturen\n\nBrug af spot- og forwardrenter\n\nRenterisiko\n\nVarighed og konveksitet\n\nImmunisering og risikomål\n\nPorteføljer af obligationer\n\nDansk realkredit\n\nRealkreditsystemets opbygning og regulering\n\nKonvertering og præpayment-modeller\n\nOption Adjusted Spread (OAS)\n\nPerformance og regulering\n\nObligationsafkast og performanceattribution\n\nFinanskrisen 2008 og reguleringsbølgen (Basel III, CRR/CRD)\n\nCase: Silicon Valley Bank og renterisiko",
-    "crumbs": [
-      "Finansiering 2025"
-    ]
-  },
-  {
-    "objectID": "index.html#course-materials",
-    "href": "index.html#course-materials",
-    "title": "Finansiering 2025",
-    "section": "Course Materials",
-    "text": "Course Materials\nPensum består primært af:\n\nEgenudviklede lektionsnoter i finansiering\n\nEvt. supplerende artikler og cases om finanskrisen\n\nDerudover kan følgende lærebøger anbefales som opslagsværk:\n- Tanggaard: Finansielle instrumenter og deres markeder\n- Just Andresen: Finansiel risikostyring\n- Christensen: Obligationsinvestering: Teori og praksis anvendelse",
-    "crumbs": [
-      "Finansiering 2025"
-    ]
-  },
-  {
-    "objectID": "index.html#course-policies",
-    "href": "index.html#course-policies",
-    "title": "Finansiering 2025",
-    "section": "Course Policies",
-    "text": "Course Policies\nEksamen og karakter\nKarakteren gives på baggrund af en 4 timers skriftlig eksamen (uden internet). Dato d. 12/01/2026\nDeltagelse under forelæsninger og øvelsestimer\nDeltagelse anbefales stærkt, da undervisningen bygger på dialog og øvelser.\nAkademisk integritet\nUniversitetets regler om eksamenssnyd og plagiering gælder.\nSærlige behov\nStuderende med særlige behov bør kontakte universitetets kontor tidligt i semestret.",
-    "crumbs": [
-      "Finansiering 2025"
-    ]
-  },
-  {
-    "objectID": "slides/organizational/intro.html#indhold-og-motivation",
-    "href": "slides/organizational/intro.html#indhold-og-motivation",
-    "title": "Kursusintroduktion",
-    "section": "Indhold og motivation",
-    "text": "Indhold og motivation",
-    "crumbs": [
-      "Lectures",
-      "Kursusintroduktion"
-    ]
-  },
-  {
-    "objectID": "slides/organizational/intro.html#kursuslogistik",
-    "href": "slides/organizational/intro.html#kursuslogistik",
-    "title": "Kursusintroduktion",
-    "section": "Kursuslogistik",
-    "text": "Kursuslogistik",
-    "crumbs": [
-      "Lectures",
-      "Kursusintroduktion"
-    ]
-  },
-  {
-    "objectID": "slides/organizational/intro.html#referencer",
-    "href": "slides/organizational/intro.html#referencer",
-    "title": "Kursusintroduktion",
-    "section": "Referencer",
-    "text": "Referencer\n\nLektionsnoter i finansiering (2025)\n\nFabozzi — Bond Markets, Analysis, and Strategies\n\nTuckman & Serrat — Fixed Income Securities\n\nHull — Options, Futures, and Other Derivatives"
-  },
-  {
-    "objectID": "slides/organizational/intro.html#lidt-praktisk-om-kurset",
-    "href": "slides/organizational/intro.html#lidt-praktisk-om-kurset",
-    "title": "Kursusintroduktion",
-    "section": "Lidt praktisk om kurset",
-    "text": "Lidt praktisk om kurset",
-    "crumbs": [
-      "Lectures",
-      "Kursusintroduktion"
-    ]
-  },
-  {
-    "objectID": "slides/Rentedannelse/entedannelsen.html#introduktion",
-    "href": "slides/Rentedannelse/entedannelsen.html#introduktion",
-    "title": "Rentedannelsen",
+    "objectID": "slides/Risikomål/risikomaal.html#introduktion",
+    "href": "slides/Risikomål/risikomaal.html#introduktion",
+    "title": "Risikomål for obligationer",
     "section": "Introduktion",
-    "text": "Introduktion"
+    "text": "Introduktion",
+    "crumbs": [
+      "Lectures",
+      "Risikomål for obligationer"
+    ]
   },
   {
-    "objectID": "slides/Rentedannelse/entedannelsen.html#byggesten-i-den-nominelle-rente",
-    "href": "slides/Rentedannelse/entedannelsen.html#byggesten-i-den-nominelle-rente",
-    "title": "Rentedannelsen",
-    "section": "Byggesten i den nominelle rente",
-    "text": "Byggesten i den nominelle rente"
+    "objectID": "slides/Risikomål/risikomaal.html#varighed-grundidé",
+    "href": "slides/Risikomål/risikomaal.html#varighed-grundidé",
+    "title": "Risikomål for obligationer",
+    "section": "Varighed: grundidé",
+    "text": "Varighed: grundidé",
+    "crumbs": [
+      "Lectures",
+      "Risikomål for obligationer"
+    ]
   },
   {
-    "objectID": "slides/Rentedannelse/entedannelsen.html#lånekapital-udbud-efterspørgsel",
-    "href": "slides/Rentedannelse/entedannelsen.html#lånekapital-udbud-efterspørgsel",
-    "title": "Rentedannelsen",
-    "section": "Lånekapital: udbud & efterspørgsel",
-    "text": "Lånekapital: udbud & efterspørgsel"
+    "objectID": "slides/Risikomål/risikomaal.html#varighed-og-risikomål",
+    "href": "slides/Risikomål/risikomaal.html#varighed-og-risikomål",
+    "title": "Risikomål for obligationer",
+    "section": "Varighed og risikomål",
+    "text": "Varighed og risikomål",
+    "crumbs": [
+      "Lectures",
+      "Risikomål for obligationer"
+    ]
   },
   {
-    "objectID": "slides/Rentedannelse/entedannelsen.html#pengepolitik-og-kort-rente",
-    "href": "slides/Rentedannelse/entedannelsen.html#pengepolitik-og-kort-rente",
-    "title": "Rentedannelsen",
-    "section": "Pengepolitik og kort rente",
-    "text": "Pengepolitik og kort rente"
+    "objectID": "slides/Risikomål/risikomaal.html#konveksitet",
+    "href": "slides/Risikomål/risikomaal.html#konveksitet",
+    "title": "Risikomål for obligationer",
+    "section": "Konveksitet",
+    "text": "Konveksitet",
+    "crumbs": [
+      "Lectures",
+      "Risikomål for obligationer"
+    ]
   },
   {
-    "objectID": "slides/Rentedannelse/entedannelsen.html#forventninger-og-rentestruktur-uden-at-gå-dybt-i-forwards",
-    "href": "slides/Rentedannelse/entedannelsen.html#forventninger-og-rentestruktur-uden-at-gå-dybt-i-forwards",
-    "title": "Rentedannelsen",
-    "section": "Forventninger og rentestruktur (uden at gå dybt i forwards)",
-    "text": "Forventninger og rentestruktur (uden at gå dybt i forwards)"
+    "objectID": "slides/Risikomål/risikomaal.html#rentersiko-på-porteføljer",
+    "href": "slides/Risikomål/risikomaal.html#rentersiko-på-porteføljer",
+    "title": "Risikomål for obligationer",
+    "section": "Rentersiko på porteføljer",
+    "text": "Rentersiko på porteføljer",
+    "crumbs": [
+      "Lectures",
+      "Risikomål for obligationer"
+    ]
   },
   {
-    "objectID": "slides/Rentedannelse/entedannelsen.html#risikopræmier-kort",
-    "href": "slides/Rentedannelse/entedannelsen.html#risikopræmier-kort",
-    "title": "Rentedannelsen",
-    "section": "Risikopræmier (kort)",
-    "text": "Risikopræmier (kort)"
+    "objectID": "slides/Risikomål/risikomaal.html#risikomål-og-rentestrukturen",
+    "href": "slides/Risikomål/risikomaal.html#risikomål-og-rentestrukturen",
+    "title": "Risikomål for obligationer",
+    "section": "Risikomål og rentestrukturen",
+    "text": "Risikomål og rentestrukturen",
+    "crumbs": [
+      "Lectures",
+      "Risikomål for obligationer"
+    ]
   },
   {
-    "objectID": "slides/Rentedannelse/entedannelsen.html#øvelser-tænk-selv",
-    "href": "slides/Rentedannelse/entedannelsen.html#øvelser-tænk-selv",
-    "title": "Rentedannelsen",
-    "section": "Øvelser / “tænk selv”",
-    "text": "Øvelser / “tænk selv”"
+    "objectID": "slides/Risikomål/risikomaal.html#risikomål-og-nøglerentevarighed",
+    "href": "slides/Risikomål/risikomaal.html#risikomål-og-nøglerentevarighed",
+    "title": "Risikomål for obligationer",
+    "section": "Risikomål og nøglerentevarighed",
+    "text": "Risikomål og nøglerentevarighed",
+    "crumbs": [
+      "Lectures",
+      "Risikomål for obligationer"
+    ]
   },
   {
-    "objectID": "slides/Rentedannelse/entedannelsen.html#opsummering",
-    "href": "slides/Rentedannelse/entedannelsen.html#opsummering",
-    "title": "Rentedannelsen",
+    "objectID": "slides/Risikomål/risikomaal.html#øvelser",
+    "href": "slides/Risikomål/risikomaal.html#øvelser",
+    "title": "Risikomål for obligationer",
+    "section": "Øvelser",
+    "text": "Øvelser",
+    "crumbs": [
+      "Lectures",
+      "Risikomål for obligationer"
+    ]
+  },
+  {
+    "objectID": "slides/Risikomål/risikomaal.html#opsummering",
+    "href": "slides/Risikomål/risikomaal.html#opsummering",
+    "title": "Risikomål for obligationer",
     "section": "Opsummering",
-    "text": "Opsummering"
+    "text": "Opsummering",
+    "crumbs": [
+      "Lectures",
+      "Risikomål for obligationer"
+    ]
   },
   {
     "objectID": "slides/Rentedannelse/rentedannelsen.html#introduktion",
@@ -151,63 +104,6 @@
     "title": "Rentedannelsen",
     "section": "Introduktion",
     "text": "Introduktion",
-    "crumbs": [
-      "Lectures",
-      "Rentedannelsen"
-    ]
-  },
-  {
-    "objectID": "slides/Rentedannelse/rentedannelsen.html#byggesten-i-den-nominelle-rente",
-    "href": "slides/Rentedannelse/rentedannelsen.html#byggesten-i-den-nominelle-rente",
-    "title": "Rentedannelsen",
-    "section": "Byggesten i den nominelle rente",
-    "text": "Byggesten i den nominelle rente"
-  },
-  {
-    "objectID": "slides/Rentedannelse/rentedannelsen.html#lånekapital-udbud-efterspørgsel",
-    "href": "slides/Rentedannelse/rentedannelsen.html#lånekapital-udbud-efterspørgsel",
-    "title": "Rentedannelsen",
-    "section": "Lånekapital: udbud & efterspørgsel",
-    "text": "Lånekapital: udbud & efterspørgsel",
-    "crumbs": [
-      "Lectures",
-      "Rentedannelsen"
-    ]
-  },
-  {
-    "objectID": "slides/Rentedannelse/rentedannelsen.html#pengepolitik-og-kort-rente",
-    "href": "slides/Rentedannelse/rentedannelsen.html#pengepolitik-og-kort-rente",
-    "title": "Rentedannelsen",
-    "section": "Pengepolitik og kort rente",
-    "text": "Pengepolitik og kort rente"
-  },
-  {
-    "objectID": "slides/Rentedannelse/rentedannelsen.html#forventninger-og-rentestruktur-uden-at-gå-dybt-i-forwards",
-    "href": "slides/Rentedannelse/rentedannelsen.html#forventninger-og-rentestruktur-uden-at-gå-dybt-i-forwards",
-    "title": "Rentedannelsen",
-    "section": "Forventninger og rentestruktur (uden at gå dybt i forwards)",
-    "text": "Forventninger og rentestruktur (uden at gå dybt i forwards)"
-  },
-  {
-    "objectID": "slides/Rentedannelse/rentedannelsen.html#risikopræmier-kort",
-    "href": "slides/Rentedannelse/rentedannelsen.html#risikopræmier-kort",
-    "title": "Rentedannelsen",
-    "section": "Risikopræmier (kort)",
-    "text": "Risikopræmier (kort)"
-  },
-  {
-    "objectID": "slides/Rentedannelse/rentedannelsen.html#øvelser-tænk-selv",
-    "href": "slides/Rentedannelse/rentedannelsen.html#øvelser-tænk-selv",
-    "title": "Rentedannelsen",
-    "section": "Øvelser / “tænk selv”",
-    "text": "Øvelser / “tænk selv”"
-  },
-  {
-    "objectID": "slides/Rentedannelse/rentedannelsen.html#opsummering",
-    "href": "slides/Rentedannelse/rentedannelsen.html#opsummering",
-    "title": "Rentedannelsen",
-    "section": "Opsummering",
-    "text": "Opsummering",
     "crumbs": [
       "Lectures",
       "Rentedannelsen"
@@ -230,6 +126,17 @@
     "title": "Rentedannelsen",
     "section": "Direkte rente – eksempel",
     "text": "Direkte rente – eksempel",
+    "crumbs": [
+      "Lectures",
+      "Rentedannelsen"
+    ]
+  },
+  {
+    "objectID": "slides/Rentedannelse/rentedannelsen.html#lånekapital-udbud-efterspørgsel",
+    "href": "slides/Rentedannelse/rentedannelsen.html#lånekapital-udbud-efterspørgsel",
+    "title": "Rentedannelsen",
+    "section": "Lånekapital: udbud & efterspørgsel",
+    "text": "Lånekapital: udbud & efterspørgsel",
     "crumbs": [
       "Lectures",
       "Rentedannelsen"
@@ -288,6 +195,418 @@
     "crumbs": [
       "Lectures",
       "Rentedannelsen"
+    ]
+  },
+  {
+    "objectID": "slides/Rentedannelse/rentedannelsen.html#opsummering",
+    "href": "slides/Rentedannelse/rentedannelsen.html#opsummering",
+    "title": "Rentedannelsen",
+    "section": "Opsummering",
+    "text": "Opsummering",
+    "crumbs": [
+      "Lectures",
+      "Rentedannelsen"
+    ]
+  },
+  {
+    "objectID": "slides/PrisNoegletal/pricingkeyfigures.html#pengeinstitutters-risikostyring",
+    "href": "slides/PrisNoegletal/pricingkeyfigures.html#pengeinstitutters-risikostyring",
+    "title": "Pengeinstitutters risikostyring",
+    "section": "Pengeinstitutters risikostyring",
+    "text": "Pengeinstitutters risikostyring",
+    "crumbs": [
+      "Lectures",
+      "Pengeinstitutters risikostyring"
+    ]
+  },
+  {
+    "objectID": "slides/PrisNoegletal/pricingkeyfigures.html#kreditrisiko-hvad-og-hvorfor",
+    "href": "slides/PrisNoegletal/pricingkeyfigures.html#kreditrisiko-hvad-og-hvorfor",
+    "title": "Pengeinstitutters risikostyring",
+    "section": "Kreditrisiko: hvad og hvorfor?",
+    "text": "Kreditrisiko: hvad og hvorfor?",
+    "crumbs": [
+      "Lectures",
+      "Pengeinstitutters risikostyring"
+    ]
+  },
+  {
+    "objectID": "slides/PrisNoegletal/pricingkeyfigures.html#systematisk-vs.-usystematisk-kreditrisiko",
+    "href": "slides/PrisNoegletal/pricingkeyfigures.html#systematisk-vs.-usystematisk-kreditrisiko",
+    "title": "Pengeinstitutters risikostyring",
+    "section": "Systematisk vs. usystematisk kreditrisiko",
+    "text": "Systematisk vs. usystematisk kreditrisiko",
+    "crumbs": [
+      "Lectures",
+      "Pengeinstitutters risikostyring"
+    ]
+  },
+  {
+    "objectID": "slides/PrisNoegletal/pricingkeyfigures.html#pd-ratingklasser-og-anvendelser",
+    "href": "slides/PrisNoegletal/pricingkeyfigures.html#pd-ratingklasser-og-anvendelser",
+    "title": "Pengeinstitutters risikostyring",
+    "section": "PD – ratingklasser og anvendelser",
+    "text": "PD – ratingklasser og anvendelser",
+    "crumbs": [
+      "Lectures",
+      "Pengeinstitutters risikostyring"
+    ]
+  },
+  {
+    "objectID": "slides/PrisNoegletal/pricingkeyfigures.html#eksempler-kredittillæg-pd-recovery",
+    "href": "slides/PrisNoegletal/pricingkeyfigures.html#eksempler-kredittillæg-pd-recovery",
+    "title": "Pengeinstitutters risikostyring",
+    "section": "Eksempler: kredittillæg (PD & Recovery)",
+    "text": "Eksempler: kredittillæg (PD & Recovery)",
+    "crumbs": [
+      "Lectures",
+      "Pengeinstitutters risikostyring"
+    ]
+  },
+  {
+    "objectID": "slides/PrisNoegletal/pricingkeyfigures.html#lgd-og-recovery-rate",
+    "href": "slides/PrisNoegletal/pricingkeyfigures.html#lgd-og-recovery-rate",
+    "title": "Pengeinstitutters risikostyring",
+    "section": "LGD og Recovery Rate",
+    "text": "LGD og Recovery Rate",
+    "crumbs": [
+      "Lectures",
+      "Pengeinstitutters risikostyring"
+    ]
+  },
+  {
+    "objectID": "slides/PrisNoegletal/pricingkeyfigures.html#ead-exposure-at-default",
+    "href": "slides/PrisNoegletal/pricingkeyfigures.html#ead-exposure-at-default",
+    "title": "Pengeinstitutters risikostyring",
+    "section": "EAD – Exposure at Default",
+    "text": "EAD – Exposure at Default",
+    "crumbs": [
+      "Lectures",
+      "Pengeinstitutters risikostyring"
+    ]
+  },
+  {
+    "objectID": "slides/PrisNoegletal/pricingkeyfigures.html#el-og-ul-samt-wcdr",
+    "href": "slides/PrisNoegletal/pricingkeyfigures.html#el-og-ul-samt-wcdr",
+    "title": "Pengeinstitutters risikostyring",
+    "section": "EL og UL – samt WCDR",
+    "text": "EL og UL – samt WCDR",
+    "crumbs": [
+      "Lectures",
+      "Pengeinstitutters risikostyring"
+    ]
+  },
+  {
+    "objectID": "slides/organizational/intro.html#indhold-og-motivation",
+    "href": "slides/organizational/intro.html#indhold-og-motivation",
+    "title": "Kursusintroduktion",
+    "section": "Indhold og motivation",
+    "text": "Indhold og motivation",
+    "crumbs": [
+      "Lectures",
+      "Kursusintroduktion"
+    ]
+  },
+  {
+    "objectID": "slides/organizational/intro.html#lidt-praktisk-om-kurset",
+    "href": "slides/organizational/intro.html#lidt-praktisk-om-kurset",
+    "title": "Kursusintroduktion",
+    "section": "Lidt praktisk om kurset",
+    "text": "Lidt praktisk om kurset",
+    "crumbs": [
+      "Lectures",
+      "Kursusintroduktion"
+    ]
+  },
+  {
+    "objectID": "slides/Konverteringsmodel/konverteringsmodel.html#modellering-af-konverteringsadfærd",
+    "href": "slides/Konverteringsmodel/konverteringsmodel.html#modellering-af-konverteringsadfærd",
+    "title": "Modellering af konverteringsadfærd",
+    "section": "Modellering af Konverteringsadfærd",
+    "text": "Modellering af Konverteringsadfærd",
+    "crumbs": [
+      "Lectures",
+      "Modellering af konverteringsadfærd"
+    ]
+  },
+  {
+    "objectID": "slides/Konverteringsmodel/konverteringsmodel.html#konverteringsadfærd",
+    "href": "slides/Konverteringsmodel/konverteringsmodel.html#konverteringsadfærd",
+    "title": "Modellering af konverteringsadfærd",
+    "section": "Konverteringsadfærd",
+    "text": "Konverteringsadfærd",
+    "crumbs": [
+      "Lectures",
+      "Modellering af konverteringsadfærd"
+    ]
+  },
+  {
+    "objectID": "slides/Konverteringsmodel/konverteringsmodel.html#konverteringsraten-cpr",
+    "href": "slides/Konverteringsmodel/konverteringsmodel.html#konverteringsraten-cpr",
+    "title": "Modellering af konverteringsadfærd",
+    "section": "Konverteringsraten (CPR)",
+    "text": "Konverteringsraten (CPR)",
+    "crumbs": [
+      "Lectures",
+      "Modellering af konverteringsadfærd"
+    ]
+  },
+  {
+    "objectID": "slides/Konverteringsmodel/konverteringsmodel.html#konverteringsdata",
+    "href": "slides/Konverteringsmodel/konverteringsmodel.html#konverteringsdata",
+    "title": "Modellering af konverteringsadfærd",
+    "section": "Konverteringsdata",
+    "text": "Konverteringsdata",
+    "crumbs": [
+      "Lectures",
+      "Modellering af konverteringsadfærd"
+    ]
+  },
+  {
+    "objectID": "slides/Konverteringsmodel/konverteringsmodel.html#konverteringsmodellen",
+    "href": "slides/Konverteringsmodel/konverteringsmodel.html#konverteringsmodellen",
+    "title": "Modellering af konverteringsadfærd",
+    "section": "Konverteringsmodellen",
+    "text": "Konverteringsmodellen",
+    "crumbs": [
+      "Lectures",
+      "Modellering af konverteringsadfærd"
+    ]
+  },
+  {
+    "objectID": "slides/Konverteringsmodel/konverteringsmodel.html#konverteringsfunktioner",
+    "href": "slides/Konverteringsmodel/konverteringsmodel.html#konverteringsfunktioner",
+    "title": "Modellering af konverteringsadfærd",
+    "section": "Konverteringsfunktioner",
+    "text": "Konverteringsfunktioner",
+    "crumbs": [
+      "Lectures",
+      "Modellering af konverteringsadfærd"
+    ]
+  },
+  {
+    "objectID": "slides/Konverteringsmodel/konverteringsmodel.html#opsummering",
+    "href": "slides/Konverteringsmodel/konverteringsmodel.html#opsummering",
+    "title": "Modellering af konverteringsadfærd",
+    "section": "Opsummering",
+    "text": "Opsummering",
+    "crumbs": [
+      "Lectures",
+      "Modellering af konverteringsadfærd"
+    ]
+  },
+  {
+    "objectID": "slides/Konverteringsmodel/konverteringsmodel.html#øvelser",
+    "href": "slides/Konverteringsmodel/konverteringsmodel.html#øvelser",
+    "title": "Modellering af konverteringsadfærd",
+    "section": "Øvelser",
+    "text": "Øvelser",
+    "crumbs": [
+      "Lectures",
+      "Modellering af konverteringsadfærd"
+    ]
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Finansiering 2025",
+    "section": "",
+    "text": "Se slides i full screen",
+    "crumbs": [
+      "Finansiering 2025"
+    ]
+  },
+  {
+    "objectID": "index.html#i-slide-format",
+    "href": "index.html#i-slide-format",
+    "title": "Finansiering 2025",
+    "section": "",
+    "text": "Se slides i full screen",
+    "crumbs": [
+      "Finansiering 2025"
+    ]
+  },
+  {
+    "objectID": "index.html#kursusinformation",
+    "href": "index.html#kursusinformation",
+    "title": "Finansiering 2025",
+    "section": "Kursusinformation",
+    "text": "Kursusinformation\nForelæser: Niklas Lehmann Jensen\nEmail: nlj@econ.au.dk (niklas@scanrate.dk)\nKontor: Intet kontor på AU\nKontakt tidspunkter: I skriver bare en mail\nKursus hjemmeside: Brightspace og denne side\nForelæsninger: Tirsdag (8:15–10:00) og torsdag (14:15–16:00) i M1\nNiveau: Bachelor\nForudsætninger: Ingen formelle krav, men basal forståelse for matematik og økonomi er en fordel",
+    "crumbs": [
+      "Finansiering 2025"
+    ]
+  },
+  {
+    "objectID": "index.html#kursusindhold",
+    "href": "index.html#kursusindhold",
+    "title": "Finansiering 2025",
+    "section": "Kursusindhold",
+    "text": "Kursusindhold\nKurset er struktureret som følger:\n\nRenter og rentedannelse\n\nReal- og nominelle renter\n\nInflation og Fisher-ligningen\n\nPengepolitik og institutionelle forhold i Danmark\n\nObligationer\n\nNulkupon- og kuponobligationer\n\nDirekte rente, effektiv rente og diskontering\n\nSammenhæng mellem kurs, rente og afkast\n\nRentestruktur og prisfastsættelse\n\nRentekurven og arbitrage\n\nEstimation af rentestrukturen\n\nBrug af spot- og forwardrenter\n\nRenterisiko\n\nVarighed og konveksitet\n\nImmunisering og risikomål\n\nPorteføljer af obligationer\n\nDansk realkredit\n\nRealkreditsystemets opbygning og regulering\n\nKonvertering og præpayment-modeller\n\nOption Adjusted Spread (OAS)\n\nPerformance og regulering\n\nObligationsafkast og performanceattribution\n\nFinanskrisen 2008 og reguleringsbølgen (Basel III, CRR/CRD)\n\nCase: Silicon Valley Bank og renterisiko",
+    "crumbs": [
+      "Finansiering 2025"
+    ]
+  },
+  {
+    "objectID": "index.html#kursusmateriale",
+    "href": "index.html#kursusmateriale",
+    "title": "Finansiering 2025",
+    "section": "Kursusmateriale",
+    "text": "Kursusmateriale\nPensum består primært af:\n\nEgenudviklede lektionsnoter i finansiering\n\nEvt. supplerende artikler og cases om finanskrisen\n\nDerudover kan følgende lærebøger anbefales som opslagsværk:\n- Tanggaard: Finansielle instrumenter og deres markeder\n- Just Andresen: Finansiel risikostyring\n- Christensen: Obligationsinvestering: Teori og praksis anvendelse",
+    "crumbs": [
+      "Finansiering 2025"
+    ]
+  },
+  {
+    "objectID": "index.html#andet-vigtig-gøjl",
+    "href": "index.html#andet-vigtig-gøjl",
+    "title": "Finansiering 2025",
+    "section": "Andet vigtig gøjl",
+    "text": "Andet vigtig gøjl\nEksamen og karakter\nKarakteren gives på baggrund af en 4 timers skriftlig eksamen (uden internet). Dato d. 12/01/2026\nDeltagelse under forelæsninger og øvelsestimer\nDeltagelse anbefales stærkt, da undervisningen bygger på dialog og øvelser.\nAkademisk integritet\nUniversitetets regler om eksamenssnyd og plagiering gælder.\nSærlige behov\nStuderende med særlige behov bør kontakte universitetets kontor tidligt i semestret.",
+    "crumbs": [
+      "Finansiering 2025"
+    ]
+  },
+  {
+    "objectID": "slides/FinanskrisenRegulering/financialcrisis.html#introduktion",
+    "href": "slides/FinanskrisenRegulering/financialcrisis.html#introduktion",
+    "title": "Finanskrisens udvikling og eftervirkninger",
+    "section": "Introduktion",
+    "text": "Introduktion",
+    "crumbs": [
+      "Lectures",
+      "Finanskrisens udvikling og eftervirkninger"
+    ]
+  },
+  {
+    "objectID": "slides/FinanskrisenRegulering/financialcrisis.html#perioden-op-til-finanskrisen",
+    "href": "slides/FinanskrisenRegulering/financialcrisis.html#perioden-op-til-finanskrisen",
+    "title": "Finanskrisens udvikling og eftervirkninger",
+    "section": "Perioden op til finanskrisen",
+    "text": "Perioden op til finanskrisen",
+    "crumbs": [
+      "Lectures",
+      "Finanskrisens udvikling og eftervirkninger"
+    ]
+  },
+  {
+    "objectID": "slides/FinanskrisenRegulering/financialcrisis.html#udviklingen-i-den-finansielle-sektor",
+    "href": "slides/FinanskrisenRegulering/financialcrisis.html#udviklingen-i-den-finansielle-sektor",
+    "title": "Finanskrisens udvikling og eftervirkninger",
+    "section": "Udviklingen i den finansielle sektor",
+    "text": "Udviklingen i den finansielle sektor",
+    "crumbs": [
+      "Lectures",
+      "Finanskrisens udvikling og eftervirkninger"
+    ]
+  },
+  {
+    "objectID": "slides/FinanskrisenRegulering/financialcrisis.html#securitisering-tranching-og-shadow-banking",
+    "href": "slides/FinanskrisenRegulering/financialcrisis.html#securitisering-tranching-og-shadow-banking",
+    "title": "Finanskrisens udvikling og eftervirkninger",
+    "section": "Securitisering, tranching og shadow banking",
+    "text": "Securitisering, tranching og shadow banking",
+    "crumbs": [
+      "Lectures",
+      "Finanskrisens udvikling og eftervirkninger"
+    ]
+  },
+  {
+    "objectID": "slides/FinanskrisenRegulering/financialcrisis.html#hvordan-låntagning-øger-risiko",
+    "href": "slides/FinanskrisenRegulering/financialcrisis.html#hvordan-låntagning-øger-risiko",
+    "title": "Finanskrisens udvikling og eftervirkninger",
+    "section": "Hvordan låntagning øger risiko",
+    "text": "Hvordan låntagning øger risiko",
+    "crumbs": [
+      "Lectures",
+      "Finanskrisens udvikling og eftervirkninger"
+    ]
+  },
+  {
+    "objectID": "slides/FinanskrisenRegulering/financialcrisis.html#gearing-og-kapitalandel-lehman-brothers",
+    "href": "slides/FinanskrisenRegulering/financialcrisis.html#gearing-og-kapitalandel-lehman-brothers",
+    "title": "Finanskrisens udvikling og eftervirkninger",
+    "section": "Gearing og kapitalandel: Lehman Brothers",
+    "text": "Gearing og kapitalandel: Lehman Brothers",
+    "crumbs": [
+      "Lectures",
+      "Finanskrisens udvikling og eftervirkninger"
+    ]
+  },
+  {
+    "objectID": "slides/FinanskrisenRegulering/financialcrisis.html#krisens-udbrud",
+    "href": "slides/FinanskrisenRegulering/financialcrisis.html#krisens-udbrud",
+    "title": "Finanskrisens udvikling og eftervirkninger",
+    "section": "Krisens udbrud",
+    "text": "Krisens udbrud",
+    "crumbs": [
+      "Lectures",
+      "Finanskrisens udvikling og eftervirkninger"
+    ]
+  },
+  {
+    "objectID": "slides/FinanskrisenRegulering/financialcrisis.html#eftervirkninger-politik-og-økonomi",
+    "href": "slides/FinanskrisenRegulering/financialcrisis.html#eftervirkninger-politik-og-økonomi",
+    "title": "Finanskrisens udvikling og eftervirkninger",
+    "section": "Eftervirkninger: politik og økonomi",
+    "text": "Eftervirkninger: politik og økonomi",
+    "crumbs": [
+      "Lectures",
+      "Finanskrisens udvikling og eftervirkninger"
+    ]
+  },
+  {
+    "objectID": "slides/FinanskrisenRegulering/financialcrisis.html#øget-regulering-basel-iiiiv",
+    "href": "slides/FinanskrisenRegulering/financialcrisis.html#øget-regulering-basel-iiiiv",
+    "title": "Finanskrisens udvikling og eftervirkninger",
+    "section": "Øget regulering: Basel III/IV",
+    "text": "Øget regulering: Basel III/IV",
+    "crumbs": [
+      "Lectures",
+      "Finanskrisens udvikling og eftervirkninger"
+    ]
+  },
+  {
+    "objectID": "slides/FinanskrisenRegulering/financialcrisis.html#kan-det-ske-igen-svb-case-2023",
+    "href": "slides/FinanskrisenRegulering/financialcrisis.html#kan-det-ske-igen-svb-case-2023",
+    "title": "Finanskrisens udvikling og eftervirkninger",
+    "section": "Kan “det” ske igen? (SVB-case 2023)",
+    "text": "Kan “det” ske igen? (SVB-case 2023)",
+    "crumbs": [
+      "Lectures",
+      "Finanskrisens udvikling og eftervirkninger"
+    ]
+  },
+  {
+    "objectID": "slides/FinanskrisenRegulering/financialcrisis.html#rentespænd-og-nettorentemargin",
+    "href": "slides/FinanskrisenRegulering/financialcrisis.html#rentespænd-og-nettorentemargin",
+    "title": "Finanskrisens udvikling og eftervirkninger",
+    "section": "Rentespænd og nettorentemargin",
+    "text": "Rentespænd og nettorentemargin",
+    "crumbs": [
+      "Lectures",
+      "Finanskrisens udvikling og eftervirkninger"
+    ]
+  },
+  {
+    "objectID": "slides/FinanskrisenRegulering/financialcrisis.html#egenkapitalens-varighed",
+    "href": "slides/FinanskrisenRegulering/financialcrisis.html#egenkapitalens-varighed",
+    "title": "Finanskrisens udvikling og eftervirkninger",
+    "section": "Egenkapitalens varighed",
+    "text": "Egenkapitalens varighed",
+    "crumbs": [
+      "Lectures",
+      "Finanskrisens udvikling og eftervirkninger"
+    ]
+  },
+  {
+    "objectID": "slides/FinanskrisenRegulering/financialcrisis.html#afrunding",
+    "href": "slides/FinanskrisenRegulering/financialcrisis.html#afrunding",
+    "title": "Finanskrisens udvikling og eftervirkninger",
+    "section": "Afrunding",
+    "text": "Afrunding",
+    "crumbs": [
+      "Lectures",
+      "Finanskrisens udvikling og eftervirkninger"
     ]
   },
   {
@@ -401,6 +720,17 @@
     ]
   },
   {
+    "objectID": "slides/Obligationsmarkedet/obligationsmarked.html#obligationsprisernes-dynamik",
+    "href": "slides/Obligationsmarkedet/obligationsmarked.html#obligationsprisernes-dynamik",
+    "title": "Obligationsmarkedet",
+    "section": "Obligationsprisernes dynamik",
+    "text": "Obligationsprisernes dynamik",
+    "crumbs": [
+      "Lectures",
+      "Obligationsmarkedet"
+    ]
+  },
+  {
     "objectID": "slides/Obligationsmarkedet/obligationsmarked.html#tid-og-obligationspriser",
     "href": "slides/Obligationsmarkedet/obligationsmarked.html#tid-og-obligationspriser",
     "title": "Obligationsmarkedet",
@@ -412,11 +742,11 @@
     ]
   },
   {
-    "objectID": "slides/Obligationsmarkedet/obligationsmarked.html#obligationsprisernes-dynamik",
-    "href": "slides/Obligationsmarkedet/obligationsmarked.html#obligationsprisernes-dynamik",
+    "objectID": "slides/Obligationsmarkedet/obligationsmarked.html#øvelser",
+    "href": "slides/Obligationsmarkedet/obligationsmarked.html#øvelser",
     "title": "Obligationsmarkedet",
-    "section": "Obligationsprisernes dynamik",
-    "text": "Obligationsprisernes dynamik",
+    "section": "Øvelser",
+    "text": "Øvelser",
     "crumbs": [
       "Lectures",
       "Obligationsmarkedet"
@@ -431,861 +761,6 @@
     "crumbs": [
       "Lectures",
       "Obligationsmarkedet"
-    ]
-  },
-  {
-    "objectID": "slides/Rentestrukturen/Rentestrukturen.html#introduktion",
-    "href": "slides/Rentestrukturen/Rentestrukturen.html#introduktion",
-    "title": "Rentestrukturen",
-    "section": "Introduktion",
-    "text": "Introduktion",
-    "crumbs": [
-      "Lectures",
-      "Rentestrukturen"
-    ]
-  },
-  {
-    "objectID": "slides/Rentestrukturen/Rentestrukturen.html#teorien-bag-rentestrukturen",
-    "href": "slides/Rentestrukturen/Rentestrukturen.html#teorien-bag-rentestrukturen",
-    "title": "Rentestrukturen",
-    "section": "Teorien bag rentestrukturen",
-    "text": "Teorien bag rentestrukturen",
-    "crumbs": [
-      "Lectures",
-      "Rentestrukturen"
-    ]
-  },
-  {
-    "objectID": "slides/Rentestrukturen/Rentestrukturen.html#den-effektive-rente-ytm-et-problematisk-afkastmål",
-    "href": "slides/Rentestrukturen/Rentestrukturen.html#den-effektive-rente-ytm-et-problematisk-afkastmål",
-    "title": "Rentestrukturen",
-    "section": "Den effektive rente (YTM) – et problematisk afkastmål",
-    "text": "Den effektive rente (YTM) – et problematisk afkastmål",
-    "crumbs": [
-      "Lectures",
-      "Rentestrukturen"
-    ]
-  },
-  {
-    "objectID": "slides/Rentestrukturen/Rentestrukturen.html#rentekurven-og-obligationsarbitrage",
-    "href": "slides/Rentestrukturen/Rentestrukturen.html#rentekurven-og-obligationsarbitrage",
-    "title": "Rentestrukturen",
-    "section": "Rentekurven og obligationsarbitrage",
-    "text": "Rentekurven og obligationsarbitrage",
-    "crumbs": [
-      "Lectures",
-      "Rentestrukturen"
-    ]
-  },
-  {
-    "objectID": "slides/Rentestrukturen/Rentestrukturen.html#forklaringer-på-rentestrukturens-form",
-    "href": "slides/Rentestrukturen/Rentestrukturen.html#forklaringer-på-rentestrukturens-form",
-    "title": "Rentestrukturen",
-    "section": "Forklaringer på rentestrukturens form",
-    "text": "Forklaringer på rentestrukturens form",
-    "crumbs": [
-      "Lectures",
-      "Rentestrukturen"
-    ]
-  },
-  {
-    "objectID": "slides/Rentestrukturen/Rentestrukturen.html#estimation-af-rentestrukturen",
-    "href": "slides/Rentestrukturen/Rentestrukturen.html#estimation-af-rentestrukturen",
-    "title": "Rentestrukturen",
-    "section": "Estimation af rentestrukturen",
-    "text": "Estimation af rentestrukturen",
-    "crumbs": [
-      "Lectures",
-      "Rentestrukturen"
-    ]
-  },
-  {
-    "objectID": "slides/Rentestrukturen/Rentestrukturen.html#prisfastsættelse-ud-fra-rentestrukturen",
-    "href": "slides/Rentestrukturen/Rentestrukturen.html#prisfastsættelse-ud-fra-rentestrukturen",
-    "title": "Rentestrukturen",
-    "section": "Prisfastsættelse ud fra rentestrukturen",
-    "text": "Prisfastsættelse ud fra rentestrukturen",
-    "crumbs": [
-      "Lectures",
-      "Rentestrukturen"
-    ]
-  },
-  {
-    "objectID": "slides/Rentestrukturen/Rentestrukturen.html#tolkning-og-risici",
-    "href": "slides/Rentestrukturen/Rentestrukturen.html#tolkning-og-risici",
-    "title": "Rentestrukturen",
-    "section": "Tolkning og risici",
-    "text": "Tolkning og risici",
-    "crumbs": [
-      "Lectures",
-      "Rentestrukturen"
-    ]
-  },
-  {
-    "objectID": "slides/Rentestrukturen/Rentestrukturen.html#opsummering",
-    "href": "slides/Rentestrukturen/Rentestrukturen.html#opsummering",
-    "title": "Rentestrukturen",
-    "section": "Opsummering",
-    "text": "Opsummering",
-    "crumbs": [
-      "Lectures",
-      "Rentestrukturen"
-    ]
-  },
-  {
-    "objectID": "slides/Rentestrukturen/Rentestrukturen.html#øvelser",
-    "href": "slides/Rentestrukturen/Rentestrukturen.html#øvelser",
-    "title": "Rentestrukturen",
-    "section": "Øvelser",
-    "text": "Øvelser",
-    "crumbs": [
-      "Lectures",
-      "Rentestrukturen"
-    ]
-  },
-  {
-    "objectID": "slides/Rentestrukturen/Rentestrukturen.html#øvelser-1",
-    "href": "slides/Rentestrukturen/Rentestrukturen.html#øvelser-1",
-    "title": "Rentestrukturen",
-    "section": "Øvelser",
-    "text": "Øvelser"
-  },
-  {
-    "objectID": "slides/Risikomål/risikomaal.html#introduktion",
-    "href": "slides/Risikomål/risikomaal.html#introduktion",
-    "title": "Risikomål for obligationer",
-    "section": "Introduktion",
-    "text": "Introduktion",
-    "crumbs": [
-      "Lectures",
-      "Risikomål for obligationer"
-    ]
-  },
-  {
-    "objectID": "slides/Risikomål/risikomaal.html#prisen-som-funktion-af-renten",
-    "href": "slides/Risikomål/risikomaal.html#prisen-som-funktion-af-renten",
-    "title": "Risikomål for obligationer",
-    "section": "Prisen som funktion af renten",
-    "text": "Prisen som funktion af renten"
-  },
-  {
-    "objectID": "slides/Risikomål/risikomaal.html#varighed-grundidé",
-    "href": "slides/Risikomål/risikomaal.html#varighed-grundidé",
-    "title": "Risikomål for obligationer",
-    "section": "Varighed: grundidé",
-    "text": "Varighed: grundidé",
-    "crumbs": [
-      "Lectures",
-      "Risikomål for obligationer"
-    ]
-  },
-  {
-    "objectID": "slides/Risikomål/risikomaal.html#konveksitet",
-    "href": "slides/Risikomål/risikomaal.html#konveksitet",
-    "title": "Risikomål for obligationer",
-    "section": "Konveksitet",
-    "text": "Konveksitet",
-    "crumbs": [
-      "Lectures",
-      "Risikomål for obligationer"
-    ]
-  },
-  {
-    "objectID": "slides/Risikomål/risikomaal.html#fra-parallelle-til-ikke-parallelle-bevægelser",
-    "href": "slides/Risikomål/risikomaal.html#fra-parallelle-til-ikke-parallelle-bevægelser",
-    "title": "Risikomål for obligationer",
-    "section": "Fra parallelle til ikke-parallelle bevægelser",
-    "text": "Fra parallelle til ikke-parallelle bevægelser"
-  },
-  {
-    "objectID": "slides/Risikomål/risikomaal.html#key-rate-duration-krd",
-    "href": "slides/Risikomål/risikomaal.html#key-rate-duration-krd",
-    "title": "Risikomål for obligationer",
-    "section": "Key Rate Duration (KRD)",
-    "text": "Key Rate Duration (KRD)"
-  },
-  {
-    "objectID": "slides/Risikomål/risikomaal.html#varighed-og-reinvesteringsrisiko",
-    "href": "slides/Risikomål/risikomaal.html#varighed-og-reinvesteringsrisiko",
-    "title": "Risikomål for obligationer",
-    "section": "Varighed og reinvesteringsrisiko",
-    "text": "Varighed og reinvesteringsrisiko"
-  },
-  {
-    "objectID": "slides/Risikomål/risikomaal.html#formeloversigt",
-    "href": "slides/Risikomål/risikomaal.html#formeloversigt",
-    "title": "Risikomål for obligationer",
-    "section": "Formeloversigt",
-    "text": "Formeloversigt"
-  },
-  {
-    "objectID": "slides/Risikomål/risikomaal.html#workflow-i-praksis",
-    "href": "slides/Risikomål/risikomaal.html#workflow-i-praksis",
-    "title": "Risikomål for obligationer",
-    "section": "Workflow i praksis",
-    "text": "Workflow i praksis"
-  },
-  {
-    "objectID": "slides/Risikomål/risikomaal.html#mini-eksempel-3-årig-cf-vs.-scenarier",
-    "href": "slides/Risikomål/risikomaal.html#mini-eksempel-3-årig-cf-vs.-scenarier",
-    "title": "Risikomål for obligationer",
-    "section": "Mini-eksempel: 3-årig CF vs. scenarier",
-    "text": "Mini-eksempel: 3-årig CF vs. scenarier"
-  },
-  {
-    "objectID": "slides/Risikomål/risikomaal.html#opsummering",
-    "href": "slides/Risikomål/risikomaal.html#opsummering",
-    "title": "Risikomål for obligationer",
-    "section": "Opsummering",
-    "text": "Opsummering",
-    "crumbs": [
-      "Lectures",
-      "Risikomål for obligationer"
-    ]
-  },
-  {
-    "objectID": "slides/Risikomål/risikomaal.html#prisyield-grundform",
-    "href": "slides/Risikomål/risikomaal.html#prisyield-grundform",
-    "title": "Risikomål for obligationer",
-    "section": "Pris–yield: grundform",
-    "text": "Pris–yield: grundform"
-  },
-  {
-    "objectID": "slides/Risikomål/risikomaal.html#oversigtstabel-risikomål",
-    "href": "slides/Risikomål/risikomaal.html#oversigtstabel-risikomål",
-    "title": "Risikomål for obligationer",
-    "section": "Oversigtstabel: risikomål",
-    "text": "Oversigtstabel: risikomål"
-  },
-  {
-    "objectID": "slides/Risikomål/risikomaal.html#tabel-eksempel-én-obligation-illustrativt",
-    "href": "slides/Risikomål/risikomaal.html#tabel-eksempel-én-obligation-illustrativt",
-    "title": "Risikomål for obligationer",
-    "section": "Tabel-eksempel: én obligation (illustrativt)",
-    "text": "Tabel-eksempel: én obligation (illustrativt)"
-  },
-  {
-    "objectID": "slides/Risikomål/risikomaal.html#fisherweil-varighed",
-    "href": "slides/Risikomål/risikomaal.html#fisherweil-varighed",
-    "title": "Risikomål for obligationer",
-    "section": "Fisher–Weil varighed",
-    "text": "Fisher–Weil varighed"
-  },
-  {
-    "objectID": "slides/Risikomål/risikomaal.html#konveksitet-intuition",
-    "href": "slides/Risikomål/risikomaal.html#konveksitet-intuition",
-    "title": "Risikomål for obligationer",
-    "section": "Konveksitet – intuition",
-    "text": "Konveksitet – intuition"
-  },
-  {
-    "objectID": "slides/Risikomål/risikomaal.html#kurvebevægelser",
-    "href": "slides/Risikomål/risikomaal.html#kurvebevægelser",
-    "title": "Risikomål for obligationer",
-    "section": "Kurvebevægelser",
-    "text": "Kurvebevægelser"
-  },
-  {
-    "objectID": "slides/Risikomål/risikomaal.html#tabel-eksempel-scenarie-pl-illustrativt",
-    "href": "slides/Risikomål/risikomaal.html#tabel-eksempel-scenarie-pl-illustrativt",
-    "title": "Risikomål for obligationer",
-    "section": "Tabel-eksempel: scenarie-P/L (illustrativt)",
-    "text": "Tabel-eksempel: scenarie-P/L (illustrativt)"
-  },
-  {
-    "objectID": "slides/Risikomål/risikomaal.html#delta-vektorer",
-    "href": "slides/Risikomål/risikomaal.html#delta-vektorer",
-    "title": "Risikomål for obligationer",
-    "section": "Delta-vektorer",
-    "text": "Delta-vektorer"
-  },
-  {
-    "objectID": "slides/Risikomål/risikomaal.html#hedging-tabel-eksempel",
-    "href": "slides/Risikomål/risikomaal.html#hedging-tabel-eksempel",
-    "title": "Risikomål for obligationer",
-    "section": "Hedging (tabel-eksempel)",
-    "text": "Hedging (tabel-eksempel)"
-  },
-  {
-    "objectID": "slides/Risikomål/risikomaal.html#bullet-vs.-barbell",
-    "href": "slides/Risikomål/risikomaal.html#bullet-vs.-barbell",
-    "title": "Risikomål for obligationer",
-    "section": "Bullet vs. Barbell",
-    "text": "Bullet vs. Barbell"
-  },
-  {
-    "objectID": "slides/Risikomål/risikomaal.html#immunisering",
-    "href": "slides/Risikomål/risikomaal.html#immunisering",
-    "title": "Risikomål for obligationer",
-    "section": "Immunisering",
-    "text": "Immunisering"
-  },
-  {
-    "objectID": "slides/Risikomål/risikomaal.html#immunisering-tabel-eksempel",
-    "href": "slides/Risikomål/risikomaal.html#immunisering-tabel-eksempel",
-    "title": "Risikomål for obligationer",
-    "section": "Immunisering (tabel-eksempel)",
-    "text": "Immunisering (tabel-eksempel)"
-  },
-  {
-    "objectID": "slides/Risikomål/risikomaal.html#kurver-konventioner",
-    "href": "slides/Risikomål/risikomaal.html#kurver-konventioner",
-    "title": "Risikomål for obligationer",
-    "section": "Kurver & konventioner",
-    "text": "Kurver & konventioner"
-  },
-  {
-    "objectID": "slides/Risikomål/risikomaal.html#formler-samlet",
-    "href": "slides/Risikomål/risikomaal.html#formler-samlet",
-    "title": "Risikomål for obligationer",
-    "section": "Formler (samlet)",
-    "text": "Formler (samlet)"
-  },
-  {
-    "objectID": "slides/Risikomål/risikomaal.html#kurvescenarier-grafik",
-    "href": "slides/Risikomål/risikomaal.html#kurvescenarier-grafik",
-    "title": "Risikomål for obligationer",
-    "section": "Kurvescenarier (grafik)",
-    "text": "Kurvescenarier (grafik)"
-  },
-  {
-    "objectID": "slides/Risikomål/risikomaal.html#faldgruber",
-    "href": "slides/Risikomål/risikomaal.html#faldgruber",
-    "title": "Risikomål for obligationer",
-    "section": "Faldgruber",
-    "text": "Faldgruber"
-  },
-  {
-    "objectID": "slides/Risikomål/risikomaal.html#tabel-rapporteringsformat-for-risikomål",
-    "href": "slides/Risikomål/risikomaal.html#tabel-rapporteringsformat-for-risikomål",
-    "title": "Risikomål for obligationer",
-    "section": "Tabel: Rapporteringsformat for risikomål",
-    "text": "Tabel: Rapporteringsformat for risikomål"
-  },
-  {
-    "objectID": "slides/Risikomål/risikomaal.html#tabel-krd-profil-eksempelopsætning",
-    "href": "slides/Risikomål/risikomaal.html#tabel-krd-profil-eksempelopsætning",
-    "title": "Risikomål for obligationer",
-    "section": "Tabel: KRD-profil (eksempelopsætning)",
-    "text": "Tabel: KRD-profil (eksempelopsætning)"
-  },
-  {
-    "objectID": "slides/Risikomål/risikomaal.html#tabel-scenarie-pl-via-durconv",
-    "href": "slides/Risikomål/risikomaal.html#tabel-scenarie-pl-via-durconv",
-    "title": "Risikomål for obligationer",
-    "section": "Tabel: Scenarie-P/L via Dur+Conv",
-    "text": "Tabel: Scenarie-P/L via Dur+Conv"
-  },
-  {
-    "objectID": "slides/Risikomål/risikomaal.html#formeloversigt-samlet",
-    "href": "slides/Risikomål/risikomaal.html#formeloversigt-samlet",
-    "title": "Risikomål for obligationer",
-    "section": "Formeloversigt (samlet)",
-    "text": "Formeloversigt (samlet)"
-  },
-  {
-    "objectID": "slides/Risikomål/risikomaal.html#varighed-og-reinvesteringsrisiko-1",
-    "href": "slides/Risikomål/risikomaal.html#varighed-og-reinvesteringsrisiko-1",
-    "title": "Risikomål for obligationer",
-    "section": "Varighed og reinvesteringsrisiko",
-    "text": "Varighed og reinvesteringsrisiko"
-  },
-  {
-    "objectID": "slides/Risikomål/risikomaal.html#varighed-og-risikomål",
-    "href": "slides/Risikomål/risikomaal.html#varighed-og-risikomål",
-    "title": "Risikomål for obligationer",
-    "section": "Varighed og risikomål",
-    "text": "Varighed og risikomål",
-    "crumbs": [
-      "Lectures",
-      "Risikomål for obligationer"
-    ]
-  },
-  {
-    "objectID": "slides/Risikomål/risikomaal.html#varighed-og-risikomål-1",
-    "href": "slides/Risikomål/risikomaal.html#varighed-og-risikomål-1",
-    "title": "Risikomål for obligationer",
-    "section": "Varighed og risikomål",
-    "text": "Varighed og risikomål"
-  },
-  {
-    "objectID": "slides/Risikomål/risikomaal.html#risikomål-og-rentestrukturen",
-    "href": "slides/Risikomål/risikomaal.html#risikomål-og-rentestrukturen",
-    "title": "Risikomål for obligationer",
-    "section": "Risikomål og rentestrukturen",
-    "text": "Risikomål og rentestrukturen",
-    "crumbs": [
-      "Lectures",
-      "Risikomål for obligationer"
-    ]
-  },
-  {
-    "objectID": "slides/Risikomål/risikomaal.html#risikomål-og-nøglerentevarighed",
-    "href": "slides/Risikomål/risikomaal.html#risikomål-og-nøglerentevarighed",
-    "title": "Risikomål for obligationer",
-    "section": "Risikomål og nøglerentevarighed",
-    "text": "Risikomål og nøglerentevarighed",
-    "crumbs": [
-      "Lectures",
-      "Risikomål for obligationer"
-    ]
-  },
-  {
-    "objectID": "slides/Risikomål/risikomaal.html#øvelser",
-    "href": "slides/Risikomål/risikomaal.html#øvelser",
-    "title": "Risikomål for obligationer",
-    "section": "Øvelser",
-    "text": "Øvelser",
-    "crumbs": [
-      "Lectures",
-      "Risikomål for obligationer"
-    ]
-  },
-  {
-    "objectID": "slides/Risikomål/risikomaal.html#rentersiko-på-porteføljer",
-    "href": "slides/Risikomål/risikomaal.html#rentersiko-på-porteføljer",
-    "title": "Risikomål for obligationer",
-    "section": "Rentersiko på porteføljer",
-    "text": "Rentersiko på porteføljer",
-    "crumbs": [
-      "Lectures",
-      "Risikomål for obligationer"
-    ]
-  },
-  {
-    "objectID": "slides/Realkredit/realkredit.html#introduktion",
-    "href": "slides/Realkredit/realkredit.html#introduktion",
-    "title": "Det danske realkreditmarked",
-    "section": "Introduktion",
-    "text": "Introduktion",
-    "crumbs": [
-      "Lectures",
-      "Det danske realkreditmarked"
-    ]
-  },
-  {
-    "objectID": "slides/Realkredit/realkredit.html#baggrund-københavns-brand-1795",
-    "href": "slides/Realkredit/realkredit.html#baggrund-københavns-brand-1795",
-    "title": "Det danske realkreditmarked",
-    "section": "Baggrund: Københavns brand 1795",
-    "text": "Baggrund: Københavns brand 1795",
-    "crumbs": [
-      "Lectures",
-      "Det danske realkreditmarked"
-    ]
-  },
-  {
-    "objectID": "slides/Realkredit/realkredit.html#realkreditsystemet",
-    "href": "slides/Realkredit/realkredit.html#realkreditsystemet",
-    "title": "Det danske realkreditmarked",
-    "section": "Realkreditsystemet",
-    "text": "Realkreditsystemet",
-    "crumbs": [
-      "Lectures",
-      "Det danske realkreditmarked"
-    ]
-  },
-  {
-    "objectID": "slides/Realkredit/realkredit.html#lovgivning",
-    "href": "slides/Realkredit/realkredit.html#lovgivning",
-    "title": "Det danske realkreditmarked",
-    "section": "Lovgivning",
-    "text": "Lovgivning",
-    "crumbs": [
-      "Lectures",
-      "Det danske realkreditmarked"
-    ]
-  },
-  {
-    "objectID": "slides/Realkredit/realkredit.html#ødelæggelser",
-    "href": "slides/Realkredit/realkredit.html#ødelæggelser",
-    "title": "Det danske realkreditmarked",
-    "section": "Ødelæggelser",
-    "text": "Ødelæggelser\n\nIlden varede i hele 2 dage\n\nI alt blev 941 huse ødelagt\n\nSkabte et akut behov for kapital til at genopbygge ejendommene\n\nSpørgsmålet var: Hvem skulle låne ud?",
-    "crumbs": [
-      "Lectures",
-      "Det danske realkreditmarked"
-    ]
-  },
-  {
-    "objectID": "slides/Realkredit/realkredit.html#løsningen-kreditkassen",
-    "href": "slides/Realkredit/realkredit.html#løsningen-kreditkassen",
-    "title": "Det danske realkreditmarked",
-    "section": "Løsningen: Kreditkassen",
-    "text": "Løsningen: Kreditkassen\n\nMange långivere slog sig sammen under navnet Husejernes Kreditkasse\n\nFormålet: stille kapital til rådighed for genopbygning af boliger\n\nSåledes kunne folk få et tag over hovedet igen",
-    "crumbs": [
-      "Lectures",
-      "Det danske realkreditmarked"
-    ]
-  },
-  {
-    "objectID": "slides/Realkredit/realkredit.html#særlige-vilkår",
-    "href": "slides/Realkredit/realkredit.html#særlige-vilkår",
-    "title": "Det danske realkreditmarked",
-    "section": "Særlige vilkår",
-    "text": "Særlige vilkår\n\nDatidens lov forbød renter over 4%\n\nEn lav rente kunne kun retfærdiggøres gennem lavere kreditrisiko\n\nDerfor:\n\nLåntagere blev medlemmer af foreningen og hæftede solidarisk\n\nSikkerhed/pant i ejendomme var påkrævet",
-    "crumbs": [
-      "Lectures",
-      "Det danske realkreditmarked"
-    ]
-  },
-  {
-    "objectID": "slides/Realkredit/realkredit.html#perspektiv",
-    "href": "slides/Realkredit/realkredit.html#perspektiv",
-    "title": "Det danske realkreditmarked",
-    "section": "Perspektiv",
-    "text": "Perspektiv\n\nModellen gav stor sikkerhed for investorer\n\nIngen konkurs på en obligationsserie i 200 år!\n\nStartskuddet til det danske realkreditsystem",
-    "crumbs": [
-      "Lectures",
-      "Det danske realkreditmarked"
-    ]
-  },
-  {
-    "objectID": "slides/Realkredit/realkredit.html#markedet",
-    "href": "slides/Realkredit/realkredit.html#markedet",
-    "title": "Det danske realkreditmarked",
-    "section": "Markedet",
-    "text": "Markedet",
-    "crumbs": [
-      "Lectures",
-      "Det danske realkreditmarked"
-    ]
-  },
-  {
-    "objectID": "slides/Realkredit/realkredit.html#de-forskellige-realkreditobligationer",
-    "href": "slides/Realkredit/realkredit.html#de-forskellige-realkreditobligationer",
-    "title": "Det danske realkreditmarked",
-    "section": "De forskellige realkreditobligationer",
-    "text": "De forskellige realkreditobligationer",
-    "crumbs": [
-      "Lectures",
-      "Det danske realkreditmarked"
-    ]
-  },
-  {
-    "objectID": "slides/Realkredit/realkredit.html#afrunding",
-    "href": "slides/Realkredit/realkredit.html#afrunding",
-    "title": "Det danske realkreditmarked",
-    "section": "Afrunding",
-    "text": "Afrunding",
-    "crumbs": [
-      "Lectures",
-      "Det danske realkreditmarked"
-    ]
-  },
-  {
-    "objectID": "slides/Konverteringsmodel/konverteringsmodel.html#modellering-af-konverteringsadfærd",
-    "href": "slides/Konverteringsmodel/konverteringsmodel.html#modellering-af-konverteringsadfærd",
-    "title": "Modellering af konverteringsadfærd",
-    "section": "Modellering af Konverteringsadfærd",
-    "text": "Modellering af Konverteringsadfærd",
-    "crumbs": [
-      "Lectures",
-      "Modellering af konverteringsadfærd"
-    ]
-  },
-  {
-    "objectID": "slides/Konverteringsmodel/konverteringsmodel.html#konverteringsadfærd",
-    "href": "slides/Konverteringsmodel/konverteringsmodel.html#konverteringsadfærd",
-    "title": "Modellering af konverteringsadfærd",
-    "section": "Konverteringsadfærd",
-    "text": "Konverteringsadfærd",
-    "crumbs": [
-      "Lectures",
-      "Modellering af konverteringsadfærd"
-    ]
-  },
-  {
-    "objectID": "slides/Konverteringsmodel/konverteringsmodel.html#konverteringsraten-cpr",
-    "href": "slides/Konverteringsmodel/konverteringsmodel.html#konverteringsraten-cpr",
-    "title": "Modellering af konverteringsadfærd",
-    "section": "Konverteringsraten (CPR)",
-    "text": "Konverteringsraten (CPR)",
-    "crumbs": [
-      "Lectures",
-      "Modellering af konverteringsadfærd"
-    ]
-  },
-  {
-    "objectID": "slides/Konverteringsmodel/konverteringsmodel.html#konverteringsdata",
-    "href": "slides/Konverteringsmodel/konverteringsmodel.html#konverteringsdata",
-    "title": "Modellering af konverteringsadfærd",
-    "section": "Konverteringsdata",
-    "text": "Konverteringsdata",
-    "crumbs": [
-      "Lectures",
-      "Modellering af konverteringsadfærd"
-    ]
-  },
-  {
-    "objectID": "slides/Konverteringsmodel/konverteringsmodel.html#konverteringsmodellen",
-    "href": "slides/Konverteringsmodel/konverteringsmodel.html#konverteringsmodellen",
-    "title": "Modellering af konverteringsadfærd",
-    "section": "Konverteringsmodellen",
-    "text": "Konverteringsmodellen",
-    "crumbs": [
-      "Lectures",
-      "Modellering af konverteringsadfærd"
-    ]
-  },
-  {
-    "objectID": "slides/Konverteringsmodel/konverteringsmodel.html#konverteringsfunktioner",
-    "href": "slides/Konverteringsmodel/konverteringsmodel.html#konverteringsfunktioner",
-    "title": "Modellering af konverteringsadfærd",
-    "section": "Konverteringsfunktioner",
-    "text": "Konverteringsfunktioner",
-    "crumbs": [
-      "Lectures",
-      "Modellering af konverteringsadfærd"
-    ]
-  },
-  {
-    "objectID": "slides/Konverteringsmodel/konverteringsmodel.html#opsummering",
-    "href": "slides/Konverteringsmodel/konverteringsmodel.html#opsummering",
-    "title": "Modellering af konverteringsadfærd",
-    "section": "Opsummering",
-    "text": "Opsummering",
-    "crumbs": [
-      "Lectures",
-      "Modellering af konverteringsadfærd"
-    ]
-  },
-  {
-    "objectID": "slides/Konverteringsmodel/konverteringsmodel.html#øvelser",
-    "href": "slides/Konverteringsmodel/konverteringsmodel.html#øvelser",
-    "title": "Modellering af konverteringsadfærd",
-    "section": "Øvelser",
-    "text": "Øvelser",
-    "crumbs": [
-      "Lectures",
-      "Modellering af konverteringsadfærd"
-    ]
-  },
-  {
-    "objectID": "slides/PrisNoegletal/pricingkeyfigures.html#introduktion",
-    "href": "slides/PrisNoegletal/pricingkeyfigures.html#introduktion",
-    "title": "Prisfastsættelse og nøgletal på konverterbare obligationer",
-    "section": "Introduktion",
-    "text": "Introduktion"
-  },
-  {
-    "objectID": "slides/PrisNoegletal/pricingkeyfigures.html#konverteringsrisiko",
-    "href": "slides/PrisNoegletal/pricingkeyfigures.html#konverteringsrisiko",
-    "title": "Prisfastsættelse og nøgletal på konverterbare obligationer",
-    "section": "Konverteringsrisiko",
-    "text": "Konverteringsrisiko"
-  },
-  {
-    "objectID": "slides/PrisNoegletal/pricingkeyfigures.html#markedsbestemmelse-af-konverteringspræmien",
-    "href": "slides/PrisNoegletal/pricingkeyfigures.html#markedsbestemmelse-af-konverteringspræmien",
-    "title": "Prisfastsættelse og nøgletal på konverterbare obligationer",
-    "section": "Markedsbestemmelse af konverteringspræmien",
-    "text": "Markedsbestemmelse af konverteringspræmien"
-  },
-  {
-    "objectID": "slides/PrisNoegletal/pricingkeyfigures.html#prisfastsættelse-af-konverterbare-obligationer",
-    "href": "slides/PrisNoegletal/pricingkeyfigures.html#prisfastsættelse-af-konverterbare-obligationer",
-    "title": "Prisfastsættelse og nøgletal på konverterbare obligationer",
-    "section": "Prisfastsættelse af konverterbare obligationer",
-    "text": "Prisfastsættelse af konverterbare obligationer"
-  },
-  {
-    "objectID": "slides/PrisNoegletal/pricingkeyfigures.html#varighed-og-konveksitet-for-konverterbare",
-    "href": "slides/PrisNoegletal/pricingkeyfigures.html#varighed-og-konveksitet-for-konverterbare",
-    "title": "Prisfastsættelse og nøgletal på konverterbare obligationer",
-    "section": "Varighed og konveksitet for konverterbare",
-    "text": "Varighed og konveksitet for konverterbare"
-  },
-  {
-    "objectID": "slides/PrisNoegletal/pricingkeyfigures.html#cpr-og-pris",
-    "href": "slides/PrisNoegletal/pricingkeyfigures.html#cpr-og-pris",
-    "title": "Prisfastsættelse og nøgletal på konverterbare obligationer",
-    "section": "CPR og pris",
-    "text": "CPR og pris"
-  },
-  {
-    "objectID": "slides/PrisNoegletal/pricingkeyfigures.html#to-kurver-swap-prisning-og-refinansiering-swap-lys",
-    "href": "slides/PrisNoegletal/pricingkeyfigures.html#to-kurver-swap-prisning-og-refinansiering-swap-lys",
-    "title": "Prisfastsættelse og nøgletal på konverterbare obligationer",
-    "section": "To kurver: swap (prisning) og refinansiering (swap + LYS)",
-    "text": "To kurver: swap (prisning) og refinansiering (swap + LYS)"
-  },
-  {
-    "objectID": "slides/PrisNoegletal/pricingkeyfigures.html#oas-option-adjusted-spread",
-    "href": "slides/PrisNoegletal/pricingkeyfigures.html#oas-option-adjusted-spread",
-    "title": "Prisfastsættelse og nøgletal på konverterbare obligationer",
-    "section": "OAS (Option-Adjusted Spread)",
-    "text": "OAS (Option-Adjusted Spread)"
-  },
-  {
-    "objectID": "slides/PrisNoegletal/pricingkeyfigures.html#øvelser-opgaver",
-    "href": "slides/PrisNoegletal/pricingkeyfigures.html#øvelser-opgaver",
-    "title": "Prisfastsættelse og nøgletal på konverterbare obligationer",
-    "section": "Øvelser / Opgaver",
-    "text": "Øvelser / Opgaver"
-  },
-  {
-    "objectID": "slides/PrisNoegletal/pricingkeyfigures.html#opsummering",
-    "href": "slides/PrisNoegletal/pricingkeyfigures.html#opsummering",
-    "title": "Prisfastsættelse og nøgletal på konverterbare obligationer",
-    "section": "Opsummering",
-    "text": "Opsummering"
-  },
-  {
-    "objectID": "slides/FinanskrisenRegulering/financialcrisis.html#introduktion",
-    "href": "slides/FinanskrisenRegulering/financialcrisis.html#introduktion",
-    "title": "Finanskrisens udvikling og eftervirkninger",
-    "section": "Introduktion",
-    "text": "Introduktion",
-    "crumbs": [
-      "Lectures",
-      "Finanskrisens udvikling og eftervirkninger"
-    ]
-  },
-  {
-    "objectID": "slides/FinanskrisenRegulering/financialcrisis.html#perioden-op-til-finanskrisen",
-    "href": "slides/FinanskrisenRegulering/financialcrisis.html#perioden-op-til-finanskrisen",
-    "title": "Finanskrisens udvikling og eftervirkninger",
-    "section": "Perioden op til finanskrisen",
-    "text": "Perioden op til finanskrisen",
-    "crumbs": [
-      "Lectures",
-      "Finanskrisens udvikling og eftervirkninger"
-    ]
-  },
-  {
-    "objectID": "slides/FinanskrisenRegulering/financialcrisis.html#udviklingen-i-den-finansielle-sektor",
-    "href": "slides/FinanskrisenRegulering/financialcrisis.html#udviklingen-i-den-finansielle-sektor",
-    "title": "Finanskrisens udvikling og eftervirkninger",
-    "section": "Udviklingen i den finansielle sektor",
-    "text": "Udviklingen i den finansielle sektor",
-    "crumbs": [
-      "Lectures",
-      "Finanskrisens udvikling og eftervirkninger"
-    ]
-  },
-  {
-    "objectID": "slides/FinanskrisenRegulering/financialcrisis.html#securitisering-tranching-og-shadow-banking",
-    "href": "slides/FinanskrisenRegulering/financialcrisis.html#securitisering-tranching-og-shadow-banking",
-    "title": "Finanskrisens udvikling og eftervirkninger",
-    "section": "Securitisering, tranching og shadow banking",
-    "text": "Securitisering, tranching og shadow banking",
-    "crumbs": [
-      "Lectures",
-      "Finanskrisens udvikling og eftervirkninger"
-    ]
-  },
-  {
-    "objectID": "slides/FinanskrisenRegulering/financialcrisis.html#hvordan-låntagning-øger-risiko",
-    "href": "slides/FinanskrisenRegulering/financialcrisis.html#hvordan-låntagning-øger-risiko",
-    "title": "Finanskrisens udvikling og eftervirkninger",
-    "section": "Hvordan låntagning øger risiko",
-    "text": "Hvordan låntagning øger risiko",
-    "crumbs": [
-      "Lectures",
-      "Finanskrisens udvikling og eftervirkninger"
-    ]
-  },
-  {
-    "objectID": "slides/FinanskrisenRegulering/financialcrisis.html#gearing-og-kapitalandel-lehman-brothers",
-    "href": "slides/FinanskrisenRegulering/financialcrisis.html#gearing-og-kapitalandel-lehman-brothers",
-    "title": "Finanskrisens udvikling og eftervirkninger",
-    "section": "Gearing og kapitalandel: Lehman Brothers",
-    "text": "Gearing og kapitalandel: Lehman Brothers",
-    "crumbs": [
-      "Lectures",
-      "Finanskrisens udvikling og eftervirkninger"
-    ]
-  },
-  {
-    "objectID": "slides/FinanskrisenRegulering/financialcrisis.html#krisens-udbrud",
-    "href": "slides/FinanskrisenRegulering/financialcrisis.html#krisens-udbrud",
-    "title": "Finanskrisens udvikling og eftervirkninger",
-    "section": "Krisens udbrud",
-    "text": "Krisens udbrud",
-    "crumbs": [
-      "Lectures",
-      "Finanskrisens udvikling og eftervirkninger"
-    ]
-  },
-  {
-    "objectID": "slides/FinanskrisenRegulering/financialcrisis.html#eftervirkninger-politik-og-økonomi",
-    "href": "slides/FinanskrisenRegulering/financialcrisis.html#eftervirkninger-politik-og-økonomi",
-    "title": "Finanskrisens udvikling og eftervirkninger",
-    "section": "Eftervirkninger: politik og økonomi",
-    "text": "Eftervirkninger: politik og økonomi",
-    "crumbs": [
-      "Lectures",
-      "Finanskrisens udvikling og eftervirkninger"
-    ]
-  },
-  {
-    "objectID": "slides/FinanskrisenRegulering/financialcrisis.html#øget-regulering-basel-iiiiv",
-    "href": "slides/FinanskrisenRegulering/financialcrisis.html#øget-regulering-basel-iiiiv",
-    "title": "Finanskrisens udvikling og eftervirkninger",
-    "section": "Øget regulering: Basel III/IV",
-    "text": "Øget regulering: Basel III/IV",
-    "crumbs": [
-      "Lectures",
-      "Finanskrisens udvikling og eftervirkninger"
-    ]
-  },
-  {
-    "objectID": "slides/FinanskrisenRegulering/financialcrisis.html#kan-det-ske-igen-svb-case-2023",
-    "href": "slides/FinanskrisenRegulering/financialcrisis.html#kan-det-ske-igen-svb-case-2023",
-    "title": "Finanskrisens udvikling og eftervirkninger",
-    "section": "Kan “det” ske igen? (SVB-case 2023)",
-    "text": "Kan “det” ske igen? (SVB-case 2023)",
-    "crumbs": [
-      "Lectures",
-      "Finanskrisens udvikling og eftervirkninger"
-    ]
-  },
-  {
-    "objectID": "slides/FinanskrisenRegulering/financialcrisis.html#nim-balance-og-struktur",
-    "href": "slides/FinanskrisenRegulering/financialcrisis.html#nim-balance-og-struktur",
-    "title": "Finanskrisens udvikling og eftervirkninger",
-    "section": "NIM, balance og struktur",
-    "text": "NIM, balance og struktur"
-  },
-  {
-    "objectID": "slides/FinanskrisenRegulering/financialcrisis.html#egenkapitalens-varighed-duration",
-    "href": "slides/FinanskrisenRegulering/financialcrisis.html#egenkapitalens-varighed-duration",
-    "title": "Finanskrisens udvikling og eftervirkninger",
-    "section": "Egenkapitalens varighed (duration)",
-    "text": "Egenkapitalens varighed (duration)"
-  },
-  {
-    "objectID": "slides/FinanskrisenRegulering/financialcrisis.html#afrunding",
-    "href": "slides/FinanskrisenRegulering/financialcrisis.html#afrunding",
-    "title": "Finanskrisens udvikling og eftervirkninger",
-    "section": "Afrunding",
-    "text": "Afrunding",
-    "crumbs": [
-      "Lectures",
-      "Finanskrisens udvikling og eftervirkninger"
-    ]
-  },
-  {
-    "objectID": "slides/FinanskrisenRegulering/financialcrisis.html#rentespænd-og-nettorentemargin",
-    "href": "slides/FinanskrisenRegulering/financialcrisis.html#rentespænd-og-nettorentemargin",
-    "title": "Finanskrisens udvikling og eftervirkninger",
-    "section": "Rentespænd og nettorentemargin",
-    "text": "Rentespænd og nettorentemargin",
-    "crumbs": [
-      "Lectures",
-      "Finanskrisens udvikling og eftervirkninger"
-    ]
-  },
-  {
-    "objectID": "slides/FinanskrisenRegulering/financialcrisis.html#egenkapitalens-varighed",
-    "href": "slides/FinanskrisenRegulering/financialcrisis.html#egenkapitalens-varighed",
-    "title": "Finanskrisens udvikling og eftervirkninger",
-    "section": "Egenkapitalens varighed",
-    "text": "Egenkapitalens varighed",
-    "crumbs": [
-      "Lectures",
-      "Finanskrisens udvikling og eftervirkninger"
     ]
   },
   {
@@ -1487,84 +962,234 @@
     ]
   },
   {
-    "objectID": "slides/Obligationsmarkedet/obligationsmarked.html#øvelser",
-    "href": "slides/Obligationsmarkedet/obligationsmarked.html#øvelser",
-    "title": "Obligationsmarkedet",
+    "objectID": "slides/Realkredit/realkredit.html#introduktion",
+    "href": "slides/Realkredit/realkredit.html#introduktion",
+    "title": "Det danske realkreditmarked",
+    "section": "Introduktion",
+    "text": "Introduktion",
+    "crumbs": [
+      "Lectures",
+      "Det danske realkreditmarked"
+    ]
+  },
+  {
+    "objectID": "slides/Realkredit/realkredit.html#baggrund-københavns-brand-1795",
+    "href": "slides/Realkredit/realkredit.html#baggrund-københavns-brand-1795",
+    "title": "Det danske realkreditmarked",
+    "section": "Baggrund: Københavns brand 1795",
+    "text": "Baggrund: Københavns brand 1795",
+    "crumbs": [
+      "Lectures",
+      "Det danske realkreditmarked"
+    ]
+  },
+  {
+    "objectID": "slides/Realkredit/realkredit.html#ødelæggelser",
+    "href": "slides/Realkredit/realkredit.html#ødelæggelser",
+    "title": "Det danske realkreditmarked",
+    "section": "Ødelæggelser",
+    "text": "Ødelæggelser\n\nIlden varede i hele 2 dage\n\nI alt blev 941 huse ødelagt\n\nSkabte et akut behov for kapital til at genopbygge ejendommene\n\nSpørgsmålet var: Hvem skulle låne ud?",
+    "crumbs": [
+      "Lectures",
+      "Det danske realkreditmarked"
+    ]
+  },
+  {
+    "objectID": "slides/Realkredit/realkredit.html#løsningen-kreditkassen",
+    "href": "slides/Realkredit/realkredit.html#løsningen-kreditkassen",
+    "title": "Det danske realkreditmarked",
+    "section": "Løsningen: Kreditkassen",
+    "text": "Løsningen: Kreditkassen\n\nMange långivere slog sig sammen under navnet Husejernes Kreditkasse\n\nFormålet: stille kapital til rådighed for genopbygning af boliger\n\nSåledes kunne folk få et tag over hovedet igen",
+    "crumbs": [
+      "Lectures",
+      "Det danske realkreditmarked"
+    ]
+  },
+  {
+    "objectID": "slides/Realkredit/realkredit.html#særlige-vilkår",
+    "href": "slides/Realkredit/realkredit.html#særlige-vilkår",
+    "title": "Det danske realkreditmarked",
+    "section": "Særlige vilkår",
+    "text": "Særlige vilkår\n\nDatidens lov forbød renter over 4%\n\nEn lav rente kunne kun retfærdiggøres gennem lavere kreditrisiko\n\nDerfor:\n\nLåntagere blev medlemmer af foreningen og hæftede solidarisk\n\nSikkerhed/pant i ejendomme var påkrævet",
+    "crumbs": [
+      "Lectures",
+      "Det danske realkreditmarked"
+    ]
+  },
+  {
+    "objectID": "slides/Realkredit/realkredit.html#perspektiv",
+    "href": "slides/Realkredit/realkredit.html#perspektiv",
+    "title": "Det danske realkreditmarked",
+    "section": "Perspektiv",
+    "text": "Perspektiv\n\nModellen gav stor sikkerhed for investorer\n\nIngen konkurs på en obligationsserie i 200 år!\n\nStartskuddet til det danske realkreditsystem",
+    "crumbs": [
+      "Lectures",
+      "Det danske realkreditmarked"
+    ]
+  },
+  {
+    "objectID": "slides/Realkredit/realkredit.html#realkreditsystemet",
+    "href": "slides/Realkredit/realkredit.html#realkreditsystemet",
+    "title": "Det danske realkreditmarked",
+    "section": "Realkreditsystemet",
+    "text": "Realkreditsystemet",
+    "crumbs": [
+      "Lectures",
+      "Det danske realkreditmarked"
+    ]
+  },
+  {
+    "objectID": "slides/Realkredit/realkredit.html#lovgivning",
+    "href": "slides/Realkredit/realkredit.html#lovgivning",
+    "title": "Det danske realkreditmarked",
+    "section": "Lovgivning",
+    "text": "Lovgivning",
+    "crumbs": [
+      "Lectures",
+      "Det danske realkreditmarked"
+    ]
+  },
+  {
+    "objectID": "slides/Realkredit/realkredit.html#markedet",
+    "href": "slides/Realkredit/realkredit.html#markedet",
+    "title": "Det danske realkreditmarked",
+    "section": "Markedet",
+    "text": "Markedet",
+    "crumbs": [
+      "Lectures",
+      "Det danske realkreditmarked"
+    ]
+  },
+  {
+    "objectID": "slides/Realkredit/realkredit.html#de-forskellige-realkreditobligationer",
+    "href": "slides/Realkredit/realkredit.html#de-forskellige-realkreditobligationer",
+    "title": "Det danske realkreditmarked",
+    "section": "De forskellige realkreditobligationer",
+    "text": "De forskellige realkreditobligationer",
+    "crumbs": [
+      "Lectures",
+      "Det danske realkreditmarked"
+    ]
+  },
+  {
+    "objectID": "slides/Realkredit/realkredit.html#afrunding",
+    "href": "slides/Realkredit/realkredit.html#afrunding",
+    "title": "Det danske realkreditmarked",
+    "section": "Afrunding",
+    "text": "Afrunding",
+    "crumbs": [
+      "Lectures",
+      "Det danske realkreditmarked"
+    ]
+  },
+  {
+    "objectID": "slides/Rentestrukturen/Rentestrukturen.html#introduktion",
+    "href": "slides/Rentestrukturen/Rentestrukturen.html#introduktion",
+    "title": "Rentestrukturen",
+    "section": "Introduktion",
+    "text": "Introduktion",
+    "crumbs": [
+      "Lectures",
+      "Rentestrukturen"
+    ]
+  },
+  {
+    "objectID": "slides/Rentestrukturen/Rentestrukturen.html#teorien-bag-rentestrukturen",
+    "href": "slides/Rentestrukturen/Rentestrukturen.html#teorien-bag-rentestrukturen",
+    "title": "Rentestrukturen",
+    "section": "Teorien bag rentestrukturen",
+    "text": "Teorien bag rentestrukturen",
+    "crumbs": [
+      "Lectures",
+      "Rentestrukturen"
+    ]
+  },
+  {
+    "objectID": "slides/Rentestrukturen/Rentestrukturen.html#den-effektive-rente-ytm-et-problematisk-afkastmål",
+    "href": "slides/Rentestrukturen/Rentestrukturen.html#den-effektive-rente-ytm-et-problematisk-afkastmål",
+    "title": "Rentestrukturen",
+    "section": "Den effektive rente (YTM) – et problematisk afkastmål",
+    "text": "Den effektive rente (YTM) – et problematisk afkastmål",
+    "crumbs": [
+      "Lectures",
+      "Rentestrukturen"
+    ]
+  },
+  {
+    "objectID": "slides/Rentestrukturen/Rentestrukturen.html#rentekurven-og-obligationsarbitrage",
+    "href": "slides/Rentestrukturen/Rentestrukturen.html#rentekurven-og-obligationsarbitrage",
+    "title": "Rentestrukturen",
+    "section": "Rentekurven og obligationsarbitrage",
+    "text": "Rentekurven og obligationsarbitrage",
+    "crumbs": [
+      "Lectures",
+      "Rentestrukturen"
+    ]
+  },
+  {
+    "objectID": "slides/Rentestrukturen/Rentestrukturen.html#forklaringer-på-rentestrukturens-form",
+    "href": "slides/Rentestrukturen/Rentestrukturen.html#forklaringer-på-rentestrukturens-form",
+    "title": "Rentestrukturen",
+    "section": "Forklaringer på rentestrukturens form",
+    "text": "Forklaringer på rentestrukturens form",
+    "crumbs": [
+      "Lectures",
+      "Rentestrukturen"
+    ]
+  },
+  {
+    "objectID": "slides/Rentestrukturen/Rentestrukturen.html#estimation-af-rentestrukturen",
+    "href": "slides/Rentestrukturen/Rentestrukturen.html#estimation-af-rentestrukturen",
+    "title": "Rentestrukturen",
+    "section": "Estimation af rentestrukturen",
+    "text": "Estimation af rentestrukturen",
+    "crumbs": [
+      "Lectures",
+      "Rentestrukturen"
+    ]
+  },
+  {
+    "objectID": "slides/Rentestrukturen/Rentestrukturen.html#prisfastsættelse-ud-fra-rentestrukturen",
+    "href": "slides/Rentestrukturen/Rentestrukturen.html#prisfastsættelse-ud-fra-rentestrukturen",
+    "title": "Rentestrukturen",
+    "section": "Prisfastsættelse ud fra rentestrukturen",
+    "text": "Prisfastsættelse ud fra rentestrukturen",
+    "crumbs": [
+      "Lectures",
+      "Rentestrukturen"
+    ]
+  },
+  {
+    "objectID": "slides/Rentestrukturen/Rentestrukturen.html#tolkning-og-risici",
+    "href": "slides/Rentestrukturen/Rentestrukturen.html#tolkning-og-risici",
+    "title": "Rentestrukturen",
+    "section": "Tolkning og risici",
+    "text": "Tolkning og risici",
+    "crumbs": [
+      "Lectures",
+      "Rentestrukturen"
+    ]
+  },
+  {
+    "objectID": "slides/Rentestrukturen/Rentestrukturen.html#øvelser",
+    "href": "slides/Rentestrukturen/Rentestrukturen.html#øvelser",
+    "title": "Rentestrukturen",
     "section": "Øvelser",
     "text": "Øvelser",
     "crumbs": [
       "Lectures",
-      "Obligationsmarkedet"
+      "Rentestrukturen"
     ]
   },
   {
-    "objectID": "index.html#in-slide-form",
-    "href": "index.html#in-slide-form",
-    "title": "Finansiering 2025 — Lecture Notes",
-    "section": "",
-    "text": "View slides in full screen",
+    "objectID": "slides/Rentestrukturen/Rentestrukturen.html#opsummering",
+    "href": "slides/Rentestrukturen/Rentestrukturen.html#opsummering",
+    "title": "Rentestrukturen",
+    "section": "Opsummering",
+    "text": "Opsummering",
     "crumbs": [
-      "Finansiering 2025"
-    ]
-  },
-  {
-    "objectID": "index.html#kursusinformation",
-    "href": "index.html#kursusinformation",
-    "title": "Finansiering 2025",
-    "section": "Kursusinformation",
-    "text": "Kursusinformation\nForelæser: Niklas Lehmann Jensen\nEmail: nlj@econ.au.dk (niklas@scanrate.dk)\nKontor: Intet kontor på AU\nKontakt tidspunkter: I skriver bare en mail\nKursus hjemmeside: Brightspace og denne side\nForelæsninger: Tirsdag (8:15–10:00) og torsdag (14:15–16:00) i M1\nNiveau: Bachelor\nForudsætninger: Ingen formelle krav, men basal forståelse for matematik og økonomi er en fordel",
-    "crumbs": [
-      "Finansiering 2025"
-    ]
-  },
-  {
-    "objectID": "index.html#i-slide-format",
-    "href": "index.html#i-slide-format",
-    "title": "Finansiering 2025",
-    "section": "",
-    "text": "Se slides i full screen",
-    "crumbs": [
-      "Finansiering 2025"
-    ]
-  },
-  {
-    "objectID": "index.html#kursusinformation-1",
-    "href": "index.html#kursusinformation-1",
-    "title": "Finansiering 2025",
-    "section": "Kursusinformation",
-    "text": "Kursusinformation\nForelæser: Niklas Lehmann Jensen\nEmail: nlj@econ.au.dk (niklas@scanrate.dk)\nKontor: Intet kontor på AU\nKontakt tidspunkter: I skriver bare en mail\nKursus hjemmeside: Brightspace og denne side\nForelæsninger: Tirsdag (8:15–10:00) og torsdag (14:15–16:00) i M1\nNiveau: Bachelor\nForudsætninger: Ingen formelle krav, men basal forståelse for matematik og økonomi er en fordel",
-    "crumbs": [
-      "Finansiering 2025"
-    ]
-  },
-  {
-    "objectID": "index.html#kursusindhold",
-    "href": "index.html#kursusindhold",
-    "title": "Finansiering 2025",
-    "section": "Kursusindhold",
-    "text": "Kursusindhold\nKurset er struktureret som følger:\n\nRenter og rentedannelse\n\nReal- og nominelle renter\n\nInflation og Fisher-ligningen\n\nPengepolitik og institutionelle forhold i Danmark\n\nObligationer\n\nNulkupon- og kuponobligationer\n\nDirekte rente, effektiv rente og diskontering\n\nSammenhæng mellem kurs, rente og afkast\n\nRentestruktur og prisfastsættelse\n\nRentekurven og arbitrage\n\nEstimation af rentestrukturen\n\nBrug af spot- og forwardrenter\n\nRenterisiko\n\nVarighed og konveksitet\n\nImmunisering og risikomål\n\nPorteføljer af obligationer\n\nDansk realkredit\n\nRealkreditsystemets opbygning og regulering\n\nKonvertering og præpayment-modeller\n\nOption Adjusted Spread (OAS)\n\nPerformance og regulering\n\nObligationsafkast og performanceattribution\n\nFinanskrisen 2008 og reguleringsbølgen (Basel III, CRR/CRD)\n\nCase: Silicon Valley Bank og renterisiko",
-    "crumbs": [
-      "Finansiering 2025"
-    ]
-  },
-  {
-    "objectID": "index.html#kursusmateriale",
-    "href": "index.html#kursusmateriale",
-    "title": "Finansiering 2025",
-    "section": "Kursusmateriale",
-    "text": "Kursusmateriale\nPensum består primært af:\n\nEgenudviklede lektionsnoter i finansiering\n\nEvt. supplerende artikler og cases om finanskrisen\n\nDerudover kan følgende lærebøger anbefales som opslagsværk:\n- Tanggaard: Finansielle instrumenter og deres markeder\n- Just Andresen: Finansiel risikostyring\n- Christensen: Obligationsinvestering: Teori og praksis anvendelse",
-    "crumbs": [
-      "Finansiering 2025"
-    ]
-  },
-  {
-    "objectID": "index.html#andet-vigtig-gøjl",
-    "href": "index.html#andet-vigtig-gøjl",
-    "title": "Finansiering 2025",
-    "section": "Andet vigtig gøjl",
-    "text": "Andet vigtig gøjl\nEksamen og karakter\nKarakteren gives på baggrund af en 4 timers skriftlig eksamen (uden internet). Dato d. 12/01/2026\nDeltagelse under forelæsninger og øvelsestimer\nDeltagelse anbefales stærkt, da undervisningen bygger på dialog og øvelser.\nAkademisk integritet\nUniversitetets regler om eksamenssnyd og plagiering gælder.\nSærlige behov\nStuderende med særlige behov bør kontakte universitetets kontor tidligt i semestret.",
-    "crumbs": [
-      "Finansiering 2025"
+      "Lectures",
+      "Rentestrukturen"
     ]
   }
 ]
