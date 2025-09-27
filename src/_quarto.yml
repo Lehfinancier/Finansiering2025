@@ -64,6 +64,7 @@ format:
       light: [themes/ws_light.scss, themes/block.scss]
       dark:  [themes/ws_dark.scss,  themes/block.scss]
     page-navigation: true
+    embed-resources: true            # <- VIGTIGT: indlejr CSS/JS/ikoner i HTML  
   revealjs:
     include-in-header: themes/mathjax.html
     logo: themes/favicon.ico                # global logo for slides
@@ -74,5 +75,6 @@ format:
     toc-depth: 2
     transition: convex
     transition-speed: fast
+    embed-resources: true            # <- også for slides, så tema/logo virker live  
 
 bibliography: eco.bib
