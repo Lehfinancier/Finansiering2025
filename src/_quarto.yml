@@ -1,9 +1,11 @@
 project:
   type: website
-  output-dir: ../docs   # byg op i /docs i repo-roden
+  output-dir: ../docs            # build into /docs at repo root
   resources:
+    - themes/                    # ensure custom themes get published
     - Lektionsnote/Lektionsnoter_2025.pdf
     - exercises/Del2_OS2.pdf
+
 html-math-method: mathjax
 
 execute:
@@ -12,6 +14,7 @@ execute:
 website:
   title: "Finansiering 2025"
   site-url: https://lehfinancier.github.io/Finansiering2025/
+#  base-url: /Finansiering2025/    # important for GitHub Pages project sites
   repo-url: https://github.com/Lehfinancier/Finansiering2025
   repo-subdir: "src"
   sidebar:
@@ -23,7 +26,7 @@ website:
         href: https://github.com/Lehfinancier
       - icon: linkedin
         href: https://www.linkedin.com/in/niklas-lehmann-jensen-204088112
-      - icon: twitter            # hvis din Quarto-version ikke kender 'x', brug 'twitter'
+      - icon: twitter
         href: https://twitter.com/NiklasLehmann8
       - icon: snapchat
         href: https://i.imgflip.com/120j0e.jpg
@@ -58,11 +61,13 @@ format:
   html:
     include-in-header: themes/mathjax.html
     theme:
-      light: [themes/ws_light.scss, themes/block.scss]  # <— uden ../
-      dark:  [themes/ws_dark.scss,  themes/block.scss]  # <— uden ../
+      light: [themes/ws_light.scss, themes/block.scss]
+      dark:  [themes/ws_dark.scss,  themes/block.scss]
     page-navigation: true
   revealjs:
     include-in-header: themes/mathjax.html
+    logo: themes/favicon.ico                # global logo for slides
+    theme: themes/slides_themes.scss        # global slides theme
     slide-number: true
     incremental: true
     toc: true
