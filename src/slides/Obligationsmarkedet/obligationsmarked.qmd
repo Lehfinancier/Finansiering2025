@@ -10,6 +10,7 @@ format:
     footer: "Finansiering — Obligationsmarkedet"
     footer-logo-link: "#"
     theme: ../../themes/slides_themes.scss
+    toc-title: Indhold         
 slide-level: 4
 title-slide-attributes:
   data-background-color: "#045D5D"

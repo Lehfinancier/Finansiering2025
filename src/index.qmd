@@ -1,10 +1,56 @@
 ---
-description: "Finansiering giver en grundlæggende og anvendelsesorienteret introduktion til renter, obligationer, realkredit og regulering. Kurset kombinerer teori, cases og praktiske værktøjer til at forstå fastforrentede instrumenter, renterisiko og bankregulering."
-open-graph:
-    description: "Finansiering giver en grundlæggende og anvendelsesorienteret introduktion til renter, obligationer, realkredit og regulering. Kurset kombinerer teori, cases og praktiske værktøjer til at forstå fastforrentede instrumenter, renterisiko og bankregulering."
+title: "Finansiering 2025"
+description: "Finansiering giver en grundlæggende og anvendelsesorienteret introduktion til renter, obligationer, realkredit, risikostyring i banker og regulering heraf."
+page-layout: article
+toc: false
+format: html
 ---
 
-# Finansiering (Bachelor)
+## I slide format
+
+[Se slides i full screen](slides/organizational/intro.html)
+
+<div class="slide-embed">
+  <iframe
+    src="slides/organizational/intro.html"
+    title="Course Introduction slides"
+    loading="lazy"
+    allowfullscreen
+    referrerpolicy="no-referrer-when-downgrade">
+  </iframe>
+</div>
+
+<style>
+.slide-embed {
+  position: relative;
+  width: 100%;
+  padding-top: 56.25%; /* keeps 16:9 */
+  margin: 1rem 0;
+}
+.slide-embed iframe {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  border: 0;
+}
+</style>
+
+  
+## Kursusinformation
+
+**Forelæser:** Niklas Lehmann Jensen  
+**Email:** nlj@econ.au.dk (niklas@scanrate.dk)  
+**Kontor:** Intet kontor på AU  
+**Kontakt tidspunkter:** I skriver bare en mail  
+**Kursus hjemmeside:** Brightspace og denne side  
+**Forelæsninger:** Tirsdag (8:15–10:00) og torsdag (14:15–16:00) i M1  
+
+**Niveau:** Bachelor  
+**Forudsætninger:** Ingen formelle krav, men basal forståelse for matematik og økonomi er en fordel
+
+---
+
+# Finansiering del 2 (HA.jur)
 
 <img src="images/finance-header-img-fixed.png" alt="Finansiering" style="width: 100%;  border-radius: 15px; margin-bottom: 6px;">
 
@@ -14,21 +60,8 @@ Kurset er designet til HA(jur.)-studerende, og lægger vægt på at gøre de tek
 
 ---
 
-## Course Information
-  
-**Instructor:** Niklas Lehmann Jensen  
-**Email:** [indsæt email her]  
-**Office Location:** [indsæt kontoradresse]  
-**Office Hours:** Efter aftale  
-**Course Website:** Absalon og denne side  
-**Lectures:** [indsæt tid og lokale]  
 
-**Level:** Undergraduate  
-**Prerequisites:** Ingen formelle krav, men basal forståelse for matematik og økonomi er en fordel  
-
----
-
-## Course Content
+## Kursusindhold
 
 Kurset er struktureret som følger:
 
@@ -64,29 +97,30 @@ Kurset er struktureret som følger:
 
 ---
 
-## Course Materials
+## Kursusmateriale
 
 **Pensum** består primært af:  
 
 - Egenudviklede lektionsnoter i finansiering  
-- Supplerende artikler og cases om finanskrisen og SVB  
+- Evt. supplerende artikler og cases om finanskrisen  
 
 Derudover kan følgende lærebøger anbefales som opslagsværk:  
-- Tuckman & Serrat: *Fixed Income Securities*  
-- Fabozzi: *Bond Markets, Analysis, and Strategies*  
+   - Tanggaard: *Finansielle instrumenter og deres markeder*  
+   - Just Andresen: *Finansiel risikostyring*  
+   - Christensen: *Obligationsinvestering: Teori og praksis anvendelse*  
 
 ---
 
-## Course Policies
+## Andet vigtig gøjl
 
-**Grading and Evaluation**  
-Karakteren gives på baggrund af en 90 minutters skriftlig eksamen (closed book). Dato fastsættes af eksamenskontoret.  
+**Eksamen og karakter**  
+Karakteren gives på baggrund af en 4 timers skriftlig eksamen (uden internet). Dato d. 12/01/2026
 
-**Attendance and Participation**  
+**Deltagelse under forelæsninger og øvelsestimer**  
 Deltagelse anbefales stærkt, da undervisningen bygger på dialog og øvelser.  
 
-**Academic Integrity**  
+**Akademisk integritet**  
 Universitetets regler om eksamenssnyd og plagiering gælder.  
 
-**Accommodations**  
-Studerende med særlige behov bør kontakte universitetets SPS-kontor tidligt i semestret.  
+**Særlige behov**  
+Studerende med særlige behov bør kontakte universitetets kontor tidligt i semestret.  

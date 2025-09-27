@@ -1,7 +1,9 @@
 project:
   type: website
-  output-dir: ../docs   # <- vigtigt: byg til /docs i repoet
-
+  output-dir: ../docs   # byg op i /docs i repo-roden
+  resources:
+    - Lektionsnote/Lektionsnoter_2025.pdf
+    - exercises/Del2_OS2.pdf
 html-math-method: mathjax
 
 execute:
@@ -12,52 +14,55 @@ website:
   site-url: https://lehfinancier.github.io/Finansiering2025/
   repo-url: https://github.com/Lehfinancier/Finansiering2025
   repo-subdir: "src"
-  repo-actions: [edit, issue]
   sidebar:
-    style: docked       # venstre, fast menu (som Morozov)
+    title: "Finansiering"
+    style: docked
     search: true
+    tools:
+      - icon: github
+        href: https://github.com/Lehfinancier
+      - icon: linkedin
+        href: https://www.linkedin.com/in/niklas-lehmann-jensen-204088112
+      - icon: twitter            # hvis din Quarto-version ikke kender 'x', brug 'twitter'
+        href: https://twitter.com/NiklasLehmann8
+      - icon: snapchat
+        href: https://i.imgflip.com/120j0e.jpg
+      - icon: envelope
+        href: mailto:nlj@econ.au.dk
     contents:
-      - text: "Forside"
-        href: src/index.qmd
-
+      - index.qmd
+      - section: "Lektionsnoten"
+        contents:
+          - text: "Lektionsnote (PDF)"
+            href: Lektionsnote/Lektionsnoter_2025.pdf
+            target: _blank
       - section: "Lectures"
-        # enten list filer én for én...
         contents:
-          - src/slides/organizational/intro.qmd
-          # ...eller brug glob-mønstre (tilføj flere linjer for alle kapitler):
-          - text: "Kapitel 7 — Konverterbare"
-            contents: src/slides/Konverteringsmodel/**
-          - text: "Kapitel 10 — Pengeinstitutter"
-            contents: src/slides/PengeinstitutterRisikostyring/**
-          - text: "Rentestrukturen"
-            contents: src/slides/Rentestrukturen/**
-          - text: "Obligationsmarkedet"
-            contents: src/slides/Obligationsmarkedet/**
-          - text: "Realkredit"
-            contents: src/slides/Realkredit/**
-          - text: "Risikomål"
-            contents: src/slides/Risikomål/**
-          - text: "Prisnøgletal"
-            contents: src/slides/PrisNoegletal/**
-
-      - section: "Exercises"
+          - slides/organizational/intro.qmd
+          - slides/Rentedannelse/rentedannelsen.qmd
+          - slides/Obligationsmarkedet/obligationsmarked.qmd
+          - slides/Rentestrukturen/Rentestrukturen.qmd
+          - slides/Risikomål/risikomaal.qmd
+          - slides/Realkredit/realkredit.qmd
+          - slides/Konverteringsmodel/konverteringsmodel.qmd
+          - slides/PrisNoegletal/pricingkeyfigures.qmd
+          - slides/FinanskrisenRegulering/financialcrisis.qmd
+          - slides/PengeinstitutterRisikostyring/bankingandrisk.qmd
+      - section: "Øvelsesopgaver"
         contents:
-          - src/exercises/ex01.qmd
-
-      - section: "Course Info"
-        contents:
-          - src/syllabus.qmd
+          - text: "Del 2 — OS2 (PDF)"
+            href: exercises/Del2_OS2.pdf
+            target: _blank
 
 format:
   html:
-    include-in-header: themes/mathjax.html   # <- korrekt sti
+    include-in-header: themes/mathjax.html
     theme:
-      light: [themes/ws_light.scss, themes/block.scss]
-      dark:  [themes/ws_dark.scss, themes/block.scss]
-    page-navigation: true                    # næste/forrige i bunden
-
+      light: [themes/ws_light.scss, themes/block.scss]  # <— uden ../
+      dark:  [themes/ws_dark.scss,  themes/block.scss]  # <— uden ../
+    page-navigation: true
   revealjs:
-    include-in-header: themes/mathjax.html   # <- samme her
+    include-in-header: themes/mathjax.html
     slide-number: true
     incremental: true
     toc: true
