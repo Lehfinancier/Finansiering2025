@@ -4,8 +4,9 @@ project:
   resources:
     - themes/                    # ensure custom themes get published
     - Lektionsnote/Lektionsnoter_2025.pdf
-    - exercises/Del2_OS2.pdf
     - slides/**/*
+    - exercises/**/*        # <- add this line
+
 
 html-math-method: mathjax
 
@@ -45,17 +46,46 @@ website:
           - slides/Rentedannelse/rentedannelsen.qmd
           - slides/Obligationsmarkedet/obligationsmarked.qmd
           - slides/Rentestrukturen/Rentestrukturen.qmd
-          - slides/Risikomål/risikomaal.qmd
+          - slides/Risikomaal/risikomaal.qmd
           - slides/Realkredit/realkredit.qmd
           - slides/Konverteringsmodel/konverteringsmodel.qmd
           - slides/PrisNoegletal/pricingkeyfigures.qmd
           - slides/FinanskrisenRegulering/financialcrisis.qmd
           - slides/PengeinstitutterRisikostyring/bankingandrisk.qmd
-      - section: "Øvelsesopgaver"
+      - section: "Opgaver"
         contents:
-          - text: "Del 2 — OS2 (PDF)"
-            href: exercises/Del2_OS2.pdf
-            target: _blank
+          - section: "Opgave 1"
+            contents:
+              - text: "Opgavesæt (PDF)"
+                href: "exercises/Opgave 1/OS1.pdf"
+                target: _blank
+              # add more later:
+              # - text: "Løsningsforslag (PDF)"
+              #   href: "exercises/Opgave 1/solutions/OS1_loesning.pdf"
+              #   target: _blank
+              # - text: "Data (Excel)"
+              #   href: "exercises/Opgave 1/data.xlsx"
+              #   target: _blank
+          - section: "Opgave 2"
+            contents:
+              - text: "Opgavesæt (PDF)"
+                href: "exercises/Opgave 2/OS2.pdf"
+                target: _blank
+          - section: "Opgave 3"
+            contents:
+              - text: "Opgavesæt (PDF)"
+                href: "exercises/Opgave 3/OS3.pdf"
+                target: _blank
+          - section: "Opgave 4"
+            contents:
+              - text: "Opgavesæt (PDF)"
+                href: "exercises/Opgave 4/OS4.pdf"
+                target: _blank
+          - section: "Opgave 5"
+            contents:
+              - text: "Opgavesæt (PDF)"
+                href: "exercises/Opgave 5/OS5.pdf"
+                target: _blank
 
 format:
   html:
