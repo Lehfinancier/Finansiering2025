@@ -102,15 +102,15 @@ Kurset er struktureret som følger:
 | 2       | 43  |                                  | Obligationer                                           | Lektionsnoten, kapitel 2         |         |
 | 3       | 44  |                                  | Rentestrukturen                                        | Lektionsnoten, kapitel 3         |         |
 | 4       | 44  |                                  | Renterisiko                                            | Lektionsnoten, kapitel 4         |         |
-| 5       | 45  | Realkredit                       | Intro til dansk realkredit                             | Lektionsnoten, kapitel 5         | OS1     |
+| 5       | 45  | Realkredit                       | Intro til dansk realkredit                             | Lektionsnoten, kapitel 5         | [OS1](exercises/Opgave%201/OS1.pdf){target=_blank} |
 | 6       | 45  |                                  | Modellering af konverteringsadfærd                     | Lektionsnoten, kapitel 6         |         |
-| 7       | 46  |                                  | Prisfastsættelse og nøgletal på konverterbare obligationer | Lektionsnoten, kapitel 7         | OS2     |
+| 7       | 46  |                                  | Prisfastsættelse og nøgletal på konverterbare obligationer | Lektionsnoten, kapitel 7     | [OS2](exercises/Opgave%202/OS2.pdf){target=_blank} |
 | 8       | 46  | Performanceevaluering            | Obligationsafkast                                      | Lektionsnoten, kapitel 8         |         |
-| 9       | 47  | Regulering                       | Finanskrisens udvikling og eftervirkninger             | Lektionsnoten, kapitel 9         | OS3     |
+| 9       | 47  | Regulering                       | Finanskrisens udvikling og eftervirkninger             | Lektionsnoten, kapitel 9         | [OS3](exercises/Opgave%203/OS3.pdf){target=_blank} |
 | 10      | 47  |                                  | Pengeinstitutters risikostyring                        | Lektionsnoten, kapitel 10        |         |
-| 11      | 48  |                                  | Buffer?                                                |                                  | OS4     |
+| 11      | 48  |                                  | Buffer?                                                |                                  | [OS4](exercises/Opgave%204/OS4.pdf){target=_blank} |
 | 12      | 48  |                                  | Buffer?                                                |                                  |         |
-|         | 49  |                                  |                                                        |                                  | OS5     |
+|         | 49  |                                  |                                                        |                                  | [OS5](exercises/Opgave%205/OS5.pdf){target=_blank} |
 
 
 
